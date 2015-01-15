@@ -1,3 +1,1 @@
-
-
 ruby 'github-pages'
