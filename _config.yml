@@ -4,10 +4,10 @@ permalink: /blog/:categories/:year/:month/:day/:title.html
 title: Christopher Lovell
 #email: your-email@domain.com
 description: > # this means to ignore newlines until "baseurl:"
-  Technology, Cosmology and other random noise
+#  Technology, Cosmology and other random noise
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://polyphant1.github.io" # the base hostname & protocol for your site
-twitter_username: polyphantastic
+#twitter_username: polyphantastic
 github_username:  polyphant1
 
 # Build settings
