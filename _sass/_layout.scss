@@ -101,10 +101,14 @@
     margin-bottom: $spacing-unit / 2;
 }
 
-.contact-list,
-.social-media-list {
+.contact-list {
     list-style: none;
     margin-left: 0;
+}
+
+.social-media-list {
+    list-style: none;
+    position: absolute;
 }
 
 .footer-col-wrapper {
@@ -127,7 +131,13 @@
 
 .footer-col-2 {
     width: -webkit-calc(20% - (#{$spacing-unit} / 2));
-    width:         calc(20% - (#{$spacing-unit} / 2));
+    width:         calc(40% - (#{$spacing-unit} / 2));
+    align: center;
+}
+
+.footer-col-2 li {
+    display: inline;
+    float: left;
 }
 
 .footer-col-3 {
