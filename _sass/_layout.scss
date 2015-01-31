@@ -132,7 +132,7 @@
 .footer-col-2 {
     width: -webkit-calc(20% - (#{$spacing-unit} / 2));
     width:         calc(40% - (#{$spacing-unit} / 2));
-    align: center;
+    float: right;
 }
 
 .footer-col-2 li {
