@@ -10,6 +10,7 @@ url: "http://polyphant1.github.io" # the base hostname & protocol for your site
 #twitter_username: polyphantastic
 github_username:  polyphant1
 linkedin_username: lovellchristopher
+stackexchange_username: polyphant
 
 # Build settings
 markdown: kramdown
