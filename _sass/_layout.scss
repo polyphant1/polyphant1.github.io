@@ -112,7 +112,7 @@
 }
 
 .social-media-list li{
-    padding: 5px;
+    padding: 3px;
 }
 
 .footer-col-wrapper {
@@ -125,7 +125,7 @@
 .footer-col {
     float: left;
     margin-bottom: $spacing-unit / 2;
-    padding-left: $spacing-unit / 2;
+    padding-left: 0px; //$spacing-unit / 4;
 }
 
 .footer-col-1 {
