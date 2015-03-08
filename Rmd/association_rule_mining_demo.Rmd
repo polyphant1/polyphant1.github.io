@@ -1,0 +1,196 @@
+---
+title: "Association rule mining demo"
+author: "Christopher Lovell"
+date: "Sunday, March 08, 2015"
+output:
+  html_document: default
+---
+
+# Mining Association Rules
+I'm currently following [Pattern Discovery in Data Mining](https://www.coursera.org/course/patterndiscovery) on Coursera from Illinois university and was introduced to association rule mining, a method of finding frequent itemsets in large databases. I then found a good chapter in Yanchang Zhao's [R and Data Mining](http://www.amazon.co.uk/Data-Mining-Examples-Case-Studies/dp/0123969638) on the subject which, despite being pretty savagely ripped apart in reviews for being impenetrable and low quality, was helpful in combination with the lectures in showing the practical applications. Here's a run through of an example from Zhao using data on survivors from the sinking of the Titanic.
+
+## Support, Confidence and Lift
+First, a little background theory. An association rule of the form $A=>B$ states that there is a correlation or association between occurences of the itemset A, known as the left hand side *lhs* or antecedent, and the itemset B, known as the right hand side *rhs* or consequent. 
+
+We can define the value of a rule using a number of different measures. The simplest is the *Support*, which gives the frequency or number of occurences of the combined itemset ${A}\cup{B}$ in the database. The *Confidence* gives the relative frequency of occurences of A that also contain B:
+
+$$
+  Conf(A=>B)=P(B|A)=\frac{P({A}\cup{B})}{P(A)}
+$$
+
+The final measure used here is the *Lift*, which gives the ratio of the confidence to the relative frequency of B:
+
+$$
+Lift(A=>B)=\frac{P({A}\cup{B})}{P(A)P(B)}
+$$
+
+In combination we can use these measures to sort and filter our rule set to find the most interesting patterns.
+
+## Data: The Titanic
+The dataset I'm going to use contains information on passengers of the Titanic when it sank, including their age, sex, the class they were travelling in, and whther they survived or not; pretty morbid stuff, but large enough to hopefully throw up some interesting patterns. It's included in the datasets package in R, but you can download the original data from [here](http://www.amstat.org/publications/jse/v3n3/datasets.dawson.html).
+
+```{r}
+str(Titanic)
+df<-as.data.frame(Titanic)
+head(df)
+```
+
+After converting to a data frame we can see that R has summarised each combination of attributes in to a dense table with a frequency column. We want to break this down in to individual "transactions" for each occurence, where each row represents each passenger.
+
+```{r}
+titanic.raw<-NULL
+for(i in 1:4){
+  titanic.raw<-cbind(titanic.raw,rep(as.character(df[,i]),df$Freq))
+}
+
+titanic.data<-as.data.frame(titanic.raw)
+rm(titanic.raw)
+names(titanic.data)<-names(df[1:4])
+head(titanic.data)
+```
+
+We can see a breakdown of the data using the *summary* function:
+
+```{r}
+summary(titanic.data)
+```
+
+## Rule Mining
+The example uses the APRIORI algorithm, a level-wise candidate generator from the *arules* package. The algorithm is written in pseudocode below:
+
+```
+Set k = 1
+Scan DB to get frequent k-itemset's
+while(frequent candidate set generated)
+  Generate length k+1 itemsets from length-k frequent itemsets
+  Test candidates against DB to find frequent k+1 itemsets 
+end
+return all frequent itemsets
+```
+
+```{r echo=FALSE,error=FALSE,message=FALSE}
+if(!require(arules)){
+  install.packages("arules")
+}
+```
+
+Call the *apriori* function on the Titanic data frame, which returns 27 rules printed below.
+
+```{r}
+rules.all<-apriori(titanic.data)
+
+rules.all
+inspect(rules.all)
+```
+
+Suppose we are only interested in rules satisfying certain constraints, for example those with "Survived" in the consequent. We pass both *Survived=Yes* and *Survived=No* to the *rhs* in the appearance argument to filter only rules satisfying these constraints, and *default* equal to *lhs* so that all left hand side arguments (antecedents) are returned.
+```{r}
+rules<-apriori(titanic.data,control=list(verbose=F),
+               parameter = list(minlen=2,supp=0.005,conf=0.8),
+               appearance = list(rhs=c("Survived=No","Survived=Yes"),default="lhs"))
+```
+
+We also set verbose to False in the control argument to prevent verbose output to console on execution, and *minlen* equal to two, so that rules with an empty left or right hand side (as seen in the first rule above) are excluded.
+
+Finally we round the support, confidence and lift measures and sort by lift.
+```{r}
+quality(rules)<-round(quality(rules),digits = 3)
+rules<-sort(rules,by="lift")
+inspect(rules)
+```
+
+From this quick analysis we have already mined some interesting patterns. Children travelling second class all survived the sinking, evidenced by the hundred percent confidence in this rule. It is also the rule in our subset with the highest lift (711 of 2201 people survived the sinking, so there is a 32.3% chance of survival. $\frac{Conf(A=>B)}{P(B)} = 1/32.3 = 3.096$). However, there is also some redundancy: our second highest rule is that female children travelling in second class survived; this information is already implied explicitly in our first rule.
+
+Generally speaking we can remove those supersets where the lift of the superset is lower than the lift of the subset. The function *is.subset* in *arules* identifies all subsets:
+
+```{r}
+# find all subsets in our rule set using is.subset. Note that we have already sorted our rules by descending lift.
+rules.subset<-is.subset(rules)
+# throw away the bottom half, including the diagonal, of our identity matrix
+rules.subset[lower.tri(rules.subset,diag=T)]<-NA
+
+# find all matching subset rules
+redundant<-colSums(rules.subset,na.rm = T)>=1
+# prune matching subset rules
+rules.pruned<-rules[!redundant]
+inspect(rules.pruned)
+```
+
+The first rule states that all children travelling second class survived. How about children in other classes? We cannot from this pruned rule set make any comparisons since there are no corresponding rules for children travelling in other classes, due to the fact that the support and confidence of these rules are below the limits we set previously. To find these rules we reset our filters for both the left and right hand sides of our rules, and loosen our parameter constraints.
+
+```{r}
+rules.children<-apriori(titanic.data,
+                        parameter=list(minlen=3,supp=0.002,conf=0.2),
+                        appearance=list(rhs=c("Survived=Yes"),
+                                        lhs=c("Class=1st","Class=2nd","Class=3rd","Age=Child"),
+                                        default="none"),
+                        control=list(verbose=F))
+
+rules.children<-sort(rules.children,by="confidence")
+inspect(rules.children)
+```
+
+We can now see that all children in first and second class survived, but only 34% of children in third class, of which there were as many as in first and second class combined. Pretty miserable stuff.
+
+## Visualising Association Rules
+The *arulesViz* package has some interesting functions allowing you to visualise your rules.
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+if(!require(arulesViz)){
+  install.packages("arulesViz")
+}
+```
+
+The simplest is a scatterplot showing each rule as a point against it's confidence and support score, where the colour of the point shows it's lift.
+
+```{r}
+plot(rules.all,method="scatterplot",measure=c("support","confidence"),shading=c("lift"))
+```
+
+There are also some interactive selection and filtering options available, just set the *interactive* argument to True (this is the case for most of the subsequent visualisations from *arulesViz* demoed here).
+
+```{r eval=FALSE}
+plot(rules.all,method="scatterplot",measure=c("support","confidence"),shading=c("lift"),interactive=T)
+```
+
+If heatmaps are your thing then the matrix method will plot each antecedent against it's consequent with a further dimension defining the shading. The names are printed in the console but I can't work out how to include them on the plot. 
+
+```{r}
+plot(rules.all,method="matrix",type="grid",measure=c("confidence"))
+```
+
+You can also plot it in 3D... providing further evidence that 3D plots are in most cases useless if you want to actually learn anything from your data vis.
+
+```{r}
+plot(rules.all,method="matrix3D")
+```
+
+A grouped plot does show the antecedent and consequent names by default, but no colour scale. Strange.
+
+```{r}
+plot(rules.all,method="grouped",measure=c("confidence"))
+```
+
+There is also the option to plot rules as a network, where nodes represent antecedents and consequents and edges show the relationships between them. Under the hood this calls the *igraph* package for plotting and calculating common network measures. Here we plot the pruned rule set to show the relationships clearer; the edge weight represents the confidence in this case.
+
+```{r}
+plot(rules.pruned,method="graph",measure=c("confidence"),control=list(type="itemsets"))
+```
+
+We can also plot relationships between individual items in the frequent itemsets making up the rules, by setting the control type argument to *items*. In this case nodes are the items themselves but they are not directly related t each other but through nodes showing the size of the aggregate relationship, here confidence. For example, in the plot below the largest dot represents the rule {2nd class,Child}=>{Survived}, where the size of the dot indicates complete confidence since the maximum of the range of possible confidence is 1.
+
+```{r}
+plot(rules.pruned,method="graph",control=list(type="items"),measure=c("confidence"))
+```
+
+This begins to show us some interesting relationships across all rules. The crew, first class passengers and women all had a much higher chance of survival than men and third class passengers, evidenced by the clustering of these two groups in to distinct areas on the graph. Second class passengers, however, straddle the center ground: for these passengers survival depends on your age and sex.
+
+
+Finally, you can create a parallel coordinate plot. I find it hard to interpret this due to the lack of grid lines on the y axis. If anyone knows how to add these easily I'd be grateful. 
+
+```{r}
+plot(rules.all,method="paracoord",control=list(reorder=T),measure=c("confidence"),lty = "dotted")
+```
+
+## Reflections
+So there you have it: I've demonstrated the Apriori algorithm for mining association rules and visualised them with the *arulesViz* package. This is my first dabble with these kinds of techniques; there are plenty of more complex implementations out there, and I'm sure there are also better packages by now for doing this kind of mining. If you have any suggestions let me know in the comments. Thank for reading!
