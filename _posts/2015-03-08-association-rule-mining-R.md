@@ -382,7 +382,7 @@ inspect(rules.children)</code></pre>
 </div>
 <div id="reflections" class="section level2">
 <h2>Reflections</h2>
-<p>So there you have it: I’ve demonstrated the Apriori algorithm for mining association rules and visualised them with the <em>arulesViz</em> package. This is my first dabble with these kinds of techniques; there are plenty more complex implementations out there, and I’m sure there are also better packages by now for doing this kind of mining. If you have any suggestions let me know in the comments. Thank for reading!</p>
+<p>So there you have it: I’ve demonstrated the Apriori algorithm for mining association rules and visualised them with the <em>arulesViz</em> package. This is my first dabble with these kinds of techniques; there are plenty more complex implementations out there, and I’m sure there are also better packages by now for doing this kind of mining. If you have any suggestions let me know in the comments. Thanks for reading!</p>
 </div>
 </div>
 
