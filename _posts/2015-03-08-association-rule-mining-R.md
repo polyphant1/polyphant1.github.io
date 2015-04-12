@@ -3,7 +3,7 @@ layout: post
 title: "Association Rule Mining in R"
 comments: true
 date: "Sunday, March 08, 2015"
-categories: data mining, association rule mining, 
+categories: data_mining, association_rule_mining
 ---
 
 I’m currently following [Pattern Discovery in Data Mining](https://www.coursera.org/course/patterndiscovery) on Coursera from Illinois university and was introduced to association rule mining, a method of finding frequent itemsets in large databases. I then found a good chapter in Yanchang Zhao’s [R and Data Mining](http://www.amazon.co.uk/Data-Mining-Examples-Case-Studies/dp/0123969638) on the subject which, despite being pretty savagely ripped apart in reviews for being impenetrable and low quality, was helpful in combination with the lectures in showing the practical applications. Here’s a run through of an example from Zhao using data on survivors from the sinking of the Titanic.
