@@ -12,6 +12,7 @@ $output_folder = ($input_folder+"test\")
 #}
 
 ## grep method for word documents
+## from here https://woozle.org/neale/papers/docx.html
 ## - requires unzip for windows
 Get-ChildItem $input_folder -Filter *.docx | `
 Foreach-Object{
