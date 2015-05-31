@@ -5,6 +5,12 @@ comments: true
 date: "Tuesday, May 18, 2015"
 ---
 
+<center>
+<img src="/assets/David-Cameron-008.jpg">
+</center>
+<br>
+
+
 The digital age calls for technology aware policy makers. Digital currencies, encryption and online privacy present a few of the challenges facing governments across the world. Yet the majority of these governments are composed of those with little to no grasp of the basics of how technology works. Most politicians practical experience with technology ends with Microsoft Office. How many national leaders would understand that "Hello world!" is not the name of a prenatal meditation class, but the first step for new programmers learning a  language?
 
 Lee Hsien Loong, prime minister of Singapore, recently demonstrated that he's the most technically literate national leader on the planet, by [releasing his C++ code](https://www.facebook.com/leehsienloong/photos/a.344710778924968.83425.125845680811480/905828379479869/) for a Sudoku solver. The program runs in a DOS window, in to which you enter each line of the unsolved Sudoku line by line. It then prints out the solution(s), found using a [backtrack search](http://en.wikipedia.org/wiki/Backtracking). He even asked for users to submit bugs.
