@@ -8,6 +8,8 @@
 
     // Positioning context for the mobile navigation icon
     position: relative;
+    
+    background-color: black;
 }
 
 .site-title {
@@ -19,7 +21,7 @@
 
     &,
     &:visited {
-        color: $grey-color-dark;
+        color: $heading-text-color;
     }
 }
 
@@ -32,7 +34,7 @@
     }
 
     .page-link {
-        color: $text-color;
+        color: $heading-text-color;
         line-height: $base-line-height;
 
         // Gaps between nav items, but not on the first one
@@ -64,7 +66,7 @@
                 height: 15px;
 
                 path {
-                    fill: $grey-color-dark;
+                    fill: $heading-text-color;
                 }
             }
         }
@@ -94,6 +96,7 @@
 .site-footer {
     border-top: 1px solid $grey-color-light;
     padding: $spacing-unit 0;
+    background-color: black;
 }
 
 .footer-heading {
