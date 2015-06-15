@@ -3,13 +3,14 @@ layout: post
 title: "How technologically illiterate are our political leaders, and does it matter?"
 comments: true
 date: "Tuesday, May 18, 2015"
+featured_image: /images/hdf.gif
+categories: twitter
 ---
 
 <center>
 <img src="/assets/David-Cameron-008.jpg">
 </center>
 <br>
-
 
 The digital age calls for technology aware policy makers. Digital currencies, encryption and online privacy present a few of the challenges facing governments across the world. Yet the majority of these governments are composed of those with little to no grasp of the basics of how technology works. Most politicians practical experience with technology ends with Microsoft Office. How many national leaders would understand that "Hello world!" is not the name of a prenatal meditation class, but the first step for new programmers learning a  language?
 
@@ -22,8 +23,10 @@ In the UK, recently re-elected David Cameron isn't shy about speaking on technol
 
 <br>
 <center>
+
 <blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">With children learning &quot;coding&quot; at No 10 - being able to understand computing is vital for our economic future <a href="http://t.co/yZOcHvIRcK">pic.twitter.com/yZOcHvIRcK</a></p>&mdash; David Cameron (@David_Cameron) <a href="https://twitter.com/David_Cameron/status/541882168616943617">December 8, 2014</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 </center>
 <br>
 
@@ -35,6 +38,7 @@ You might argue that political leaders are also interested in their countries ag
 
 <br>
 <center>
+
 <blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">Guy is 1of 3,450 people across Loughborough who&#39;ve started an apprenticeship since 2010 <a href="http://t.co/EkWMF0ppI9">pic.twitter.com/EkWMF0ppI9</a></p>&mdash; George Osborne (@George_Osborne) <a href="https://twitter.com/George_Osborne/status/595845731635855360">May 6, 2015</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
@@ -49,6 +53,7 @@ You might argue that political leaders are also interested in their countries ag
 
 <blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">Having a go at welding with apprentices at <a href="https://twitter.com/HarrisPye">@HarrisPye</a> in Vale of Glamorgan with strong local voice <a href="https://twitter.com/AlunCairns">@aluncairns</a> <a href="http://t.co/yPB7Um2tgB">pic.twitter.com/yPB7Um2tgB</a></p>&mdash; George Osborne (@George_Osborne) <a href="https://twitter.com/George_Osborne/status/586481813973008385">April 10, 2015</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 </center>
 <br>
 

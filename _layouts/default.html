@@ -1,21 +1,29 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>{{ site.title + page.title }}</title>
+  <meta name="viewport" content="width=device-width">
 
-  {% include head.html %}
+  <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"-->
+  <script type="text/javascript" language="Javascript" src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.1.min.js"></script> 
+  <!--script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script-->
+
   {% include google_analytics.html %}
 
-  <body>
+  <!-- syntax highlighting CSS -->
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/syntax.css">
 
-    {% include header.html %}
+  <!-- CSS -->
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/reset.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css">
+  <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </div>
-
-    {% include footer.html %}
-    
-  </body>
-
+  <!-- Fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Bitter:400,700,400italic|Open+Sans:400italic,600italic,400,600' rel='stylesheet' type='text/css'>
+</head>
+<body>
+  {{ content }}
+</body>
 </html>
