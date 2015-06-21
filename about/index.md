@@ -1,6 +1,7 @@
 ---
 layout: page
 permalink: /about/
+title: About
 ---
 
 <img src="/assets/profile.jpg" alt="#" class="img-responsive img-circle" >

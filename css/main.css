@@ -6,8 +6,20 @@
   box-sizing: border-box;
 }
 
+
+/* Custom CSS */
+
 #disqus_thread {
   padding: 23px;
+}
+
+#home-header .container p a {
+  color: white;
+  text-decoration: none;
+}
+
+.site-title {
+  text-decoration: none;
 }
 
 img {
@@ -16,6 +28,9 @@ img {
     margin-left: auto;
     margin-right: auto;
 }
+
+/* END: Custom CSS */
+
 
 html,
 body {

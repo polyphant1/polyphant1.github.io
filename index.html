@@ -1,18 +1,9 @@
 ---
 layout: default
 ---
-<header id="home-header" style="background-image: url({{ site.baseurl }}{{ site.sidebar_image }});">
-  <div class="container">
-    <h1>{{ site.title }}</h1>
-    <ul class="meta">
-      <li>
-        <span>
-          {{ site.tagline }}
-        </span>
-      </li>
-  </div>
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-</header>
+
+{% include new_header.html %}
+
 <article>
   <div class="container">
     <ul class="posts">
@@ -22,7 +13,7 @@ layout: default
           <span class="meta">
             {{ post.date | date_to_string }}
           </span>
-          {{ post.excerpt }}
+          {{ post.content | strip_html | truncatewords: 50 }}
         </li>
       {% endfor %}
     </ul>
