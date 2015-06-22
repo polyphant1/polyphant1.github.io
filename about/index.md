@@ -4,7 +4,7 @@ permalink: /about/
 title: About
 ---
 
-<img src="/assets/profile.jpg" alt="#" class="img-responsive img-circle" >
+<img src="/assets/profile.jpg" alt="#" class="img-responsive img-circle"
 <br>
 Data Scientist based in London working on data led digital projects.<br>
 
