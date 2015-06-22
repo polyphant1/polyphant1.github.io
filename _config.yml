@@ -3,17 +3,22 @@ permalink: /blog/:categories/:year/:month/:day/:title.html
 # Site settings
 title: Polyphant
 #email: your-email@domain.com
+tagline: 'Technology, Cosmology and other random noise' # A brief tagline for your site
 description: > # this means to ignore newlines until "baseurl:"
 #  Technology, Cosmology and other random noise
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "polyphant.com" # the base hostname & protocol for your site
+
+sidebar_image: /images/hdf.gif
+
 #twitter_username: polyphantastic
 github_username:  polyphant1
 linkedin_username: lovellchristopher
 stackexchange_username: polyphant
 
 # Build settings
-markdown: kramdown
+markdown: redcarpet
+highlighter: pygments
 
 # Pagination
 pagination: 5
@@ -23,3 +28,6 @@ paginate_path: "/page:num/"
 author:
     twitter: chrisclovell
     linkedin: lovellchristopher
+    
+sass:
+    sass_dir: _sass

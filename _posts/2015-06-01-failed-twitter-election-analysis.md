@@ -3,6 +3,7 @@ layout: post
 title: "A failed twitter election analysis, and lessons learnt"
 comments: true
 date: "Sunday, June 14, 2015"
+featured_image: /images/hdf.gif
 ---
 
 I had grand data-based plans for the recent British general election. My 'novel' (as far as I'm aware) idea was to capture all tweets from the *candidates* over the election period, and do some time series analysis around the kinds of terms used. I've been developing a package to do term frequency analysis and visualisation, and this seemed like an exciting opportunity to show it off. It also presented a good excuse to refresh my python skills, by leveraging the [Tweepy](http://www.tweepy.org/) library, and learn the basics of MongoDB for storing all my tweets and user details.
