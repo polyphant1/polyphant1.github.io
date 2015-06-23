@@ -1,4 +1,4 @@
-permalink: /blog/:categories/:year/:month/:day/:title.html
+permalink: /:categories/:year/:month/:day/:title.html
 
 # Site settings
 title: Polyphant
