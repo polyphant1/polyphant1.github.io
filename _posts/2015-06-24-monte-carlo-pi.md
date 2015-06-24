@@ -2373,7 +2373,7 @@ amount2:1-d})};a.filter.invert.toString=function(){return this()};a.filter.brigh
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>If we take any random point within the rectangle, then the probability that this point lies within the circle, $P(circle)$, is equal to the area of the circle relative to the area of the rectangle. i.e,</p>
-<p>$$P(circle) = \frac{A\_{circle}}{A\_{square}} = \frac{\pi (a/2)^2}{a^2}$$</p>
+<p>$$P(circle) = \frac{A_{circle}}{A_{square}} = \frac{\pi (a/2)^2}{a^2}$$</p>
 <p>If we take $n$ points, then as $n$ gets very large the fraction of points that lie within the circle will converge to the probability of landing in the circle, $P(circle)$.</p>
 <p>Expanding and rearranging our equation above for $\pi$,</p>
 <p>$$\pi = 4\times P(circle)$$</p>
