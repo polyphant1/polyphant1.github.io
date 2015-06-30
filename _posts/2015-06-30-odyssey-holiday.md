@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "An alternative holiday snaps slideshow using Odyssey.js"
+title: "An alternative holiday slideshow using Odyssey.js"
 comments: true
 date: "Tuesday, June 30, 2015"
 featured_image: /images/hdf.gif
