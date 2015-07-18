@@ -2378,7 +2378,7 @@ amount2:1-d})};a.filter.invert.toString=function(){return this()};a.filter.brigh
 <p>Expanding and rearranging our equation above for $\pi$,</p>
 <p>$$\pi = 4\times P(circle)$$</p>
 <p>Below is a Julia script for doing just this. $n$ samples from a bivariate uniform range $[0,1]$ are taken, and used as coordinates $(x,y)$ centred on the origin. For each coordinate a distance from the origin is calculated; if this exceeds the radius of the circle then it must lie outside, if not the point is within the circle. The sum of points in the circle is divided by the total number of points taken to give the probability of points in the circle. We can then use the equation above to estimate $\pi$.</p>
-<p>The plot shows a sample of the coordinates generated, coloured by whether they lie in or out of the circle. It's interactive, which in this case is pretty pointless, but it's nice that it comes out of the box with IJulia notebooks. I used [JuliaBox](https://www.juliabox.org/), which is a neat online tool for running some basic Julia scripts, and getting a feel for the language.</p>
+<p>The plot shows a sample of the coordinates generated, coloured by whether they lie in or out of the circle. It's interactive, which in this case is pretty pointless, but it's nice that it comes out of the box with IJulia notebooks. I used <a href="https://www.juliabox.org/">JuliaBox</a>, which is a neat online tool for running some basic Julia scripts, and getting a feel for the language.</p>
 
 </div>
 </div>
