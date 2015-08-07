@@ -9,6 +9,10 @@
   {% include header_scripts.html %}
   
   {% include google_analytics.html %}
+  
+  <meta content="{{ page.title }}" property="og:title"/>
+  <meta content="{{ page.excerpt }}" property="og:description"/>
+  
 </head>
 <body>
   {{ content }}

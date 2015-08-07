@@ -5,9 +5,10 @@ comments: true
 date: "Monday, April 13, 2015"
 categories: github_pages
 featured_image: /images/hdf.gif
+excerpt:
 ---
 
-Quick post today on how to add Google Analytics tracking to your GitHub pages site. First, head over to [Google Analytics](http://www.google.com/analytics/) and sign up. After entering your details and green lighting the T&C's you'll be directed to an admin page. This will give you the tracking code that you need to add to each page of your site:
+Quick post today on how to add Google Analytics tracking to your GitHub pages site. First, head over to [Google Analytics](http://www.google.com/analytics/) and sign up. After entering your details and green lighting the T&C's you'll be directed to an admin page. This will give you the tracking code that you need to add to each page of your site. Mine, anonymised, is below:
 
 ```html
 <script>
@@ -21,7 +22,7 @@ Quick post today on how to add Google Analytics tracking to your GitHub pages si
 ```
 <br>
 
-Jekyll makes adding this easy; create a HTML file in your *_includes* folder containing this code. I named mine google_analytics.html. Then add the following to your default layout, `_layouts/default.html`: 
+Jekyll makes adding this easy; create a HTML file in your *\_includes* folder containing this code. I named mine google\_analytics.html. Then add the following to your default layout, `_layouts/default.html`: 
 
 ```
 {% raw %}{% include google_analytics.html %}{% endraw %}
