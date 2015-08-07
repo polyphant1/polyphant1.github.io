@@ -4,6 +4,7 @@ title: "Google cardboard is awesome"
 comments: true
 date: "Tuesday, July 07, 2015"
 featured_image: /images/hdf.gif
+excerpt: Despite reading article after article on, and getting very excited about, virtual reality, I had yet to actually get my hands on a headset. Fortunately, Google solved this issue last year with Project Cardboard; Version 2 has recently been released, so I decided to take the relatively small plunge and grab a headset.
 ---
 
 Despite reading article after article on, and getting very excited about, virtual reality, I had yet to actually get my hands on a headset, my main excuse being that I'm not mad rich enough to get an [oculus rift](https://www.oculus.com/en-us/), and neither are any of my friends. Fortunately, Google solved this issue last year with [Project Cardboard](https://www.google.com/get/cardboard/). Version 2 has [recently been released](http://www.theverge.com/2015/5/28/8662873/google-cardboard-virtual-reality-io-2015), so I decided to take the relatively small plunge; I opted for a [third party kit from Amazon](http://www.amazon.co.uk/v2-0-AM-CARDBOARD%C2%AE-CARDBOARD-KIT/dp/B00YF5Z14Q/ref=sr_1_1?ie=UTF8&qid=1436272561&sr=8-1&keywords=google+cardboard+2) (image below) rather than building my own, which is a little more expensive but definitely the quickest and easiest way to get started. After just 5 minutes playing with a couple of demo apps, I was blown away.

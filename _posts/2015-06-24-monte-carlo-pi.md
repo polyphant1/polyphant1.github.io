@@ -4,6 +4,7 @@ title: "Using Monte Carlo methods to estimate pi"
 comments: true
 date: "Wednesday, June 24, 2015"
 featured_image: /images/hdf.gif
+excerpt: A brief post on how to find the value of pi, using the law of large numbers and bit of introductory Julia.
 ---
 
 You've just bought a brand new computer. You excitedly rip open the packaging, carefully extract it from the box, remove the protective film from the screen (so satisfying) and, after 10 hours of charging, boot it up. It turns on fine, and everything seems to be functioning normally. It's only after a few minutes of use that you discover, to your horror, that the manufacturer has forgotten to store the constant $\pi$ on the operating system. How are you going to play [Kerbal space program](https://kerbalspaceprogram.com/en/) if you can't calculate the equations of motion of your rockets and space probes?!

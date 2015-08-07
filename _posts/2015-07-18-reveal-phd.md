@@ -4,6 +4,7 @@ title: "PhD at UoS"
 comments: true
 date: "Saturday, July 18, 2015"
 featured_image: /images/hdf.gif
+excerpt: I'm starting a PhD in September. If you're interested in what that means I'll be doing for the next three and a half years, here's a primer
 ---
 
 I'm incredibly proud to reveal that I'll be starting a PhD at the University of Sussex this September. It's something I was considering even before I finished my masters; I was fortunate enough to get sidetracked by a very rewarding and eye opening two years in the City, but I soon realised that if I didn't do it (a PhD) now, I never would! A lot of people have asked me what I'll be studying, and my usual reply is just "Astrophysics". However, I've come to realise that many people's impressions of what constitutes "Astrophysics" varies substantially. So, to help my Mum and anyone else interested understand what I'll be doing for the next three and a half years, here's a quick break down.

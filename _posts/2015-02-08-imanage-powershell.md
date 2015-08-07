@@ -5,6 +5,7 @@ comments: true
 date:   2015-02-02 12:00:00
 categories: powershell imanage text mining data mining
 featured_image: /images/hdf.gif
+excerpt:
 ---
 
 If your organisation uses [iManage](http://www.tikit.com/software/document-management/) as its content management system then the [iManage Powershell module](https://imanagepowershell.codeplex.com/) is a really powerful tool for mining that data. It allows you to write complex queries to filter documents of interest and downlad them to disc in native format.

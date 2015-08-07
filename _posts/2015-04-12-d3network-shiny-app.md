@@ -5,6 +5,7 @@ comments: true
 date: "Sunday, April 12, 2015"
 categories: airport_networks
 featured_image: /images/hdf.gif
+excerpt: 
 ---
 
 I've been looking for an excuse to create a [Shiny](http://shiny.rstudio.com/) app, an R based web application, and decided to start with a data set I stumbled upon at work on UK Airport Statistics. The data shows directed passenger traffic between domestic airports over 12 months, and goes back to 1990 (with some unexplained missing data from 1997 to 2000). You can also get data for each individual month, but to begin with I decided to focus on yearly aggregated data.
