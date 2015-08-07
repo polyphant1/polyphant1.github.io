@@ -7,7 +7,6 @@ layout: default
 <article>
   <div class="container">
     {{ content }}
-    <center><i>Copyright &#169; {{ site.time | date: '%Y' }} Christopher Lovell</i></center>
   </div>
   
   {% if page.comments %}
@@ -34,4 +33,5 @@ layout: default
     document.addEventListener("DOMContentLoaded", Carnival.init);
   </script>
   
+  <center><i>Copyright &#169; {{ site.time | date: '%Y' }} Christopher Lovell</i></center>
 </article>
