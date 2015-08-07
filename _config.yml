@@ -7,7 +7,7 @@ tagline: 'Technology, Cosmology and other random noise' # A brief tagline for yo
 description: > # this means to ignore newlines until "baseurl:"
 #  Technology, Cosmology and other random noise
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "polyphant.com" # the base hostname & protocol for your site
+url: "http://www.polyphant.com" # the base hostname & protocol for your site
 
 sidebar_image: /images/hdf.gif
 
