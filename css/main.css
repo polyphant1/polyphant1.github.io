@@ -13,21 +13,13 @@
   padding: 23px;
 }
 
-#home-header .container p a {
-  color: white;
-  text-decoration: none;
-}
-
-.site-title {
-  text-decoration: none !important;
-}
-
 img {
     max-width: 100%;
     vertical-align: middle;
     margin-left: auto;
     margin-right: auto;
 }
+
 
 /* END: Custom CSS */
 
@@ -40,7 +32,7 @@ body {
 body {
   overflow-x: hidden;
   font-family: 'Bitter', serif;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 28px;
   color: #222;
   font-weight: 400;
@@ -121,8 +113,8 @@ header {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  -webkit-filter: grayscale(1);
-  filter: grayscale(1);
+  /*-webkit-filter: grayscale(1);
+  filter: grayscale(1);*/
   overflow: hidden;
 }
 
@@ -227,6 +219,10 @@ header .home_button:hover {
   -webkit-transition: background 300ms linear;
 }
 
+header a:hover{
+  text-decoration: none;
+}
+
 header ul.meta {
   margin-top: 45px;
   margin-bottom: 10px;
@@ -240,20 +236,30 @@ header ul.meta {
 
 #home-header ul.meta {
   margin-top: 15px;
+  padding:0;
+  list-style-type: none;
 }
 
 header ul.meta li {
-  display: inline-block;
+  /*display: inline-block;*/
   margin-right: 25px;
   line-height: 30px;
-  color: #fff;
 }
 
-header ul.meta li span {
-  margin-right: 10px;
-  font-style: italic;
-  color: rgba(255, 255, 255, .5);
+header ul.meta li span{
+  font-weight: bold;
+  color: rgba(255,255,255,.7);
 }
+
+header ul.meta a{
+  color: #ce2323;
+}
+
+header ul.meta a:hover{
+  text-decoration: underline;
+}
+
+
 
 /* Pagination_custom */
 
@@ -335,7 +341,7 @@ article p {
 }
 
 article li {
-  margin-left: 3em;
+  /*margin-left: 3em;*/
   margin-bottom: 9px;
   list-style-type: disc;
 }
@@ -347,7 +353,7 @@ article li {
 }
 
 article a {
-  color: #CE2323;
+  color: #CE2323 !important;
   text-decoration: none;
 }
 

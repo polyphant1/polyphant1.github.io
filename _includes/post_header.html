@@ -6,13 +6,12 @@
       <ul class="meta">
         <li>
           <span>
-            Published
+            Published {{ page.date | date_to_string }}
           </span>
-          {{ page.date | date_to_string }}
         </li>
         <li>
           <p class="post-meta">
-            <a href="https://twitter.com/share" class="twitter-share-button" data-via="{{ site.author.twitter }}">Tweet</a> <g:plusone size="medium"></g:plusone></h5>
+            <a href="https://twitter.com/share" class="twitter-share-button" data-via="{{ site.author.twitter }}">Tweet</a></h5>
             <script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
             <script type="IN/Share" data-counter="right"></script>
           </p>
