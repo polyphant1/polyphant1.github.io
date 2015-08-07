@@ -2,7 +2,7 @@
 layout: default
 ---
 
-{% include new_header.html %}
+{% include home_header.html %}
 
 <article>
   <div class="container">
@@ -13,7 +13,7 @@ layout: default
           <span class="meta">
             {{ post.date | date_to_string }}
           </span>
-          {{ post.content | strip_html | truncatewords: 50 }}
+          {{ post.content | strip_html | truncatewords: 100 }}
         </li>
       {% endfor %}
     </ul>
@@ -31,3 +31,6 @@ layout: default
     </ul>
   </nav>
 </article>
+
+
+
