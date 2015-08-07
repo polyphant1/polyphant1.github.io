@@ -22,13 +22,8 @@ highlighter: pygments
 
 # Pagination
 paginate: 5
-processors:
-    - strange_case.extensions.paginated
 
 # twitter
 author:
     twitter: chrisclovell
     linkedin: lovellchristopher
-    
-sass:
-    sass_dir: _sass
