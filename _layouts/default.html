@@ -11,8 +11,10 @@
   {% include google_analytics.html %}
   
   <meta property="og:type" content="website" />
-  <meta content="{{ page.title }}" property="og:title"/>
-  <meta content="{{ page.excerpt }}" property="og:description"/>
+  <meta property="og:title" content="{{ page.title }}" />
+  <meta property="og:description" content="{{ page.excerpt }}" />
+  <meta property="og:site_name" content="Polyphant" />
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
   
 </head>
 <body>
