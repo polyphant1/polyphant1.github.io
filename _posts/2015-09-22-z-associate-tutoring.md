@@ -16,14 +16,14 @@ The article is titled *The Idea of a New University: The School of Physical Scie
 </center><br>
 
 <center>
-*Left to Right: Gabriel Barton, David Bailin, Roger Blin-Stoyle, Norman Dombey. Picture taken by Roger's former student, Peter Rosen, on July 12, 1973. Source: [http://history.phys.susx.ac.uk/Research-TPP](http://history.phys.susx.ac.uk/Research-TPP)*
+*Left to Right: Gabriel Barton, David Bailin, Roger Blin-Stoyle and Norman Dombey outside Pevensey 1 building, University of Sussex, 1973. Source: [http://history.phys.susx.ac.uk/Research-TPP](http://history.phys.susx.ac.uk/Research-TPP)*
 </center>
 
 He begins by outlining two guiding principles to which all students of physics should aspire: **Understanding** and **Inquiry**. Understanding, he explains, is achieved through the interpretation of, 
 
 >*"phenomena at one level... in terms of processes and structures at a more fundamental level"*
 
-This, he explains, leads students of science from all disciplines to the very frontiers of their subjects, and inevitably to areas where they overlap with other sciences or other disciplines. I am a great believer in the benefits of this behaviour, in mixing backgrounds and ideas from different subjects; it leads to novel approaches to problems, and can help researchers to escape the bubble of their specific field that they may often find themselves in. Also, the underlying mathematical constructs of a given field are often readily transferable in isolation. As Roger puts it,
+This leads students of science from all disciplines to the very frontiers of their subjects, and inevitably to areas where they overlap with other sciences or other disciplines. I am a great believer in the benefits of this behaviour, in mixing backgrounds and ideas from different subjects; it leads to novel approaches to problems, and can help researchers to escape the bubble of their specific field that they may often find themselves in. Also, the underlying mathematical constructs of a given field are often readily transferable in isolation. As Roger puts it,
 
 > "The borderlines between the different sciences are diffuse"
 
@@ -31,6 +31,6 @@ His second identified principle is that of *Inquiry*, in particular an instillin
 
 We don't start teaching for a few months yet, but I am already nervous yet excited to begin - it's a pretty terrifying responsibility! However, I hope to keep in mind Roger's guiding principles, and continue the good work he started over 50 years ago.
 
-I'm not sure I'm allowed to share Roger's extract; I will check and post here if so. 
+I'm not sure I'm allowed to share Roger's extract; I will check and post here if so. You can read more about his life, and his significant achievements in the nuclear sciences,  [here](http://www.theguardian.com/science/2007/feb/20/guardianobituaries.highereducation).
 
 
