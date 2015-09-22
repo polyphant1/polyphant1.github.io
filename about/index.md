@@ -6,7 +6,7 @@ title: About
 <img src="/assets/profile.jpg" alt="#" class="img-responsive img-circle"
 <br>
 <br>
-Data Scientist based in London working on data led digital projects.<br>
+Doctoral Student in Astronomy & Astrophysics at the University of Sussex.<br>
 
 I'm active on Stack Exchange, mostly in the Astronomy and Stack Overflow sites. Click the flair below to link to my profile.
 <br><br>
