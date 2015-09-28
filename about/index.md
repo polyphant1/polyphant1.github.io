@@ -6,7 +6,7 @@ title: About
 <img src="/assets/profile.jpg" alt="#" class="img-responsive img-circle"
 <br>
 <br>
-Doctoral Student in Astronomy & Astrophysics at the University of Sussex.<br>
+Doctoral Student in Astronomy & Astrophysics at the University of Sussex. See [here](http://www.sussex.ac.uk/profiles/363743) for contact details, and to read more on my current research.<br> 
 
 I'm active on Stack Exchange, mostly in the Astronomy and Stack Overflow sites. Click the flair below to link to my profile.
 <br><br>
