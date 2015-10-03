@@ -7,6 +7,8 @@ featured_image: /images/hdf.gif
 excerpt: Results of a topic model run on speeches from the prime ministers office during the coalition years.
 ---
 
+> If you just want to play with pretty interactive things, scroll down and click on the image. Once you've finished, come back and humour me by reading the rest
+
 Computational text analysis is a rapidly growing field of research that promises to extract meaningful information from one of the most abundant and fundamentally unstructured data sources that humans produce.
 
 To understand a body of text you have to read it - however, getting computers to do some of the reading for you is not only (a lot) quicker, but can also uncover hidden patterns in the structure of the text that you, as an inconsistent, blind, blundering and fallible human, wouldn't.
