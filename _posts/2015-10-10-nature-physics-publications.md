@@ -16,6 +16,7 @@ They find an interesting discontinuity in citation numbers around 1960, which th
 <center>
 ![citation age](/images/nature1.jpg)
 </center>
+<center>*Average age of citations for papers in the data set over time*</center>
 
 This trend for citing older papers continued in the years after the 60s, and the authors again find an elegant explanation: peer review. Before the 60's, papers were commonly accepted at the discretion of editors. There was no practical alternative; it was difficult to share papers with a large audience before the invention of photocopying, or sharing online. I suspect there may also have been an element of bias toward established colleagues. However, once peer review became common place, trust in papers from this point onwards increased and authors had greater confidence in reaching further back in history for inspiration.
 
@@ -24,6 +25,8 @@ Another interesting conclusion is that "the smaller a sub-field, the more self-r
 <br><center>
 ![citation age](/images/nature2.jpg)
 </center><br>
+<center>*The major sub fields in physics arranged as an artificial network to show those that reference each other. Self-connecting loops represent references within the field.*</center>
+
 
 Of course, there is a sub-context to this. Nuclear and particle physics, like astronomy and astrophysics, require very large, very expensive experimental apparatus, involving teams of hundreds, if not thousands of collaborators to function and process the data. Each member of such a team obviously wants to be recognised for their work, and the current metric in academia for doing so is through authorship. The shelf life of such research is also quite low since many such papers are technical summaries of experimental apparatus or approaches that are soon superseded by bigger and better approaches, which is certainly not something that should be discouraged.
 
