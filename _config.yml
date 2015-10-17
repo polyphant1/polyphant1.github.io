@@ -21,7 +21,7 @@ markdown: redcarpet
 highlighter: pygments
 
 # Pagination
-paginate: 5
+paginate: 7
 
 # twitter
 author:
