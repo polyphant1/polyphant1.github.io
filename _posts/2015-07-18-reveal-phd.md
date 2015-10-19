@@ -3,7 +3,6 @@ layout: post
 title: "PhD at UoS"
 comments: true
 date: "Saturday, July 18, 2015"
-featured_image: /images/hdf.gif
 tags:
 - Physics
 excerpt: I'm starting a PhD in September. If you're interested in what that means I'll be doing for the next three and a half years, here's a primer

@@ -3,7 +3,6 @@ layout: post
 title: "Tweets, Runs and the Minnesota Vikings"
 comments: true
 date: "Tuesday, September 01, 2015"
-featured_image: /images/hdf.gif
 tags:
 - Data Science
 excerpt: Post for the Bank of England's blog 'Bank Underground' on a project using Twitter data to try and identify Bank runs in the run up to the Scottish independence referendum

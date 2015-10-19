@@ -3,7 +3,6 @@ layout: post
 title: "How to build a galaxy, #1"
 comments: true
 date: "Monday, September 7, 2015"
-featured_image: /images/hdf.gif
 tags:
 - Physics
 excerpt: Introduction to the work I did for my third year project during my integrated masters, modelling a spiral galaxy

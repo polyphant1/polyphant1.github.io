@@ -3,7 +3,6 @@ layout: post
 title: "New blog design"
 comments: true
 date: "Sunday, June 21, 2015"
-featured_image: /images/hdf.gif
 tags:
 - Technology
 - Meta

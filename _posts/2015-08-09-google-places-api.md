@@ -3,7 +3,6 @@ layout: post
 title: "Finding a cash machine with the Google Places API "
 comments: true
 date: "Sunday, August 9, 2015"
-featured_image: /images/hdf.gif
 tags:
 - Data Science
 excerpt:

@@ -3,8 +3,6 @@ layout: post
 title: "Association Rule Mining in R"
 comments: true
 date: "Sunday, March 08, 2015"
-categories: association_rule_mining
-featured_image: /images/hdf.gif
 tags:
 - Data Science
 excerpt: A method of finding frequent itemsets in large databases, applied to survivor data from the Titanic.

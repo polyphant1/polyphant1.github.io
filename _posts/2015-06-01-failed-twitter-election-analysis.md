@@ -3,7 +3,6 @@ layout: post
 title: "A failed twitter election analysis, and lessons learnt"
 comments: true
 date: "Sunday, June 14, 2015"
-featured_image: /images/hdf.gif
 tags:
 - Data Science
 excerpt: Twitter, MongoDB and yournextmp.com prove no match for socially fickle parliamentarians  

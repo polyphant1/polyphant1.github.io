@@ -3,7 +3,6 @@ layout: post
 title: "Download D3 vis using SVG crowbar"
 comments: true
 date: "Wednesday, September 22, 2015"
-featured_image: /images/hdf.gif
 tags:
 - Technology
 excerpt: How to extract D3 visualisations through the browser using SVG crowbar

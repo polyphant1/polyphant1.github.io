@@ -3,8 +3,6 @@ layout: post
 title: "Adding Google Analytics to GitHub Pages"
 comments: true
 date: "Monday, April 13, 2015"
-categories: github_pages
-featured_image: /images/hdf.gif
 tags:
 - Technology
 excerpt:

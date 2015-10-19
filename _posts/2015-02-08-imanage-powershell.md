@@ -2,9 +2,7 @@
 layout: post
 title:  "iManage Powershell module"
 comments: true
-date:   2015-02-02 12:00:00
-categories: powershell imanage text mining data mining
-featured_image: /images/hdf.gif
+date: "Monday, February 02, 2015"
 tags:
 - Technology
 excerpt:

@@ -3,8 +3,6 @@ layout: post
 title: "How technologically illiterate are our political leaders, and does it matter?"
 comments: true
 date: "Tuesday, May 18, 2015"
-featured_image: /images/hdf.gif
-categories: twitter
 tags:
 - Technology
 excerpt: Lee Hsien Loong, prime minister of Singapore, has released his C++ code for a sudoku solver, setting a standard that all other political leaders should strive for.

@@ -3,7 +3,6 @@ layout: post
 title: "An alternative holiday slideshow using Odyssey.js"
 comments: true
 date: "Tuesday, June 30, 2015"
-featured_image: /images/hdf.gif
 tags:
 - Technology
 excerpt: My girlfriend Annie and I went away to Hong Kong and Dubai earlier this year. Rather than trotting out the usual Facebook holiday photo album I thought I'd do something a little different with our snaps this time.

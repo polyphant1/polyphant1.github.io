@@ -3,7 +3,6 @@ layout: post
 title: "Topic modelling No.10's speeches"
 comments: true
 date: "Saturday, October 3, 2015"
-featured_image: /images/hdf.gif
 tags:
 - Data Science
 excerpt: Results of a topic model run on speeches from the prime ministers office during the coalition years.

@@ -3,7 +3,6 @@ layout: post
 title: "Creating dynamic UI components in Shiny"
 comments: true
 date: "Wednesday, August 19, 2015"
-featured_image: /images/hdf.gif
 tags:
 - Data Science
 excerpt:

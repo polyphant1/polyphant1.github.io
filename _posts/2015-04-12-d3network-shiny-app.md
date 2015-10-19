@@ -3,8 +3,6 @@ layout: post
 title: "UK Domestic Airport Traffic: A Shiny Investigation"
 comments: true
 date: "Sunday, April 12, 2015"
-categories: airport_networks
-featured_image: /images/hdf.gif
 tags:
 - Data Science
 excerpt:

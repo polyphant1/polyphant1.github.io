@@ -2,9 +2,7 @@
 layout: post
 title:  "Microsoft Data Culture Event"
 comments: true
-date:   2015-02-02 12:00:00
-categories: microsoft data culture azure machine learning
-featured_image: /images/hdf.gif
+date: "Monday, February 02, 2015"
 tags:
 - Technology
 excerpt:

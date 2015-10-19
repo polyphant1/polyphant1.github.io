@@ -3,7 +3,6 @@ layout: post
 title: "Using Monte Carlo methods to estimate pi"
 comments: true
 date: "Wednesday, June 24, 2015"
-featured_image: /images/hdf.gif
 tags:
 - Data Science
 excerpt: A brief post on how to find the value of pi, using the law of large numbers and bit of introductory Julia.

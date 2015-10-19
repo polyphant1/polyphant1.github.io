@@ -3,7 +3,6 @@ layout: post
 title: "Educating undergraduates, a guide by Roger Blin-Stoyle"
 comments: true
 date: "Wednesday, September 22, 2015"
-featured_image: /images/hdf.gif
 tags:
 - Physics
 excerpt: Thoughts on an article by Roger Blin-Stoyle, written shortly after the founding of the school of Mathematical and Physical Sciences at Sussex
