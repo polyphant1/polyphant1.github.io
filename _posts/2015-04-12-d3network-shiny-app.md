@@ -5,7 +5,9 @@ comments: true
 date: "Sunday, April 12, 2015"
 categories: airport_networks
 featured_image: /images/hdf.gif
-excerpt: 
+tags:
+- Data Science
+excerpt:
 ---
 
 I've been looking for an excuse to create a [Shiny](http://shiny.rstudio.com/) app, an R based web application, and decided to start with a data set I stumbled upon at work on UK Airport Statistics. The data shows directed passenger traffic between domestic airports over 12 months, and goes back to 1990 (with some unexplained missing data from 1997 to 2000). You can also get data for each individual month, but to begin with I decided to focus on yearly aggregated data.
@@ -22,4 +24,4 @@ The second tab shows some simple graph metrics plotted over time. A significant 
 
 The final tab provides a look at the raw data used to generate the networks and the plots. Shiny reads and renders all this data live, which makes the speed and flexibility pretty impressive. It makes exploration of the data simple, so go ahead and explore, and comment if you find anything interesting.
 
-All the code used to clean the data and generate the app is on [GitHub](https://github.com/polyphant1/UKAirportNetwork). 
+All the code used to clean the data and generate the app is on [GitHub](https://github.com/polyphant1/UKAirportNetwork).

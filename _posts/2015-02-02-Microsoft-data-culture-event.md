@@ -5,6 +5,8 @@ comments: true
 date:   2015-02-02 12:00:00
 categories: microsoft data culture azure machine learning
 featured_image: /images/hdf.gif
+tags:
+- Technology
 excerpt:
 ---
 

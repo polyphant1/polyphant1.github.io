@@ -4,6 +4,8 @@ title: "Google cardboard is awesome"
 comments: true
 date: "Tuesday, July 07, 2015"
 featured_image: /images/hdf.gif
+tags:
+- Technology
 excerpt: Despite reading article after article on, and getting very excited about, virtual reality, I had yet to actually get my hands on a headset. Fortunately, Google solved this issue last year with Project Cardboard; Version 2 has recently been released, so I decided to take the relatively small plunge and grab a headset.
 ---
 

@@ -4,6 +4,8 @@ title: "Topic modelling No.10's speeches"
 comments: true
 date: "Saturday, October 3, 2015"
 featured_image: /images/hdf.gif
+tags:
+- Data Science
 excerpt: Results of a topic model run on speeches from the prime ministers office during the coalition years.
 ---
 
@@ -48,6 +50,6 @@ Finally, there are four overlapping topics in the top right corner, 13, 15, 18 &
 
 Interesting stuff! and powerful - to read these topics and communicate the content in such a consumable, quantitative way by hand would we impossible. The data generated here can be related back to the original documents too, to show how much of a particular topic is mentioned in a given speech; this is very useful for classifying documents.
 
-If I get time I'll add some extra features to the vis so that you can do just that, and also see the speeches themselves, to assess whether you agree with the algorithm. 
+If I get time I'll add some extra features to the vis so that you can do just that, and also see the speeches themselves, to assess whether you agree with the algorithm.
 
 **The relevance metric has an impact on the sorting of the terms. It is a weighting term, adjusting the relative frequency of a word in a topic as compared to in the whole collection of documents. You can see the difference by moving the slider to the extremes - when lambda is one, the most frequent terms in the topic are shown, whereas for lambda equal to zero those terms that are used mostly in this topic are weighted highest.*

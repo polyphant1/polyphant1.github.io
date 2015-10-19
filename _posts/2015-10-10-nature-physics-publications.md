@@ -5,7 +5,7 @@ comments: true
 date: "Saturday, October 10, 2015"
 featured_image: /images/hdf.gif
 tags:
-- physics
+- Physics
 excerpt: Thoughts on a Nature article that takes a data driven approach to understanding the history of physics
 ---
 

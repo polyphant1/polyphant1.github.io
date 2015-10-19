@@ -5,6 +5,8 @@ comments: true
 date:   2015-02-02 12:00:00
 categories: powershell imanage text mining data mining
 featured_image: /images/hdf.gif
+tags:
+- Technology
 excerpt:
 ---
 
@@ -14,7 +16,7 @@ Download the module and load it in to your PowerShell workspace, then point it a
 
 ```powershell
 # import the iManagePowershell module .dll
-"iManagePowerShell.dll" | Import-Module 
+"iManagePowerShell.dll" | Import-Module
 
 # point this at a csv containing 'ID' and 'version no'
 $csv = @(Import-Csv \imanage_docs.csv)
