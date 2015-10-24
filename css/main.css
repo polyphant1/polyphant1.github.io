@@ -20,6 +20,9 @@ img {
     margin-right: auto;
 }
 
+.list-unstyled{
+  list-style-type: none;
+}
 
 /* END: Custom CSS */
 
@@ -100,7 +103,7 @@ article {
 }
 
 .container {
-  padding: 100px 50px;
+  padding: 20px 20px;
   width: 100%;
 }
 
@@ -297,10 +300,12 @@ header ul.meta a:hover{
 }
 
 .previous {
+  padding-left: 10px;
   float: left;
 }
 
 .next {
+  padding: 10px 10px;
   float: right;
 }
 
@@ -332,7 +337,7 @@ article {
 
 
 article .container {
-  padding-top: 80px;
+  padding-top: 60px;
 }
 
 @media (max-width: 960px) {
@@ -352,7 +357,7 @@ article p {
 article li {
   /*margin-left: 3em;*/
   margin-bottom: 9px;
-  list-style-type: disc;
+  /*list-style-type: disc;*/
 }
 
 @media (max-width: 960px) {
