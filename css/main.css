@@ -193,7 +193,7 @@ header .container {
 
 @media screen and (max-width: 960px){
   #home-header .container {
-    padding: 100px 50px;
+    /*padding: 0px 0px;*/
   }
 
   header .container {
@@ -205,20 +205,21 @@ header .container {
 }
 
 header .home_button {
-  position: absolute;
+  /*position: absolute;*/
   top: 10px;
   left: 10px;
-  display: block;
+  /*display: block;*/
   width: 21px;
   height: 18px;
   border-radius: 4px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   line-height: 40px;
   font-size: 14px;
-  color: rgba(255, 255, 255, 0.5);
+  color: #ce2323; /*rgba(255, 255, 255, 0.5);*/
   text-decoration: none;
   text-align: center;
-  background-image: url(../images/icon_home.png);
+  /*background-image: url(../images/icon_home.png);*/
+  background-image: url(../images/icon_home_hover.png);
   background-position: center;
   background-repeat: no-repeat;
   padding: 20px;
@@ -227,13 +228,13 @@ header .home_button {
 }
 
 header .home_button:hover {
-  background: #fff;
+  /*background: #fff;
   background-image: url(../images/icon_home_hover.png);
   background-position: center;
   background-repeat: no-repeat;
   color: #ce2323;
   transition: background 300ms linear;
-  -webkit-transition: background 300ms linear;
+  -webkit-transition: background 300ms linear;*/
 }
 
 header a:hover{
@@ -300,12 +301,16 @@ header ul.meta a:hover{
 }
 
 .previous {
-  padding-left: 10px;
+  padding-left: 50px;
   float: left;
 }
 
+.home {
+  text-align: center;
+}
+
 .next {
-  padding: 10px 10px;
+  padding-right: 50px;
   float: right;
 }
 
@@ -317,7 +322,7 @@ header ul.meta a:hover{
   font-family: 'Open Sans', sans-serif;
   font-size: 12px;
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.5);
+  color: black; /*rgba(255, 255, 255, 0.5);*/
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 1px;

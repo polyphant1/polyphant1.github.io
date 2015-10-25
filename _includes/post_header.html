@@ -1,6 +1,6 @@
 <header id="home-header">
   <div class="container post-container">
-    <a href="{{ site.baseurl }}/" class="home_button"></a>
+
     <div class="inner-container">
       <h1>{{ page.title }}</h1>
       <ul class="meta">
@@ -23,21 +23,28 @@
       </ul>
     </div>
 
-    <ul class="pagination_custom">
+    <div class="pagination_custom">
       {% if page.previous.url %}
-        <li class="previous">
+        <div class="previous">
           <a href="{{ site.baseurl }}{{ page.previous.url }}">
             Previous
           </a>
-        </li>
+        </div>
       {% endif %}
+
       {% if page.next.url %}
-        <li class="next">
+        <div class="next">
           <a href="{{ site.baseurl }}{{ page.next.url }}">
             Next
           </a>
-        </li>
+        </div>
       {% endif %}
+
+      <div class="home">
+        <a href="{{ site.baseurl }}/">
+          Home
+        </a>
+      </div>
     </ul>
   </div>
 </header>
