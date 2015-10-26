@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Site updated with tags, and a new coat"
+title: "Blog now sporting a new winter coat with tags"
 comments: true
 date: "Monday, October 26, 2015"
 tags:
