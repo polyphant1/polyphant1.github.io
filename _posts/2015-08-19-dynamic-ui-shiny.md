@@ -3,11 +3,12 @@ layout: post
 title: "Creating dynamic UI components in Shiny"
 comments: true
 date: "Wednesday, August 19, 2015"
-featured_image: /images/hdf.gif
-excerpt: 
+tags:
+- Data Science
+excerpt:
 ---
 
-I was recently trying to implement some dynamic functionality in Shiny. The aim was to have a set number of UI elements load depending on a numeric value entered by the user, and then use the data input in these elements later in the app. 
+I was recently trying to implement some dynamic functionality in Shiny. The aim was to have a set number of UI elements load depending on a numeric value entered by the user, and then use the data input in these elements later in the app.
 
 I found the following thread on [SO](http://stackoverflow.com/questions/19130455/create-dynamic-number-of-input-elements-with-r-shiny/32089489#32089489) by someone having the same issue. The first answer details how to create a series of UI elements dynamically; the following snippet shows a similar example that creates a series of `numericInput` elements depending on the value entered in the drop down,
 
@@ -16,7 +17,7 @@ I found the following thread on [SO](http://stackoverflow.com/questions/19130455
 
 output$input_ui <- renderUI({
     num <- as.integer(input$num)
-    
+
     lapply(1:num, function(i) {
       numericInput(paste0("n_input_", i), label = paste0("n_input", i), value = 0)
     })

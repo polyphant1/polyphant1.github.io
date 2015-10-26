@@ -3,11 +3,12 @@ layout: post
 title: "Finding a cash machine with the Google Places API "
 comments: true
 date: "Sunday, August 9, 2015"
-featured_image: /images/hdf.gif
-excerpt: 
+tags:
+- Data Science
+excerpt:
 ---
 
-Trying to find a free cash machine is one of the great challenges faced by Londoners, up there with getting a pint for less than £4 and renting a property close to the center without having to live on bread and water for the rest of the year. Unfortunately web technology has been a bit tardy in coming up with a solution; there are some of independent web apps from different [machine](http://www.visa.com/atmlocator/index.jsp) [companies](http://www.link.co.uk/ATMLocator/Pages/ATMLocator.aspx), and a couple of apps on the google app store with [mixed](https://play.google.com/store/apps/details?id=com.moneypass&hl=en) [reviews](https://play.google.com/store/apps/details?id=com.souf.nearbyATM&hl=en), and that's about it. 
+Trying to find a free cash machine is one of the great challenges faced by Londoners, up there with getting a pint for less than £4 and renting a property close to the center without having to live on bread and water for the rest of the year. Unfortunately web technology has been a bit tardy in coming up with a solution; there are some of independent web apps from different [machine](http://www.visa.com/atmlocator/index.jsp) [companies](http://www.link.co.uk/ATMLocator/Pages/ATMLocator.aspx), and a couple of apps on the google app store with [mixed](https://play.google.com/store/apps/details?id=com.moneypass&hl=en) [reviews](https://play.google.com/store/apps/details?id=com.souf.nearbyATM&hl=en), and that's about it.
 
 Whilst doing a project at work recently I discovered the [Google places API](https://developers.google.com/places/?hl=en), which provides an interface to Google Maps' huge database of places around the globe. You can search for nearby places given a position, and filter by different place types, including _atm's_. It doesn't differentiate between surcharge free API's, or those inside Bank's, but it also doesn't discriminate between ATM type; not perfect, but a start.
 

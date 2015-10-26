@@ -3,8 +3,8 @@ layout: post
 title: "Association Rule Mining in R"
 comments: true
 date: "Sunday, March 08, 2015"
-categories: association_rule_mining
-featured_image: /images/hdf.gif
+tags:
+- Data Science
 excerpt: A method of finding frequent itemsets in large databases, applied to survivor data from the Titanic.
 ---
 
@@ -58,9 +58,9 @@ code {
   font-size:1em;
 }
 pre code{padding:0;font-size:inherit;color:inherit;white-space:pre-wrap;background-color:transparent;border-radius:0;}
-img { 
-  max-width:100%; 
-  height: auto; 
+img {
+  max-width:100%;
+  height: auto;
 }
 pre{display:block;padding:9.5px;margin:0 0 10px;font-size:13px;line-height:1.42857143;color:#333;word-break:break-all;word-wrap:break-word;background-color:#f5f5f5;border:1px solid #ccc;border-radius:4px}
 </style>
@@ -123,7 +123,7 @@ head(titanic.data)</code></pre>
 <pre><code>##   Class         Sex          Age       Survived  
 ##  1st :325   Female: 470   Adult:2092   No :1490  
 ##  2nd :285   Male  :1731   Child: 109   Yes: 711  
-##  3rd :706                                        
+##  3rd :706
 ##  Crew:885</code></pre>
 </div>
 <div id="rule-mining" class="section level2">
@@ -139,17 +139,17 @@ end
 return all frequent itemsets</code></pre>
 <p>Here I call the <em>apriori</em> function on the Titanic data frame, which returns 27 rules printed below along with their support, confidence and lift.</p>
 <pre class="r"><code>rules.all&lt;-apriori(titanic.data)</code></pre>
-<pre><code>## 
+<pre><code>##
 ## parameter specification:
 ##  confidence minval smax arem  aval originalSupport support minlen maxlen
 ##         0.8    0.1    1 none FALSE            TRUE     0.1      1     10
 ##  target   ext
 ##   rules FALSE
-## 
+##
 ## algorithmic control:
 ##  filter tree heap memopt load sort verbose
 ##     0.1 TRUE TRUE  FALSE TRUE    2    TRUE
-## 
+##
 ## apriori - find association rules with the apriori algorithm
 ## version 4.21 (2004.05.09)        (c) 1996-2004   Christian Borgelt
 ## set item appearances ...[0 item(s)] done [0.00s].
@@ -174,42 +174,42 @@ return all frequent itemsets</code></pre>
 ## 9  {Survived=No}  =&gt; {Sex=Male}    0.6197183  0.9154362 1.1639949
 ## 10 {Survived=No}  =&gt; {Age=Adult}   0.6533394  0.9651007 1.0153856
 ## 11 {Sex=Male}     =&gt; {Age=Adult}   0.7573830  0.9630272 1.0132040
-## 12 {Sex=Female,                                                  
+## 12 {Sex=Female,
 ##     Survived=Yes} =&gt; {Age=Adult}   0.1435711  0.9186047 0.9664669
-## 13 {Class=3rd,                                                   
+## 13 {Class=3rd,
 ##     Sex=Male}     =&gt; {Survived=No} 0.1917310  0.8274510 1.2222950
-## 14 {Class=3rd,                                                   
+## 14 {Class=3rd,
 ##     Survived=No}  =&gt; {Age=Adult}   0.2162653  0.9015152 0.9484870
-## 15 {Class=3rd,                                                   
+## 15 {Class=3rd,
 ##     Sex=Male}     =&gt; {Age=Adult}   0.2099046  0.9058824 0.9530818
-## 16 {Sex=Male,                                                    
+## 16 {Sex=Male,
 ##     Survived=Yes} =&gt; {Age=Adult}   0.1535666  0.9209809 0.9689670
-## 17 {Class=Crew,                                                  
+## 17 {Class=Crew,
 ##     Survived=No}  =&gt; {Sex=Male}    0.3044071  0.9955423 1.2658514
-## 18 {Class=Crew,                                                  
+## 18 {Class=Crew,
 ##     Survived=No}  =&gt; {Age=Adult}   0.3057701  1.0000000 1.0521033
-## 19 {Class=Crew,                                                  
+## 19 {Class=Crew,
 ##     Sex=Male}     =&gt; {Age=Adult}   0.3916402  1.0000000 1.0521033
-## 20 {Class=Crew,                                                  
+## 20 {Class=Crew,
 ##     Age=Adult}    =&gt; {Sex=Male}    0.3916402  0.9740113 1.2384742
-## 21 {Sex=Male,                                                    
+## 21 {Sex=Male,
 ##     Survived=No}  =&gt; {Age=Adult}   0.6038164  0.9743402 1.0251065
-## 22 {Age=Adult,                                                   
+## 22 {Age=Adult,
 ##     Survived=No}  =&gt; {Sex=Male}    0.6038164  0.9242003 1.1751385
-## 23 {Class=3rd,                                                   
-##     Sex=Male,                                                    
+## 23 {Class=3rd,
+##     Sex=Male,
 ##     Survived=No}  =&gt; {Age=Adult}   0.1758292  0.9170616 0.9648435
-## 24 {Class=3rd,                                                   
-##     Age=Adult,                                                   
+## 24 {Class=3rd,
+##     Age=Adult,
 ##     Survived=No}  =&gt; {Sex=Male}    0.1758292  0.8130252 1.0337773
-## 25 {Class=3rd,                                                   
-##     Sex=Male,                                                    
+## 25 {Class=3rd,
+##     Sex=Male,
 ##     Age=Adult}    =&gt; {Survived=No} 0.1758292  0.8376623 1.2373791
-## 26 {Class=Crew,                                                  
-##     Sex=Male,                                                    
+## 26 {Class=Crew,
+##     Sex=Male,
 ##     Survived=No}  =&gt; {Age=Adult}   0.3044071  1.0000000 1.0521033
-## 27 {Class=Crew,                                                  
-##     Age=Adult,                                                   
+## 27 {Class=Crew,
+##     Age=Adult,
 ##     Survived=No}  =&gt; {Sex=Male}    0.3044071  0.9955423 1.2658514</code></pre>
 <p>Suppose we are only interested in rules satisfying certain constraints, for example those with “Survived” in the consequent. We pass both <em>Survived=Yes</em> and <em>Survived=No</em> to the <em>rhs</em> in the appearance argument to filter only rules satisfying these constraints, and <em>default</em> equal to <em>lhs</em> so that all left hand side arguments (antecedents) are returned.</p>
 <pre class="r"><code>rules&lt;-apriori(titanic.data,control=list(verbose=F),
@@ -221,35 +221,35 @@ return all frequent itemsets</code></pre>
 rules&lt;-sort(rules,by=&quot;lift&quot;)
 inspect(rules)</code></pre>
 <pre><code>##    lhs             rhs            support confidence  lift
-## 1  {Class=2nd,                                            
+## 1  {Class=2nd,
 ##     Age=Child}  =&gt; {Survived=Yes}   0.011      1.000 3.096
-## 2  {Class=2nd,                                            
-##     Sex=Female,                                           
+## 2  {Class=2nd,
+##     Sex=Female,
 ##     Age=Child}  =&gt; {Survived=Yes}   0.006      1.000 3.096
-## 3  {Class=1st,                                            
+## 3  {Class=1st,
 ##     Sex=Female} =&gt; {Survived=Yes}   0.064      0.972 3.010
-## 4  {Class=1st,                                            
-##     Sex=Female,                                           
+## 4  {Class=1st,
+##     Sex=Female,
 ##     Age=Adult}  =&gt; {Survived=Yes}   0.064      0.972 3.010
-## 5  {Class=2nd,                                            
+## 5  {Class=2nd,
 ##     Sex=Female} =&gt; {Survived=Yes}   0.042      0.877 2.716
-## 6  {Class=Crew,                                           
+## 6  {Class=Crew,
 ##     Sex=Female} =&gt; {Survived=Yes}   0.009      0.870 2.692
-## 7  {Class=Crew,                                           
-##     Sex=Female,                                           
+## 7  {Class=Crew,
+##     Sex=Female,
 ##     Age=Adult}  =&gt; {Survived=Yes}   0.009      0.870 2.692
-## 8  {Class=2nd,                                            
-##     Sex=Female,                                           
+## 8  {Class=2nd,
+##     Sex=Female,
 ##     Age=Adult}  =&gt; {Survived=Yes}   0.036      0.860 2.663
-## 9  {Class=2nd,                                            
-##     Sex=Male,                                             
+## 9  {Class=2nd,
+##     Sex=Male,
 ##     Age=Adult}  =&gt; {Survived=No}    0.070      0.917 1.354
-## 10 {Class=2nd,                                            
+## 10 {Class=2nd,
 ##     Sex=Male}   =&gt; {Survived=No}    0.070      0.860 1.271
-## 11 {Class=3rd,                                            
-##     Sex=Male,                                             
+## 11 {Class=3rd,
+##     Sex=Male,
 ##     Age=Adult}  =&gt; {Survived=No}    0.176      0.838 1.237
-## 12 {Class=3rd,                                            
+## 12 {Class=3rd,
 ##     Sex=Male}   =&gt; {Survived=No}    0.192      0.827 1.222</code></pre>
 <p>From this quick analysis we have already mined some interesting patterns. Children travelling second class all survived the sinking, evidenced by the hundred percent confidence in this rule. It is also the rule in our subset with the highest lift (711 of 2201 people survived the sinking, so there is a 32.3% chance of survival. <span class="math">\(\frac{Conf(A=&gt;B)}{P(B)} = 1/32.3 = 3.096\)</span>). However, there is also some redundancy: our second highest rule is that female children travelling in second class survived; this information is already implied explicitly in our first rule.</p>
 <p>Generally speaking we can remove those supersets where the lift of the superset is lower than the lift of the subset. The function <em>is.subset</em> in <em>arules</em> identifies all subsets, which we use to filter our rule set.</p>
@@ -264,23 +264,23 @@ redundant&lt;-colSums(rules.subset,na.rm = T)&gt;=1
 rules.pruned&lt;-rules[!redundant]
 inspect(rules.pruned)</code></pre>
 <pre><code>##   lhs             rhs            support confidence  lift
-## 1 {Class=2nd,                                            
+## 1 {Class=2nd,
 ##    Age=Child}  =&gt; {Survived=Yes}   0.011      1.000 3.096
-## 2 {Class=1st,                                            
+## 2 {Class=1st,
 ##    Sex=Female} =&gt; {Survived=Yes}   0.064      0.972 3.010
-## 3 {Class=2nd,                                            
+## 3 {Class=2nd,
 ##    Sex=Female} =&gt; {Survived=Yes}   0.042      0.877 2.716
-## 4 {Class=Crew,                                           
+## 4 {Class=Crew,
 ##    Sex=Female} =&gt; {Survived=Yes}   0.009      0.870 2.692
-## 5 {Class=2nd,                                            
-##    Sex=Male,                                             
+## 5 {Class=2nd,
+##    Sex=Male,
 ##    Age=Adult}  =&gt; {Survived=No}    0.070      0.917 1.354
-## 6 {Class=2nd,                                            
+## 6 {Class=2nd,
 ##    Sex=Male}   =&gt; {Survived=No}    0.070      0.860 1.271
-## 7 {Class=3rd,                                            
-##    Sex=Male,                                             
+## 7 {Class=3rd,
+##    Sex=Male,
 ##    Age=Adult}  =&gt; {Survived=No}    0.176      0.838 1.237
-## 8 {Class=3rd,                                            
+## 8 {Class=3rd,
 ##    Sex=Male}   =&gt; {Survived=No}    0.192      0.827 1.222</code></pre>
 <p>The first rule states that all children travelling second class survived. How about children in other classes? We cannot from this pruned rule set make any comparisons since there are no corresponding rules for children travelling in other classes, due to the fact that the support and confidence of these rules are below the limits we set previously. To find these rules we reset our filters for both the left and right hand sides of our rules, and loosen our parameter constraints.</p>
 <pre class="r"><code>rules.children&lt;-apriori(titanic.data,
@@ -293,11 +293,11 @@ inspect(rules.pruned)</code></pre>
 rules.children&lt;-sort(rules.children,by=&quot;confidence&quot;)
 inspect(rules.children)</code></pre>
 <pre><code>##   lhs            rhs                support confidence     lift
-## 1 {Class=2nd,                                                  
+## 1 {Class=2nd,
 ##    Age=Child} =&gt; {Survived=Yes} 0.010904134  1.0000000 3.095640
-## 2 {Class=1st,                                                  
+## 2 {Class=1st,
 ##    Age=Child} =&gt; {Survived=Yes} 0.002726034  1.0000000 3.095640
-## 3 {Class=3rd,                                                  
+## 3 {Class=3rd,
 ##    Age=Child} =&gt; {Survived=Yes} 0.012267151  0.3417722 1.058004</code></pre>
 <p>We can now see that all children in first and second class survived, but only 34% of children in third class, of which there were as many as in first and second class combined. Pretty miserable stuff.</p>
 </div>
@@ -312,28 +312,28 @@ inspect(rules.children)</code></pre>
 <p>If heatmaps are your thing then the matrix method will plot each antecedent against it’s consequent with a further dimension defining the shading. The names are printed in the console but I can’t work out how to include them on the plot.</p>
 <pre class="r"><code>plot(rules.all,method=&quot;matrix&quot;,type=&quot;grid&quot;,measure=c(&quot;confidence&quot;))</code></pre>
 <pre><code>## Itemsets in Antecedent (LHS)
-##  [1] &quot;{}&quot;                                
-##  [2] &quot;{Class=2nd}&quot;                       
-##  [3] &quot;{Class=1st}&quot;                       
-##  [4] &quot;{Sex=Female}&quot;                      
-##  [5] &quot;{Class=3rd}&quot;                       
-##  [6] &quot;{Survived=Yes}&quot;                    
-##  [7] &quot;{Class=Crew}&quot;                      
-##  [8] &quot;{Survived=No}&quot;                     
-##  [9] &quot;{Sex=Male}&quot;                        
-## [10] &quot;{Sex=Female,Survived=Yes}&quot;         
-## [11] &quot;{Class=3rd,Sex=Male}&quot;              
-## [12] &quot;{Class=3rd,Survived=No}&quot;           
-## [13] &quot;{Sex=Male,Survived=Yes}&quot;           
-## [14] &quot;{Class=Crew,Survived=No}&quot;          
-## [15] &quot;{Class=Crew,Sex=Male}&quot;             
-## [16] &quot;{Class=Crew,Age=Adult}&quot;            
-## [17] &quot;{Sex=Male,Survived=No}&quot;            
-## [18] &quot;{Age=Adult,Survived=No}&quot;           
+##  [1] &quot;{}&quot;
+##  [2] &quot;{Class=2nd}&quot;
+##  [3] &quot;{Class=1st}&quot;
+##  [4] &quot;{Sex=Female}&quot;
+##  [5] &quot;{Class=3rd}&quot;
+##  [6] &quot;{Survived=Yes}&quot;
+##  [7] &quot;{Class=Crew}&quot;
+##  [8] &quot;{Survived=No}&quot;
+##  [9] &quot;{Sex=Male}&quot;
+## [10] &quot;{Sex=Female,Survived=Yes}&quot;
+## [11] &quot;{Class=3rd,Sex=Male}&quot;
+## [12] &quot;{Class=3rd,Survived=No}&quot;
+## [13] &quot;{Sex=Male,Survived=Yes}&quot;
+## [14] &quot;{Class=Crew,Survived=No}&quot;
+## [15] &quot;{Class=Crew,Sex=Male}&quot;
+## [16] &quot;{Class=Crew,Age=Adult}&quot;
+## [17] &quot;{Sex=Male,Survived=No}&quot;
+## [18] &quot;{Age=Adult,Survived=No}&quot;
 ## [19] &quot;{Class=3rd,Sex=Male,Survived=No}&quot;  
-## [20] &quot;{Class=3rd,Age=Adult,Survived=No}&quot; 
-## [21] &quot;{Class=3rd,Sex=Male,Age=Adult}&quot;    
-## [22] &quot;{Class=Crew,Sex=Male,Survived=No}&quot; 
+## [20] &quot;{Class=3rd,Age=Adult,Survived=No}&quot;
+## [21] &quot;{Class=3rd,Sex=Male,Age=Adult}&quot;
+## [22] &quot;{Class=Crew,Sex=Male,Survived=No}&quot;
 ## [23] &quot;{Class=Crew,Age=Adult,Survived=No}&quot;
 ## Itemsets in Consequent (RHS)
 ## [1] &quot;{Age=Adult}&quot;   &quot;{Sex=Male}&quot;    &quot;{Survived=No}&quot;</code></pre>
@@ -341,28 +341,28 @@ inspect(rules.children)</code></pre>
 <p>You can also plot it in 3D… providing further evidence that 3D plots are in most cases useless if you want to actually learn anything from your data vis.</p>
 <pre class="r"><code>plot(rules.all,method=&quot;matrix3D&quot;)</code></pre>
 <pre><code>## Itemsets in Antecedent (LHS)
-##  [1] &quot;{}&quot;                                
-##  [2] &quot;{Class=2nd}&quot;                       
-##  [3] &quot;{Class=1st}&quot;                       
-##  [4] &quot;{Sex=Female}&quot;                      
-##  [5] &quot;{Class=3rd}&quot;                       
-##  [6] &quot;{Survived=Yes}&quot;                    
-##  [7] &quot;{Class=Crew}&quot;                      
-##  [8] &quot;{Survived=No}&quot;                     
-##  [9] &quot;{Sex=Male}&quot;                        
-## [10] &quot;{Sex=Female,Survived=Yes}&quot;         
-## [11] &quot;{Class=3rd,Sex=Male}&quot;              
-## [12] &quot;{Class=3rd,Survived=No}&quot;           
-## [13] &quot;{Sex=Male,Survived=Yes}&quot;           
-## [14] &quot;{Class=Crew,Survived=No}&quot;          
-## [15] &quot;{Class=Crew,Sex=Male}&quot;             
-## [16] &quot;{Class=Crew,Age=Adult}&quot;            
-## [17] &quot;{Sex=Male,Survived=No}&quot;            
-## [18] &quot;{Age=Adult,Survived=No}&quot;           
+##  [1] &quot;{}&quot;
+##  [2] &quot;{Class=2nd}&quot;
+##  [3] &quot;{Class=1st}&quot;
+##  [4] &quot;{Sex=Female}&quot;
+##  [5] &quot;{Class=3rd}&quot;
+##  [6] &quot;{Survived=Yes}&quot;
+##  [7] &quot;{Class=Crew}&quot;
+##  [8] &quot;{Survived=No}&quot;
+##  [9] &quot;{Sex=Male}&quot;
+## [10] &quot;{Sex=Female,Survived=Yes}&quot;
+## [11] &quot;{Class=3rd,Sex=Male}&quot;
+## [12] &quot;{Class=3rd,Survived=No}&quot;
+## [13] &quot;{Sex=Male,Survived=Yes}&quot;
+## [14] &quot;{Class=Crew,Survived=No}&quot;
+## [15] &quot;{Class=Crew,Sex=Male}&quot;
+## [16] &quot;{Class=Crew,Age=Adult}&quot;
+## [17] &quot;{Sex=Male,Survived=No}&quot;
+## [18] &quot;{Age=Adult,Survived=No}&quot;
 ## [19] &quot;{Class=3rd,Sex=Male,Survived=No}&quot;  
-## [20] &quot;{Class=3rd,Age=Adult,Survived=No}&quot; 
-## [21] &quot;{Class=3rd,Sex=Male,Age=Adult}&quot;    
-## [22] &quot;{Class=Crew,Sex=Male,Survived=No}&quot; 
+## [20] &quot;{Class=3rd,Age=Adult,Survived=No}&quot;
+## [21] &quot;{Class=3rd,Sex=Male,Age=Adult}&quot;
+## [22] &quot;{Class=Crew,Sex=Male,Survived=No}&quot;
 ## [23] &quot;{Class=Crew,Age=Adult,Survived=No}&quot;
 ## Itemsets in Consequent (RHS)
 ## [1] &quot;{Age=Adult}&quot;   &quot;{Sex=Male}&quot;    &quot;{Survived=No}&quot;</code></pre>

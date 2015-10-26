@@ -3,13 +3,14 @@ layout: post
 title: "Using Monte Carlo methods to estimate pi"
 comments: true
 date: "Wednesday, June 24, 2015"
-featured_image: /images/hdf.gif
+tags:
+- Data Science
 excerpt: A brief post on how to find the value of pi, using the law of large numbers and bit of introductory Julia.
 ---
 
 You've just bought a brand new computer. You excitedly rip open the packaging, carefully extract it from the box, remove the protective film from the screen (so satisfying) and, after 10 hours of charging, boot it up. It turns on fine, and everything seems to be functioning normally. It's only after a few minutes of use that you discover, to your horror, that the manufacturer has forgotten to store the constant $\pi$ on the operating system. How are you going to play [Kerbal space program](https://kerbalspaceprogram.com/en/) if you can't calculate the equations of motion of your rockets and space probes?!
 
-One way around this is to use Monte Carlo methods, taking advantage of the law of large numbers to gain a reasonable approximation of pi to a few decimal places. In this post I'll demonstrate this using Julia (we'll conveniently ignore the fact that Julia has the number $\pi$ in it), which I've just started learning and having a play with. 
+One way around this is to use Monte Carlo methods, taking advantage of the law of large numbers to gain a reasonable approximation of pi to a few decimal places. In this post I'll demonstrate this using Julia (we'll conveniently ignore the fact that Julia has the number $\pi$ in it), which I've just started learning and having a play with.
 
 Take a square of side $a$, centred on the origin. Now place a circle inside the box with radius $a/2$, also centred on the origin. The area of the rectangle is $a^2$, and the area of the circle is $\pi(a/2)^2$.
 
@@ -35,7 +36,7 @@ If we take any random point within the rectangle, then the probability that this
 $$P(circle)=\frac{A\_{circle}}{A\_{square}}=\frac{\pi (a/2)^2}{a^2}$$
 
 
-If we take $n$ points, then as $n$ gets very large the fraction of points that lie within the circle will converge to the probability of landing in the circle, $P(circle)$. 
+If we take $n$ points, then as $n$ gets very large the fraction of points that lie within the circle will converge to the probability of landing in the circle, $P(circle)$.
 
 Expanding and rearranging our equation above for $\pi$,
 
@@ -58,7 +59,7 @@ for i = 1:n
     df[i,:r] = (df[i,:x]^2 + df[i,:y]^2)^.5
     if df[i,:r] < 0.5
         df[i,:c] = "in"
-    else 
+    else
         df[i,:c] = "out"
     end
 end

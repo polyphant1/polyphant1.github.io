@@ -3,7 +3,8 @@ layout: post
 title: "PhD at UoS"
 comments: true
 date: "Saturday, July 18, 2015"
-featured_image: /images/hdf.gif
+tags:
+- Physics
 excerpt: I'm starting a PhD in September. If you're interested in what that means I'll be doing for the next three and a half years, here's a primer
 ---
 
@@ -19,6 +20,6 @@ In summary, modern astrophysics is the study of how the universe works, in part 
 
 >_"Using semi-analytic and hydrodynamical simulations of galaxy formation to explore the formation and evolution of galaxies to z=6, and make predictions for JWST."_
 
-In other words, use computer simulations to study some of the first galaxies that formed in the universe, and use the results to make predictions for what the [James Webb Space Telescope](http://www.jwst.nasa.gov/) will see after launch in October 2018. This captures the spirit of my introductory explanation; use models, simulated using computers, to understand how a physical process works, and then test that model against observations. 
+In other words, use computer simulations to study some of the first galaxies that formed in the universe, and use the results to make predictions for what the [James Webb Space Telescope](http://www.jwst.nasa.gov/) will see after launch in October 2018. This captures the spirit of my introductory explanation; use models, simulated using computers, to understand how a physical process works, and then test that model against observations.
 
 I can't wait to get started; looking forward to achieving the childhood dream of being a real scientist!

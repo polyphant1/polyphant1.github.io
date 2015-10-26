@@ -20,6 +20,40 @@ img {
     margin-right: auto;
 }
 
+.list-unstyled{
+  list-style-type: none;
+}
+
+#home-header .navbar-brand{
+  display: none;
+}
+
+.fb-like {
+  float:left;
+  padding-right: 5px;
+}
+
+.post-date {
+  padding-right: 5px;
+  padding-top: 8px;
+}
+
+.post-meta {
+  padding-top: 8px;
+}
+
+.navbar {
+    position: static;
+}
+
+.nav-collapse {
+  z-index: 2;
+}
+
+.collapse {
+  z-index: 2;
+}
+
 
 /* END: Custom CSS */
 
@@ -50,7 +84,6 @@ h1 {
   line-height: 1.3;
   font-weight: 600;
   font-size: 50px;
-  color: #FFF;
 }
 
 h2 {
@@ -58,6 +91,18 @@ h2 {
   font-size: 24px;
   margin-bottom: 18px;
   margin-top: 36px;
+}
+
+.site-title{
+  color: black;
+}
+
+.site-tagline{
+  padding-bottom: 20px;
+}
+
+header {
+  background-color: white;
 }
 
 blockquote {
@@ -89,7 +134,7 @@ article {
 }
 
 .container {
-  padding: 100px 50px;
+  padding: 20px 20px;
   width: 100%;
 }
 
@@ -115,7 +160,7 @@ header {
   background-size: cover;
   /*-webkit-filter: grayscale(1);
   filter: grayscale(1);*/
-  overflow: hidden;
+  overflow: visible;
 }
 
 @media (max-width: 960px) {
@@ -141,14 +186,18 @@ header:after {
 header .container {
   padding: 0 50px;
   z-index: 1;
+  background-clip: content-box;
+  background-color: white;
+  border-radius: 50px;
 }
 
 
 @media screen and (min-width: 961px){
-  #home-header .container {
+  #home-header .container, #post-header .container {
     position: absolute;
     top: 50%;
     left: 50%;
+
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
@@ -175,48 +224,27 @@ header .container {
 }
 
 @media screen and (max-width: 960px){
-  #home-header .container {
-    padding: 100px 50px;
+  #home-header .container, #post-header .container {
+    padding: 10px 20px;
   }
 
   header .container {
     padding: 80px 0 10px;
   }
   header .container .inner-container {
-    padding: 0 50px;
+    padding: 0 10px;
   }
-}
 
-header .home_button {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  display: block;
-  width: 21px;
-  height: 18px;
-  border-radius: 4px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  line-height: 40px;
-  font-size: 14px;
-  color: rgba(255, 255, 255, 0.5);
-  text-decoration: none;
-  text-align: center;
-  background-image: url(../images/icon_home.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  padding: 20px;
-  transition: background 300ms linear;
-  -webkit-transition: background 300ms linear;
-}
+  #home-header .navbar-brand{
+    display: block;
+  }
+  .post-date {
+    float: left;
+  }
 
-header .home_button:hover {
-  background: #fff;
-  background-image: url(../images/icon_home_hover.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  color: #ce2323;
-  transition: background 300ms linear;
-  -webkit-transition: background 300ms linear;
+  .site-title, .site-tagline {
+    display:none;
+  }
 }
 
 header a:hover{
@@ -234,7 +262,7 @@ header ul.meta {
   }
 }
 
-#home-header ul.meta {
+#home-header ul.meta, #post-header ul.meta {
   margin-top: 15px;
   padding:0;
   list-style-type: none;
@@ -246,11 +274,6 @@ header ul.meta li {
   line-height: 30px;
 }
 
-header ul.meta li span{
-  font-weight: bold;
-  color: rgba(255,255,255,.7);
-}
-
 header ul.meta a{
   color: #ce2323;
 }
@@ -259,6 +282,10 @@ header ul.meta a:hover{
   text-decoration: underline;
 }
 
+header .site-title:hover{
+  text-decoration: underline;
+  color: black;
+}
 
 
 /* Pagination_custom */
@@ -269,14 +296,14 @@ header ul.meta a:hover{
     right: 10px;
     bottom: 10px;
     left: 10px;
-  }  
+  }
 }
 
 @media screen and (max-width: 960px){
   .pagination_custom {
     margin-top: 40px;
     padding: 0 10px;
-  }  
+  }
 }
 
 .pagination_custom:after {
@@ -288,10 +315,16 @@ header ul.meta a:hover{
 }
 
 .previous {
+  padding-left: 50px;
   float: left;
 }
 
+.pagination_custom {
+  text-align: center;
+}
+
 .next {
+  padding-right: 50px;
   float: right;
 }
 
@@ -303,7 +336,7 @@ header ul.meta a:hover{
   font-family: 'Open Sans', sans-serif;
   font-size: 12px;
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.5);
+  color: black; /*rgba(255, 255, 255, 0.5);*/
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 1px;
@@ -323,7 +356,7 @@ article {
 
 
 article .container {
-  padding-top: 80px;
+  padding-top: 60px;
 }
 
 @media (max-width: 960px) {
@@ -343,7 +376,7 @@ article p {
 article li {
   /*margin-left: 3em;*/
   margin-bottom: 9px;
-  list-style-type: disc;
+  /*list-style-type: disc;*/
 }
 
 @media (max-width: 960px) {

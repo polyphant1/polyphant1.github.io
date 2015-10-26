@@ -1,43 +1,56 @@
-<header id="home-header" style="background-image: url({{ site.baseurl }}{{ page.featured_image }});">
+<header id="post-header">
   <div class="container post-container">
-    <a href="{{ site.baseurl }}/" class="home_button"></a>
+
     <div class="inner-container">
       <h1>{{ page.title }}</h1>
       <ul class="meta">
         <li>
           <span>
-            Published {{ page.date | date_to_string }}
+            <div class="post-date">{{ page.date | date_to_string }}</div>
           </span>
         </li>
         <li>
+          <div class="fb-like" data-href="{{ page.url }}" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+
           <p class="post-meta">
             <a href="https://twitter.com/share" class="twitter-share-button" data-via="{{ site.author.twitter }}">Tweet</a></h5>
-            
             <script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
             <script type="IN/Share" data-url="{{ site.url }}{{ page.url }}" data-counter="right"></script>
-
-            <div class="fb-like" data-href="{{ page.url }}" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
-            
           </p>
         </li>
       </ul>
-    </div>  
-      
-    <ul class="pagination_custom">
-      {% if page.previous.url %}
-        <li class="previous">
-          <a href="{{ site.baseurl }}{{ page.previous.url }}">
-            Previous
-          </a>
-        </li>
-      {% endif %}
-      {% if page.next.url %}
-        <li class="next">
-          <a href="{{ site.baseurl }}{{ page.next.url }}">
-            Next
-          </a>
-        </li>
-      {% endif %}
-    </ul>    
+
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{{ site.baseurl }}/">Polyphant</a>
+          </div>
+
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li><a href="{{ site.baseurl }}/about">About</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tags<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="/tags">All</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="/tags/physics">Physics</a></li>
+                  <li><a href="/tags/data science">Data Science</a></li>
+                  <li><a href="/tags/technology">Technology</a></li>
+                  <li><a href="/tags/meta">Meta</a></li>
+                </ul>
+              </li>
+              <li><a href="{{ "/feed.xml" | prepend: site.baseurl }}">RSS</a></li>
+            </ul>
+          </div>
+        </div>
+    </div>
+
   </div>
 </header>

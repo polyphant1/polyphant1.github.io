@@ -3,11 +3,12 @@ layout: post
 title: "How to build a galaxy, #1"
 comments: true
 date: "Monday, September 7, 2015"
-featured_image: /images/hdf.gif
+tags:
+- Physics
 excerpt: Introduction to the work I did for my third year project during my integrated masters, modelling a spiral galaxy
 ---
 
-In just two weeks I'll begin my Ph.D., and after attending the [STFC summer school](http://sites.cardiff.ac.uk/astronomy-summer-school/) program last week I'm now feeling very inspired and eager to start. In the run up I thought it would be quite fun (?) to write a few short posts on some of the work that went in to my 3rd and 4th year projects during my integrated masters. This post introduces my third year project titled "Star Formation Epidemics in Galaxies", supervised by [Professor Anthony Whitworth](http://www.astro.cardiff.ac.uk/contactsandpeople/?page=full&id=417) and [Dr Dimitris Stamatellos](http://www.uclan.ac.uk/staff_profiles/dimitris_stamatellos.php) (Anthony unfortunately fell seriously ill at the beginning of the project, but Dimitris bravely stepped up whilst he recovered to help me and two other students. I've since learned at the summer school that Dimitris is supervising one of my fellow Ph.D. entrants, so congratulations and best of luck to them both!). 
+In just two weeks I'll begin my Ph.D., and after attending the [STFC summer school](http://sites.cardiff.ac.uk/astronomy-summer-school/) program last week I'm now feeling very inspired and eager to start. In the run up I thought it would be quite fun (?) to write a few short posts on some of the work that went in to my 3rd and 4th year projects during my integrated masters. This post introduces my third year project titled "Star Formation Epidemics in Galaxies", supervised by [Professor Anthony Whitworth](http://www.astro.cardiff.ac.uk/contactsandpeople/?page=full&id=417) and [Dr Dimitris Stamatellos](http://www.uclan.ac.uk/staff_profiles/dimitris_stamatellos.php) (Anthony unfortunately fell seriously ill at the beginning of the project, but Dimitris bravely stepped up whilst he recovered to help me and two other students. I've since learned at the summer school that Dimitris is supervising one of my fellow Ph.D. entrants, so congratulations and best of luck to them both!).
 
 The aim of the project was to model a galaxy, simulate it, and test the outputs of the simulation against observed galaxy properties. Galaxies display a wide range of morphologies, and many attempts have been made to classify them based on their appearance. The most well known galaxy morphology classification system is the [Hubble sequence](https://en.wikipedia.org/wiki/Hubble_sequence), also known as the 'tuning fork' diagram due to its shape.
 
@@ -38,4 +39,3 @@ With this dark matter halo, the rotation curve now appears as it should. You can
 </center><br>
 
 Now that we have a galactic gravitational potential that produces realistic rotation curves, we can start putting things in to it. In the next 'episode' I'll add molecular clouds, and describe how we can model star formation through the energetic collisions of these clouds.
-

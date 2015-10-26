@@ -3,7 +3,8 @@ layout: post
 title: "What can we learn from the history of physics publications?"
 comments: true
 date: "Saturday, October 10, 2015"
-featured_image: /images/hdf.gif
+tags:
+- Physics
 excerpt: Thoughts on a Nature article that takes a data driven approach to understanding the history of physics
 ---
 
