@@ -22,9 +22,9 @@ layout: default
   <nav>
     <ul class="pager">
       {% if paginator.previous_page %}
-        <li><a href="{{ paginator.previous_page_path }}"><span aria-hidden="true">&larr;</span> Latest</a></li>
+        <li><a href="{{ paginator.previous_page_path }}"><span aria-hidden="true">&larr;</span>Next</a></li>
       {% endif %}
-      <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+      <span class="page_number"> {{ paginator.page }} of {{ paginator.total_pages }} </span>
       {% if paginator.next_page %}
         <li><a href="{{ paginator.next_page_path }}">Previous <span aria-hidden="true">&rarr;</span></a></li>
       {% endif %}
