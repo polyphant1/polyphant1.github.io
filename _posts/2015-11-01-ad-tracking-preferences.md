@@ -2,7 +2,7 @@
 layout: post
 title: "Avoiding tailored ads in the EU"
 comments: true
-date: "Monday, November 2, 2015"
+date: "Monday, November 1, 2015"
 tags:
 - Technology
 excerpt: youronlinechoices.com gives you the power to tell companies that you don't want to receive targeted advertising online
