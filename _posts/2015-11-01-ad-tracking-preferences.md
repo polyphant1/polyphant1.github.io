@@ -5,7 +5,7 @@ comments: true
 date: "Monday, November 2, 2015"
 tags:
 - Technology
-excerpt:
+excerpt: youronlinechoices.com gives you the power to tell companies that you don't want to receive targeted advertising online
 ---
 
 Found a great site today that everyone should know about - [youronlinechoices.com](youronlinechoice.com/uk/). It gives you the power to tell companies that you don't want to receive targeted advertising online. It's a result of some [obscure EU guidelines](http://www.youronlinechoices.com/goodpractice) dating back to 2011 for "for businesses collecting and using online information for behavioural advertising", and there are some big names signed up: Amazon, Microsoft, Facebook and Google are all listed, and you're free to 'tell them where to go', so to speak. I'm assuming it uses cookies to match your current browsing session with company data, which is a neat approach.
