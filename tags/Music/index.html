@@ -1,0 +1,11 @@
+---
+layout: page
+---
+
+<ul>
+{% for playlist in site.data.playlists %}
+<li>
+{{ playlist[1].year }}
+</li>
+{% endfor %}
+</ul>
