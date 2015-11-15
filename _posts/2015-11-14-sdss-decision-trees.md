@@ -1,6 +1,5 @@
 ---
 title: "Classifying Astronomical Data Using Tree Based Methods"
-output: html_document
 layout: post
 comments: true
 date: "Saturday, November 14, 2015"
@@ -14,7 +13,7 @@ The following is a guide to using tree based methods in R, based on the correspo
 
 ## Data
 
-Rather than getting the data directly from SDSS and doing the cleaning myself, I'm going to cheat and use a pre-filtered data set used in the book 'Modern Statistical Methods for Astronomy', available [here](http://astrostatistics.psu.edu/MSMA/datasets/index.html). As part of their extract they perform a few cleaning operations, such as ignoring spatially resolved galaxies, those with large measurement errors, and those that are very bright (and could cause saturation) or very faint (with uncertain measurements). They also provide 3 labelled data sets for training, one each for Quasars, Stars & White Dwarfs. 
+Rather than getting the data directly from SDSS and doing the cleaning myself, I'm going to cheat and use a pre-filtered data set used in the book 'Modern Statistical Methods for Astronomy', available [here](http://astrostatistics.psu.edu/MSMA/datasets/index.html). As part of their extract they perform a few cleaning operations, such as ignoring spatially resolved galaxies, those with large measurement errors, and those that are very bright (and could cause saturation) or very faint (with uncertain measurements). They also provide 3 labelled data sets for training, one each for Quasars, Stars & White Dwarfs.
 
 The colour bands as they stand aren't particularly useful, since objects of the same class can be at different distances, and therefore have relatively lower flux across all bands. This can be avoided by looking at the ratios of brightness across bands, and since magnitudes are logarithmic units of brightness we simply find the difference between the provided values to get four colour indices, *(u-g)*, *(g-r)*, *(r-i)* & *(i-z)*.
 
@@ -35,7 +34,7 @@ Star training set (Class 2):
 
 {% highlight r %}
 dat2 <- read.csv('http://astrostatistics.psu.edu/MSMA/datasets/SDSS_stars.csv', h=T)
-dat2 <- cbind((dat2[,1]-dat2[,2]), (dat2[,2]-dat2[,3]), (dat2[,3]-dat2[,4]), 
+dat2 <- cbind((dat2[,1]-dat2[,2]), (dat2[,2]-dat2[,3]), (dat2[,3]-dat2[,4]),
 	(dat2[,4]-dat2[,5]))
 star_train <- data.frame(cbind(dat2, rep(2, length(dat2[,1]))))
 names(star_train) <- c('u_g','g_r','r_i','i_z','Class')
@@ -78,7 +77,7 @@ The plot below shows each training class on a bivariate colour-colour scatter pl
 
 ## Decision Trees
 
-Decision trees are the most basic tree based method, and one on which the majority of other methods are built on They work by splitting the predictor space in to regions; each split can be thought of as a *branch*, and each of the remaining regions are *leaves*. 
+Decision trees are the most basic tree based method, and one on which the majority of other methods are built on They work by splitting the predictor space in to regions; each split can be thought of as a *branch*, and each of the remaining regions are *leaves*.
 
 The default `tree` library has a simple binary recursive partitioning method for growing regression or classification trees.
 
@@ -87,7 +86,7 @@ The default `tree` library has a simple binary recursive partitioning method for
 library(tree)
 {% endhighlight %}
 
-Below we split the data in to a training and test set, and train the classifier on the training test. 
+Below we split the data in to a training and test set, and train the classifier on the training test.
 
 
 {% highlight r %}
@@ -109,16 +108,16 @@ text(tree.sdss,col=rainbow(10)[1:25],srt=35,cex=0.8)
 
 <img src="/../images/SDSS_decision_trees/unnamed-chunk-8-1.png" title="center" alt="center" style="display: block; margin: auto;" />
 
-To evaluate our tree, we use it to predict the class of our test data. 
+To evaluate our tree, we use it to predict the class of our test data.
 
 {% highlight r %}
 tree.pred <- predict(tree.sdss, SDSS_train[-train,], type="class")
 {% endhighlight %}
 
-Below is a [confusion matrix](https://en.wikipedia.org/wiki/Confusion_matrix) of the predicted classes against the actual. 
+Below is a [confusion matrix](https://en.wikipedia.org/wiki/Confusion_matrix) of the predicted classes against the actual.
 
 {% highlight text %}
-##          
+##
 ## tree.pred   1   2   3
 ##         1 921   8 131
 ##         2  65 985   1
@@ -140,16 +139,16 @@ cv.sdss
 {% highlight text %}
 ## $size
 ## [1] 11 10  9  7  6  5  3  2  1
-## 
+##
 ## $dev
 ## [1]  868  868  922  971 1039 1194 1592 4050 8177
-## 
+##
 ## $k
 ## [1]   -Inf    0.0   38.0   44.5   72.0  111.0  217.0 2482.0 3943.0
-## 
+##
 ## $method
 ## [1] "misclass"
-## 
+##
 ## attr(,"class")
 ## [1] "prune"         "tree.sequence"
 {% endhighlight %}
@@ -185,7 +184,7 @@ test.results
 
 
 {% highlight text %}
-##          
+##
 ## tree.pred   1   2   3
 ##         1 921   8 131
 ##         2  65 985   1
@@ -197,7 +196,7 @@ The error rate, 7.3%, is the same, as expected, but the tree is easier to interp
 
 ## Bagging and Random Forests
 
-Bagging and random forests are both examples of ensemble methods, where many decison trees are combined together to improve the prediction accuracy. Both can be implemented using the `randomForest` package. 
+Bagging and random forests are both examples of ensemble methods, where many decison trees are combined together to improve the prediction accuracy. Both can be implemented using the `randomForest` package.
 
 Bagging (derived from the full name *Bootstrap Aggregation*) takes multiple bootstrapped samples from the same training set and builds an ensemble of trees that are then averaged. Bagging uses all predictors; `mtry` states that all 4 predictors should be considered for each split of the tree.
 
@@ -217,13 +216,13 @@ bag.sdss
 
 
 {% highlight text %}
-## 
+##
 ## Call:
-##  randomForest(formula = Class ~ ., data = SDSS_train, mtry = 4,      importance = T, subset = train) 
+##  randomForest(formula = Class ~ ., data = SDSS_train, mtry = 4,      importance = T, subset = train)
 ##                Type of random forest: classification
 ##                      Number of trees: 500
 ## No. of variables tried at each split: 4
-## 
+##
 ##         OOB estimate of  error rate: 2.38%
 ## Confusion matrix:
 ##      1    2    3 class.error
@@ -239,7 +238,7 @@ yhat.bag <- predict(bag.sdss, newdata = SDSS_train[-train,])
 
 
 {% highlight text %}
-##         
+##
 ## yhat.bag   1   2   3
 ##        1 966   5  36
 ##        2  12 988   0
@@ -261,13 +260,13 @@ rf.sdss
 
 
 {% highlight text %}
-## 
+##
 ## Call:
-##  randomForest(formula = Class ~ ., data = SDSS_train, importance = T,      subset = train) 
+##  randomForest(formula = Class ~ ., data = SDSS_train, importance = T,      subset = train)
 ##                Type of random forest: classification
 ##                      Number of trees: 500
 ## No. of variables tried at each split: 2
-## 
+##
 ##         OOB estimate of  error rate: 2.17%
 ## Confusion matrix:
 ##      1    2    3 class.error
@@ -293,7 +292,7 @@ We can use the `importance` function to view the importance of each of the varia
 
 Boosting algortihms for regression and classification problems are different, and I will not provide a full description here (for details, see [here](https://www.statsoft.com/Textbook/Boosting-Trees-Regression-Classification/button/1)). In basic terms, boosting algorithms apply many weak learners sequentially to the residuals (i.e. the remaining unexplained data) of previous trees. The algorithm learns slowly and incrementally, which can lead to a better resulting model, at the cost of extra computation compared to more direct learners.
 
-The `gbm` function, from the identically named package, is used here to perform Boosting. 
+The `gbm` function, from the identically named package, is used here to perform Boosting.
 
 
 
@@ -332,7 +331,7 @@ yhat.boost <- apply(yhat.boost, 1, which.max) # find max predictor
 
 
 {% highlight text %}
-##           
+##
 ## yhat.boost   1   2   3
 ##          1 953   3  47
 ##          2  28 990   0
@@ -360,7 +359,7 @@ yhat.et <- predict(et, SDSS_train[-train,-5])
 {% endhighlight %}
 
 {% highlight text %}
-##        
+##
 ## yhat.et   1   2   3
 ##       1 972   3  35
 ##       2  12 990   0
@@ -377,7 +376,7 @@ The source of the data used in this post, the textbook '[Modern Statistical Meth
 
 {% highlight r %}
 SDSS <- read.csv('http://astrostatistics.psu.edu/MSMA/datasets/SDSS_test.csv', h=T)
-SDSS_test <- data.frame(cbind((SDSS[,1]-SDSS[,2]), (SDSS[,2]-SDSS[,3]), 
+SDSS_test <- data.frame(cbind((SDSS[,1]-SDSS[,2]), (SDSS[,2]-SDSS[,3]),
 	(SDSS[,3]-SDSS[,4]), (SDSS[,4]-SDSS[,5])))
 names(SDSS_test) <- c('u_g', 'g_r', 'r_i', 'i_z')
 {% endhighlight %}
