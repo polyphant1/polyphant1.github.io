@@ -75,7 +75,7 @@ $$\Omega = -2U$$
 So, only half of the total gravitational potential energy can be converted to thermal energy. The minus sign in the above equation is important when explaining why bodies appear to get hotter as they contract and lose energy. In our case, the total thermal energy within the sun is then,
 
 <center>
-$$U = -\frac{3M^{2}G}{10R}$$
+$$U = \frac{3M^{2}G}{10R}$$
 </center>
 
 We can now use this to calculate the age of the Sun! Given the luminosity of the Sun today ($L = 3.846 \times 10^{26}$ Watts), and assuming that this has stayed constant throughout the Sun's life, the age can be given by the ratio of the total thermal energy against the rate of energy loss. Sticking everything in, we get
@@ -100,3 +100,5 @@ Lessons learnt:
 
 - don't rely on your assumptions too much; even if your theory is simple and elegant; as the old adage goes, 'rubbish in, rubbish out'.
 - Don't be arrogant and pompous; even if you are the first British scientists to join the house of lords, if you're model is wrong you'll end up with egg on your face. And in the end, [all models are wrong, but some are useful](https://en.wikipedia.org/wiki/George_E._P._Box).
+
+*Edit: the previous version of this post had the wrong sign for the thermal energy, thanks to Abi and Spyros for pointing out*
