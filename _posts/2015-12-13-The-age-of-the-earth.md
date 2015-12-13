@@ -11,6 +11,8 @@ excerpt: A look back at one of the great scientific controversies; Lord Kelvin's
 
 The story of how scientists revealed the age of the earth is a remarkable one; at the beginning of the nineteenth century many still believed that the earth had been around forever, but by the 1920s evidence from fields as diverse as geology and biology had been united, and the definitive source of the Sun's heat discovered. Perhaps what makes the story even more fascinating are the egos and personalities that shaped it, and none more so than that of William Thomson, aka Lord Kelvin.
 
+![Kelvin](/images/Lord_Kelvin_photograph.jpg)
+
 Lord Kelvin was arguably the most eminent scientist of his time, famous today for the temperature scale that bears his name. But it was his work on thermodynamics that led him to ponder the question of the age of the earth. He saw an opportunity to apply the recently formulated laws of thermodynamics to the problem, in particular the first law, which states:
 
 >  The total energy of an isolated system is constant; energy can be transformed from one form to another, but cannot be created or destroyed
