@@ -98,7 +98,7 @@ Radiometric dating of rocks also provided 'bonus' evidence, as rocks could now b
 
 Lessons learnt:
 
-- don't rely on your assumptions too much; even if your theory is simple and elegant; as the old adage goes, 'rubbish in, rubbish out'.
-- Don't be arrogant and pompous; even if you are the first British scientists to join the house of lords, if you're model is wrong you'll end up with egg on your face. And in the end, [all models are wrong, but some are useful](https://en.wikipedia.org/wiki/George_E._P._Box).
+- Don't rely on your assumptions too much; even if your theory is simple and elegant; as the old adage goes, 'rubbish in, rubbish out'.
+- Don't be arrogant and pompous; even if you are the first British scientists to join the house of lords, if your model is wrong you'll end up with egg on your face. And in the end, [all models are wrong, but some are useful](https://en.wikipedia.org/wiki/George_E._P._Box).
 
-*Edit: the previous version of this post had the wrong sign for the thermal energy, thanks to Abi and Spyros for pointing out*
+*Edit: the previous version of this post had the wrong sign for the thermal energy and all the grammar mistakes, thanks to Abi and Spyros for pointing them out*
