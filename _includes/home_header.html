@@ -5,38 +5,6 @@
   <div class="container">
     <a class="site-title" href="{{ site.baseurl }}/"><h1>{{ site.title }}</h1></a>
     <div class="site-tagline">{{ site.tagline }}</div>
-
-    <nav class="navbar navbar-default">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="{{ site.baseurl }}/">Polyphant</a>
-        </div>
-
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ol class="nav navbar-nav">
-            <li><a href="{{ site.baseurl }}/about">About</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tags<span class="caret"></span></a>
-              <ol class="dropdown-menu">
-                <li><a href="/tags">All</a></li>
-                <li role="separator" class="divider"></li>
-
-                {% for tag in sortedtags %}
-                <li><a href="/tags/{{ tag }}">{{ tag }}</a></li>
-                {% endfor %}
-
-              </ol>
-            </li>
-            <li><a href="{{ "/feed.xml" | prepend: site.baseurl }}">RSS</a></li>
-          </ol>
-        </div>
-      </div>
-    </nav>
+    {% include navbar.html %}
   </div>
 </header>
