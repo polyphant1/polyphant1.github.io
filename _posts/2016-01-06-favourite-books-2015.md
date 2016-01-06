@@ -1,0 +1,32 @@
+---
+layout: post
+title:  "Top books 2015"
+comments: true
+date: "Wednesday, January 6, 2016"
+tags:
+- Books
+excerpt: A personal review of the best books I've read in the past 12 months
+---
+
+I read a lot in 2015, so to round it all off here's a selection of some of the best books I got through, in no particular order. None of them were actually released in 2015, so if you're looking for the latest best sellers you're going to have to wait for me to get through the last 30 centuries of human literature first. Which could take a little time. Science fiction features heavily, so if you're mortally afraid of dystopian futures, look away quick.
+
+## <a href="https://www.goodreads.com/book/show/826097.Neuromancer" target="blank">Neuromancer, William Gibson</a>
+This was my first introduction to the genre of cyberpunk, and I'm now hooked. Neuromancer single handedly invented the genre, and many of its most identifiable concepts, such as cyberspace, the matrix and hacker culture, were introduced here. The most outstanding thing is that this was Gibson's *first novel*, written on a *typewriter* in the early 80's before the internet was even a twinkle in Tim Berners-Lee's eye. The writing is thick and fast, rich with slang and jargon, building a believable near future world where individuals struggle to survive amidst the jostling of mega corporations. I've since gone on to read parts 2 and 3 of the trilogy, but Neuromancer stands out for its originality. I can't recommend it enough.
+
+## <a href="https://www.goodreads.com/book/show/1239196.Fortress_Malta" target="blank">Fortress Malta, James Holland</a>
+My late Nana grew up in Malta through the Second World War, and experienced first hand the destruction of her home country by German and Italian aerial bombardment, as well as the hunger and malnutrition that accompanied the siege. This was therefore an illuminating but difficult book to read, more so due to Holland's approach, which told the story through the eyes of a multitude of characters on the ground and in the air above the skies of Malta. Definitely recommended for those interested in the lesser known battles of WWII, but also a rewarding read for all due to the manner in which Holland reveals the heartbreaking human side of the conflict.
+
+## <a href="https://www.goodreads.com/book/show/7046300-the-forever-war" target="blank"> The Forever War, Joe Haldeman</a>
+I haven't read any other military science fiction, but I'm inclined to believe in this books reputation for being the best of its surprisingly populated subgenre. Haldeman, a Vietnam war veteran, uses the concept of time dilation to build a frightening future reality, where those men and women sent to the front lines of an interstellar war return to earth decades, if not hundreds of years in the planets future. The sense of cultural isolation is an obvious reflection of Haldeman's experiences coming back from Vietnam.
+
+## <a href="https://www.goodreads.com/book/show/294477.Foundation" target="blank"> Foundation, Isaac Asimov</a>
+Reading a supposed 'classic' is always hazardous; the anticipation often leads to disappointment, or your initial expectations can be far from the mark. *Foundation* was special, in that it was almost exactly what I expected, yet still blew me away. Asimov's soft sci-fi style is not to everyones taste, but I really enjoyed the allegorical storylines, and the *Psychohistory* invention, where human history can be predicted millenia in to the future through an understanding of human psychology on population scales. Parts 2 and 3 of the trilogy follow the same formula but never tire, showing the mileage of such a simple plot device.
+
+## <a href="https://www.goodreads.com/book/show/107007.The_League_of_Extraordinary_Gentlemen_Vol_2" target="blank"> League of Extraordinary Gentlemen Vol. II, Alan Moore & Kevin O'Neill</a>
+My favourite graphic novel I read last year, by one of my favourite graphic novelist's in Alan Moore. The fantasy steampunk world created in the first volume is the scene for an alien invasion from Mars, inspired by H.G. Wells *War of the Worlds*. My personal highlight is the first scene, where the cause of the Martian invasion is revealed to be due to a war on the surface of the red planet, from which the visitors are fleeing; the purposefully dated view of the conditions and creatures on the red planet reminded me of a short story, <a href="https://www.goodreads.com/book/show/19300931-a-martian-odyssey" target="blank">A Martian Odyssey</a>, by Stanley G. Weinbaum. Kevin O'Neill's illustrations are fantastic; on reading some of the latter sequels, which falter on both the illustration and story front (Moore's apparent disdain for women is becoming more prominent with age), I have come to appreciate O'Neill's drawing style even more.
+
+## <a href="https://www.goodreads.com/book/show/12455877-store-of-the-worlds" target="blank"> Store of the Worlds, Robert Sheckley</a>
+Robert Sheckley wrote short, fun and challenging science fiction; this is a collection of some of his best, from the genres heyday during the 60s and 70s. Throughout each story runs a thinly veiled current of dark humour and fatalism, which is right up my street. I've read a few science fiction short stories in 2015 but this collection stood out for its originality, often compromising on realism but never on imagination and fun.
+
+## <a href="https://www.goodreads.com/book/show/1434257.Rising_44" target="blank"> Rising '44, Norman Davies</a>
+I've already written a post on the Warsaw Rising, and a <a href="{% post_url 2015-11-15-orwell-warsaw %}" target="blank">renowned British authors take on it</a>. It was inspired by this book, by my favourite historical author, which tells the tragic story of the Warsaw rising of 1944 (not to be mistaken with the Jewish Ghetto uprising earlier in the war). Davies is an ardent Pola-phile, having written the English language bible on Polish history and culture, God's playground, making him suitably equipped to tackle one of the darkest hours in the countries history. The narrative is interspersed with writings from those on the ground, from both sides of the front line, which brings home the horror and destruction of the annihilation of one of Europe's oldest and most vibrant cities. But it is Davies quietly directed rage towards those who oversaw, or rather overlooked, the calamity that leaves a lasting memory.
