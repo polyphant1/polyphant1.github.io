@@ -1,3 +1,6 @@
+{% capture tags %}{% for tag in site.tags %}{{ tag[0] }}|{% endfor %}{% endcapture %}
+{% assign sortedtags = tags | split:'|' | sort %}
+
 <nav class="navbar navbar-default">
   <div class="collapse navbar-collapse"><!-- id="bs-example-navbar-collapse-1">-->
     <ol class="nav navbar-nav">
