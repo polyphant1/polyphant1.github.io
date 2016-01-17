@@ -14,18 +14,23 @@
   <meta name="copyright" content="&copy; Christopher Lovell 2016">
   
 
+  <!-- Facebook (custom) -->
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.4";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
 
-
+  <!-- twitter (custom) -->
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
   <!-- External libraries -->
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/monokai_sublime.min.css">
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css">
-  <!-- custom -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-  <script type="text/javascript" language="Javascript" src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.1.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-
 
   <!-- Favicon and other icons (made with http://www.favicon-generator.org/) -->
   <link rel="shortcut icon" href="/assets/icons/favicon.ico" type="image/x-icon">
@@ -83,7 +88,8 @@
 
   <body>
 
-    <header class="navigation" role="banner">
+    
+<header class="navigation" role="banner">
   <div class="navigation-wrapper">
     <a href="/" class="logo">
       
@@ -95,7 +101,12 @@
     </a>
     <nav role="navigation">
       <ul id="js-navigation-menu" class="navigation-menu show">
+
+        <li class="nav-link"><a href="/about">About</a></li>
+        <li class="nav-link"><a href="/tags">Tags</a></li>
+        <li class="nav-link"><a href="/contact">Contact</a></li>
         
+        <!--
           
           <li class="nav-link"><a href="/contact/">Contact</a>
           
@@ -137,7 +148,7 @@
           
         
           
-        
+        -->
       </ul>
     </nav>
   </div>
@@ -163,20 +174,96 @@
   <img class="small img-circle" src="/assets/profile.jpg" title="Moi" />
 </a></p>
 
-<p>Christopher Lovell is a doctoral student in Astronomy &amp; Astrophysics at the University of Sussex.</p>
+<p>I’m Christopher Lovell, a doctoral student in Astronomy &amp; Astrophysics at the University of Sussex. I currently live in London.</p>
 
-<p>See <a target="source" href="http://www.sussex.ac.uk/profiles/363743">here</a> for contact details.</p>
+<p><br /><span class="page-divider">
+  <span class="one"></span>
+  <span class="two"></span>
+</span></p>
 
-<p>I’m active on Stack Exchange, mostly in the Astronomy and Stack Overflow sites. Click the flair below to link to my profile. I also record my reading habits on <a href="https://www.goodreads.com/review/list/30265524?shelf=read" target="source" title="Chris's book recommendations, liked quotes, book clubs, book trivia, book lists (read shelf)"><img class="small" border="0" alt="Chris's book recommendations, liked quotes, book clubs, book trivia, book lists (read shelf)" src="https://www.goodreads.com/images/badge/badge1.jpg" /></a></p>
+<h2 style="text-align:center">Research</h2>
 
-<p><a href="http://stackexchange.com/users/1902550/polyphant" target="_blank">
+<p>My research is about understanding galaxies in the very early universe. One of the ways to do this is by using simulations, typically of a collection of galaxies in a large volume representing some patch of the universe. Combining the data from these simulations with observational data provides a robust way of testing theories of galaxy formation and evolution.</p>
+
+<p>I’m also interested in how techniques from the growing field of Data Science, such as Machine Learning, can be used in Astronomy to expose relationships and patterns otherwise obscured when using traditional techniques.</p>
+
+<p><br /><span class="page-divider">
+  <span class="one"></span>
+  <span class="two"></span>
+</span></p>
+
+<h2 style="text-align:center">Writing</h2>
+
+<p>Additional to this blog I also write for <a href="http://astrobites.org/" target="blank">Astrobites</a>, where postgraduates in Astronomy and Astrophysics write about the latest research papers in a more accessible format for undergraduates or the public in general. You can read my posts <a href="http://astrobites.com/author/clovell/" target="blank">here</a>.</p>
+
+<p>Soon I’ll also be writing outreach materials for the <a href="http://www.darkenergysurvey.org/" target="blank">Dark Energy Survey</a>. Stay tuned.</p>
+
+<p><br /><span class="page-divider">
+  <span class="one"></span>
+  <span class="two"></span>
+</span></p>
+
+<h2 style="text-align:center">Measured Beauty</h2>
+
+<p><a href="http://measuredbeauty.com/" target="blank">Measured Beauty</a> is an art project started in early 2016 that aims to reveal the abstract beauty hidden in scientific research. Read more <a href="http://measuredbeauty.com/about/" target="blank">here</a>.</p>
+
+<p><br /><span class="page-divider">
+  <span class="one"></span>
+  <span class="two"></span>
+</span></p>
+
+<h2 style="text-align:center" id="about-social">Social</h2>
+
+<center>
+
+
+<a href="https://twitter.com/polyphantastic" target="blank"><i class="fa fa-twitter"></i></a>
+
+
+
+
+
+<a href="https://github.com/polyphant1" target="blank"><i class="fa fa-github"></i></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</center>
+
+<p>The source code for this site, as well as all of my other public projects, can be found on <a href="github.com/polyphant1" target="blank">GitHub</a>. When I remember to update it you can read my posts on <a href="https://medium.com/@polyphant" target="blank">Medium</a>.</p>
+
+<p>I’m active on Stack Exchange, mostly in the Astronomy and Stack Overflow sites; the flair below links to my profile. I record my reading habits on <a href="https://www.goodreads.com/polyphant" target="blank">Goodreads</a>.</p>
+
+<p><br /><a href="http://stackexchange.com/users/1902550/polyphant" target="_blank">
 <img class="small" src="http://stackexchange.com/users/flair/1902550.png" width="208" height="58" alt="profile for polyphant on Stack Exchange, a network of free, community-driven Q&amp;A sites" title="profile for polyphant on Stack Exchange, a network of free, community-driven Q&amp;A sites" />
 </a></p>
 
-<p>You can also read my posts on Medium, when I remember to update it.</p>
-
-<script async="" src="https://static.medium.com/embed.js"></script>
-<p><a class="m-profile" data-collapsed="true" href="https://medium.com/@polyphant">Chris Lovell</a></p>
+<p><br /><span class="page-divider">
+  <span class="one"></span>
+  <span class="two"></span>
+</span></p>
 
 <p>This site is built on <a href="https://pages.github.com/" target="source">GitHub pages</a> using <a href="http://jekyllrb.com/" target="source">Jekyll</a>; for details on how to recreate it using Cloud9, read <a href="/2015/01/31/meta-post.html" target="source">this post</a>.</p>
 
@@ -193,7 +280,7 @@
 
   <div class="wrapper">
 
-    <h3 class="footer-heading">Polyphant</h3>
+    <h3 class="footer-heading"><a href="/">Polyphant</a></h3>
 
     <div class="site-navigation">
 
@@ -296,13 +383,13 @@
           
         
 
+        <a href="/about#about-social">More...</a>
       </ul>
     </div>
 
     <div class="site-signature">
       <p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
-      <p class="text">Technology, Astronomy and other random noise, from an Astrophysicist in London
-</p>
+      <p><i>Copyright &#169; 2016 Christopher Lovell</i></p>
     </div>
 
   </div>

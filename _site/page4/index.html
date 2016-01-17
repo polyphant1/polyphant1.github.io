@@ -14,18 +14,23 @@
   <meta name="copyright" content="&copy; Christopher Lovell 2016">
   
 
+  <!-- Facebook (custom) -->
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.4";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
 
-
+  <!-- twitter (custom) -->
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
   <!-- External libraries -->
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/monokai_sublime.min.css">
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css">
-  <!-- custom -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-  <script type="text/javascript" language="Javascript" src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.1.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-
 
   <!-- Favicon and other icons (made with http://www.favicon-generator.org/) -->
   <link rel="shortcut icon" href="/assets/icons/favicon.ico" type="image/x-icon">
@@ -83,7 +88,8 @@
 
   <body>
 
-    <header class="navigation" role="banner">
+    
+<header class="navigation" role="banner">
   <div class="navigation-wrapper">
     <a href="/" class="logo">
       
@@ -95,7 +101,12 @@
     </a>
     <nav role="navigation">
       <ul id="js-navigation-menu" class="navigation-menu show">
+
+        <li class="nav-link"><a href="/about">About</a></li>
+        <li class="nav-link"><a href="/tags">Tags</a></li>
+        <li class="nav-link"><a href="/contact">Contact</a></li>
         
+        <!--
           
           <li class="nav-link"><a href="/contact/">Contact</a>
           
@@ -137,7 +148,7 @@
           
         
           
-        
+        -->
       </ul>
     </nav>
   </div>
@@ -319,7 +330,7 @@
 
   <div class="wrapper">
 
-    <h3 class="footer-heading">Polyphant</h3>
+    <h3 class="footer-heading"><a href="/">Polyphant</a></h3>
 
     <div class="site-navigation">
 
@@ -422,13 +433,13 @@
           
         
 
+        <a href="/about#about-social">More...</a>
       </ul>
     </div>
 
     <div class="site-signature">
       <p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
-      <p class="text">Technology, Astronomy and other random noise, from an Astrophysicist in London
-</p>
+      <p><i>Copyright &#169; 2016 Christopher Lovell</i></p>
     </div>
 
   </div>

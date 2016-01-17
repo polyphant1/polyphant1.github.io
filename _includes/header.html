@@ -1,3 +1,4 @@
+
 <header class="navigation" role="banner">
   <div class="navigation-wrapper">
     <a href="{{ site.baseurl }}/" class="logo">
@@ -12,11 +13,16 @@
     </a>
     <nav role="navigation">
       <ul id="js-navigation-menu" class="navigation-menu show">
-        {% for page in site.pages %}
+
+        <li class="nav-link"><a href="/about">About</a></li>
+        <li class="nav-link"><a href="/tags">Tags</a></li>
+        <li class="nav-link"><a href="/contact">Contact</a></li>
+        
+        <!--{% for page in site.pages %}
           {% if page.title and page.main_nav != false %}
           <li class="nav-link"><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
           {% endif %}
-        {% endfor %}
+        {% endfor %}-->
       </ul>
     </nav>
   </div>

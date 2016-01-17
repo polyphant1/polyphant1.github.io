@@ -63,7 +63,7 @@ social:
     username: polyphantastic
     url: https://twitter.com/polyphantastic
     desc: Follow me on Twitter
-    share: true
+    share: false
 
   - name: Facebook
     icon: facebook
@@ -77,12 +77,12 @@ social:
     username: polyphant1
     url: https://github.com/polyphant1
     desc: Fork me on GitHub
-    share: false
+    share: true
 
   - name: LinkedIn
     icon: linkedin
-    username: 
-    url:
+    username:
+    url: https://uk.linkedin.com/in/lovellchristopher
     desc: Connect with me on LinkedIn
     share: false
 

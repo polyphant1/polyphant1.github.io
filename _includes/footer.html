@@ -2,7 +2,7 @@
 
   <div class="wrapper">
 
-    <h3 class="footer-heading">{{ site.title }}</h3>
+    <h3 class="footer-heading"><a href="/">{{ site.title }}</a></h3>
 
     <div class="site-navigation">
 
@@ -32,12 +32,13 @@
           {% endif %}
         {% endfor %}
 
+        <a href="/about#about-social">More...</a>
       </ul>
     </div>
 
     <div class="site-signature">
       <p class="rss-subscribe text"><strong>Subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></strong></p>
-      <p class="text">{{ site.description }}</p>
+      <p><i>Copyright &#169; {{ site.time | date: '%Y' }} Christopher Lovell</i></p>
     </div>
 
   </div>

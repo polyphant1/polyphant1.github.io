@@ -60,6 +60,10 @@ a {
   }
 }
 
+article p a {
+  color: $link-color;
+}
+
 hr {
   border-bottom: $base-border;
   border-left: none;
