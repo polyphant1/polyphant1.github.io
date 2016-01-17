@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>{{ site.title + page.title }}</title>
+  <meta name="viewport" content="width=device-width">
+
+  {% include header_scripts.html %}
+  
+  {% include google_analytics.html %}
+  
+  <meta property="og:type" content="website" />
+  
+  {% if page.title %}
+    <meta property="og:title" content="{{ page.title }}" />
+  {% else %}  
+    <meta property="og:title" content="Polyphant" />
+  {% endif %}
+  
+  {% if page.excerpt %}
+    <meta property="og:description" content="{{ page.excerpt }}" />
+  {% else %}
+    <meta property="og:description" content="Technology, Cosmology and other random noise" />
+  {% endif %}
+  
+  <meta property="og:site_name" content="Polyphant" />
+  <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
+  
+</head>
+<body>
+  {{ content }}
+</body>
+</html>

@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>A failed twitter election analysis, and lessons learnt</title>
+  <meta name="description" content="Twitter, MongoDB and yournextmp.com prove no match for socially fickle parliamentarians">
+  
+  <meta name="author" content="Christopher Lovell">
+  <meta name="copyright" content="&copy; Christopher Lovell 2016">
+  
+
+
+
+
+  <!-- External libraries -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/monokai_sublime.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css">
+  <!-- custom -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+  <script type="text/javascript" language="Javascript" src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.1.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+
+  <!-- Favicon and other icons (made with http://www.favicon-generator.org/) -->
+  <link rel="shortcut icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/icons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  
+  <!-- Facebook OGP cards -->
+  <meta property="og:description" content="Twitter, MongoDB and yournextmp.com prove no match for socially fickle parliamentarians" />
+  <meta property="og:url" content="" />
+  <meta property="og:site_name" content="Polyphant" />
+  <meta property="og:title" content="A failed twitter election analysis, and lessons learnt" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/assets/logo.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="612" />
+  <meta property="og:image:height" content="605" />
+  
+
+  
+  <!-- Twitter: card tags -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="A failed twitter election analysis, and lessons learnt">
+  <meta name="twitter:description" content="Twitter, MongoDB and yournextmp.com prove no match for socially fickle parliamentarians">
+  <meta name="twitter:image" content="/assets/logo.png">
+  <meta name="twitter:url" content="">
+  
+
+  
+
+  <!-- Site styles -->
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="/2015/06/14/failed-twitter-election-analysis.html">
+  <link rel="alternate" type="application/rss+xml" title="Polyphant" href="/feed.xml" />
+</head>
+
+
+  <body>
+
+    <header class="navigation" role="banner">
+  <div class="navigation-wrapper">
+    <a href="/" class="logo">
+      
+      <img src="/assets/logo.png" alt="Polyphant">
+      
+    </a>
+    <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <nav role="navigation">
+      <ul id="js-navigation-menu" class="navigation-menu show">
+        
+          
+          <li class="nav-link"><a href="/contact/">Contact</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+          <li class="nav-link"><a href="/tags/">Tags</a>
+          
+        
+          
+          <li class="nav-link"><a href="/about/">About</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <div class="page-content">
+        <div class="post">
+
+<div class="post-header-container " >
+  <div class="scrim ">
+    <header class="post-header">
+      <h1 class="title">A failed twitter election analysis, and lessons learnt</h1>
+    </header>
+  </div>
+</div>
+
+<div class="wrapper">
+
+ <span class="page-divider">
+  <span class="one"></span>
+  <span class="two"></span>
+</span>
+ 
+
+<section class="post-meta">
+  <div class="post-date">June 14, 2015</div>
+  <div class="post-categories">
+  
+  </div>
+</section>
+
+<article class="post-content">
+  <p>I had grand data-based plans for the recent British general election. My ‘novel’ (as far as I’m aware) idea was to capture all tweets from the <em>candidates</em> over the election period, and do some time series analysis around the kinds of terms used. I’ve been developing a package to do term frequency analysis and visualisation, and this seemed like an exciting opportunity to show it off. It also presented a good excuse to refresh my python skills, by leveraging the <a href="http://www.tweepy.org/">Tweepy</a> library, and learn the basics of MongoDB for storing all my tweets and user details.</p>
+
+<p>I hit my first hurdle just trying to find the accounts for all the potential candidates. This was further complicated by the fact that, on parliament dissolving on the 30th of March, MPs were no longer MPs. They couldn’t call themselves MPs in any communications, including twitter. For all those MPs who created their twitter accounts in the last 5 years, and short sightedly stuck these two letters in their twitter handle, they had to stop using the offending account and create a new one.</p>
+
+<p>Fortunately a group of tireless individuals at <a href="https://yournextmp.com/help/api/">yournextmp.com</a> have compiled an amazing data set of all the election candidates, updated after the dissolusion, with basic details such as age and sex, as well as social media contact information. It’s all done by volunteers, so likely incomplete or inaccurate in a number of cases, but it was the nearest I was going to get to a list of twitter handles without collecting the information myself by hand.</p>
+
+<p>With this information I started work. I wrote a script that looped through each account, grabbed the last 200 tweets, and put them in Mongo. If the given account already had tweets in the database, it would grab 200 of the next latest tweets, or as many as it could up to the very latest. If the tweets in the database were up to date, it would go back and grab a few more older tweets before the oldest tweet in the DB. I set it up this way so that I could run the script at any time, and get all tweets from the surrounding period so long as I left the script run for long enough. Easy.</p>
+
+<p>Yet, not so easy. Because politicians can’t even be trusted to keep their accounts open long enough for me to grab all their tweets. In keeping with their growing reputation of being useless social media test subjects, plenty of candidates (mostly those that lost or failed to win their seats, incidentally) chose to delete their accounts after the results came in on that fateful night after polling day. So, unless you collected the tweets before the account was deleted, the tweets associated with these accounts are lost. Forever.</p>
+
+<p>Of course, I hadn’t thought of this. The last time I ran my script was nearly a fortnight before polling day. I’d done some initial analysis to see if it was worth pursuing, and there were some interesting initial results. I naively thought I’d leave it until after polling day, grab all the latest tweets, complete my analysis, and publish, for wealth and glory. Things didn’t quite turn out as I planned, but I learnt some important lessons about capturing this kind of volatile social information. Namely, get it while it’s hot. Because you never know when your test subjects might decide to disappear half way through your experiment.</p>
+
+<p>The code to carry out the analysis is available <a href="https://github.com/polyphant1/telenico2015">here</a>. You can view my initial, rough analysis in PDF format <a href="/assets/tweet_analysis.pdf">here</a>. In a future post I’ll introduce the code used to do the analysis in more detail, hopefully in conjunction with another event driven social media analysis.</p>
+
+</article>
+
+
+
+<section class="rss">
+  <p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
+</section>
+
+<section class="share">
+  <span>Share: </span>
+  
+    
+    
+      <a href="//twitter.com/share?text=A+failed+twitter+election+analysis%2C+and+lessons+learnt&url=/2015/06/14/failed-twitter-election-analysis.html&via=polyphantastic"
+        onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
+        <i class="fa fa-twitter-square fa-lg"></i>
+      </a>
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+      <a href="//www.facebook.com/sharer.php?t=A+failed+twitter+election+analysis%2C+and+lessons+learnt&u=/2015/06/14/failed-twitter-election-analysis.html"
+        onclick="window.open(this.href, 'facebook-share', 'width=550,height=255');return false;">
+        <i class="fa fa-facebook-square fa-lg"></i>
+      </a>
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      <a href="//plus.google.com/share?title=A+failed+twitter+election+analysis%2C+and+lessons+learnt&url=/2015/06/14/failed-twitter-election-analysis.html"
+        onclick="window.open(this.href, 'google-plus-share', 'width=550,height=255');return false;">
+        <i class="fa fa-google-plus-square fa-lg"></i>
+      </a>
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+      <a href="//www.pinterest.com/pin/create/button/?description=A+failed+twitter+election+analysis%2C+and+lessons+learnt&url=/2015/06/14/failed-twitter-election-analysis.html&media=/images/hdf.gif"
+        onclick="window.open(this.href, 'pinterest-share', 'width=550,height=255');return false;">
+        <i class="fa fa-pinterest-square fa-lg"></i>
+      </a>
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+      <a href="//www.reddit.com/submit" onclick="window.location = '//www.reddit.com/submit?url=' + encodeURIComponent('/2015/06/14/failed-twitter-election-analysis.html') + '&title=A failed twitter election analysis, and lessons learnt'; return false">
+        <i class="fa fa-reddit-square fa-lg"></i>
+      </a>
+    
+  
+</section>
+
+	<section class="post-navigation">
+		<span class="prev-post">
+			
+				<a href="/2015/05/18/lee-hsien-loong-singapore-cpp.html">
+					<span class="fa-stack fa-lg">
+						<i class="fa fa-square fa-stack-2x"></i>
+						<i class="fa fa-angle-double-left fa-stack-1x fa-inverse"></i>
+					</span>
+					<span class="page-number">How technologically illiterate are our political leaders, and does it matter?</span>
+				</a>
+			
+		</span>
+		<span class="next-post">
+			
+				<a href="/2015/06/21/new-blog-design.html">
+					<span class="page-number">New blog design</span>
+					<span class="fa-stack fa-lg">
+						<i class="fa fa-square fa-stack-2x"></i>
+						<i class="fa fa-angle-double-right fa-stack-1x fa-inverse"></i>
+					</span>
+				</a>
+			
+		</span>
+	</section>
+
+
+
+
+<section class="disqus">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_shortname = 'polyphant';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+
+</div>
+</div>
+
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h3 class="footer-heading">Polyphant</h3>
+
+    <div class="site-navigation">
+
+      <p><strong>Site Map</strong></p>
+      <ul class="pages">
+        
+        
+          <li class="nav-link"><a href="/contact/">Contact</a>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+          <li class="nav-link"><a href="/tags/">Tags</a>
+        
+        
+        
+          <li class="nav-link"><a href="/about/">About</a>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      </ul>
+    </div>
+
+    <div class="site-contact">
+
+      <p><strong>Social</strong></p>
+      <ul class="social-media-list">
+
+        
+          
+          <li>
+            <a href="https://twitter.com/polyphantastic" target="blank" title="Follow me on Twitter">
+              <i class="fa fa-twitter"></i>
+              <span class="username">polyphantastic</span>
+            </a>
+          </li>
+          
+        
+          
+        
+          
+          <li>
+            <a href="https://github.com/polyphant1" target="blank" title="Fork me on GitHub">
+              <i class="fa fa-github"></i>
+              <span class="username">polyphant1</span>
+            </a>
+          </li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+
+      </ul>
+    </div>
+
+    <div class="site-signature">
+      <p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
+      <p class="text">Technology, Astronomy and other random noise, from an Astrophysicist in London
+</p>
+    </div>
+
+  </div>
+
+</footer>
+
+<!-- Scripts -->
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"></script>
+<script>
+
+$(document).ready(function() {
+
+  // Syntax highlighting
+  hljs.initHighlightingOnLoad();
+
+  // Header
+  var menuToggle = $('#js-mobile-menu').unbind();
+  $('#js-navigation-menu').removeClass("show");
+  menuToggle.on('click', function(e) {
+    e.preventDefault();
+    $('#js-navigation-menu').slideToggle(function(){
+      if($('#js-navigation-menu').is(':hidden')) {
+        $('#js-navigation-menu').removeAttr('style');
+      }
+    });
+  });
+
+
+});
+
+</script>
+
+
+<!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-61827184-1', 'auto');
+  ga('send', 'pageview', {
+    'page': '/2015/06/14/failed-twitter-election-analysis.html',
+    'title': 'A failed twitter election analysis, and lessons learnt'
+  });
+</script>
+
+
+
+  </body>
+
+</html>

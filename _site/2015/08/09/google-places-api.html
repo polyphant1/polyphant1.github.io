@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Finding a cash machine with the Google Places API </title>
+  <meta name="description" content="Trying to find a free cash machine is one of the great challenges faced by Londoners, up there with getting a pint for less than £4 and renting a property cl...">
+  
+  <meta name="author" content="Christopher Lovell">
+  <meta name="copyright" content="&copy; Christopher Lovell 2016">
+  
+
+
+
+
+  <!-- External libraries -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/monokai_sublime.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css">
+  <!-- custom -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+  <script type="text/javascript" language="Javascript" src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.1.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+
+  <!-- Favicon and other icons (made with http://www.favicon-generator.org/) -->
+  <link rel="shortcut icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/icons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  
+  <!-- Facebook OGP cards -->
+  <meta property="og:description" content="Trying to find a free cash machine is one of the great challenges faced by Londoners, up there with getting a pint for less than £4 and renting a property cl..." />
+  <meta property="og:url" content="" />
+  <meta property="og:site_name" content="Polyphant" />
+  <meta property="og:title" content="Finding a cash machine with the Google Places API " />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/assets/logo.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="612" />
+  <meta property="og:image:height" content="605" />
+  
+
+  
+  <!-- Twitter: card tags -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Finding a cash machine with the Google Places API ">
+  <meta name="twitter:description" content="Trying to find a free cash machine is one of the great challenges faced by Londoners, up there with getting a pint for less than £4 and renting a property cl...">
+  <meta name="twitter:image" content="/assets/logo.png">
+  <meta name="twitter:url" content="">
+  
+
+  
+
+  <!-- Site styles -->
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="/2015/08/09/google-places-api.html">
+  <link rel="alternate" type="application/rss+xml" title="Polyphant" href="/feed.xml" />
+</head>
+
+
+  <body>
+
+    <header class="navigation" role="banner">
+  <div class="navigation-wrapper">
+    <a href="/" class="logo">
+      
+      <img src="/assets/logo.png" alt="Polyphant">
+      
+    </a>
+    <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <nav role="navigation">
+      <ul id="js-navigation-menu" class="navigation-menu show">
+        
+          
+          <li class="nav-link"><a href="/contact/">Contact</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+          <li class="nav-link"><a href="/tags/">Tags</a>
+          
+        
+          
+          <li class="nav-link"><a href="/about/">About</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <div class="page-content">
+        <div class="post">
+
+<div class="post-header-container " >
+  <div class="scrim ">
+    <header class="post-header">
+      <h1 class="title">Finding a cash machine with the Google Places API </h1>
+    </header>
+  </div>
+</div>
+
+<div class="wrapper">
+
+ <span class="page-divider">
+  <span class="one"></span>
+  <span class="two"></span>
+</span>
+ 
+
+<section class="post-meta">
+  <div class="post-date">August 9, 2015</div>
+  <div class="post-categories">
+  
+  </div>
+</section>
+
+<article class="post-content">
+  <p>Trying to find a free cash machine is one of the great challenges faced by Londoners, up there with getting a pint for less than £4 and renting a property close to the center without having to live on bread and water for the rest of the year. Unfortunately web technology has been a bit tardy in coming up with a solution; there are some of independent web apps from different <a href="http://www.visa.com/atmlocator/index.jsp">machine</a> <a href="http://www.link.co.uk/ATMLocator/Pages/ATMLocator.aspx">companies</a>, and a couple of apps on the google app store with <a href="https://play.google.com/store/apps/details?id=com.moneypass&amp;hl=en">mixed</a> <a href="https://play.google.com/store/apps/details?id=com.souf.nearbyATM&amp;hl=en">reviews</a>, and that’s about it.</p>
+
+<p>Whilst doing a project at work recently I discovered the <a href="https://developers.google.com/places/?hl=en">Google places API</a>, which provides an interface to Google Maps’ huge database of places around the globe. You can search for nearby places given a position, and filter by different place types, including <em>atm’s</em>. It doesn’t differentiate between surcharge free API’s, or those inside Bank’s, but it also doesn’t discriminate between ATM type; not perfect, but a start.</p>
+
+<p>Below is a brief R script for producing a plot of the nearest ATM’s given a postcode. The google places API gives you 1000 requests per day, but if you enter your billing details you get up to 150000 (it won’t charge you, the details are only required to verify your identity).</p>
+
+<p>The <code class="highlighter-rouge">rjson</code> library is used throughout for grabbing API data.</p>
+
+<p><code class="highlighter-rouge">r
+library(rjson)
+</code></p>
+
+<p>Below I query the google maps API for latitude and longitude coordinates given a postocde, in this case the <a href="http://www.historic-uk.com/CultureUK/The-Old-Lady-of-Threadneedle-Street/">old lady</a> in the heart of the city. I construct the API request string, grab the JSON, test whether the look up was succesful, then assign the longitude and latitude data to variables with less verbose names.</p>
+
+<p>```r
+postcode = “EC2R8AH”</p>
+
+<p>API_request &lt;- “https://maps.googleapis.com/maps/api/geocode/json?address=”
+API_request &lt;- paste(API_request,postcode,sep=””)</p>
+
+<p>address &lt;- rjson::fromJSON(file=API_request)</p>
+
+<p>if(address$status != “OK”){
+  stop(“Error in API look up”)
+}</p>
+
+<p>latitude &lt;- address$results[[1]]$geometry$location$lat
+longitude &lt;- address$results[[1]]$geometry$location$lng
+```</p>
+
+<p>We’re now ready to query the places API. If you’ve verified your identity, you will be given a key which needs to be passed in the look up. If not, leave it as <code class="highlighter-rouge">NULL</code> and it’ll be left our of your query string later.</p>
+
+<p><code class="highlighter-rouge">r
+key = "..."
+</code></p>
+
+<p>There are a number of different searches in the places API you can employ, detailed <a href="https://developers.google.com/places/webservice/search">here</a>. I use the <em>nearby search</em>, which requires location coordinates and a radius within which to search. These are provided as ampersand separated arguments at the end of the URL. You can also specify whether to rank your results based on distance from your location. Finally, we add a <em>type</em> which we wish to return, <em>atm</em>. This will return the 20 nearest atm’s ranked by distance.</p>
+
+<p>```r
+API_request &lt;- “https://maps.googleapis.com/maps/api/place/nearbysearch/json?radius=2000&amp;rankby=distance&amp;types=atm”</p>
+
+<p>if(!is.null(key)){
+  API_request &lt;- paste(API_request,paste(“&amp;key=”,key,sep=””),sep=””)
+}</p>
+
+<p>API_request &lt;- paste(API_request,”&amp;location=”, paste(latitude,longitude,sep=”,”),sep=””)</p>
+
+<p>bank_address &lt;- rjson::fromJSON(file = API_request, unexpected.escape = “keep”)</p>
+
+<p>if(bank_address$status != “OK”){
+  stop(“Error in API look up”)
+}
+```</p>
+
+<p>To make the data easier to work with I use the <code class="highlighter-rouge">data.table</code> packages <code class="highlighter-rouge">rbindlist</code> function to flatten some key variables in the JSON in to a data table.</p>
+
+<p>```r
+library(data.table)</p>
+
+<p>bank.details &lt;- rbindlist(lapply(bank_address$results, function(x) data.frame(as.numeric(x$geometry$location$lat[[1]]),
+                                                                                 as.numeric(x$geometry$location$lng[[1]]),
+                                                                                 as.character(x$name[[1]]),
+                                                                                 as.character(x$vicinity[[1]]))))</p>
+
+<p>setnames(bank.details, c(“Latitude”,”Longitude”,”Name”,”Address”))
+```</p>
+
+<p>To plot the results I use the <code class="highlighter-rouge">ggmap</code> package, grabbing a map centered on the location provided at the start, with each ATM highlighted by a different colour.</p>
+
+<p>```r
+library(ggmap)</p>
+
+<p>map &lt;- get_map(location = c(longitude,latitude), zoom = 14, maptype = “roadmap”, scale = 2)</p>
+
+<p>ggmap(map) +
+  geom_point(data = bank.details, aes(x = Longitude, y = Latitude, colour = Name),
+             size = 8, alpha = 0.3, shape = 19)
+```</p>
+
+<center>![branches](/images/branches.png "Nearest atm's to Bank")</center>
+
+</article>
+
+
+
+<section class="rss">
+  <p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
+</section>
+
+<section class="share">
+  <span>Share: </span>
+  
+    
+    
+      <a href="//twitter.com/share?text=Finding+a+cash+machine+with+the+Google+Places+API+&url=/2015/08/09/google-places-api.html&via=polyphantastic"
+        onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
+        <i class="fa fa-twitter-square fa-lg"></i>
+      </a>
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+      <a href="//www.facebook.com/sharer.php?t=Finding+a+cash+machine+with+the+Google+Places+API+&u=/2015/08/09/google-places-api.html"
+        onclick="window.open(this.href, 'facebook-share', 'width=550,height=255');return false;">
+        <i class="fa fa-facebook-square fa-lg"></i>
+      </a>
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      <a href="//plus.google.com/share?title=Finding+a+cash+machine+with+the+Google+Places+API+&url=/2015/08/09/google-places-api.html"
+        onclick="window.open(this.href, 'google-plus-share', 'width=550,height=255');return false;">
+        <i class="fa fa-google-plus-square fa-lg"></i>
+      </a>
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+      <a href="//www.pinterest.com/pin/create/button/?description=Finding+a+cash+machine+with+the+Google+Places+API+&url=/2015/08/09/google-places-api.html&media=/images/hdf.gif"
+        onclick="window.open(this.href, 'pinterest-share', 'width=550,height=255');return false;">
+        <i class="fa fa-pinterest-square fa-lg"></i>
+      </a>
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+      <a href="//www.reddit.com/submit" onclick="window.location = '//www.reddit.com/submit?url=' + encodeURIComponent('/2015/08/09/google-places-api.html') + '&title=Finding a cash machine with the Google Places API '; return false">
+        <i class="fa fa-reddit-square fa-lg"></i>
+      </a>
+    
+  
+</section>
+
+	<section class="post-navigation">
+		<span class="prev-post">
+			
+				<a href="/2015/07/18/reveal-phd.html">
+					<span class="fa-stack fa-lg">
+						<i class="fa fa-square fa-stack-2x"></i>
+						<i class="fa fa-angle-double-left fa-stack-1x fa-inverse"></i>
+					</span>
+					<span class="page-number">PhD at UoS</span>
+				</a>
+			
+		</span>
+		<span class="next-post">
+			
+				<a href="/2015/08/19/dynamic-ui-shiny.html">
+					<span class="page-number">Creating dynamic UI components in Shiny</span>
+					<span class="fa-stack fa-lg">
+						<i class="fa fa-square fa-stack-2x"></i>
+						<i class="fa fa-angle-double-right fa-stack-1x fa-inverse"></i>
+					</span>
+				</a>
+			
+		</span>
+	</section>
+
+
+
+
+<section class="disqus">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_shortname = 'polyphant';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+
+</div>
+</div>
+
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h3 class="footer-heading">Polyphant</h3>
+
+    <div class="site-navigation">
+
+      <p><strong>Site Map</strong></p>
+      <ul class="pages">
+        
+        
+          <li class="nav-link"><a href="/contact/">Contact</a>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+          <li class="nav-link"><a href="/tags/">Tags</a>
+        
+        
+        
+          <li class="nav-link"><a href="/about/">About</a>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      </ul>
+    </div>
+
+    <div class="site-contact">
+
+      <p><strong>Social</strong></p>
+      <ul class="social-media-list">
+
+        
+          
+          <li>
+            <a href="https://twitter.com/polyphantastic" target="blank" title="Follow me on Twitter">
+              <i class="fa fa-twitter"></i>
+              <span class="username">polyphantastic</span>
+            </a>
+          </li>
+          
+        
+          
+        
+          
+          <li>
+            <a href="https://github.com/polyphant1" target="blank" title="Fork me on GitHub">
+              <i class="fa fa-github"></i>
+              <span class="username">polyphant1</span>
+            </a>
+          </li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+
+      </ul>
+    </div>
+
+    <div class="site-signature">
+      <p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
+      <p class="text">Technology, Astronomy and other random noise, from an Astrophysicist in London
+</p>
+    </div>
+
+  </div>
+
+</footer>
+
+<!-- Scripts -->
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"></script>
+<script>
+
+$(document).ready(function() {
+
+  // Syntax highlighting
+  hljs.initHighlightingOnLoad();
+
+  // Header
+  var menuToggle = $('#js-mobile-menu').unbind();
+  $('#js-navigation-menu').removeClass("show");
+  menuToggle.on('click', function(e) {
+    e.preventDefault();
+    $('#js-navigation-menu').slideToggle(function(){
+      if($('#js-navigation-menu').is(':hidden')) {
+        $('#js-navigation-menu').removeAttr('style');
+      }
+    });
+  });
+
+
+});
+
+</script>
+
+
+<!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-61827184-1', 'auto');
+  ga('send', 'pageview', {
+    'page': '/2015/08/09/google-places-api.html',
+    'title': 'Finding a cash machine with the Google Places API '
+  });
+</script>
+
+
+
+  </body>
+
+</html>

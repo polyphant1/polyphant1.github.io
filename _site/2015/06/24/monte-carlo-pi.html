@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Using Monte Carlo methods to estimate pi</title>
+  <meta name="description" content="A brief post on how to find the value of pi, using the law of large numbers and bit of introductory Julia.">
+  
+  <meta name="author" content="Christopher Lovell">
+  <meta name="copyright" content="&copy; Christopher Lovell 2016">
+  
+
+
+
+
+  <!-- External libraries -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/monokai_sublime.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css">
+  <!-- custom -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+  <script type="text/javascript" language="Javascript" src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.1.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+
+  <!-- Favicon and other icons (made with http://www.favicon-generator.org/) -->
+  <link rel="shortcut icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/icons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  
+  <!-- Facebook OGP cards -->
+  <meta property="og:description" content="A brief post on how to find the value of pi, using the law of large numbers and bit of introductory Julia." />
+  <meta property="og:url" content="" />
+  <meta property="og:site_name" content="Polyphant" />
+  <meta property="og:title" content="Using Monte Carlo methods to estimate pi" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/assets/logo.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="612" />
+  <meta property="og:image:height" content="605" />
+  
+
+  
+  <!-- Twitter: card tags -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Using Monte Carlo methods to estimate pi">
+  <meta name="twitter:description" content="A brief post on how to find the value of pi, using the law of large numbers and bit of introductory Julia.">
+  <meta name="twitter:image" content="/assets/logo.png">
+  <meta name="twitter:url" content="">
+  
+
+  
+
+  <!-- Site styles -->
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="/2015/06/24/monte-carlo-pi.html">
+  <link rel="alternate" type="application/rss+xml" title="Polyphant" href="/feed.xml" />
+</head>
+
+
+  <body>
+
+    <header class="navigation" role="banner">
+  <div class="navigation-wrapper">
+    <a href="/" class="logo">
+      
+      <img src="/assets/logo.png" alt="Polyphant">
+      
+    </a>
+    <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <nav role="navigation">
+      <ul id="js-navigation-menu" class="navigation-menu show">
+        
+          
+          <li class="nav-link"><a href="/contact/">Contact</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+          <li class="nav-link"><a href="/tags/">Tags</a>
+          
+        
+          
+          <li class="nav-link"><a href="/about/">About</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <div class="page-content">
+        <div class="post">
+
+<div class="post-header-container " >
+  <div class="scrim ">
+    <header class="post-header">
+      <h1 class="title">Using Monte Carlo methods to estimate pi</h1>
+    </header>
+  </div>
+</div>
+
+<div class="wrapper">
+
+ <span class="page-divider">
+  <span class="one"></span>
+  <span class="two"></span>
+</span>
+ 
+
+<section class="post-meta">
+  <div class="post-date">June 24, 2015</div>
+  <div class="post-categories">
+  
+  </div>
+</section>
+
+<article class="post-content">
+  <p>You’ve just bought a brand new computer. You excitedly rip open the packaging, carefully extract it from the box, remove the protective film from the screen (so satisfying) and, after 10 hours of charging, boot it up. It turns on fine, and everything seems to be functioning normally. It’s only after a few minutes of use that you discover, to your horror, that the manufacturer has forgotten to store the constant $\pi$ on the operating system. How are you going to play <a href="https://kerbalspaceprogram.com/en/">Kerbal space program</a> if you can’t calculate the equations of motion of your rockets and space probes?!</p>
+
+<p>One way around this is to use Monte Carlo methods, taking advantage of the law of large numbers to gain a reasonable approximation of pi to a few decimal places. In this post I’ll demonstrate this using Julia (we’ll conveniently ignore the fact that Julia has the number $\pi$ in it), which I’ve just started learning and having a play with.</p>
+
+<p>Take a square of side $a$, centred on the origin. Now place a circle inside the box with radius $a/2$, also centred on the origin. The area of the rectangle is $a^2$, and the area of the circle is $\pi(a/2)^2$.</p>
+
+<p>```julia
+using DataArrays, DataFrames
+using Gadfly
+using Compose</p>
+
+<p>set_default_plot_size(10cm,10cm)</p>
+
+<p>compose(context(),
+  (context(),circle(0.5,.5,0.5),fill(“tomato”)),
+  (context(),rectangle(0.,0.,1,1),fill(“black”))
+)
+```</p>
+
+<p><br /></p>
+
+<center>![circle-square](/assets/monte-carlo-pi/output_1_0.svg "Circle in rectangle")</center>
+
+<p>If we take any random point within the rectangle, then the probability that this point lies within the circle, $P(circle)$, is equal to the area of the circle relative to the area of the rectangle. i.e,</p>
+
+<script type="math/tex; mode=display">P(circle)=\frac{A\_{circle}}{A\_{square}}=\frac{\pi (a/2)^2}{a^2}</script>
+
+<p>If we take $n$ points, then as $n$ gets very large the fraction of points that lie within the circle will converge to the probability of landing in the circle, $P(circle)$.</p>
+
+<p>Expanding and rearranging our equation above for $\pi$,</p>
+
+<script type="math/tex; mode=display">\pi = 4\times P(circle)</script>
+
+<p>Below is a Julia script for doing just this. $n$ samples from a bivariate uniform range $[0,1]$ are taken, and used as coordinates $(x,y)$ centred on the origin. For each coordinate a distance from the origin is calculated; if this exceeds the radius of the circle then it must lie outside, if not the point is within the circle. The sum of points in the circle is divided by the total number of points taken to give the probability of points in the circle. We can then use the equation above to estimate $\pi$.</p>
+
+<p>The plot shows a sample of the coordinates generated, coloured by whether they lie in or out of the circle.</p>
+
+<p>```julia
+n = 1000000</p>
+
+<p>df = DataFrame()
+df[:x] = 0.5 - rand(n)
+df[:y] = 0.5 - rand(n)
+df[:c] = Array(String, n)
+df[:r] = Array(Float64, n)</p>
+
+<p>for i = 1:n
+    df[i,:r] = (df[i,:x]^2 + df[i,:y]^2)^.5
+    if df[i,:r] &lt; 0.5
+        df[i,:c] = “in”
+    else
+        df[i,:c] = “out”
+    end
+end</p>
+
+<p>circle_df = DataFrame()
+circle_df[:c] = cos(-pi:0.01:pi)/2
+circle_df[:s] = sin(-pi:0.01:pi)/2</p>
+
+<p>set_default_plot_size(15cm,15cm)</p>
+
+<p>plot(df[sample(1:size(df, 1), iceil(0.001 * size(df, 1))), :], x=”x”, y=”y”, color=”c”, Geom.point,Coord.cartesian(fixed=true),
+Guide.Annotation(compose(context(),circle(0,0,0.5), fill(nothing), stroke(“orange”))))
+```</p>
+
+<center>![point-distribution](/assets/monte-carlo-pi/output_3_0.svg "Point distribution")</center>
+
+<p><code class="highlighter-rouge">julia
+print("pi ~ ",4*sum(df[:c] .== "in")/n)
+pi ~ 3.138924
+</code></p>
+
+</article>
+
+
+
+<section class="rss">
+  <p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
+</section>
+
+<section class="share">
+  <span>Share: </span>
+  
+    
+    
+      <a href="//twitter.com/share?text=Using+Monte+Carlo+methods+to+estimate+pi&url=/2015/06/24/monte-carlo-pi.html&via=polyphantastic"
+        onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
+        <i class="fa fa-twitter-square fa-lg"></i>
+      </a>
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+      <a href="//www.facebook.com/sharer.php?t=Using+Monte+Carlo+methods+to+estimate+pi&u=/2015/06/24/monte-carlo-pi.html"
+        onclick="window.open(this.href, 'facebook-share', 'width=550,height=255');return false;">
+        <i class="fa fa-facebook-square fa-lg"></i>
+      </a>
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      <a href="//plus.google.com/share?title=Using+Monte+Carlo+methods+to+estimate+pi&url=/2015/06/24/monte-carlo-pi.html"
+        onclick="window.open(this.href, 'google-plus-share', 'width=550,height=255');return false;">
+        <i class="fa fa-google-plus-square fa-lg"></i>
+      </a>
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+      <a href="//www.pinterest.com/pin/create/button/?description=Using+Monte+Carlo+methods+to+estimate+pi&url=/2015/06/24/monte-carlo-pi.html&media=/images/hdf.gif"
+        onclick="window.open(this.href, 'pinterest-share', 'width=550,height=255');return false;">
+        <i class="fa fa-pinterest-square fa-lg"></i>
+      </a>
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+      <a href="//www.reddit.com/submit" onclick="window.location = '//www.reddit.com/submit?url=' + encodeURIComponent('/2015/06/24/monte-carlo-pi.html') + '&title=Using Monte Carlo methods to estimate pi'; return false">
+        <i class="fa fa-reddit-square fa-lg"></i>
+      </a>
+    
+  
+</section>
+
+	<section class="post-navigation">
+		<span class="prev-post">
+			
+				<a href="/2015/06/21/new-blog-design.html">
+					<span class="fa-stack fa-lg">
+						<i class="fa fa-square fa-stack-2x"></i>
+						<i class="fa fa-angle-double-left fa-stack-1x fa-inverse"></i>
+					</span>
+					<span class="page-number">New blog design</span>
+				</a>
+			
+		</span>
+		<span class="next-post">
+			
+				<a href="/2015/06/30/odyssey-holiday.html">
+					<span class="page-number">An alternative holiday slideshow using Odyssey.js</span>
+					<span class="fa-stack fa-lg">
+						<i class="fa fa-square fa-stack-2x"></i>
+						<i class="fa fa-angle-double-right fa-stack-1x fa-inverse"></i>
+					</span>
+				</a>
+			
+		</span>
+	</section>
+
+
+
+
+<section class="disqus">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_shortname = 'polyphant';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+
+</div>
+</div>
+
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h3 class="footer-heading">Polyphant</h3>
+
+    <div class="site-navigation">
+
+      <p><strong>Site Map</strong></p>
+      <ul class="pages">
+        
+        
+          <li class="nav-link"><a href="/contact/">Contact</a>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+          <li class="nav-link"><a href="/tags/">Tags</a>
+        
+        
+        
+          <li class="nav-link"><a href="/about/">About</a>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      </ul>
+    </div>
+
+    <div class="site-contact">
+
+      <p><strong>Social</strong></p>
+      <ul class="social-media-list">
+
+        
+          
+          <li>
+            <a href="https://twitter.com/polyphantastic" target="blank" title="Follow me on Twitter">
+              <i class="fa fa-twitter"></i>
+              <span class="username">polyphantastic</span>
+            </a>
+          </li>
+          
+        
+          
+        
+          
+          <li>
+            <a href="https://github.com/polyphant1" target="blank" title="Fork me on GitHub">
+              <i class="fa fa-github"></i>
+              <span class="username">polyphant1</span>
+            </a>
+          </li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+
+      </ul>
+    </div>
+
+    <div class="site-signature">
+      <p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
+      <p class="text">Technology, Astronomy and other random noise, from an Astrophysicist in London
+</p>
+    </div>
+
+  </div>
+
+</footer>
+
+<!-- Scripts -->
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"></script>
+<script>
+
+$(document).ready(function() {
+
+  // Syntax highlighting
+  hljs.initHighlightingOnLoad();
+
+  // Header
+  var menuToggle = $('#js-mobile-menu').unbind();
+  $('#js-navigation-menu').removeClass("show");
+  menuToggle.on('click', function(e) {
+    e.preventDefault();
+    $('#js-navigation-menu').slideToggle(function(){
+      if($('#js-navigation-menu').is(':hidden')) {
+        $('#js-navigation-menu').removeAttr('style');
+      }
+    });
+  });
+
+
+});
+
+</script>
+
+
+<!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-61827184-1', 'auto');
+  ga('send', 'pageview', {
+    'page': '/2015/06/24/monte-carlo-pi.html',
+    'title': 'Using Monte Carlo methods to estimate pi'
+  });
+</script>
+
+
+
+  </body>
+
+</html>

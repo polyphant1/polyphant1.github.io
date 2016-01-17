@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>How technologically illiterate are our political leaders, and does it matter?</title>
+  <meta name="description" content="Lee Hsien Loong, prime minister of Singapore, has released his C++ code for a sudoku solver, setting a standard that all other political leaders should striv...">
+  
+  <meta name="author" content="Christopher Lovell">
+  <meta name="copyright" content="&copy; Christopher Lovell 2016">
+  
+
+
+
+
+  <!-- External libraries -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/monokai_sublime.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css">
+  <!-- custom -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+  <script type="text/javascript" language="Javascript" src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.1.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+
+  <!-- Favicon and other icons (made with http://www.favicon-generator.org/) -->
+  <link rel="shortcut icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/icons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  
+  <!-- Facebook OGP cards -->
+  <meta property="og:description" content="Lee Hsien Loong, prime minister of Singapore, has released his C++ code for a sudoku solver, setting a standard that all other political leaders should striv..." />
+  <meta property="og:url" content="" />
+  <meta property="og:site_name" content="Polyphant" />
+  <meta property="og:title" content="How technologically illiterate are our political leaders, and does it matter?" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/assets/logo.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="612" />
+  <meta property="og:image:height" content="605" />
+  
+
+  
+  <!-- Twitter: card tags -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="How technologically illiterate are our political leaders, and does it matter?">
+  <meta name="twitter:description" content="Lee Hsien Loong, prime minister of Singapore, has released his C++ code for a sudoku solver, setting a standard that all other political leaders should striv...">
+  <meta name="twitter:image" content="/assets/logo.png">
+  <meta name="twitter:url" content="">
+  
+
+  
+
+  <!-- Site styles -->
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="/2015/05/18/lee-hsien-loong-singapore-cpp.html">
+  <link rel="alternate" type="application/rss+xml" title="Polyphant" href="/feed.xml" />
+</head>
+
+
+  <body>
+
+    <header class="navigation" role="banner">
+  <div class="navigation-wrapper">
+    <a href="/" class="logo">
+      
+      <img src="/assets/logo.png" alt="Polyphant">
+      
+    </a>
+    <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <nav role="navigation">
+      <ul id="js-navigation-menu" class="navigation-menu show">
+        
+          
+          <li class="nav-link"><a href="/contact/">Contact</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+          <li class="nav-link"><a href="/tags/">Tags</a>
+          
+        
+          
+          <li class="nav-link"><a href="/about/">About</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <div class="page-content">
+        <div class="post">
+
+<div class="post-header-container " >
+  <div class="scrim ">
+    <header class="post-header">
+      <h1 class="title">How technologically illiterate are our political leaders, and does it matter?</h1>
+    </header>
+  </div>
+</div>
+
+<div class="wrapper">
+
+ <span class="page-divider">
+  <span class="one"></span>
+  <span class="two"></span>
+</span>
+ 
+
+<section class="post-meta">
+  <div class="post-date">May 18, 2015</div>
+  <div class="post-categories">
+  
+  </div>
+</section>
+
+<article class="post-content">
+  <center>
+<img src="/assets/David-Cameron-008.jpg" />
+</center>
+<p><br /></p>
+
+<p>The digital age calls for technology aware policy makers. Digital currencies, encryption and online privacy present a few of the challenges facing governments across the world. Yet the majority of these governments are composed of those with little to no grasp of the basics of how technology works. Most politicians practical experience with technology ends with Microsoft Office. How many national leaders would understand that “Hello world!” is not the name of a prenatal meditation class, but the first step for new programmers learning a  language?</p>
+
+<p>Lee Hsien Loong, prime minister of Singapore, recently demonstrated that he’s the most technically literate national leader on the planet, by <a href="https://www.facebook.com/leehsienloong/photos/a.344710778924968.83425.125845680811480/905828379479869/">releasing his C++ code</a> for a Sudoku solver. The program runs in a DOS window, in to which you enter each line of the unsolved Sudoku line by line. It then prints out the solution(s), found using a <a href="http://en.wikipedia.org/wiki/Backtracking">backtrack search</a>. He even asked for users to submit bugs.</p>
+
+<p>This level of know-how is above average for the general population, never mind prime ministers. But it begs the question, how do other leaders compare? And is it really necessary to have this level of technical knowledge when you’re running a country, with a number of other pressing concerns?</p>
+
+<p>In the UK, recently re-elected David Cameron isn’t shy about speaking on technology issues; he’s boasted about the <a href="https://www.gov.uk/government/news/tech-nation-prime-minister-and-chancellor-welcome-launch">growing technology sector</a> and advocated <a href="http://www.bbc.co.uk/news/uk-politics-30778424">looser data privacy laws</a>. He still appears to have a pretty dated view of the technology profession though.</p>
+
+<p><br /></p>
+<center>
+
+<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">With children learning &quot;coding&quot; at No 10 - being able to understand computing is vital for our economic future <a href="http://t.co/yZOcHvIRcK">pic.twitter.com/yZOcHvIRcK</a></p>&mdash; David Cameron (@David_Cameron) <a href="https://twitter.com/David_Cameron/status/541882168616943617">December 8, 2014</a></blockquote>
+<script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</center>
+<p><br /></p>
+
+<p>The quote marks are an embarrassing nod to an era when geek-dom wasn’t as acceptable or even fashionable as it is now. And the declaration that “understanding is vital” seems a bit hollow given that a group of schoolchildren are actively demonstrating more knowledge than him. “I know what I need to know about coding,” <a href="http://www.redonline.co.uk/red-women/blogs/David-Cameron-hour-of-code-computer-coding-schools">he told reporters</a>. “It wasn’t completely baffling. I did understand what was going on.”</p>
+
+<p>From <a href="https://www.youtube.com/watch?v=6XvmhE1J9PY">Obama</a> to <a href="http://blogs.ft.com/beyond-brics/2012/01/30/guest-post-by-vladimir-putin-russia-needs-more-technology-and-less-corruption/">Putin</a>, leaders are boasting about their growing technology sectors, but none have any practical experience using the tech itself (except perhaps German Chancellor Merkel, who has a doctorate in physical chemistry, and wrote her thesis on quantum chemistry). The majority have education backgrounds in Law, or other Humanities. Merkel is a rare case of a national leader educated to a high level in the natural sciences; as far as I’m aware there have been none with a computer science education.</p>
+
+<p>You might argue that political leaders are also interested in their countries agriculture and heavy industry, but we don’t expect them to start shoveling silage to get a better understanding of farmers livelihoods. But that’s exactly what they have been doing! The recent UK general election saw the chancellor, George Osborne, initiate his nationwide ‘<a href="http://www.ft.com/cms/s/0/fbbc28de-0a69-11e4-ac2a-00144feabdc0.html#axzz3axPQEFyJ">Hard Hat tour</a>’, supposedly to demonstrate that he’s a normal kind of bloke, but also to show voters that he understands these industries. Here’s just a selection of fancy dress options George modeled this past month,</p>
+
+<p><br /></p>
+<center>
+
+<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">Guy is 1of 3,450 people across Loughborough who&#39;ve started an apprenticeship since 2010 <a href="http://t.co/EkWMF0ppI9">pic.twitter.com/EkWMF0ppI9</a></p>&mdash; George Osborne (@George_Osborne) <a href="https://twitter.com/George_Osborne/status/595845731635855360">May 6, 2015</a></blockquote>
+<script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">Chef at Bikash tells me economy in a country is like Thorka in a curry, if you don&#39;t get it right nothing else works <a href="http://t.co/hkZibH1NsT">pic.twitter.com/hkZibH1NsT</a></p>&mdash; George Osborne (@George_Osborne) <a href="https://twitter.com/George_Osborne/status/591610301528834048">April 24, 2015</a></blockquote>
+<script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">Enjoyed meeting employees at <a href="https://twitter.com/CarlsbergUK">@CarlsbergUK</a> with our brilliant Morley&amp;Outwood candidate <a href="https://twitter.com/andreajenkyns">@andreajenkyns</a> <a href="http://t.co/R0LPo8JIJP">pic.twitter.com/R0LPo8JIJP</a></p>&mdash; George Osborne (@George_Osborne) <a href="https://twitter.com/George_Osborne/status/591234371237085185">April 23, 2015</a></blockquote>
+<script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">With @John4Carlisle meeting builders who agree with me - the best time to fix the roof is when the sun is shining <a href="http://t.co/hT3wy5Bfnq">pic.twitter.com/hT3wy5Bfnq</a></p>&mdash; George Osborne (@George_Osborne) <a href="https://twitter.com/George_Osborne/status/588044113351725056">April 14, 2015</a></blockquote>
+<script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">Having a go at welding with apprentices at <a href="https://twitter.com/HarrisPye">@HarrisPye</a> in Vale of Glamorgan with strong local voice <a href="https://twitter.com/AlunCairns">@aluncairns</a> <a href="http://t.co/yPB7Um2tgB">pic.twitter.com/yPB7Um2tgB</a></p>&mdash; George Osborne (@George_Osborne) <a href="https://twitter.com/George_Osborne/status/586481813973008385">April 10, 2015</a></blockquote>
+<script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</center>
+<p><br /></p>
+
+<p>But why didn’t he visit any of the technology start ups that his superior has been harping on about? The only image I can find of George Osborne in even close proximity to a computer is on a <a href="https://twitter.com/George_Osborne/status/591957094674358272">visit to Warner Bros. studios</a>, never mind using one.</p>
+
+<p>It’s not as if it’s unpopular; Lee Hsien Loong has received worldwide plaudits for releasing his code, and a generation of young Singaporean voters have taken to social media to congratulate him. Perhaps national leaders are scared of alienating the majority of their voter base, who are also technically illiterate. This will inevitably have to change. If they want to inspire young people to get involved with technology, and win a few younger voters along the way as well, politicians should be encouraged to get their hands dirty. If they’re making big decisions about net neutrality and digital currencies, a little low level experience playing with the cogs and gears of the internet won’t do any harm. We certainly don’t expect or even wish our leaders to become expert hackers overnight, but a little practical exposure could go a long way to resolving some of the dangerous misconceptions about technology often held by some of the most powerful in our society. At the very least, the next time a bunch of tech savvy school children turn up at David’s house, he could speak the same language.</p>
+
+</article>
+
+
+
+<section class="rss">
+  <p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
+</section>
+
+<section class="share">
+  <span>Share: </span>
+  
+    
+    
+      <a href="//twitter.com/share?text=How+technologically+illiterate+are+our+political+leaders%2C+and+does+it+matter%3F&url=/2015/05/18/lee-hsien-loong-singapore-cpp.html&via=polyphantastic"
+        onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
+        <i class="fa fa-twitter-square fa-lg"></i>
+      </a>
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+      <a href="//www.facebook.com/sharer.php?t=How+technologically+illiterate+are+our+political+leaders%2C+and+does+it+matter%3F&u=/2015/05/18/lee-hsien-loong-singapore-cpp.html"
+        onclick="window.open(this.href, 'facebook-share', 'width=550,height=255');return false;">
+        <i class="fa fa-facebook-square fa-lg"></i>
+      </a>
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      <a href="//plus.google.com/share?title=How+technologically+illiterate+are+our+political+leaders%2C+and+does+it+matter%3F&url=/2015/05/18/lee-hsien-loong-singapore-cpp.html"
+        onclick="window.open(this.href, 'google-plus-share', 'width=550,height=255');return false;">
+        <i class="fa fa-google-plus-square fa-lg"></i>
+      </a>
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+      <a href="//www.pinterest.com/pin/create/button/?description=How+technologically+illiterate+are+our+political+leaders%2C+and+does+it+matter%3F&url=/2015/05/18/lee-hsien-loong-singapore-cpp.html&media=/images/hdf.gif"
+        onclick="window.open(this.href, 'pinterest-share', 'width=550,height=255');return false;">
+        <i class="fa fa-pinterest-square fa-lg"></i>
+      </a>
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+      <a href="//www.reddit.com/submit" onclick="window.location = '//www.reddit.com/submit?url=' + encodeURIComponent('/2015/05/18/lee-hsien-loong-singapore-cpp.html') + '&title=How technologically illiterate are our political leaders, and does it matter?'; return false">
+        <i class="fa fa-reddit-square fa-lg"></i>
+      </a>
+    
+  
+</section>
+
+	<section class="post-navigation">
+		<span class="prev-post">
+			
+				<a href="/2015/04/13/google-analytics-ghpages.html">
+					<span class="fa-stack fa-lg">
+						<i class="fa fa-square fa-stack-2x"></i>
+						<i class="fa fa-angle-double-left fa-stack-1x fa-inverse"></i>
+					</span>
+					<span class="page-number">Adding Google Analytics to GitHub Pages</span>
+				</a>
+			
+		</span>
+		<span class="next-post">
+			
+				<a href="/2015/06/14/failed-twitter-election-analysis.html">
+					<span class="page-number">A failed twitter election analysis, and lessons learnt</span>
+					<span class="fa-stack fa-lg">
+						<i class="fa fa-square fa-stack-2x"></i>
+						<i class="fa fa-angle-double-right fa-stack-1x fa-inverse"></i>
+					</span>
+				</a>
+			
+		</span>
+	</section>
+
+
+
+
+<section class="disqus">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_shortname = 'polyphant';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+
+</div>
+</div>
+
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h3 class="footer-heading">Polyphant</h3>
+
+    <div class="site-navigation">
+
+      <p><strong>Site Map</strong></p>
+      <ul class="pages">
+        
+        
+          <li class="nav-link"><a href="/contact/">Contact</a>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+          <li class="nav-link"><a href="/tags/">Tags</a>
+        
+        
+        
+          <li class="nav-link"><a href="/about/">About</a>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      </ul>
+    </div>
+
+    <div class="site-contact">
+
+      <p><strong>Social</strong></p>
+      <ul class="social-media-list">
+
+        
+          
+          <li>
+            <a href="https://twitter.com/polyphantastic" target="blank" title="Follow me on Twitter">
+              <i class="fa fa-twitter"></i>
+              <span class="username">polyphantastic</span>
+            </a>
+          </li>
+          
+        
+          
+        
+          
+          <li>
+            <a href="https://github.com/polyphant1" target="blank" title="Fork me on GitHub">
+              <i class="fa fa-github"></i>
+              <span class="username">polyphant1</span>
+            </a>
+          </li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+
+      </ul>
+    </div>
+
+    <div class="site-signature">
+      <p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
+      <p class="text">Technology, Astronomy and other random noise, from an Astrophysicist in London
+</p>
+    </div>
+
+  </div>
+
+</footer>
+
+<!-- Scripts -->
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"></script>
+<script>
+
+$(document).ready(function() {
+
+  // Syntax highlighting
+  hljs.initHighlightingOnLoad();
+
+  // Header
+  var menuToggle = $('#js-mobile-menu').unbind();
+  $('#js-navigation-menu').removeClass("show");
+  menuToggle.on('click', function(e) {
+    e.preventDefault();
+    $('#js-navigation-menu').slideToggle(function(){
+      if($('#js-navigation-menu').is(':hidden')) {
+        $('#js-navigation-menu').removeAttr('style');
+      }
+    });
+  });
+
+
+});
+
+</script>
+
+
+<!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-61827184-1', 'auto');
+  ga('send', 'pageview', {
+    'page': '/2015/05/18/lee-hsien-loong-singapore-cpp.html',
+    'title': 'How technologically illiterate are our political leaders, and does it matter?'
+  });
+</script>
+
+
+
+  </body>
+
+</html>

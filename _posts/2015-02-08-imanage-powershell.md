@@ -12,7 +12,7 @@ If your organisation uses [iManage](http://www.tikit.com/software/document-manag
 
 Download the module and load it in to your PowerShell workspace, then point it at a folder, database, or specific files. The example below loops through a CSV of document ID's and version numbers and downloads them to disc.
 
-```powershell
+<pre><code class="hljs powershell">
 # import the iManagePowershell module .dll
 "iManagePowerShell.dll" | Import-Module
 
@@ -26,4 +26,4 @@ $d = Get-iManDatabase -Server imanage_server -Database imanage_database
 foreach($i in $csv){
     $d | Get-iManDocument -Number $i.'ID' -Version $i.'version no' | Export-iManDocument docs
 }
-```
+</code></pre>

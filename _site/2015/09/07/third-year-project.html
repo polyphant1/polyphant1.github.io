@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>How to build a galaxy, #1</title>
+  <meta name="description" content="Introduction to the work I did for my third year project during my integrated masters, modelling a spiral galaxy">
+  
+  <meta name="author" content="Christopher Lovell">
+  <meta name="copyright" content="&copy; Christopher Lovell 2016">
+  
+
+
+
+
+  <!-- External libraries -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/monokai_sublime.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css">
+  <!-- custom -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+  <script type="text/javascript" language="Javascript" src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.1.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+
+  <!-- Favicon and other icons (made with http://www.favicon-generator.org/) -->
+  <link rel="shortcut icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/icons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  
+  <!-- Facebook OGP cards -->
+  <meta property="og:description" content="Introduction to the work I did for my third year project during my integrated masters, modelling a spiral galaxy" />
+  <meta property="og:url" content="" />
+  <meta property="og:site_name" content="Polyphant" />
+  <meta property="og:title" content="How to build a galaxy, #1" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/assets/logo.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="612" />
+  <meta property="og:image:height" content="605" />
+  
+
+  
+  <!-- Twitter: card tags -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="How to build a galaxy, #1">
+  <meta name="twitter:description" content="Introduction to the work I did for my third year project during my integrated masters, modelling a spiral galaxy">
+  <meta name="twitter:image" content="/assets/logo.png">
+  <meta name="twitter:url" content="">
+  
+
+  
+
+  <!-- Site styles -->
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="/2015/09/07/third-year-project.html">
+  <link rel="alternate" type="application/rss+xml" title="Polyphant" href="/feed.xml" />
+</head>
+
+
+  <body>
+
+    <header class="navigation" role="banner">
+  <div class="navigation-wrapper">
+    <a href="/" class="logo">
+      
+      <img src="/assets/logo.png" alt="Polyphant">
+      
+    </a>
+    <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <nav role="navigation">
+      <ul id="js-navigation-menu" class="navigation-menu show">
+        
+          
+          <li class="nav-link"><a href="/contact/">Contact</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+          <li class="nav-link"><a href="/tags/">Tags</a>
+          
+        
+          
+          <li class="nav-link"><a href="/about/">About</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <div class="page-content">
+        <div class="post">
+
+<div class="post-header-container " >
+  <div class="scrim ">
+    <header class="post-header">
+      <h1 class="title">How to build a galaxy, #1</h1>
+    </header>
+  </div>
+</div>
+
+<div class="wrapper">
+
+ <span class="page-divider">
+  <span class="one"></span>
+  <span class="two"></span>
+</span>
+ 
+
+<section class="post-meta">
+  <div class="post-date">September 7, 2015</div>
+  <div class="post-categories">
+  
+  </div>
+</section>
+
+<article class="post-content">
+  <p>In just two weeks I’ll begin my Ph.D., and after attending the <a href="http://sites.cardiff.ac.uk/astronomy-summer-school/">STFC summer school</a> program last week I’m now feeling very inspired and eager to start. In the run up I thought it would be quite fun (?) to write a few short posts on some of the work that went in to my 3rd and 4th year projects during my integrated masters. This post introduces my third year project titled “Star Formation Epidemics in Galaxies”, supervised by <a href="http://www.astro.cardiff.ac.uk/contactsandpeople/?page=full&amp;id=417">Professor Anthony Whitworth</a> and <a href="http://www.uclan.ac.uk/staff_profiles/dimitris_stamatellos.php">Dr Dimitris Stamatellos</a> (Anthony unfortunately fell seriously ill at the beginning of the project, but Dimitris bravely stepped up whilst he recovered to help me and two other students. I’ve since learned at the summer school that Dimitris is supervising one of my fellow Ph.D. entrants, so congratulations and best of luck to them both!).</p>
+
+<p>The aim of the project was to model a galaxy, simulate it, and test the outputs of the simulation against observed galaxy properties. Galaxies display a wide range of morphologies, and many attempts have been made to classify them based on their appearance. The most well known galaxy morphology classification system is the <a href="https://en.wikipedia.org/wiki/Hubble_sequence">Hubble sequence</a>, also known as the ‘tuning fork’ diagram due to its shape.</p>
+
+<p><br /><center>
+![tuning fork](/images/tuning-fork.jpeg)
+</center><br /></p>
+
+<p>At the far left of the diagram lie the elliptical galaxies, collections of old stars that appear as uniform spheres on the sky. To the far right of each end of the forks are the spiral galaxies, flat dusty galaxies with large spiral arms. The fork defines whether the spiral has a central bar or not, a feature seen in a large proportion of spiral galaxies; our own Milky Way galaxy is in fact a <a href="http://apod.nasa.gov/apod/ap050825.html">barred spiral</a>. This classification scheme has remained remarkably popular, especially given that it’s mostly unrelated to the underlying physics which leads to these variations in appearance.</p>
+
+<p>My task was to create a spiral galaxy, and one of the first ingredients required was a model of the gravity on large scales, due to all the stuff in it. Spiral galaxies have two distinct visible components that provide this gravity. The first is the bulge, a spherical distribution of older stars around the center. The second is the disc, a flat pancake of stars, gas and dust  on which the spiral is visible, and is usually where star formation occurs. However, with just these two components we have a problem: The velocity of material spinning around the galaxy should decrease with radius, according to Newtonian dynamics,</p>
+
+<center>
+$v \varpropto r^{-2}$
+</center>
+
+<p>However, this is not what’s observed; in fact, the velocity remains relatively constant with radius. This presented a major problem to theorists in the mid-twentieth century: could Newtonian gravity be wrong at these great distances? Or was there new physics causing the discrepancy?</p>
+
+<p>One of the first astronomers to observe these rotation curves was the American <a href="https://en.wikipedia.org/wiki/Vera_Rubin">Vera Rubin</a>. In particular, her and her co-author Kent Ford in 1975 stated the bold implication that this could be due to mass further out than the stars. Further work found that this made up matter at large radii, if arranged as a halo around the galaxy, could accurately replicate the rotation curves observed. It provide the extra gravity needed to give particles far from the galactic centre the extra velocity observed in actual galaxies. This extra matter is now well known as <strong>Dark Matter</strong>… physicists still don’t know what it is, but it makes for good galaxy models!</p>
+
+<p><br /><center>
+![tuning fork](/images/galaxy-model.png)
+</center><br /></p>
+
+<p>With this dark matter halo, the rotation curve now appears as it should. You can see the contributions from each of the components below, as well as the combined rotation curve,</p>
+
+<p><br /><center>
+![tuning fork](/images/rotation-curve.png)
+</center><br /></p>
+
+<p>Now that we have a galactic gravitational potential that produces realistic rotation curves, we can start putting things in to it. In the next ‘episode’ I’ll add molecular clouds, and describe how we can model star formation through the energetic collisions of these clouds.</p>
+
+</article>
+
+
+
+<section class="rss">
+  <p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
+</section>
+
+<section class="share">
+  <span>Share: </span>
+  
+    
+    
+      <a href="//twitter.com/share?text=How+to+build+a+galaxy%2C+%231&url=/2015/09/07/third-year-project.html&via=polyphantastic"
+        onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
+        <i class="fa fa-twitter-square fa-lg"></i>
+      </a>
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+      <a href="//www.facebook.com/sharer.php?t=How+to+build+a+galaxy%2C+%231&u=/2015/09/07/third-year-project.html"
+        onclick="window.open(this.href, 'facebook-share', 'width=550,height=255');return false;">
+        <i class="fa fa-facebook-square fa-lg"></i>
+      </a>
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      <a href="//plus.google.com/share?title=How+to+build+a+galaxy%2C+%231&url=/2015/09/07/third-year-project.html"
+        onclick="window.open(this.href, 'google-plus-share', 'width=550,height=255');return false;">
+        <i class="fa fa-google-plus-square fa-lg"></i>
+      </a>
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+      <a href="//www.pinterest.com/pin/create/button/?description=How+to+build+a+galaxy%2C+%231&url=/2015/09/07/third-year-project.html&media=/images/hdf.gif"
+        onclick="window.open(this.href, 'pinterest-share', 'width=550,height=255');return false;">
+        <i class="fa fa-pinterest-square fa-lg"></i>
+      </a>
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+      <a href="//www.reddit.com/submit" onclick="window.location = '//www.reddit.com/submit?url=' + encodeURIComponent('/2015/09/07/third-year-project.html') + '&title=How to build a galaxy, #1'; return false">
+        <i class="fa fa-reddit-square fa-lg"></i>
+      </a>
+    
+  
+</section>
+
+	<section class="post-navigation">
+		<span class="prev-post">
+			
+				<a href="/2015/09/01/bank-underground.html">
+					<span class="fa-stack fa-lg">
+						<i class="fa fa-square fa-stack-2x"></i>
+						<i class="fa fa-angle-double-left fa-stack-1x fa-inverse"></i>
+					</span>
+					<span class="page-number">Tweets, Runs and the Minnesota Vikings</span>
+				</a>
+			
+		</span>
+		<span class="next-post">
+			
+				<a href="/2015/09/22/svg-crowbar.html">
+					<span class="page-number">Download D3 vis using SVG crowbar</span>
+					<span class="fa-stack fa-lg">
+						<i class="fa fa-square fa-stack-2x"></i>
+						<i class="fa fa-angle-double-right fa-stack-1x fa-inverse"></i>
+					</span>
+				</a>
+			
+		</span>
+	</section>
+
+
+
+
+<section class="disqus">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_shortname = 'polyphant';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+
+</div>
+</div>
+
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h3 class="footer-heading">Polyphant</h3>
+
+    <div class="site-navigation">
+
+      <p><strong>Site Map</strong></p>
+      <ul class="pages">
+        
+        
+          <li class="nav-link"><a href="/contact/">Contact</a>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+          <li class="nav-link"><a href="/tags/">Tags</a>
+        
+        
+        
+          <li class="nav-link"><a href="/about/">About</a>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      </ul>
+    </div>
+
+    <div class="site-contact">
+
+      <p><strong>Social</strong></p>
+      <ul class="social-media-list">
+
+        
+          
+          <li>
+            <a href="https://twitter.com/polyphantastic" target="blank" title="Follow me on Twitter">
+              <i class="fa fa-twitter"></i>
+              <span class="username">polyphantastic</span>
+            </a>
+          </li>
+          
+        
+          
+        
+          
+          <li>
+            <a href="https://github.com/polyphant1" target="blank" title="Fork me on GitHub">
+              <i class="fa fa-github"></i>
+              <span class="username">polyphant1</span>
+            </a>
+          </li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+
+      </ul>
+    </div>
+
+    <div class="site-signature">
+      <p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
+      <p class="text">Technology, Astronomy and other random noise, from an Astrophysicist in London
+</p>
+    </div>
+
+  </div>
+
+</footer>
+
+<!-- Scripts -->
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"></script>
+<script>
+
+$(document).ready(function() {
+
+  // Syntax highlighting
+  hljs.initHighlightingOnLoad();
+
+  // Header
+  var menuToggle = $('#js-mobile-menu').unbind();
+  $('#js-navigation-menu').removeClass("show");
+  menuToggle.on('click', function(e) {
+    e.preventDefault();
+    $('#js-navigation-menu').slideToggle(function(){
+      if($('#js-navigation-menu').is(':hidden')) {
+        $('#js-navigation-menu').removeAttr('style');
+      }
+    });
+  });
+
+
+});
+
+</script>
+
+
+<!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-61827184-1', 'auto');
+  ga('send', 'pageview', {
+    'page': '/2015/09/07/third-year-project.html',
+    'title': 'How to build a galaxy, #1'
+  });
+</script>
+
+
+
+  </body>
+
+</html>

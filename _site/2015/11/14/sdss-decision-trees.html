@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Classifying Astronomical Data Using Tree Based Methods</title>
+  <meta name="description" content="Guide to using tree based methods in R, applied to Astronomical data">
+  
+  <meta name="author" content="Christopher Lovell">
+  <meta name="copyright" content="&copy; Christopher Lovell 2016">
+  
+
+
+
+
+  <!-- External libraries -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/monokai_sublime.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css">
+  <!-- custom -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+  <script type="text/javascript" language="Javascript" src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.1.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+
+  <!-- Favicon and other icons (made with http://www.favicon-generator.org/) -->
+  <link rel="shortcut icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/icons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  
+  <!-- Facebook OGP cards -->
+  <meta property="og:description" content="Guide to using tree based methods in R, applied to Astronomical data" />
+  <meta property="og:url" content="" />
+  <meta property="og:site_name" content="Polyphant" />
+  <meta property="og:title" content="Classifying Astronomical Data Using Tree Based Methods" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/assets/logo.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="612" />
+  <meta property="og:image:height" content="605" />
+  
+
+  
+  <!-- Twitter: card tags -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Classifying Astronomical Data Using Tree Based Methods">
+  <meta name="twitter:description" content="Guide to using tree based methods in R, applied to Astronomical data">
+  <meta name="twitter:image" content="/assets/logo.png">
+  <meta name="twitter:url" content="">
+  
+
+  
+
+  <!-- Site styles -->
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="/2015/11/14/sdss-decision-trees.html">
+  <link rel="alternate" type="application/rss+xml" title="Polyphant" href="/feed.xml" />
+</head>
+
+
+  <body>
+
+    <header class="navigation" role="banner">
+  <div class="navigation-wrapper">
+    <a href="/" class="logo">
+      
+      <img src="/assets/logo.png" alt="Polyphant">
+      
+    </a>
+    <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <nav role="navigation">
+      <ul id="js-navigation-menu" class="navigation-menu show">
+        
+          
+          <li class="nav-link"><a href="/contact/">Contact</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+          <li class="nav-link"><a href="/tags/">Tags</a>
+          
+        
+          
+          <li class="nav-link"><a href="/about/">About</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <div class="page-content">
+        <div class="post">
+
+<div class="post-header-container " >
+  <div class="scrim ">
+    <header class="post-header">
+      <h1 class="title">Classifying Astronomical Data Using Tree Based Methods</h1>
+    </header>
+  </div>
+</div>
+
+<div class="wrapper">
+
+ <span class="page-divider">
+  <span class="one"></span>
+  <span class="two"></span>
+</span>
+ 
+
+<section class="post-meta">
+  <div class="post-date">November 14, 2015</div>
+  <div class="post-categories">
+  
+  </div>
+</section>
+
+<article class="post-content">
+  <p>The following is a guide to using tree based methods in R, based on the corresponding chapter in ‘An Introduction to Statistical Learning’ but using data from the <strong>Sloan Digital Sky Survey</strong> (SDSS). The aim is to use the five colour bands provided by the SDSS extract, <em>u</em> (ultraviolet), <em>g</em> (green), <em>r</em> (red), <em>i</em> &amp; <em>z</em> (very-near-infrared), to predict whether the sources in the survey are Quasars, Stars or White Dwarfs. I use a variety of techniques, from simple decision trees to ensemble methods such as random forests.</p>
+
+<h2 id="data">Data</h2>
+
+<p>Rather than getting the data directly from SDSS and doing the cleaning myself, I’m going to cheat and use a pre-filtered data set used in the book ‘Modern Statistical Methods for Astronomy’, available <a href="http://astrostatistics.psu.edu/MSMA/datasets/index.html">here</a>. As part of their extract they perform a few cleaning operations, such as ignoring spatially resolved galaxies, those with large measurement errors, and those that are very bright (and could cause saturation) or very faint (with uncertain measurements). They also provide 3 labelled data sets for training, one each for Quasars, Stars &amp; White Dwarfs.</p>
+
+<p>The colour bands as they stand aren’t particularly useful, since objects of the same class can be at different distances, and therefore have relatively lower flux across all bands. This can be avoided by looking at the ratios of brightness across bands, and since magnitudes are logarithmic units of brightness we simply find the difference between the provided values to get four colour indices, <em>(u-g)</em>, <em>(g-r)</em>, <em>(r-i)</em> &amp; <em>(i-z)</em>.</p>
+
+<p>The following three code chunks extract and clean the training data for all three sources and combine them in to a single data frame. Quasras, stars and white dwarfs are given the labels 1,2 and 3 respectively. There are 5000 stellar objects available for training, but for quasars there are over 7.7429 × 10<sup>4</sup> and for white dwarfs over 1.009 × 10<sup>4</sup>, so I’ve filtered each of the latter two down to only 5000 so that there are equal numbers of each class.</p>
+
+<p>Quasar training set (Class 1):</p>
+
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">dat1</span> <span class="o">&lt;-</span> <span class="n">read.table</span><span class="p">(</span><span class="s1">'http://astrostatistics.psu.edu/MSMA/datasets/SDSS_QSO.dat'</span><span class="p">,</span> <span class="n">h</span><span class="o">=</span><span class="n">T</span><span class="p">)</span>  
+<span class="n">bad_phot_qso</span> <span class="o">&lt;-</span> <span class="n">which</span><span class="p">(</span><span class="n">dat1</span><span class="p">[,</span><span class="n">c</span><span class="p">(</span><span class="m">3</span><span class="p">,</span><span class="m">5</span><span class="p">,</span><span class="m">7</span><span class="p">,</span><span class="m">9</span><span class="p">,</span><span class="m">11</span><span class="p">)]</span> <span class="o">&gt;</span> <span class="m">21.0</span> <span class="o">|</span> <span class="n">dat1</span><span class="p">[,</span><span class="m">3</span><span class="p">]</span><span class="o">==</span><span class="m">0</span><span class="p">)</span>
+<span class="n">dat1</span> <span class="o">&lt;-</span> <span class="n">dat1</span><span class="p">[</span><span class="m">1</span><span class="o">:</span><span class="m">5000</span><span class="p">,</span><span class="o">-</span><span class="n">bad_phot_qso</span><span class="p">,]</span>
+<span class="n">dat1</span> <span class="o">&lt;-</span> <span class="n">cbind</span><span class="p">((</span><span class="n">dat1</span><span class="p">[,</span><span class="m">3</span><span class="p">]</span><span class="o">-</span><span class="n">dat1</span><span class="p">[,</span><span class="m">5</span><span class="p">]),</span> <span class="p">(</span><span class="n">dat1</span><span class="p">[,</span><span class="m">5</span><span class="p">]</span><span class="o">-</span><span class="n">dat1</span><span class="p">[,</span><span class="m">7</span><span class="p">]),</span> <span class="p">(</span><span class="n">dat1</span><span class="p">[,</span><span class="m">7</span><span class="p">]</span><span class="o">-</span><span class="n">dat1</span><span class="p">[,</span><span class="m">9</span><span class="p">]),</span> <span class="p">(</span><span class="n">dat1</span><span class="p">[,</span><span class="m">9</span><span class="p">]</span><span class="o">-</span><span class="n">dat1</span><span class="p">[,</span><span class="m">11</span><span class="p">]))</span>
+<span class="n">qso_train</span> <span class="o">&lt;-</span> <span class="n">data.frame</span><span class="p">(</span><span class="n">cbind</span><span class="p">(</span><span class="n">dat1</span><span class="p">,</span> <span class="n">rep</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="n">length</span><span class="p">(</span><span class="n">dat1</span><span class="p">[,</span><span class="m">1</span><span class="p">]))))</span>
+<span class="n">names</span><span class="p">(</span><span class="n">qso_train</span><span class="p">)</span> <span class="o">&lt;-</span> <span class="n">c</span><span class="p">(</span><span class="s1">'u_g'</span><span class="p">,</span> <span class="s1">'g_r'</span><span class="p">,</span> <span class="s1">'r_i'</span><span class="p">,</span> <span class="s1">'i_z'</span><span class="p">,</span> <span class="s1">'Class'</span><span class="p">)</span></code></pre></figure>
+
+<p>Star training set (Class 2):</p>
+
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">dat2</span> <span class="o">&lt;-</span> <span class="n">read.csv</span><span class="p">(</span><span class="s1">'http://astrostatistics.psu.edu/MSMA/datasets/SDSS_stars.csv'</span><span class="p">,</span> <span class="n">h</span><span class="o">=</span><span class="n">T</span><span class="p">)</span>
+<span class="n">dat2</span> <span class="o">&lt;-</span> <span class="n">cbind</span><span class="p">((</span><span class="n">dat2</span><span class="p">[,</span><span class="m">1</span><span class="p">]</span><span class="o">-</span><span class="n">dat2</span><span class="p">[,</span><span class="m">2</span><span class="p">]),</span> <span class="p">(</span><span class="n">dat2</span><span class="p">[,</span><span class="m">2</span><span class="p">]</span><span class="o">-</span><span class="n">dat2</span><span class="p">[,</span><span class="m">3</span><span class="p">]),</span> <span class="p">(</span><span class="n">dat2</span><span class="p">[,</span><span class="m">3</span><span class="p">]</span><span class="o">-</span><span class="n">dat2</span><span class="p">[,</span><span class="m">4</span><span class="p">]),</span>
+	<span class="p">(</span><span class="n">dat2</span><span class="p">[,</span><span class="m">4</span><span class="p">]</span><span class="o">-</span><span class="n">dat2</span><span class="p">[,</span><span class="m">5</span><span class="p">]))</span>
+<span class="n">star_train</span> <span class="o">&lt;-</span> <span class="n">data.frame</span><span class="p">(</span><span class="n">cbind</span><span class="p">(</span><span class="n">dat2</span><span class="p">,</span> <span class="n">rep</span><span class="p">(</span><span class="m">2</span><span class="p">,</span> <span class="n">length</span><span class="p">(</span><span class="n">dat2</span><span class="p">[,</span><span class="m">1</span><span class="p">]))))</span>
+<span class="n">names</span><span class="p">(</span><span class="n">star_train</span><span class="p">)</span> <span class="o">&lt;-</span> <span class="n">c</span><span class="p">(</span><span class="s1">'u_g'</span><span class="p">,</span><span class="s1">'g_r'</span><span class="p">,</span><span class="s1">'r_i'</span><span class="p">,</span><span class="s1">'i_z'</span><span class="p">,</span><span class="s1">'Class'</span><span class="p">)</span></code></pre></figure>
+
+<p>White dwarf training set (Class 3):</p>
+
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">dat3</span> <span class="o">&lt;-</span> <span class="n">read.csv</span><span class="p">(</span><span class="s1">'http://astrostatistics.psu.edu/MSMA/datasets/SDSS_wd.csv'</span><span class="p">,</span> <span class="n">h</span><span class="o">=</span><span class="n">T</span><span class="p">)</span>
+<span class="n">dat3</span> <span class="o">&lt;-</span> <span class="n">na.omit</span><span class="p">(</span><span class="n">dat3</span><span class="p">)</span>
+<span class="n">dat3</span> <span class="o">&lt;-</span> <span class="n">cbind</span><span class="p">((</span><span class="n">dat3</span><span class="p">[</span><span class="m">1</span><span class="o">:</span><span class="m">5000</span><span class="p">,</span><span class="m">2</span><span class="p">]</span><span class="o">-</span><span class="n">dat3</span><span class="p">[</span><span class="m">1</span><span class="o">:</span><span class="m">5000</span><span class="p">,</span><span class="m">3</span><span class="p">]),</span> <span class="p">(</span><span class="n">dat3</span><span class="p">[</span><span class="m">1</span><span class="o">:</span><span class="m">5000</span><span class="p">,</span><span class="m">3</span><span class="p">]</span><span class="o">-</span><span class="n">dat3</span><span class="p">[</span><span class="m">1</span><span class="o">:</span><span class="m">5000</span><span class="p">,</span><span class="m">4</span><span class="p">]),(</span><span class="n">dat3</span><span class="p">[</span><span class="m">1</span><span class="o">:</span><span class="m">5000</span><span class="p">,</span><span class="m">4</span><span class="p">]</span><span class="o">-</span><span class="n">dat3</span><span class="p">[</span><span class="m">1</span><span class="o">:</span><span class="m">5000</span><span class="p">,</span><span class="m">5</span><span class="p">]),</span> <span class="p">(</span><span class="n">dat3</span><span class="p">[</span><span class="m">1</span><span class="o">:</span><span class="m">5000</span><span class="p">,</span><span class="m">5</span><span class="p">]</span><span class="o">-</span><span class="n">dat3</span><span class="p">[</span><span class="m">1</span><span class="o">:</span><span class="m">5000</span><span class="p">,</span><span class="m">6</span><span class="p">]))</span>
+
+<span class="n">wd_train</span> <span class="o">&lt;-</span> <span class="n">data.frame</span><span class="p">(</span><span class="n">cbind</span><span class="p">(</span><span class="n">dat3</span><span class="p">,</span> <span class="n">rep</span><span class="p">(</span><span class="m">3</span><span class="p">,</span> <span class="n">length</span><span class="p">(</span><span class="n">dat3</span><span class="p">[,</span><span class="m">1</span><span class="p">]))))</span>
+<span class="n">names</span><span class="p">(</span><span class="n">wd_train</span><span class="p">)</span> <span class="o">&lt;-</span> <span class="n">c</span><span class="p">(</span><span class="s1">'u_g'</span><span class="p">,</span> <span class="s1">'g_r'</span><span class="p">,</span> <span class="s1">'r_i'</span><span class="p">,</span> <span class="s1">'i_z'</span><span class="p">,</span> <span class="s1">'Class'</span><span class="p">)</span></code></pre></figure>
+
+<p>Combine the training sets</p>
+
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">SDSS_train</span> <span class="o">&lt;-</span> <span class="n">data.frame</span><span class="p">(</span><span class="n">rbind</span><span class="p">(</span><span class="n">qso_train</span><span class="p">,</span> <span class="n">star_train</span><span class="p">,</span> <span class="n">wd_train</span><span class="p">))</span>
+<span class="n">names</span><span class="p">(</span><span class="n">SDSS_train</span><span class="p">)</span> <span class="o">&lt;-</span> <span class="n">c</span><span class="p">(</span><span class="s1">'u_g'</span><span class="p">,</span> <span class="s1">'g_r'</span><span class="p">,</span> <span class="s1">'r_i'</span><span class="p">,</span> <span class="s1">'i_z'</span><span class="p">,</span> <span class="s1">'Class'</span><span class="p">)</span>
+<span class="n">str</span><span class="p">(</span><span class="n">SDSS_train</span><span class="p">)</span></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-text" data-lang="text">## 'data.frame':	15000 obs. of  5 variables:
+##  $ u_g  : num  -0.079 0.033 0.11 0.325 0.22 ...
+##  $ g_r  : num  0.136 0.255 0.425 0.448 0.049 ...
+##  $ r_i  : num  0.233 0.454 0.221 0.114 0.189 ...
+##  $ i_z  : num  0.046 0.3 -0.158 0.221 0.04 ...
+##  $ Class: num  1 1 1 1 1 1 1 1 1 1 ...</code></pre></figure>
+
+<p>The plot below shows each training class on a bivariate colour-colour scatter plot.There’s plenty of structure to each class, something that tree based methods should be more than capable of picking up on.</p>
+
+<p><img src="/../images/SDSS_decision_trees/unnamed-chunk-5-1.png" title="center" alt="center" style="display: block; margin: auto;" /></p>
+
+<h2 id="decision-trees">Decision Trees</h2>
+
+<p>Decision trees are the most basic tree based method, and one on which the majority of other methods are built on They work by splitting the predictor space in to regions; each split can be thought of as a <em>branch</em>, and each of the remaining regions are <em>leaves</em>.</p>
+
+<p>The default <code class="highlighter-rouge">tree</code> library has a simple binary recursive partitioning method for growing regression or classification trees.</p>
+
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">library</span><span class="p">(</span><span class="n">tree</span><span class="p">)</span></code></pre></figure>
+
+<p>Below we split the data in to a training and test set, and train the classifier on the training test.</p>
+
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">SDSS_train</span><span class="o">$</span><span class="n">Class</span> <span class="o">&lt;-</span> <span class="n">as.factor</span><span class="p">(</span><span class="n">SDSS_train</span><span class="o">$</span><span class="n">Class</span><span class="p">)</span>
+
+<span class="n">set.seed</span><span class="p">(</span><span class="m">1</span><span class="p">)</span>
+<span class="n">train</span> <span class="o">&lt;-</span> <span class="n">sample</span><span class="p">(</span><span class="n">nrow</span><span class="p">(</span><span class="n">SDSS_train</span><span class="p">),</span> <span class="m">4</span><span class="o">*</span><span class="n">nrow</span><span class="p">(</span><span class="n">SDSS_train</span><span class="p">)</span><span class="o">/</span><span class="m">5</span><span class="p">)</span>
+
+<span class="n">tree.sdss</span> <span class="o">&lt;-</span> <span class="n">tree</span><span class="p">(</span><span class="n">Class</span><span class="o">~</span><span class="err">.</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">SDSS_train</span><span class="p">,</span> <span class="n">subset</span> <span class="o">=</span> <span class="n">train</span><span class="p">)</span></code></pre></figure>
+
+<p><code class="highlighter-rouge">tree.sdss</code> is our trained classifier. We can plot it to see the major branches and leaves of the tree. The default is pretty cluttered, so I’ve coloured and rotated the text to make it easier to read… not sure if that really helps. The <code class="highlighter-rouge">rpart</code> package for building trees has some nicer plotting capabilities but, in the spirit of every undergraduate lab report, ‘<em>that is beyond the purposes of this investigation</em>’.</p>
+
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">plot</span><span class="p">(</span><span class="n">tree.sdss</span><span class="p">)</span>
+<span class="n">text</span><span class="p">(</span><span class="n">tree.sdss</span><span class="p">,</span><span class="n">col</span><span class="o">=</span><span class="n">rainbow</span><span class="p">(</span><span class="m">10</span><span class="p">)[</span><span class="m">1</span><span class="o">:</span><span class="m">25</span><span class="p">],</span><span class="n">srt</span><span class="o">=</span><span class="m">35</span><span class="p">,</span><span class="n">cex</span><span class="o">=</span><span class="m">0.8</span><span class="p">)</span></code></pre></figure>
+
+<p><img src="/../images/SDSS_decision_trees/unnamed-chunk-8-1.png" title="center" alt="center" style="display: block; margin: auto;" /></p>
+
+<p>To evaluate our tree, we use it to predict the class of our test data.</p>
+
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">tree.pred</span> <span class="o">&lt;-</span> <span class="n">predict</span><span class="p">(</span><span class="n">tree.sdss</span><span class="p">,</span> <span class="n">SDSS_train</span><span class="p">[</span><span class="o">-</span><span class="n">train</span><span class="p">,],</span> <span class="n">type</span><span class="o">=</span><span class="s2">"class"</span><span class="p">)</span></code></pre></figure>
+
+<p>Below is a <a href="https://en.wikipedia.org/wiki/Confusion_matrix">confusion matrix</a> of the predicted classes against the actual.</p>
+
+<figure class="highlight"><pre><code class="language-text" data-lang="text">##
+## tree.pred   1   2   3
+##         1 921   8 131
+##         2  65 985   1
+##         3  14   0 875</code></pre></figure>
+
+<p>The overall test error rate is 7.3%.</p>
+
+<p>Often the algorithm that builds the tree can create more branches than necessary, and end up reducing the predictive accuracy of our classifier. To test this I perform cross validation on the built tree. Specifying <code class="highlighter-rouge">FUN = prune.misclass</code> tells <code class="highlighter-rouge">cv.tree</code> that we want the cross validation to be guided by the classification error rate, rather than the default which is the <a href="https://en.wikipedia.org/wiki/Deviance_(statistics)">deviance</a>.</p>
+
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">cv.sdss</span> <span class="o">&lt;-</span> <span class="n">cv.tree</span><span class="p">(</span><span class="n">tree.sdss</span><span class="p">,</span> <span class="n">FUN</span> <span class="o">=</span> <span class="n">prune.misclass</span><span class="p">)</span>
+<span class="n">cv.sdss</span></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-text" data-lang="text">## $size
+## [1] 11 10  9  7  6  5  3  2  1
+##
+## $dev
+## [1]  868  868  922  971 1039 1194 1592 4050 8177
+##
+## $k
+## [1]   -Inf    0.0   38.0   44.5   72.0  111.0  217.0 2482.0 3943.0
+##
+## $method
+## [1] "misclass"
+##
+## attr(,"class")
+## [1] "prune"         "tree.sequence"</code></pre></figure>
+
+<p>The left hand plot shows the error rate against tree size, the right against the cost complexity parameter <code class="highlighter-rouge">k</code>.</p>
+
+<p><img src="/../images/SDSS_decision_trees/unnamed-chunk-12-1.png" title="center" alt="center" style="display: block; margin: auto;" /></p>
+
+<p>The 10 branch tree has the same error rate as the 11, so pruning to this size will not reduce the predictive power of the model, but will reduce the complexity.</p>
+
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">min_size</span> <span class="o">=</span> <span class="n">cv.sdss</span><span class="o">$</span><span class="n">size</span><span class="p">[</span><span class="n">max</span><span class="p">(</span><span class="n">which</span><span class="p">(</span><span class="n">cv.sdss</span><span class="o">$</span><span class="n">dev</span> <span class="o">==</span> <span class="n">min</span><span class="p">(</span><span class="n">cv.sdss</span><span class="o">$</span><span class="n">dev</span><span class="p">)))]</span>  <span class="c1"># find minimum size that fits best
+</span>
+<span class="n">prune.sdss</span> <span class="o">&lt;-</span> <span class="n">prune.misclass</span><span class="p">(</span><span class="n">tree.sdss</span><span class="p">,</span> <span class="n">best</span> <span class="o">=</span> <span class="n">min_size</span><span class="p">)</span>
+<span class="n">par</span><span class="p">(</span><span class="n">mfrow</span><span class="o">=</span><span class="n">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">))</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">prune.sdss</span><span class="p">)</span>
+<span class="n">text</span><span class="p">(</span><span class="n">tree.sdss</span><span class="p">,</span><span class="n">col</span><span class="o">=</span><span class="n">rainbow</span><span class="p">(</span><span class="m">10</span><span class="p">)[</span><span class="m">1</span><span class="o">:</span><span class="m">25</span><span class="p">],</span><span class="n">srt</span><span class="o">=</span><span class="m">35</span><span class="p">,</span><span class="n">cex</span><span class="o">=</span><span class="m">0.8</span><span class="p">)</span></code></pre></figure>
+
+<p><img src="/../images/SDSS_decision_trees/unnamed-chunk-14-1.png" title="center" alt="center" style="display: block; margin: auto;" /></p>
+
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">tree.pred</span> <span class="o">&lt;-</span> <span class="n">predict</span><span class="p">(</span><span class="n">prune.sdss</span><span class="p">,</span> <span class="n">SDSS_train</span><span class="p">[</span><span class="o">-</span><span class="n">train</span><span class="p">,],</span> <span class="n">type</span><span class="o">=</span><span class="s2">"class"</span><span class="p">)</span>
+
+<span class="n">test.results</span> <span class="o">&lt;-</span> <span class="n">table</span><span class="p">(</span><span class="n">tree.pred</span><span class="p">,</span><span class="n">SDSS_train</span><span class="p">[</span><span class="o">-</span><span class="n">train</span><span class="p">,</span><span class="s2">"Class"</span><span class="p">])</span>
+<span class="n">test.results</span></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-text" data-lang="text">##
+## tree.pred   1   2   3
+##         1 921   8 131
+##         2  65 985   1
+##         3  14   0 875</code></pre></figure>
+
+<p>The error rate, 7.3%, is the same, as expected, but the tree is easier to interpret.</p>
+
+<h2 id="bagging-and-random-forests">Bagging and Random Forests</h2>
+
+<p>Bagging and random forests are both examples of ensemble methods, where many decison trees are combined together to improve the prediction accuracy. Both can be implemented using the <code class="highlighter-rouge">randomForest</code> package.</p>
+
+<p>Bagging (derived from the full name <em>Bootstrap Aggregation</em>) takes multiple bootstrapped samples from the same training set and builds an ensemble of trees that are then averaged. Bagging uses all predictors; <code class="highlighter-rouge">mtry</code> states that all 4 predictors should be considered for each split of the tree.</p>
+
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">library</span><span class="p">(</span><span class="n">randomForest</span><span class="p">)</span></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">bag.sdss</span> <span class="o">&lt;-</span> <span class="n">randomForest</span><span class="p">(</span><span class="n">Class</span><span class="o">~</span><span class="err">.</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">SDSS_train</span><span class="p">,</span> <span class="n">subset</span> <span class="o">=</span> <span class="n">train</span><span class="p">,</span> <span class="n">mtry</span> <span class="o">=</span> <span class="m">4</span><span class="p">,</span> <span class="n">importance</span> <span class="o">=</span> <span class="n">T</span><span class="p">)</span>
+<span class="n">bag.sdss</span></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-text" data-lang="text">##
+## Call:
+##  randomForest(formula = Class ~ ., data = SDSS_train, mtry = 4,      importance = T, subset = train)
+##                Type of random forest: classification
+##                      Number of trees: 500
+## No. of variables tried at each split: 4
+##
+##         OOB estimate of  error rate: 2.38%
+## Confusion matrix:
+##      1    2    3 class.error
+## 1 3853   55   92 0.036750000
+## 2   25 3981    1 0.006488645
+## 3  111    1 3881 0.028049086</code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">yhat.bag</span> <span class="o">&lt;-</span> <span class="n">predict</span><span class="p">(</span><span class="n">bag.sdss</span><span class="p">,</span> <span class="n">newdata</span> <span class="o">=</span> <span class="n">SDSS_train</span><span class="p">[</span><span class="o">-</span><span class="n">train</span><span class="p">,])</span></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-text" data-lang="text">##
+## yhat.bag   1   2   3
+##        1 966   5  36
+##        2  12 988   0
+##        3  22   0 971</code></pre></figure>
+
+<p>The test error rate associated with the bagged tree is 2.5%, a significant improvement over the single decision tree.</p>
+
+<p>Random forests are similar to bagged trees, but with a small tweak to the algorithm; at each step, when a split is considered only a <em>random subset</em> of the predictors is made available. This prevents strong features from dominating the root branches of the trees, otherwise this can lead to correlations between the predictions of the trees, as they all look relatively similar. The trees in a random forest ensemble can be thought of as <em>decorrelated</em>.</p>
+
+<p>Growing a random forest proceeds in the same way as Bagging, but with a smaller value for <code class="highlighter-rouge">mtry</code>. By default, for classification problems <code class="highlighter-rouge">randomForst</code> uses $\sqrt{p}$ predictors, so 2 in our case.</p>
+
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">rf.sdss</span> <span class="o">&lt;-</span> <span class="n">randomForest</span><span class="p">(</span><span class="n">Class</span><span class="o">~</span><span class="err">.</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">SDSS_train</span><span class="p">,</span> <span class="n">subset</span> <span class="o">=</span> <span class="n">train</span><span class="p">,</span> <span class="n">importance</span> <span class="o">=</span> <span class="n">T</span><span class="p">)</span>
+<span class="n">rf.sdss</span></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-text" data-lang="text">##
+## Call:
+##  randomForest(formula = Class ~ ., data = SDSS_train, importance = T,      subset = train)
+##                Type of random forest: classification
+##                      Number of trees: 500
+## No. of variables tried at each split: 2
+##
+##         OOB estimate of  error rate: 2.17%
+## Confusion matrix:
+##      1    2    3 class.error
+## 1 3869   50   81 0.032750000
+## 2   23 3983    1 0.005989518
+## 3  104    2 3887 0.026546456</code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">yhat.rf</span> <span class="o">&lt;-</span> <span class="n">predict</span><span class="p">(</span><span class="n">rf.sdss</span><span class="p">,</span> <span class="n">newdata</span> <span class="o">=</span> <span class="n">SDSS_train</span><span class="p">[</span><span class="o">-</span><span class="n">train</span><span class="p">,])</span>
+<span class="n">test.results</span> <span class="o">&lt;-</span> <span class="n">table</span><span class="p">(</span><span class="n">yhat.rf</span><span class="p">,</span> <span class="n">SDSS_train</span><span class="p">[</span><span class="o">-</span><span class="n">train</span><span class="p">,</span><span class="s2">"Class"</span><span class="p">])</span></code></pre></figure>
+
+<p>The test error rate associated with the random forest is 2.37%, a further improvement over the bagged tree.</p>
+
+<p>We can use the <code class="highlighter-rouge">importance</code> function to view the importance of each of the variables used as our features. The first, <code class="highlighter-rouge">%IncMSE</code>, measures the mean decrease in accuracy of the predictions on out of bag samples when that feature is excluded from the model. The second, <code class="highlighter-rouge">IncNodePurity</code>, measures the decrease in node impurity due to splits over that variable, over all trees; node impurity measured by training RSS in the case of regression trees, and deviance for classification trees. <code class="highlighter-rouge">varImpPlot</code> plots these importance functions.</p>
+
+<p><img src="/../images/SDSS_decision_trees/unnamed-chunk-22-1.png" title="center" alt="center" style="display: block; margin: auto;" /></p>
+
+<h2 id="boosting">Boosting</h2>
+
+<p>Boosting algortihms for regression and classification problems are different, and I will not provide a full description here (for details, see <a href="https://www.statsoft.com/Textbook/Boosting-Trees-Regression-Classification/button/1">here</a>). In basic terms, boosting algorithms apply many weak learners sequentially to the residuals (i.e. the remaining unexplained data) of previous trees. The algorithm learns slowly and incrementally, which can lead to a better resulting model, at the cost of extra computation compared to more direct learners.</p>
+
+<p>The <code class="highlighter-rouge">gbm</code> function, from the identically named package, is used here to perform Boosting.</p>
+
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">boost.sdss</span> <span class="o">&lt;-</span> <span class="n">gbm</span><span class="p">(</span><span class="n">Class</span><span class="o">~</span><span class="err">.</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">SDSS_train</span><span class="p">[</span><span class="n">train</span><span class="p">,],</span> <span class="n">distribution</span> <span class="o">=</span> <span class="s2">"multinomial"</span><span class="p">,</span> <span class="n">n.trees</span> <span class="o">=</span> <span class="m">5000</span><span class="p">,</span> <span class="n">interaction.depth</span> <span class="o">=</span> <span class="m">4</span><span class="p">)</span></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">summary</span><span class="p">(</span><span class="n">boost.sdss</span><span class="p">)</span></code></pre></figure>
+
+<p><img src="/../images/SDSS_decision_trees/unnamed-chunk-26-1.png" title="center" alt="center" style="display: block; margin: auto;" /></p>
+
+<figure class="highlight"><pre><code class="language-text" data-lang="text">##     var   rel.inf
+## u_g u_g 46.908265
+## g_r g_r 23.571429
+## r_i r_i 22.557859
+## i_z i_z  6.962446</code></pre></figure>
+
+<p>The plot above shows the relative importance of each feature in the training data. The <code class="highlighter-rouge">interaction.depth</code> argument, in the cal to <code class="highlighter-rouge">gbm</code>, limits the depth of each tree. Here we use a multinomial distribution as this is a multinomial classification problem; if it was binary, use a bernoulli distribution, or if performing a regression, use a gaussian distribution.</p>
+
+<p>Below are some <em>partial dependence plots</em>, which integrate out other variables to show the marginal effect of selected variables. The black line shows class 1, the red line class 2, and green class 3 (Quasars, Stars &amp; White Dwarfs respectively). The peaks of each line show where for this line ratio that particular class can be identified most clearly.</p>
+
+<p><img src="/../images/SDSS_decision_trees/unnamed-chunk-27-1.png" title="center" alt="center" style="display: block; margin: auto;" /></p>
+
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">yhat.boost</span> <span class="o">&lt;-</span> <span class="n">predict</span><span class="p">(</span><span class="n">boost.sdss</span><span class="p">,</span> <span class="n">newdata</span> <span class="o">=</span> <span class="n">SDSS_train</span><span class="p">[</span><span class="o">-</span><span class="n">train</span><span class="p">,],</span> <span class="n">n.trees</span> <span class="o">=</span> <span class="m">5000</span><span class="p">,</span> <span class="n">type</span><span class="o">=</span><span class="s1">'response'</span><span class="p">)</span>
+<span class="n">yhat.boost</span> <span class="o">&lt;-</span> <span class="n">apply</span><span class="p">(</span><span class="n">yhat.boost</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="n">which.max</span><span class="p">)</span> <span class="err">#</span> <span class="n">find</span> <span class="n">max</span> <span class="n">predictor</span></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-text" data-lang="text">##
+## yhat.boost   1   2   3
+##          1 953   3  47
+##          2  28 990   0
+##          3  19   0 960</code></pre></figure>
+
+<p>Test error rate associated with Boosting is 3.23%. This is actually <strong>worse</strong> than the bagging and random forest approaches above, for this particular data set, and the performance is $~\mathcal{O}(10)$ worse.</p>
+
+<h2 id="extremely-randomized-trees">Extremely randomized trees</h2>
+
+<p>Extremely Randomised Trees (ERTs) are a relatively modern incarnation of random forests. The difference is that, after choosing a random subset of features, the threshold for the split on each feature is also chosen randomly, and the best split is then chosen. Then ensemble of trees is again combined to provide the best estimate. This randomness increases the variance at the cost of a little bias.</p>
+
+<p>The <code class="highlighter-rouge">extraTrees</code> package in R can execute ERTs. Somme of the documentation looks a little rough around the edges, so I’d certainly take a closer look at the source code if you’re doing anything important with it. For our purposes though it will suffice.</p>
+
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">library</span><span class="p">(</span><span class="n">extraTrees</span><span class="p">)</span></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">et</span> <span class="o">&lt;-</span> <span class="n">extraTrees</span><span class="p">(</span><span class="n">SDSS_train</span><span class="p">[</span><span class="n">train</span><span class="p">,</span><span class="m">-5</span><span class="p">],</span> <span class="n">SDSS_train</span><span class="p">[</span><span class="n">train</span><span class="p">,</span><span class="s2">"Class"</span><span class="p">])</span>
+<span class="n">yhat.et</span> <span class="o">&lt;-</span> <span class="n">predict</span><span class="p">(</span><span class="n">et</span><span class="p">,</span> <span class="n">SDSS_train</span><span class="p">[</span><span class="o">-</span><span class="n">train</span><span class="p">,</span><span class="m">-5</span><span class="p">])</span></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-text" data-lang="text">##
+## yhat.et   1   2   3
+##       1 972   3  35
+##       2  12 990   0
+##       3  16   0 972</code></pre></figure>
+
+<p>Test error rate associated with ERTs is 2.2%, the best of all the approaches demonstrated here.</p>
+
+<h2 id="sdss-test-data">SDSS ‘test’ data</h2>
+
+<p>The source of the data used in this post, the textbook ‘<a href="http://astrostatistics.psu.edu/MSMA/datasets/index.html">Modern Statistical Methods for Astronomy</a>’, made another set of SDSS data available named ‘test data’ that consist of 17000 sources. Unfortunately it doesn’t have any associated source classes, making it a pretty useless test set! However, it is useful to apply our models to and analyse from inspection. Here I use the random forest model, since it has one of the best error rate to complexity ratios. Below is a colour-colour plot similar to that made at the start of the workbook for the training data (repeated below for easier comparison).</p>
+
+<p><em>SDSS point sources test dataset, N=17,000 (mag&lt;21, point sources, hi-qual)</em></p>
+
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">SDSS</span> <span class="o">&lt;-</span> <span class="n">read.csv</span><span class="p">(</span><span class="s1">'http://astrostatistics.psu.edu/MSMA/datasets/SDSS_test.csv'</span><span class="p">,</span> <span class="n">h</span><span class="o">=</span><span class="n">T</span><span class="p">)</span>
+<span class="n">SDSS_test</span> <span class="o">&lt;-</span> <span class="n">data.frame</span><span class="p">(</span><span class="n">cbind</span><span class="p">((</span><span class="n">SDSS</span><span class="p">[,</span><span class="m">1</span><span class="p">]</span><span class="o">-</span><span class="n">SDSS</span><span class="p">[,</span><span class="m">2</span><span class="p">]),</span> <span class="p">(</span><span class="n">SDSS</span><span class="p">[,</span><span class="m">2</span><span class="p">]</span><span class="o">-</span><span class="n">SDSS</span><span class="p">[,</span><span class="m">3</span><span class="p">]),</span>
+	<span class="p">(</span><span class="n">SDSS</span><span class="p">[,</span><span class="m">3</span><span class="p">]</span><span class="o">-</span><span class="n">SDSS</span><span class="p">[,</span><span class="m">4</span><span class="p">]),</span> <span class="p">(</span><span class="n">SDSS</span><span class="p">[,</span><span class="m">4</span><span class="p">]</span><span class="o">-</span><span class="n">SDSS</span><span class="p">[,</span><span class="m">5</span><span class="p">])))</span>
+<span class="n">names</span><span class="p">(</span><span class="n">SDSS_test</span><span class="p">)</span> <span class="o">&lt;-</span> <span class="n">c</span><span class="p">(</span><span class="s1">'u_g'</span><span class="p">,</span> <span class="s1">'g_r'</span><span class="p">,</span> <span class="s1">'r_i'</span><span class="p">,</span> <span class="s1">'i_z'</span><span class="p">)</span></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">SDSS_test</span><span class="o">$</span><span class="n">Class.Predict</span> <span class="o">&lt;-</span> <span class="n">predict</span><span class="p">(</span><span class="n">rf.sdss</span><span class="p">,</span> <span class="n">SDSS_test</span><span class="p">)</span>
+<span class="c1">#yhat.boost &lt;- predict(boost.sdss, SDSS_test, n.trees = 5000, type='response')
+</span><span class="err">#</span><span class="n">SDSS_test</span><span class="o">$</span><span class="n">Class.Predict</span> <span class="o">&lt;-</span> <span class="n">apply</span><span class="p">(</span><span class="n">yhat.boost</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="n">which.max</span><span class="p">)</span> <span class="err">#</span> <span class="n">find</span> <span class="n">max</span> <span class="n">predictor</span></code></pre></figure>
+
+<p><img src="/../images/SDSS_decision_trees/unnamed-chunk-35-1.png" title="center" alt="center" style="display: block; margin: auto;" /></p>
+
+<p><img src="/../images/SDSS_decision_trees/unnamed-chunk-36-1.png" title="center" alt="center" style="display: block; margin: auto;" /></p>
+
+<p>There are a few interesting features here. Firstly, there are hardly any white dwarfs identified. This could be because there aren’t very many in this data set, or the algorithm is failing to pick up on them. In the <em>u-g</em>/<em>g-r</em> plot on the left hand side their is also a clear vertical boundary on the red stellar classification. This lines up exactly with where the stars with lowest <em>u-g</em> line ratio lie in the training set, suggesting that our model isn’t able to classify stars beyind this range.</p>
+
+<p>Given that we don’t know what is actually in the ‘test’ data set, it’s hard to draw any firm conclusions from it, but it does highlight some of the limitations of such learning algorithms, namely that they are very bad at predicting events beyond what they’ve been trained to; this is more generally known as ‘overfitting’, in relation to the training set.</p>
+
+<p>All of the code used to produce this post is available <a href="https://github.com/polyphant1/statistical_learning/blob/master/SDSS_decision_trees.Rmd">here</a>. Thanks for reading.</p>
+
+</article>
+
+
+
+<section class="rss">
+  <p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
+</section>
+
+<section class="share">
+  <span>Share: </span>
+  
+    
+    
+      <a href="//twitter.com/share?text=Classifying+Astronomical+Data+Using+Tree+Based+Methods&url=/2015/11/14/sdss-decision-trees.html&via=polyphantastic"
+        onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
+        <i class="fa fa-twitter-square fa-lg"></i>
+      </a>
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+      <a href="//www.facebook.com/sharer.php?t=Classifying+Astronomical+Data+Using+Tree+Based+Methods&u=/2015/11/14/sdss-decision-trees.html"
+        onclick="window.open(this.href, 'facebook-share', 'width=550,height=255');return false;">
+        <i class="fa fa-facebook-square fa-lg"></i>
+      </a>
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      <a href="//plus.google.com/share?title=Classifying+Astronomical+Data+Using+Tree+Based+Methods&url=/2015/11/14/sdss-decision-trees.html"
+        onclick="window.open(this.href, 'google-plus-share', 'width=550,height=255');return false;">
+        <i class="fa fa-google-plus-square fa-lg"></i>
+      </a>
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+      <a href="//www.pinterest.com/pin/create/button/?description=Classifying+Astronomical+Data+Using+Tree+Based+Methods&url=/2015/11/14/sdss-decision-trees.html&media=/images/hdf.gif"
+        onclick="window.open(this.href, 'pinterest-share', 'width=550,height=255');return false;">
+        <i class="fa fa-pinterest-square fa-lg"></i>
+      </a>
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+      <a href="//www.reddit.com/submit" onclick="window.location = '//www.reddit.com/submit?url=' + encodeURIComponent('/2015/11/14/sdss-decision-trees.html') + '&title=Classifying Astronomical Data Using Tree Based Methods'; return false">
+        <i class="fa fa-reddit-square fa-lg"></i>
+      </a>
+    
+  
+</section>
+
+	<section class="post-navigation">
+		<span class="prev-post">
+			
+				<a href="/2015/11/02/ad-tracking-preferences.html">
+					<span class="fa-stack fa-lg">
+						<i class="fa fa-square fa-stack-2x"></i>
+						<i class="fa fa-angle-double-left fa-stack-1x fa-inverse"></i>
+					</span>
+					<span class="page-number">Avoiding tailored ads in the EU</span>
+				</a>
+			
+		</span>
+		<span class="next-post">
+			
+				<a href="/2015/11/15/orwell-warsaw.html">
+					<span class="page-number">Orwell's support for the Rising</span>
+					<span class="fa-stack fa-lg">
+						<i class="fa fa-square fa-stack-2x"></i>
+						<i class="fa fa-angle-double-right fa-stack-1x fa-inverse"></i>
+					</span>
+				</a>
+			
+		</span>
+	</section>
+
+
+
+
+<section class="disqus">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_shortname = 'polyphant';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+
+</div>
+</div>
+
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h3 class="footer-heading">Polyphant</h3>
+
+    <div class="site-navigation">
+
+      <p><strong>Site Map</strong></p>
+      <ul class="pages">
+        
+        
+          <li class="nav-link"><a href="/contact/">Contact</a>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+          <li class="nav-link"><a href="/tags/">Tags</a>
+        
+        
+        
+          <li class="nav-link"><a href="/about/">About</a>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      </ul>
+    </div>
+
+    <div class="site-contact">
+
+      <p><strong>Social</strong></p>
+      <ul class="social-media-list">
+
+        
+          
+          <li>
+            <a href="https://twitter.com/polyphantastic" target="blank" title="Follow me on Twitter">
+              <i class="fa fa-twitter"></i>
+              <span class="username">polyphantastic</span>
+            </a>
+          </li>
+          
+        
+          
+        
+          
+          <li>
+            <a href="https://github.com/polyphant1" target="blank" title="Fork me on GitHub">
+              <i class="fa fa-github"></i>
+              <span class="username">polyphant1</span>
+            </a>
+          </li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+
+      </ul>
+    </div>
+
+    <div class="site-signature">
+      <p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
+      <p class="text">Technology, Astronomy and other random noise, from an Astrophysicist in London
+</p>
+    </div>
+
+  </div>
+
+</footer>
+
+<!-- Scripts -->
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"></script>
+<script>
+
+$(document).ready(function() {
+
+  // Syntax highlighting
+  hljs.initHighlightingOnLoad();
+
+  // Header
+  var menuToggle = $('#js-mobile-menu').unbind();
+  $('#js-navigation-menu').removeClass("show");
+  menuToggle.on('click', function(e) {
+    e.preventDefault();
+    $('#js-navigation-menu').slideToggle(function(){
+      if($('#js-navigation-menu').is(':hidden')) {
+        $('#js-navigation-menu').removeAttr('style');
+      }
+    });
+  });
+
+
+});
+
+</script>
+
+
+<!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-61827184-1', 'auto');
+  ga('send', 'pageview', {
+    'page': '/2015/11/14/sdss-decision-trees.html',
+    'title': 'Classifying Astronomical Data Using Tree Based Methods'
+  });
+</script>
+
+
+
+  </body>
+
+</html>
