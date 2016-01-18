@@ -13,6 +13,19 @@
   <meta name="copyright" content="&copy; Christopher Lovell 2016">
   
 
+  <!-- Enable inline mathjax. Must be placed before loading Mathjax. See http://tex.stackexchange.com/questions/27633/mathjax-inline-mode-not-rendering -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        processEscapes: true
+      }
+    });
+  </script>
+
+  <!-- MathJax -->
+  <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
   <!-- Facebook (custom) -->
   <div id="fb-root"></div>
   <script>(function(d, s, id) {
@@ -105,6 +118,8 @@
         
         <!--
           
+        
+          
           <li class="nav-link"><a href="/contact/">Contact</a>
           
         
@@ -129,11 +144,11 @@
           
         
           
-          <li class="nav-link"><a href="/tags/">Tags</a>
+          <li class="nav-link"><a href="/about/">About</a>
           
         
           
-          <li class="nav-link"><a href="/about/">About</a>
+          <li class="nav-link"><a href="/tags/">Tags</a>
           
         
           
@@ -181,12 +196,14 @@
 <article class="post-content">
   <p>The story of how scientists revealed the age of the earth is a remarkable one; at the beginning of the nineteenth century many still believed that the earth had been around forever, but by the 1920s evidence from fields as diverse as geology and biology had been united, and the definitive source of the Sun’s heat discovered. Perhaps what makes the story even more fascinating are the egos and personalities that shaped it, and none more so than that of William Thomson, aka Lord Kelvin.</p>
 
-<center>![Kelvin](/images/Lord_Kelvin_photograph.jpg)</center>
+<p><a href="/images/Lord_Kelvin_photograph.jpg" data-lightbox="bilevel-partition" data-title="Lord Kelvin">
+  <img class="small" src="/images/Lord_Kelvin_photograph.jpg" title="Lord Kelvin" />
+</a></p>
 
 <p>Lord Kelvin was arguably the most eminent scientist of his time, famous today for the temperature scale that bears his name. But it was his work on thermodynamics that led him to ponder the question of the age of the earth. He saw an opportunity to apply the recently formulated laws of thermodynamics to the problem, in particular the first law, which states:</p>
 
 <blockquote>
-  <p>The total energy of an isolated system is constant; energy can be transformed from one form to another, but cannot be created or destroyed</p>
+  <p><em>The total energy of an isolated system is constant; energy can be transformed from one form to another, but cannot be created or destroyed</em></p>
 </blockquote>
 
 <p>This is the principle of conservation of energy.</p>
@@ -209,8 +226,11 @@ $$\Omega = - \frac{Gm\_{1}m\_{2}}{r}$$
 
 <p>To apply this to the Sun, and calculate its total gravitational potential energy, we first model it as a series of concentric shells, each of radius $dr$.</p>
 
-<p><img src="/../images/concentric.jpg" title="center" alt="center" style="display: block; margin: auto;" /></p>
+<p><a href="/images/concentric.jpg" data-lightbox="bilevel-partition" data-title="Concentric shells">
+  <img class="small" src="/images/concentric.jpg" title="Concentric shells" />
+</a></p>
 <center><i>Concentric shells at radius $r$, width $dr$.</i></center>
+<p><br /></p>
 
 <p>In the above definition, for a single shell at radius $r$, $m_1$ is the mass of the star within radius $r$, and $m_2$ is the mass of the shell itself. We then integrate between 0 and $R$, the radius of the Sun, to add up the contributions from all of the shells, giving the total gravitational potential energy of the entire star.</p>
 
@@ -267,17 +287,18 @@ $$\frac{U}{L} = t_{eff} \approx 9 \ \mathrm{million \ years}$$
 <p>Radiometric dating of rocks also provided ‘bonus’ evidence, as rocks could now be shown to be far older than Kelvins initial results. Ernest Rutherford, a pioneer in radiometric dating, reveals a humourous encounter with Kelvin where he presented his early calculations:</p>
 
 <blockquote>
-  <p>I came into the room, which was half dark, and presently spotted Lord Kelvin in the audience and realized that I was in trouble at the last part of my speech dealing with the age of the Earth, where my views conflicted with his. To my relief, Kelvin fell fast asleep, but as I came to the important point, I saw the old bird sit up, open an eye, and cock a baleful glance at me! Then a sudden inspiration came, and I said, ‘Lord Kelvin had limited the age of the Earth, provided no new source was discovered. That prophetic utterance refers to what we are now considering tonight, radium!’ Behold! the old boy beamed upon me.</p>
+  <p><em>I came into the room, which was half dark, and presently spotted Lord Kelvin in the audience and realized that I was in trouble at the last part of my speech dealing with the age of the Earth, where my views conflicted with his. To my relief, Kelvin fell fast asleep, but as I came to the important point, I saw the old bird sit up, open an eye, and cock a baleful glance at me! Then a sudden inspiration came, and I said, ‘Lord Kelvin had limited the age of the Earth, provided no new source was discovered. That prophetic utterance refers to what we are now considering tonight, radium!’ Behold! the old boy beamed upon me.</em></p>
 </blockquote>
 
 <p>Lessons learnt:</p>
 
 <ul>
   <li>Don’t rely on your assumptions too much; even if your theory is simple and elegant; as the old adage goes, ‘rubbish in, rubbish out’.</li>
-  <li>Don’t be arrogant and pompous; even if you are the first British scientists to join the house of lords, if your model is wrong you’ll end up with egg on your face. And in the end, <a href="https://en.wikipedia.org/wiki/George_E._P._Box">all models are wrong, but some are useful</a>.</li>
+  <li>Don’t be arrogant and pompous; even if you are the first British scientists to join the house of lords, if your model is wrong you’ll end up with egg on your face. And in the end, <a href="https://en.wikipedia.org/wiki/George_E._P._Box" target="blank">all models are wrong, but some are useful</a>.</li>
 </ul>
 
-<p><em>Edit: the previous version of this post had the wrong sign for the thermal energy and all the grammar mistakes, thanks to Abi and Spyros for pointing them out</em></p>
+<p><br />
+<em>Edit: the previous version of this post had the wrong sign for the thermal energy and <strong>all</strong> the grammar mistakes, thanks to Abi and Spyros for pointing them out</em></p>
 
 </article>
 
@@ -361,6 +382,8 @@ $$\frac{U}{L} = t_{eff} \approx 9 \ \mathrm{million \ years}$$
       <ul class="pages">
         
         
+        
+        
           <li class="nav-link"><a href="/contact/">Contact</a>
         
         
@@ -385,11 +408,11 @@ $$\frac{U}{L} = t_{eff} \approx 9 \ \mathrm{million \ years}$$
         
         
         
-          <li class="nav-link"><a href="/tags/">Tags</a>
-        
-        
-        
           <li class="nav-link"><a href="/about/">About</a>
+        
+        
+        
+          <li class="nav-link"><a href="/tags/">Tags</a>
         
         
         
@@ -431,6 +454,13 @@ $$\frac{U}{L} = t_{eff} \approx 9 \ \mathrm{million \ years}$$
           </li>
           
         
+          
+          <li>
+            <a href="https://uk.linkedin.com/in/lovellchristopher" target="blank" title="Connect with me on LinkedIn">
+              <i class="fa fa-linkedin"></i>
+              <span class="username">LinkedIn</span>
+            </a>
+          </li>
           
         
           

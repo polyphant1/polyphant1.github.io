@@ -15,3 +15,19 @@ img.small {
   float:left;
   padding-right: 5px;
 }
+
+article :not(h2) a {
+  &:active,
+  &:focus,
+  &:hover {
+    color: darken($action-color, 10%);
+    //text-decoration: underline;
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
+
+  color: $link-color;
+}

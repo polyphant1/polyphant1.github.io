@@ -6,8 +6,8 @@
 </description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 17 Jan 2016 20:47:45 +0000</pubDate>
-    <lastBuildDate>Sun, 17 Jan 2016 20:47:45 +0000</lastBuildDate>
+    <pubDate>Mon, 18 Jan 2016 11:22:05 +0000</pubDate>
+    <lastBuildDate>Mon, 18 Jan 2016 11:22:05 +0000</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -50,7 +50,7 @@
 
 &lt;p&gt;You can read the post &lt;a href=&quot;http://astrobites.org/2015/12/25/observational-evidence-for-the-first-generation-of-stars/&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;. The image below is of the galaxy CR7, the subject of the paper.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;/images/cr7.jpg&quot; data-lightbox=&quot;falcon9-large&quot; data-title=&quot;CR7&quot;&gt;
+&lt;p&gt;&lt;a href=&quot;/images/cr7.jpg&quot; data-lightbox=&quot;lightbox-img&quot; data-title=&quot;CR7&quot;&gt;
   &lt;img src=&quot;/images/cr7.jpg&quot; title=&quot;CR7&quot; /&gt;
 &lt;/a&gt;&lt;/p&gt;
 </description>
@@ -69,17 +69,17 @@
 
 &lt;p&gt;A couple of other founding members were in attendance, two of which could be considered celebrities in the astrophysics community due to a mathematical profile they formalised that bears their name. Carlos Frenk and Simon White, working with Julio Navarro, penned the Navarro-Frenk-White (NFW) profile in the mid 90s, and it has since gone on to become a standard for describing the density distribution of dark matter in cosmological halos. The paper that introduced it has gone on to garner nearly 4000 citations, &lt;a href=&quot;http://adsabs.harvard.edu/abs/1996ApJ...462..563N&quot;&gt;according to ADS&lt;/a&gt;.&lt;/p&gt;
 
-&lt;center&gt;
-![nfw-ads](/images/nfw-history.gif)
-
-*Citation history for [&#39;The Structure of Cold Dark Matter Halos&#39;](http://adsabs.harvard.edu/abs/1996ApJ...462..563N), Navarro et al.*
-&lt;/center&gt;
+&lt;p&gt;&lt;a href=&quot;/images/nfw-history.gif&quot; data-lightbox=&quot;bilevel-partition&quot; data-title=&quot;Citation history for &#39;The Structure of Cold Dark Matter Halos&#39;, Navarro et al.&quot;&gt;
+  &lt;img src=&quot;/images/nfw-history.gif&quot; title=&quot;Citation history for &#39;The Structure of Cold Dark Matter Halos&#39;, Navarro et al.&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;center&gt;&lt;i&gt;Citation history for &lt;a href=&quot;http://adsabs.harvard.edu/abs/1996ApJ...462..563N&quot; target=&quot;blank&quot;&gt;&#39;The Structure of Cold Dark Matter Halos&#39;&lt;/a&gt;, Navarro et al.&lt;/i&gt;&lt;/center&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;We can’t detect dark matter directly, so its presence must be inferred from its gravitational influence on baryonic matter. Inferring the exact distribution of dark matter in clusters of galaxies purely from the baryonic matter is challenging. The NFW profile was instead motivated and tuned to evidence from simulations of collisionless dark matter.&lt;/p&gt;
 
 &lt;p&gt;They argue that there is a ‘universal’ profile for dark matter halos that spans four orders of magnitude of halo mass, from galaxy halos to entire clusters. This assertion is still contentious; other authors either find different forms of the profile, or that it varies with environment.&lt;/p&gt;
 
-&lt;p&gt;The profile is also in tension with observations; the NFW profile suggests a central ‘cusp’ to the dark matter distribution, whereas observations suggest that dark matter haloes have shallower cores. This became known as the &lt;a href=&quot;https://en.wikipedia.org/wiki/Cuspy_halo_problem&quot;&gt;Cusp-Core controversy&lt;/a&gt;, and is still unresolved today.&lt;/p&gt;
+&lt;p&gt;The profile is also in tension with observations; the NFW profile suggests a central ‘cusp’ to the dark matter distribution, whereas observations suggest that dark matter haloes have shallower cores. This became known as the &lt;a href=&quot;https://en.wikipedia.org/wiki/Cuspy_halo_problem&quot; target=&quot;blank&quot;&gt;Cusp-Core controversy&lt;/a&gt;, and is still unresolved today.&lt;/p&gt;
 
 &lt;p&gt;At the end of the meeting we discussed some interesting projects, some of which I’m hoping to get involved in from the new year; will keep you posted, all 3 of you dear readers.&lt;/p&gt;
 </description>
@@ -96,12 +96,14 @@
         <title>Lord Kelvin and the age of the earth</title>
         <description>&lt;p&gt;The story of how scientists revealed the age of the earth is a remarkable one; at the beginning of the nineteenth century many still believed that the earth had been around forever, but by the 1920s evidence from fields as diverse as geology and biology had been united, and the definitive source of the Sun’s heat discovered. Perhaps what makes the story even more fascinating are the egos and personalities that shaped it, and none more so than that of William Thomson, aka Lord Kelvin.&lt;/p&gt;
 
-&lt;center&gt;![Kelvin](/images/Lord_Kelvin_photograph.jpg)&lt;/center&gt;
+&lt;p&gt;&lt;a href=&quot;/images/Lord_Kelvin_photograph.jpg&quot; data-lightbox=&quot;bilevel-partition&quot; data-title=&quot;Lord Kelvin&quot;&gt;
+  &lt;img class=&quot;small&quot; src=&quot;/images/Lord_Kelvin_photograph.jpg&quot; title=&quot;Lord Kelvin&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Lord Kelvin was arguably the most eminent scientist of his time, famous today for the temperature scale that bears his name. But it was his work on thermodynamics that led him to ponder the question of the age of the earth. He saw an opportunity to apply the recently formulated laws of thermodynamics to the problem, in particular the first law, which states:&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;The total energy of an isolated system is constant; energy can be transformed from one form to another, but cannot be created or destroyed&lt;/p&gt;
+  &lt;p&gt;&lt;em&gt;The total energy of an isolated system is constant; energy can be transformed from one form to another, but cannot be created or destroyed&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;This is the principle of conservation of energy.&lt;/p&gt;
@@ -124,8 +126,11 @@ $$\Omega = - \frac{Gm\_{1}m\_{2}}{r}$$
 
 &lt;p&gt;To apply this to the Sun, and calculate its total gravitational potential energy, we first model it as a series of concentric shells, each of radius $dr$.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/../images/concentric.jpg&quot; title=&quot;center&quot; alt=&quot;center&quot; style=&quot;display: block; margin: auto;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;/images/concentric.jpg&quot; data-lightbox=&quot;bilevel-partition&quot; data-title=&quot;Concentric shells&quot;&gt;
+  &lt;img class=&quot;small&quot; src=&quot;/images/concentric.jpg&quot; title=&quot;Concentric shells&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
 &lt;center&gt;&lt;i&gt;Concentric shells at radius $r$, width $dr$.&lt;/i&gt;&lt;/center&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;In the above definition, for a single shell at radius $r$, $m_1$ is the mass of the star within radius $r$, and $m_2$ is the mass of the shell itself. We then integrate between 0 and $R$, the radius of the Sun, to add up the contributions from all of the shells, giving the total gravitational potential energy of the entire star.&lt;/p&gt;
 
@@ -182,17 +187,18 @@ $$\frac{U}{L} = t_{eff} \approx 9 \ \mathrm{million \ years}$$
 &lt;p&gt;Radiometric dating of rocks also provided ‘bonus’ evidence, as rocks could now be shown to be far older than Kelvins initial results. Ernest Rutherford, a pioneer in radiometric dating, reveals a humourous encounter with Kelvin where he presented his early calculations:&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;I came into the room, which was half dark, and presently spotted Lord Kelvin in the audience and realized that I was in trouble at the last part of my speech dealing with the age of the Earth, where my views conflicted with his. To my relief, Kelvin fell fast asleep, but as I came to the important point, I saw the old bird sit up, open an eye, and cock a baleful glance at me! Then a sudden inspiration came, and I said, ‘Lord Kelvin had limited the age of the Earth, provided no new source was discovered. That prophetic utterance refers to what we are now considering tonight, radium!’ Behold! the old boy beamed upon me.&lt;/p&gt;
+  &lt;p&gt;&lt;em&gt;I came into the room, which was half dark, and presently spotted Lord Kelvin in the audience and realized that I was in trouble at the last part of my speech dealing with the age of the Earth, where my views conflicted with his. To my relief, Kelvin fell fast asleep, but as I came to the important point, I saw the old bird sit up, open an eye, and cock a baleful glance at me! Then a sudden inspiration came, and I said, ‘Lord Kelvin had limited the age of the Earth, provided no new source was discovered. That prophetic utterance refers to what we are now considering tonight, radium!’ Behold! the old boy beamed upon me.&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;Lessons learnt:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Don’t rely on your assumptions too much; even if your theory is simple and elegant; as the old adage goes, ‘rubbish in, rubbish out’.&lt;/li&gt;
-  &lt;li&gt;Don’t be arrogant and pompous; even if you are the first British scientists to join the house of lords, if your model is wrong you’ll end up with egg on your face. And in the end, &lt;a href=&quot;https://en.wikipedia.org/wiki/George_E._P._Box&quot;&gt;all models are wrong, but some are useful&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Don’t be arrogant and pompous; even if you are the first British scientists to join the house of lords, if your model is wrong you’ll end up with egg on your face. And in the end, &lt;a href=&quot;https://en.wikipedia.org/wiki/George_E._P._Box&quot; target=&quot;blank&quot;&gt;all models are wrong, but some are useful&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;em&gt;Edit: the previous version of this post had the wrong sign for the thermal energy and all the grammar mistakes, thanks to Abi and Spyros for pointing them out&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;
+&lt;em&gt;Edit: the previous version of this post had the wrong sign for the thermal energy and &lt;strong&gt;all&lt;/strong&gt; the grammar mistakes, thanks to Abi and Spyros for pointing them out&lt;/em&gt;&lt;/p&gt;
 </description>
         <pubDate>Sun, 13 Dec 2015 00:00:00 +0000</pubDate>
         <link>/2015/12/13/The-age-of-the-earth.html</link>
@@ -212,14 +218,16 @@ $$\frac{U}{L} = t_{eff} \approx 9 \ \mathrm{million \ years}$$
 &lt;p&gt;I’ve solved the first part, which cleverly leads on to the next part of the puzzle. If you want to have a go, the grid and instructions are shown below. If you’re lazy, you can just click the image to link to the solved version, but if you’re lazy, you probably don’t care.&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;In this type of grid-shading puzzle, each square is either black or white. Some of the black squares have already been filled in for you.&lt;/p&gt;
+  &lt;p&gt;&lt;em&gt;In this type of grid-shading puzzle, each square is either black or white. Some of the black squares have already been filled in for you.&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;Each row or column is labelled with a string of numbers. The numbers indicate the length of all consecutive runs of black squares, and are displayed in the order that the runs appear in that line. For example, a label “2 1 6” indicates sets of two, one and six black squares, each of which will have at least one white square separating them.&lt;/p&gt;
+  &lt;p&gt;&lt;em&gt;Each row or column is labelled with a string of numbers. The numbers indicate the length of all consecutive runs of black squares, and are displayed in the order that the runs appear in that line. For example, a label “2 1 6” indicates sets of two, one and six black squares, each of which will have at least one white square separating them.&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;a href=&quot;/images/grid-shading-puzzle-solved.jpg&quot;&gt;&lt;img src=&quot;/images/grid-shading-puzzle.jpg&quot; alt=&quot;puzzle&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;/images/grid-shading-puzzle-solved.jpg&quot; target=&quot;blank&quot;&gt;
+  &lt;img src=&quot;/images/grid-shading-puzzle.jpg&quot; title=&quot;Nonogram&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Sun, 13 Dec 2015 00:00:00 +0000</pubDate>
         <link>/2015/12/13/GCHQ-christmas-puzzle.html</link>
@@ -238,8 +246,11 @@ $$\frac{U}{L} = t_{eff} \approx 9 \ \mathrm{million \ years}$$
 
 &lt;p&gt;Instead, the battle lasted 63 days (longer than the siege of Stalingrad), with effectively no support from the Soviets, and meager airdrops from British bases in Italy. The resistance army was pitifully armed, but managed to hold its own against the far stronger Wehrmacht forces. More than 150,000-200,000 civilians perished, mostly from retaliatory mass executions performed by the Nazi’s, and the entire city was demolished.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/../images/warsaw3.jpg&quot; title=&quot;center&quot; alt=&quot;center&quot; style=&quot;display: block; margin: auto;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;/images/warsaw3.jpg&quot; data-lightbox=&quot;lightbox-image&quot; data-title=&quot;Complete destruction; only piles of rubble remain. Reminiscent of recent images from Syria.&quot;&gt;
+  &lt;img src=&quot;/images/warsaw3.jpg&quot; title=&quot;Complete destruction; only piles of rubble remain. Reminiscent of recent images from Syria.&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
 &lt;center&gt;&lt;i&gt;Complete destruction; only piles of rubble remain. Reminiscent of recent images from Syria.&lt;/i&gt;&lt;/center&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;Apportioning blame for this atrocity is difficult; you could say that the timing of the insurrection was poor, or that preparations were insufficient, or simply that the Varsovians were unlucky, victims of a series of calamitous decisions and events. But one cause, still controversial now, was being raised at all levels (even Churchill was suspicious) - Soviet stalling.&lt;/p&gt;
 
@@ -249,11 +260,15 @@ $$\frac{U}{L} = t_{eff} \approx 9 \ \mathrm{million \ years}$$
 
 &lt;p&gt;I heartedly recommend reading the book, as I do anything by Norman Davies, but if you don’t have time for a 700 page door stop and still want to learn more about the Rising then &lt;a href=&quot;http://www.warsawrising.eu/&quot;&gt;this site&lt;/a&gt; has a great interactive overview.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/../images/eastern_front.png&quot; title=&quot;center&quot; alt=&quot;center&quot; /&gt;&lt;/p&gt;
-&lt;center&gt;&lt;i&gt;Soviet advances on the eastern front, with suspiciously little progress past Warsaw during the rising. .&lt;/i&gt;&lt;/center&gt;
+&lt;p&gt;&lt;a href=&quot;/images/eastern_front.png&quot; data-lightbox=&quot;lightbox-image&quot; data-title=&quot;Soviet advances on the eastern front, with suspiciously little progress past Warsaw during the rising.&quot;&gt;
+  &lt;img src=&quot;/images/eastern_front.png&quot; title=&quot;Soviet advances on the eastern front, with suspiciously little progress past Warsaw during the rising.&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;center&gt;&lt;i&gt;Soviet advances on the eastern front, with suspiciously little progress past Warsaw during the rising.&lt;/i&gt;&lt;/center&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
-&lt;p&gt;## The Recent Rising in Warsaw&lt;/p&gt;
+
+&lt;h3&gt; The Recent Rising in Warsaw &lt;/h3&gt;
 
 &lt;p&gt;It is not my primary job to discuss the details of contemporary politics, but this week there is something that cries out to be said.  Since, it seems, nobody else will do so, I want to protest against the mean and cowardly attitude adopted by the British press towards the recent rising in Warsaw.&lt;/p&gt;
 

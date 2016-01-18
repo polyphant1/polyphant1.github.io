@@ -14,6 +14,19 @@
   <meta name="copyright" content="&copy; Christopher Lovell 2016">
   
 
+  <!-- Enable inline mathjax. Must be placed before loading Mathjax. See http://tex.stackexchange.com/questions/27633/mathjax-inline-mode-not-rendering -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        processEscapes: true
+      }
+    });
+  </script>
+
+  <!-- MathJax -->
+  <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
   <!-- Facebook (custom) -->
   <div id="fb-root"></div>
   <script>(function(d, s, id) {
@@ -108,6 +121,8 @@
         
         <!--
           
+        
+          
           <li class="nav-link"><a href="/contact/">Contact</a>
           
         
@@ -132,11 +147,11 @@
           
         
           
-          <li class="nav-link"><a href="/tags/">Tags</a>
+          <li class="nav-link"><a href="/about/">About</a>
           
         
           
-          <li class="nav-link"><a href="/about/">About</a>
+          <li class="nav-link"><a href="/tags/">Tags</a>
           
         
           
@@ -215,6 +230,8 @@
       <ul class="pages">
         
         
+        
+        
           <li class="nav-link"><a href="/contact/">Contact</a>
         
         
@@ -239,11 +256,11 @@
         
         
         
-          <li class="nav-link"><a href="/tags/">Tags</a>
-        
-        
-        
           <li class="nav-link"><a href="/about/">About</a>
+        
+        
+        
+          <li class="nav-link"><a href="/tags/">Tags</a>
         
         
         
@@ -285,6 +302,13 @@
           </li>
           
         
+          
+          <li>
+            <a href="https://uk.linkedin.com/in/lovellchristopher" target="blank" title="Connect with me on LinkedIn">
+              <i class="fa fa-linkedin"></i>
+              <span class="username">LinkedIn</span>
+            </a>
+          </li>
           
         
           

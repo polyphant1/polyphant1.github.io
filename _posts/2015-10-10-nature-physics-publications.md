@@ -14,23 +14,23 @@ Their data set consists of all papers published in physics journals, as well as 
 
 They find an interesting discontinuity in citation numbers around 1960, which they attribute to WWII. The war led to a fall in the number of papers produced, but once the war ended they immediately picked back up again. Since there were less papers to reference in the post-war years, authors went further back in history for inspiration.
 
-<center>
-![citation age](/images/nature1.jpg)
-</center>
-<center>*Average age of citations for papers in the data set over time*</center>
+<a href="/images/nature1.jpg" data-lightbox="Average age of citations for papers in the data set over time" data-title="Average age of citations for papers in the data set over time">
+  <img class="small" src="/images/nature1.jpg" title="Average age of citations for papers in the data set over time">
+</a>
+<center><i>Average age of citations for papers in the data set over time</i></center><br>
 
 This trend for citing older papers continued in the years after the 60s, and the authors again find an elegant explanation: peer review. Before the 60's, papers were commonly accepted at the discretion of editors. There was no practical alternative; it was difficult to share papers with a large audience before the invention of photocopying, or sharing online. I suspect there may also have been an element of bias toward established colleagues. However, once peer review became common place, trust in papers from this point onwards increased and authors had greater confidence in reaching further back in history for inspiration.
 
 Another interesting conclusion is that "the smaller a sub-field, the more self-referential it is", and Geophysics, Astronomy and Astrophysics as a sub-field are one of the main culprits for this! As I've espoused in previous posts, interdisciplinary research is vital to a vibrant research community; in the Astronomy & Astrophysics community, leveraging advances in statistics and data analysis from the past decade would bring huge benefits (answering the question 'what is statistics' should probably be left for another post...). But this is not limited to my field, nor is it a personal preference; there are very real impacts of being too insular as a field. The authors note how papers in nuclear and particle physics, the most self referential of the sub-fields they identify, gather less references over their lifetime, and over a shorter time period - they 'burn out' faster.
 
-<br><center>
-![citation age](/images/nature2.jpg)
-</center><br>
-<center>*The major sub fields in physics arranged as an artificial network to show those that reference each other. Self-connecting loops represent references within the field.*</center>
+<a href="/images/nature2.jpg" data-lightbox="The major sub fields in physics arranged as an artificial network to show those that reference each other. Self-connecting loops represent references within the field." data-title="The major sub fields in physics arranged as an artificial network to show those that reference each other. Self-connecting loops represent references within the field.">
+  <img src="/images/nature2.jpg" title="The major sub fields in physics arranged as an artificial network to show those that reference each other. Self-connecting loops represent references within the field.">
+</a>
+<center><i>The major sub fields in physics arranged as an artificial network to show those that reference each other. Self-connecting loops represent references within the field.</i></center><br>
 
 
 Of course, there is a sub-context to this. Nuclear and particle physics, like astronomy and astrophysics, require very large, very expensive experimental apparatus, involving teams of hundreds, if not thousands of collaborators to function and process the data. Each member of such a team obviously wants to be recognised for their work, and the current metric in academia for doing so is through authorship. The shelf life of such research is also quite low since many such papers are technical summaries of experimental apparatus or approaches that are soon superseded by bigger and better approaches, which is certainly not something that should be discouraged.
 
 In the era of 'big science', perhaps we need to reevaluate our model of acknowledgement if we are to truly represent the efforts of such large teams.
 
-> Take a look at the paper for deeper analysis. Some of the other visualisations are also pretty neat.
+> *Take a look at the paper for deeper analysis. Some of the other visualisations are also pretty neat.*

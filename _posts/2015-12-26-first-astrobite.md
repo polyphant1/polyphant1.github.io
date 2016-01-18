@@ -11,6 +11,6 @@ During my undergraduate I often read a site called Astrobites, which aims to bri
 
 You can read the post <a href="http://astrobites.org/2015/12/25/observational-evidence-for-the-first-generation-of-stars/" target="_blank">here</a>. The image below is of the galaxy CR7, the subject of the paper.
 
-<a href="/images/cr7.jpg" data-lightbox="falcon9-large" data-title="CR7">
+<a href="/images/cr7.jpg" data-lightbox="lightbox-img" data-title="CR7">
   <img src="/images/cr7.jpg" title="CR7">
 </a>

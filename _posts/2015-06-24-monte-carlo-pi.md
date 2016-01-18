@@ -14,7 +14,7 @@ One way around this is to use Monte Carlo methods, taking advantage of the law o
 
 Take a square of side $a$, centred on the origin. Now place a circle inside the box with radius $a/2$, also centred on the origin. The area of the rectangle is $a^2$, and the area of the circle is $\pi(a/2)^2$.
 
-```julia
+{% highlight julia %}
 using DataArrays, DataFrames
 using Gadfly
 using Compose
@@ -25,11 +25,15 @@ compose(context(),
   (context(),circle(0.5,.5,0.5),fill("tomato")),
   (context(),rectangle(0.,0.,1,1),fill("black"))
 )
-```
+{% endhighlight %}
 
 <br>  
 
-<center>![circle-square](/assets/monte-carlo-pi/output_1_0.svg "Circle in rectangle")</center>
+<a href="/assets/monte-carlo-pi/output_1_0.svg" data-lightbox="Circle in rectangle" data-title="Circle in rectangle">
+  <img class="small" src="/assets/monte-carlo-pi/output_1_0.svg" title="Circle in rectangle">
+</a>
+
+<br>
 
 If we take any random point within the rectangle, then the probability that this point lies within the circle, $P(circle)$, is equal to the area of the circle relative to the area of the rectangle. i.e,
 
@@ -46,7 +50,7 @@ Below is a Julia script for doing just this. $n$ samples from a bivariate unifor
 
 The plot shows a sample of the coordinates generated, coloured by whether they lie in or out of the circle.
 
-```julia
+{% highlight julia %}
 n = 1000000
 
 df = DataFrame()
@@ -72,11 +76,14 @@ set_default_plot_size(15cm,15cm)
 
 plot(df[sample(1:size(df, 1), iceil(0.001 * size(df, 1))), :], x="x", y="y", color="c", Geom.point,Coord.cartesian(fixed=true),
 Guide.Annotation(compose(context(),circle(0,0,0.5), fill(nothing), stroke("orange"))))
-```
+{% endhighlight %}
 
-<center>![point-distribution](/assets/monte-carlo-pi/output_3_0.svg "Point distribution")</center>
+<a href="/assets/monte-carlo-pi/output_3_0.svg" data-lightbox="Point distribution" data-title="Point distribution">
+  <img class="small" src="/assets/monte-carlo-pi/output_3_0.svg" title="Point distribution">
+</a>
 
-```julia
+
+{% highlight julia %}
 print("pi ~ ",4*sum(df[:c] .== "in")/n)
 pi ~ 3.138924
-```
+{% endhighlight %}

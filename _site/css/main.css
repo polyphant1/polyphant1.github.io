@@ -199,14 +199,12 @@ p {
 
 a {
   color: #333;
-  text-decoration: none; }
+  text-decoration: none;
+  transition: color 0.1s linear; }
   a:active, a:focus, a:hover {
     color: #1a1a1a; }
   a:active, a:focus {
     outline: none; }
-
-article p a {
-  color: #bc0000; }
 
 hr {
   border-bottom: 1px solid #ddd;
@@ -657,3 +655,10 @@ img.small {
 .fb-like {
   float: left;
   padding-right: 5px; }
+
+article :not(h2) a {
+  color: #bc0000; }
+  article :not(h2) a:active, article :not(h2) a:focus, article :not(h2) a:hover {
+    color: #1a1a1a; }
+  article :not(h2) a:active, article :not(h2) a:focus {
+    outline: none; }

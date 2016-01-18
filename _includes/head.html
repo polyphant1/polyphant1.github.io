@@ -10,6 +10,19 @@
   <meta name="copyright" content="&copy; {{ site.name }} {{ site.time | date: '%Y' }}">
   {% endif %}
 
+  <!-- Enable inline mathjax. Must be placed before loading Mathjax. See http://tex.stackexchange.com/questions/27633/mathjax-inline-mode-not-rendering -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        processEscapes: true
+      }
+    });
+  </script>
+
+  <!-- MathJax -->
+  <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
   <!-- Facebook (custom) -->
   <div id="fb-root"></div>
   <script>(function(d, s, id) {

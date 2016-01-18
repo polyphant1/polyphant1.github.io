@@ -4,8 +4,8 @@ gems:
   - jekyll-paginate
   - jekyll-gist
 
-exclude:
- - "/vendor/"
+# exclude:
+#  - "/vendor/"
 
 # Site settings
 title: Polyphant
@@ -19,7 +19,7 @@ description: >
 # root of your server.
 baseurl: "" # the subpath of your site, e.g. /blog/
 #url: "http://bencentra.github.io" # the base hostname & protocol for your site
-cover: "/images/hdf.gif"
+cover: "/images/hudf.jpg"
 logo: "/assets/logo.png"
 
 # Build settings

@@ -10,7 +10,7 @@ excerpt:
 
 Quick post today on how to add Google Analytics tracking to your GitHub pages site. First, head over to [Google Analytics](http://www.google.com/analytics/) and sign up. After entering your details and green lighting the T&C's you'll be directed to an admin page. This will give you the tracking code that you need to add to each page of your site. Mine, anonymised, is below:
 
-```html
+{% highlight javascript %}
 <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -19,14 +19,14 @@ Quick post today on how to add Google Analytics tracking to your GitHub pages si
     ga('create', 'UA-########-#', 'auto');
     ga('send', 'pageview');
 </script>
-```
+{% endhighlight %}
 <br>
 
 Jekyll makes adding this easy; create a HTML file in your *\_includes* folder containing this code. I named mine google\_analytics.html. Then add the following to your default layout, `_layouts/default.html`:
 
-```
+{% highlight ruby %}
 {% raw %}{% include google_analytics.html %}{% endraw %}
-```
+{% endhighlight %}
 
 Within a few hours Google Analytics should pick up the change, and you'll be capturing session times, demographics, and other useful information on visitors to your site.
 

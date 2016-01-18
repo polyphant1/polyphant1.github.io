@@ -13,6 +13,19 @@
   <meta name="copyright" content="&copy; Christopher Lovell 2016">
   
 
+  <!-- Enable inline mathjax. Must be placed before loading Mathjax. See http://tex.stackexchange.com/questions/27633/mathjax-inline-mode-not-rendering -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        processEscapes: true
+      }
+    });
+  </script>
+
+  <!-- MathJax -->
+  <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
   <!-- Facebook (custom) -->
   <div id="fb-root"></div>
   <script>(function(d, s, id) {
@@ -105,6 +118,8 @@
         
         <!--
           
+        
+          
           <li class="nav-link"><a href="/contact/">Contact</a>
           
         
@@ -129,11 +144,11 @@
           
         
           
-          <li class="nav-link"><a href="/tags/">Tags</a>
+          <li class="nav-link"><a href="/about/">About</a>
           
         
           
-          <li class="nav-link"><a href="/about/">About</a>
+          <li class="nav-link"><a href="/tags/">Tags</a>
           
         
           
@@ -185,22 +200,24 @@
 
 <p>Take a square of side $a$, centred on the origin. Now place a circle inside the box with radius $a/2$, also centred on the origin. The area of the rectangle is $a^2$, and the area of the circle is $\pi(a/2)^2$.</p>
 
-<p>```julia
-using DataArrays, DataFrames
+<figure class="highlight"><pre><code class="language-julia" data-lang="julia">using DataArrays, DataFrames
 using Gadfly
-using Compose</p>
+using Compose
 
-<p>set_default_plot_size(10cm,10cm)</p>
+set_default_plot_size(10cm,10cm)
 
-<p>compose(context(),
-  (context(),circle(0.5,.5,0.5),fill(“tomato”)),
-  (context(),rectangle(0.,0.,1,1),fill(“black”))
-)
-```</p>
+compose(context(),
+  (context(),circle(0.5,.5,0.5),fill("tomato")),
+  (context(),rectangle(0.,0.,1,1),fill("black"))
+)</code></pre></figure>
 
 <p><br /></p>
 
-<center>![circle-square](/assets/monte-carlo-pi/output_1_0.svg "Circle in rectangle")</center>
+<p><a href="/assets/monte-carlo-pi/output_1_0.svg" data-lightbox="Circle in rectangle" data-title="Circle in rectangle">
+  <img class="small" src="/assets/monte-carlo-pi/output_1_0.svg" title="Circle in rectangle" />
+</a></p>
+
+<p><br /></p>
 
 <p>If we take any random point within the rectangle, then the probability that this point lies within the circle, $P(circle)$, is equal to the area of the circle relative to the area of the rectangle. i.e,</p>
 
@@ -216,40 +233,39 @@ using Compose</p>
 
 <p>The plot shows a sample of the coordinates generated, coloured by whether they lie in or out of the circle.</p>
 
-<p>```julia
-n = 1000000</p>
+<figure class="highlight"><pre><code class="language-julia" data-lang="julia">n = 1000000
 
-<p>df = DataFrame()
+df = DataFrame()
 df[:x] = 0.5 - rand(n)
 df[:y] = 0.5 - rand(n)
 df[:c] = Array(String, n)
-df[:r] = Array(Float64, n)</p>
+df[:r] = Array(Float64, n)
 
-<p>for i = 1:n
+for i = 1:n
     df[i,:r] = (df[i,:x]^2 + df[i,:y]^2)^.5
     if df[i,:r] &lt; 0.5
-        df[i,:c] = “in”
+        df[i,:c] = "in"
     else
-        df[i,:c] = “out”
+        df[i,:c] = "out"
     end
-end</p>
+end
 
-<p>circle_df = DataFrame()
+circle_df = DataFrame()
 circle_df[:c] = cos(-pi:0.01:pi)/2
-circle_df[:s] = sin(-pi:0.01:pi)/2</p>
+circle_df[:s] = sin(-pi:0.01:pi)/2
 
-<p>set_default_plot_size(15cm,15cm)</p>
+set_default_plot_size(15cm,15cm)
 
-<p>plot(df[sample(1:size(df, 1), iceil(0.001 * size(df, 1))), :], x=”x”, y=”y”, color=”c”, Geom.point,Coord.cartesian(fixed=true),
-Guide.Annotation(compose(context(),circle(0,0,0.5), fill(nothing), stroke(“orange”))))
-```</p>
+plot(df[sample(1:size(df, 1), iceil(0.001 * size(df, 1))), :], x="x", y="y", color="c", Geom.point,Coord.cartesian(fixed=true),
+Guide.Annotation(compose(context(),circle(0,0,0.5), fill(nothing), stroke("orange"))))</code></pre></figure>
 
-<center>![point-distribution](/assets/monte-carlo-pi/output_3_0.svg "Point distribution")</center>
+<p><a href="/assets/monte-carlo-pi/output_3_0.svg" data-lightbox="Point distribution" data-title="Point distribution">
+  <img class="small" src="/assets/monte-carlo-pi/output_3_0.svg" title="Point distribution" />
+</a></p>
 
-<p><code class="highlighter-rouge">julia
-print("pi ~ ",4*sum(df[:c] .== "in")/n)
-pi ~ 3.138924
-</code></p>
+<figure class="highlight"><pre><code class="language-julia" data-lang="julia">print("pi ~ ",4*sum(df[:c] .== "in")/n)
+pi ~ 3.138924</code></pre></figure>
+
 
 </article>
 
@@ -333,6 +349,8 @@ pi ~ 3.138924
       <ul class="pages">
         
         
+        
+        
           <li class="nav-link"><a href="/contact/">Contact</a>
         
         
@@ -357,11 +375,11 @@ pi ~ 3.138924
         
         
         
-          <li class="nav-link"><a href="/tags/">Tags</a>
-        
-        
-        
           <li class="nav-link"><a href="/about/">About</a>
+        
+        
+        
+          <li class="nav-link"><a href="/tags/">Tags</a>
         
         
         
@@ -403,6 +421,13 @@ pi ~ 3.138924
           </li>
           
         
+          
+          <li>
+            <a href="https://uk.linkedin.com/in/lovellchristopher" target="blank" title="Connect with me on LinkedIn">
+              <i class="fa fa-linkedin"></i>
+              <span class="username">LinkedIn</span>
+            </a>
+          </li>
           
         
           

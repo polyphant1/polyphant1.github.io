@@ -14,8 +14,10 @@ For those that don't know, the Warsaw rising was a calamitous battle instigated 
 
 Instead, the battle lasted 63 days (longer than the siege of Stalingrad), with effectively no support from the Soviets, and meager airdrops from British bases in Italy. The resistance army was pitifully armed, but managed to hold its own against the far stronger Wehrmacht forces. More than 150,000-200,000 civilians perished, mostly from retaliatory mass executions performed by the Nazi's, and the entire city was demolished.
 
-<img src="/../images/warsaw3.jpg" title="center" alt="center" style="display: block; margin: auto;" />
-<center><i>Complete destruction; only piles of rubble remain. Reminiscent of recent images from Syria.</i></center>
+<a href="/images/warsaw3.jpg" data-lightbox="lightbox-image" data-title="Complete destruction; only piles of rubble remain. Reminiscent of recent images from Syria.">
+  <img src="/images/warsaw3.jpg" title="Complete destruction; only piles of rubble remain. Reminiscent of recent images from Syria.">
+</a>
+<center><i>Complete destruction; only piles of rubble remain. Reminiscent of recent images from Syria.</i></center><br>
 
 Apportioning blame for this atrocity is difficult; you could say that the timing of the insurrection was poor, or that preparations were insufficient, or simply that the Varsovians were unlucky, victims of a series of calamitous decisions and events. But one cause, still controversial now, was being raised at all levels (even Churchill was suspicious) - Soviet stalling.
 
@@ -25,11 +27,14 @@ The article below was published on the 1st of September, 1944, 6 weeks in to the
 
 I heartedly recommend reading the book, as I do anything by Norman Davies, but if you don't have time for a 700 page door stop and still want to learn more about the Rising then [this site](http://www.warsawrising.eu/) has a great interactive overview.
 
-<img src="/../images/eastern_front.png" title="center" alt="center"/>
-<center><i>Soviet advances on the eastern front, with suspiciously little progress past Warsaw during the rising. .</i></center>
+<a href="/images/eastern_front.png" data-lightbox="lightbox-image" data-title="Soviet advances on the eastern front, with suspiciously little progress past Warsaw during the rising.">
+  <img src="/images/eastern_front.png" title="Soviet advances on the eastern front, with suspiciously little progress past Warsaw during the rising.">
+</a>
+<center><i>Soviet advances on the eastern front, with suspiciously little progress past Warsaw during the rising.</i></center><br>
 
 ---
-## The Recent Rising in Warsaw
+
+<h3> The Recent Rising in Warsaw </h3>
 
 It is not my primary job to discuss the details of contemporary politics, but this week there is something that cries out to be said.  Since, it seems, nobody else will do so, I want to protest against the mean and cowardly attitude adopted by the British press towards the recent rising in Warsaw.
 

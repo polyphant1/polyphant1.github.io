@@ -40,6 +40,7 @@ Soon I'll also be writing outreach materials for the <a href="http://www.darkene
 {% endif %}
 {% endfor %}
 </center>
+<br>
 
 The source code for this site, as well as all of my other public projects, can be found on <a href="github.com/polyphant1" target="blank">GitHub</a>. When I remember to update it you can read my posts on <a href="https://medium.com/@polyphant" target="blank">Medium</a>.
 

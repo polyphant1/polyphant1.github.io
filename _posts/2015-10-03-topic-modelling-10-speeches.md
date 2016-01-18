@@ -8,7 +8,7 @@ tags:
 excerpt: Results of a topic model run on speeches from the prime ministers office during the coalition years.
 ---
 
-> If you just want to play with pretty interactive things, scroll down and click on the image. Once you've finished, come back and humour me by reading the rest
+> *If you just want to play with pretty interactive things, scroll down and click on the image. Once you've finished, come back and humour me by reading the rest*
 
 Computational text analysis is a rapidly growing field of research that promises to extract meaningful information from one of the most abundant and fundamentally unstructured data sources that humans produce.
 
@@ -25,7 +25,9 @@ To demonstrate, I've downloaded all of the official speeches published by No.10 
 Click the image below to link to a visualisation of the output of a 28 topic model run on the speeches. **Before going any further, first set the slider at the top right of the visualisation to 0.6**. I'll explain at the end of this post, if you're interested*.
 
 <br><center>
-<a href="https://polyphant.shinyapps.io/speech-analysis" target="_blank">![speech-topic-model](/images/topic-model-speeches.png)]</a>
+<a href="https://polyphant.shinyapps.io/speech-analysis" target="_blank">
+<img src="/images/topic-model-speeches.png" title="bilevel-partition">
+</a>
 </center><br>
 
 

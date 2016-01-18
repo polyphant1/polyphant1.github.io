@@ -16,13 +16,13 @@ Below is a brief R script for producing a plot of the nearest ATM's given a post
 
 The `rjson` library is used throughout for grabbing API data.  
 
-```r
+{% highlight r %}
 library(rjson)
-```
+{% endhighlight %}
 
-Below I query the google maps API for latitude and longitude coordinates given a postocde, in this case the [old lady](http://www.historic-uk.com/CultureUK/The-Old-Lady-of-Threadneedle-Street/) in the heart of the city. I construct the API request string, grab the JSON, test whether the look up was succesful, then assign the longitude and latitude data to variables with less verbose names.
+Below I query the google maps API for latitude and longitude coordinates given a postocde, in this case the <a href="http://www.historic-uk.com/CultureUK/The-Old-Lady-of-Threadneedle-Street/" target="blank">old lady</a> in the heart of the city. I construct the API request string, grab the JSON, test whether the look up was succesful, then assign the longitude and latitude data to variables with less verbose names.
 
-```r
+{% highlight r %}
 postcode = "EC2R8AH"
 
 API_request <- "https://maps.googleapis.com/maps/api/geocode/json?address="
@@ -36,17 +36,17 @@ if(address$status != "OK"){
 
 latitude <- address$results[[1]]$geometry$location$lat
 longitude <- address$results[[1]]$geometry$location$lng
-```
+{% endhighlight %}
 
 We're now ready to query the places API. If you've verified your identity, you will be given a key which needs to be passed in the look up. If not, leave it as `NULL` and it'll be left our of your query string later.
 
-```r
+{% highlight r %}
 key = "..."
-```
+{% endhighlight %}
 
-There are a number of different searches in the places API you can employ, detailed [here](https://developers.google.com/places/webservice/search). I use the *nearby search*, which requires location coordinates and a radius within which to search. These are provided as ampersand separated arguments at the end of the URL. You can also specify whether to rank your results based on distance from your location. Finally, we add a *type* which we wish to return, _atm_. This will return the 20 nearest atm's ranked by distance.
+There are a number of different searches in the places API you can employ, detailed <a href="https://developers.google.com/places/webservice/search" target="blank"here</a>. I use the *nearby search*, which requires location coordinates and a radius within which to search. These are provided as ampersand separated arguments at the end of the URL. You can also specify whether to rank your results based on distance from your location. Finally, we add a *type* which we wish to return, _atm_. This will return the 20 nearest atm's ranked by distance.
 
-```r
+{% highlight r %}
 API_request <- "https://maps.googleapis.com/maps/api/place/nearbysearch/json?radius=2000&rankby=distance&types=atm"
 
 if(!is.null(key)){
@@ -60,11 +60,11 @@ bank_address <- rjson::fromJSON(file = API_request, unexpected.escape = "keep")
 if(bank_address$status != "OK"){
   stop("Error in API look up")
 }
-```
+{% endhighlight %}
 
 To make the data easier to work with I use the `data.table` packages `rbindlist` function to flatten some key variables in the JSON in to a data table.
 
-```r
+{% highlight r %}
 library(data.table)
 
 bank.details <- rbindlist(lapply(bank_address$results, function(x) data.frame(as.numeric(x$geometry$location$lat[[1]]),
@@ -73,11 +73,11 @@ bank.details <- rbindlist(lapply(bank_address$results, function(x) data.frame(as
                                                                                  as.character(x$vicinity[[1]]))))
 
 setnames(bank.details, c("Latitude","Longitude","Name","Address"))
-```
+{% endhighlight %}
 
 To plot the results I use the `ggmap` package, grabbing a map centered on the location provided at the start, with each ATM highlighted by a different colour.
 
-```r
+{% highlight r %}
 library(ggmap)
 
 map <- get_map(location = c(longitude,latitude), zoom = 14, maptype = "roadmap", scale = 2)
@@ -85,6 +85,8 @@ map <- get_map(location = c(longitude,latitude), zoom = 14, maptype = "roadmap",
 ggmap(map) +
   geom_point(data = bank.details, aes(x = Longitude, y = Latitude, colour = Name),
              size = 8, alpha = 0.3, shape = 19)
-```
+{% endhighlight %}
 
-<center>![branches](/images/branches.png "Nearest atm's to Bank")</center>
+<a href="/images/branches.png" data-lightbox="Nearest atm's to Bank" data-title="Nearest atm's to Bank">
+  <img src="/images/branches.png" title="Nearest atm's to Bank">
+</a>

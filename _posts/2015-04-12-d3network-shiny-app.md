@@ -12,7 +12,7 @@ I've been looking for an excuse to create a [Shiny](http://shiny.rstudio.com/) a
 
 Click on the image below to view the interactive demo. If it doesn't appear to be working, it may have maxed out the usage limits on the free tier of [ShinyApps.io](https://www.shinyapps.io/); leave a comment below and I'll try and fix it as soon as I can!
 
-[![Shiny d3Network]( /assets/shiny_d3network.png)](https://polyphant.shinyapps.io/UKAirportNetwork/)
+<a href="https://polyphant.shinyapps.io/UKAirportNetwork/" target="blank">![Shiny d3Network]( /assets/shiny_d3network.png)</a>
 
 There are 3 tabs along the top linking to three different views of the data. The first is a network visualisation for each year, built with [d3Network](http://christophergandrud.github.io/d3Network/). Here, nodes represent airports, coloured by country, and edges show the aggregated two-way traffic between those airports. The network is arranged using a force directed network, an algorithm akin to simulating charged particles and springs as the nodes and edges respectively in such a way that strong and weak relationships can be seen spatially ([wikipedia](http://en.wikipedia.org/wiki/Force-directed_graph_drawing) provides a thorough review of this technique). In other words, two airports with lots of traffic between them appear closer than those with less or no traffic.
 

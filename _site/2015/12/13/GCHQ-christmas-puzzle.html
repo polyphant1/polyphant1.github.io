@@ -13,6 +13,19 @@
   <meta name="copyright" content="&copy; Christopher Lovell 2016">
   
 
+  <!-- Enable inline mathjax. Must be placed before loading Mathjax. See http://tex.stackexchange.com/questions/27633/mathjax-inline-mode-not-rendering -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        processEscapes: true
+      }
+    });
+  </script>
+
+  <!-- MathJax -->
+  <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
   <!-- Facebook (custom) -->
   <div id="fb-root"></div>
   <script>(function(d, s, id) {
@@ -105,6 +118,8 @@
         
         <!--
           
+        
+          
           <li class="nav-link"><a href="/contact/">Contact</a>
           
         
@@ -129,11 +144,11 @@
           
         
           
-          <li class="nav-link"><a href="/tags/">Tags</a>
+          <li class="nav-link"><a href="/about/">About</a>
           
         
           
-          <li class="nav-link"><a href="/about/">About</a>
+          <li class="nav-link"><a href="/tags/">Tags</a>
           
         
           
@@ -184,14 +199,16 @@
 <p>I’ve solved the first part, which cleverly leads on to the next part of the puzzle. If you want to have a go, the grid and instructions are shown below. If you’re lazy, you can just click the image to link to the solved version, but if you’re lazy, you probably don’t care.</p>
 
 <blockquote>
-  <p>In this type of grid-shading puzzle, each square is either black or white. Some of the black squares have already been filled in for you.</p>
+  <p><em>In this type of grid-shading puzzle, each square is either black or white. Some of the black squares have already been filled in for you.</em></p>
 </blockquote>
 
 <blockquote>
-  <p>Each row or column is labelled with a string of numbers. The numbers indicate the length of all consecutive runs of black squares, and are displayed in the order that the runs appear in that line. For example, a label “2 1 6” indicates sets of two, one and six black squares, each of which will have at least one white square separating them.</p>
+  <p><em>Each row or column is labelled with a string of numbers. The numbers indicate the length of all consecutive runs of black squares, and are displayed in the order that the runs appear in that line. For example, a label “2 1 6” indicates sets of two, one and six black squares, each of which will have at least one white square separating them.</em></p>
 </blockquote>
 
-<p><a href="/images/grid-shading-puzzle-solved.jpg"><img src="/images/grid-shading-puzzle.jpg" alt="puzzle" /></a></p>
+<p><a href="/images/grid-shading-puzzle-solved.jpg" target="blank">
+  <img src="/images/grid-shading-puzzle.jpg" title="Nonogram" />
+</a></p>
 
 </article>
 
@@ -275,6 +292,8 @@
       <ul class="pages">
         
         
+        
+        
           <li class="nav-link"><a href="/contact/">Contact</a>
         
         
@@ -299,11 +318,11 @@
         
         
         
-          <li class="nav-link"><a href="/tags/">Tags</a>
-        
-        
-        
           <li class="nav-link"><a href="/about/">About</a>
+        
+        
+        
+          <li class="nav-link"><a href="/tags/">Tags</a>
         
         
         
@@ -345,6 +364,13 @@
           </li>
           
         
+          
+          <li>
+            <a href="https://uk.linkedin.com/in/lovellchristopher" target="blank" title="Connect with me on LinkedIn">
+              <i class="fa fa-linkedin"></i>
+              <span class="username">LinkedIn</span>
+            </a>
+          </li>
           
         
           

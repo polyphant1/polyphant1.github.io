@@ -11,11 +11,13 @@ excerpt: A look back at one of the great scientific controversies; Lord Kelvin's
 
 The story of how scientists revealed the age of the earth is a remarkable one; at the beginning of the nineteenth century many still believed that the earth had been around forever, but by the 1920s evidence from fields as diverse as geology and biology had been united, and the definitive source of the Sun's heat discovered. Perhaps what makes the story even more fascinating are the egos and personalities that shaped it, and none more so than that of William Thomson, aka Lord Kelvin.
 
-<center>![Kelvin](/images/Lord_Kelvin_photograph.jpg)</center>
+<a href="/images/Lord_Kelvin_photograph.jpg" data-lightbox="bilevel-partition" data-title="Lord Kelvin">
+  <img class="small" src="/images/Lord_Kelvin_photograph.jpg" title="Lord Kelvin">
+</a>
 
 Lord Kelvin was arguably the most eminent scientist of his time, famous today for the temperature scale that bears his name. But it was his work on thermodynamics that led him to ponder the question of the age of the earth. He saw an opportunity to apply the recently formulated laws of thermodynamics to the problem, in particular the first law, which states:
 
->  The total energy of an isolated system is constant; energy can be transformed from one form to another, but cannot be created or destroyed
+>  *The total energy of an isolated system is constant; energy can be transformed from one form to another, but cannot be created or destroyed*
 
 This is the principle of conservation of energy.
 
@@ -37,8 +39,13 @@ where $G$ is the gravitational constant, and $m\_1$ and $m\_2$ are two masses wh
 
 To apply this to the Sun, and calculate its total gravitational potential energy, we first model it as a series of concentric shells, each of radius $dr$.
 
-<img src="/../images/concentric.jpg" title="center" alt="center" style="display: block; margin: auto;" />
-<center><i>Concentric shells at radius $r$, width $dr$.</i></center>
+
+<a href="/images/concentric.jpg" data-lightbox="bilevel-partition" data-title="Concentric shells">
+  <img class="small" src="/images/concentric.jpg" title="Concentric shells">
+</a>
+<center><i>Concentric shells at radius $r$, width $dr$.</i></center><br>
+
+
 
 In the above definition, for a single shell at radius $r$, $m\_1$ is the mass of the star within radius $r$, and $m\_2$ is the mass of the shell itself. We then integrate between 0 and $R$, the radius of the Sun, to add up the contributions from all of the shells, giving the total gravitational potential energy of the entire star.
 
@@ -94,11 +101,12 @@ It took the discovery of radioactivity as an alternative heat source, both for t
 
 Radiometric dating of rocks also provided 'bonus' evidence, as rocks could now be shown to be far older than Kelvins initial results. Ernest Rutherford, a pioneer in radiometric dating, reveals a humourous encounter with Kelvin where he presented his early calculations:
 
->I came into the room, which was half dark, and presently spotted Lord Kelvin in the audience and realized that I was in trouble at the last part of my speech dealing with the age of the Earth, where my views conflicted with his. To my relief, Kelvin fell fast asleep, but as I came to the important point, I saw the old bird sit up, open an eye, and cock a baleful glance at me! Then a sudden inspiration came, and I said, 'Lord Kelvin had limited the age of the Earth, provided no new source was discovered. That prophetic utterance refers to what we are now considering tonight, radium!' Behold! the old boy beamed upon me.
+> *I came into the room, which was half dark, and presently spotted Lord Kelvin in the audience and realized that I was in trouble at the last part of my speech dealing with the age of the Earth, where my views conflicted with his. To my relief, Kelvin fell fast asleep, but as I came to the important point, I saw the old bird sit up, open an eye, and cock a baleful glance at me! Then a sudden inspiration came, and I said, 'Lord Kelvin had limited the age of the Earth, provided no new source was discovered. That prophetic utterance refers to what we are now considering tonight, radium!' Behold! the old boy beamed upon me.*
 
 Lessons learnt:
 
 - Don't rely on your assumptions too much; even if your theory is simple and elegant; as the old adage goes, 'rubbish in, rubbish out'.
-- Don't be arrogant and pompous; even if you are the first British scientists to join the house of lords, if your model is wrong you'll end up with egg on your face. And in the end, [all models are wrong, but some are useful](https://en.wikipedia.org/wiki/George_E._P._Box).
+- Don't be arrogant and pompous; even if you are the first British scientists to join the house of lords, if your model is wrong you'll end up with egg on your face. And in the end, <a href="https://en.wikipedia.org/wiki/George_E._P._Box" target="blank">all models are wrong, but some are useful</a>.
 
-*Edit: the previous version of this post had the wrong sign for the thermal energy and all the grammar mistakes, thanks to Abi and Spyros for pointing them out*
+<br>
+*Edit: the previous version of this post had the wrong sign for the thermal energy and **all** the grammar mistakes, thanks to Abi and Spyros for pointing them out*

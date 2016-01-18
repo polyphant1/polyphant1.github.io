@@ -14,4 +14,4 @@ Possibly the biggest announcement of the event was that Revolution R, the larges
 
 Excited to see the fruits of this relationship, and how R moves out from the academic underground.
 
-![Azure Machine Learning experiment]( /assets/azure_ml.png )
+![Azure Machine Learning experiment](/assets/azure_ml.png )

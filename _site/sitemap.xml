@@ -125,7 +125,16 @@
     <lastmod>2015-01-31T00:00:00+00:00</lastmod>
   </url>
   <url>
+    <loc>/404.html</loc>
+  </url>
+  <url>
     <loc>/contact/</loc>
+  </url>
+  <url>
+    <loc>/tags/Books/</loc>
+  </url>
+  <url>
+    <loc>/tags/Music/</loc>
   </url>
   <url>
     <loc>/tags/Technology/</loc>
@@ -134,31 +143,25 @@
     <loc>/tags/Miscellany/</loc>
   </url>
   <url>
-    <loc>/tags/Music/</loc>
-  </url>
-  <url>
-    <loc>/tags/Data%20Science/</loc>
-  </url>
-  <url>
-    <loc>/tags/Books/</loc>
+    <loc>/tags/Physics/</loc>
   </url>
   <url>
     <loc>/</loc>
   </url>
   <url>
-    <loc>/tags/Meta/</loc>
-  </url>
-  <url>
     <loc>/tags/History/</loc>
   </url>
   <url>
-    <loc>/tags/Physics/</loc>
+    <loc>/tags/Meta/</loc>
   </url>
   <url>
-    <loc>/tags/</loc>
+    <loc>/tags/Data%20Science/</loc>
   </url>
   <url>
     <loc>/about/</loc>
+  </url>
+  <url>
+    <loc>/tags/</loc>
   </url>
   <url>
     <loc>/thanks/</loc>
