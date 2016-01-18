@@ -16,7 +16,7 @@ img.small {
   padding-right: 5px;
 }
 
-article :not(h1) :not(h2) :not(h3) a {
+article :not(h2) :not(h3) a {
   &:active,
   &:focus,
   &:hover {
