@@ -54,6 +54,6 @@ I'm active on Stack Exchange, mostly in the Astronomy and Stack Overflow sites; 
 
 <br>{% include page_divider.html %}
 
-This site is built on <a href="https://pages.github.com/" target="source">GitHub pages</a> using <a href="http://jekyllrb.com/" target="source">Jekyll</a>; for details on how to recreate it using Cloud9, read <a href="{% post_url 2015-01-31-meta-post %}" target="source">this post</a>.
+This site is built on <a href="https://pages.github.com/" target="source">GitHub pages</a> using <a href="http://jekyllrb.com/" target="source">Jekyll</a>; for details on how to recreate it using Cloud9, read <a href="{% post_url 2015-01-31-meta-post %}" target="source">this post</a>. The design is based on a template by Ben Centra, <a href="https://github.com/bencentra/centrarium" target="blank">Centrarium</a>. 
 
 <a href="http://en.wikipedia.org/wiki/Polyphant" target="source">Polyphant</a> is a village in east Cornwall. It is north of the civil parish of Lewannick, five miles west of the town of Launceston near the convergence of the River Inny and Penpont Water.
