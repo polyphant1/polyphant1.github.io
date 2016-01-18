@@ -4,9 +4,6 @@ gems:
   - jekyll-paginate
   - jekyll-gist
 
-# exclude:
-#  - "/vendor/"
-
 # Site settings
 title: Polyphant
 subtitle: "Technology, Astronomy and other random noise, from an Astrophysicist in London"
@@ -14,13 +11,12 @@ email: chrisl1991@hotmail.co.uk
 name: Christopher Lovell
 description: >
   Technology, Astronomy and other random noise, from an Astrophysicist in London
-# Base URL of site (i.e. /blog). It should always start with a slash,
-# and never end with a slash. Set it to a blank value if hosting at the
-# root of your server.
+
 baseurl: "" # the subpath of your site, e.g. /blog/
-#url: "http://bencentra.github.io" # the base hostname & protocol for your site
 cover: "/images/hudf.jpg"
 logo: "/assets/logo.png"
+
+permalink: /:categories/:year/:month/:day/:title.html
 
 # Build settings
 markdown: kramdown
