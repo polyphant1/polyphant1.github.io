@@ -32,7 +32,7 @@ We can calculate how much energy the Sun could possibly radiate if it collapsed 
 We first define the [gravitational potential energy](https://en.wikipedia.org/wiki/Potential_energy#Gravitational_potential_energy), $\Omega$, from Newtonian mechanics, as,
 
 <center>
-$$\Omega = - \frac{Gm\_{1}m\_{2}}{r}$$
+$$\Omega = - \frac{Gm_{1}m_{2}}{r}$$
 </center>
 
 where $G$ is the gravitational constant, and $m\_1$ and $m\_2$ are two masses whose centres of gravity are separated by a distance $r$.
