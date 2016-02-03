@@ -3,6 +3,7 @@ layout: post
 title:  "Measured Beauty"
 comments: true
 date: "Tuesday, January 19, 2016"
+cover: "/images/Batygin2016.png"
 tags:
 - Physics
 - Data Science
