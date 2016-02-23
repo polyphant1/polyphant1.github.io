@@ -1,14 +1,15 @@
 ---
 title       : What I cannot create, I do not understand - Investigating how galaxies form with simulations
-subtitle    : 
+subtitle    :
 author      : Christopher Lovell
-job         : 
+job         :
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
-hitheme     : tomorrow      # 
+hitheme     : tomorrow      #
 widgets     : []            # {mathjax, quiz, bootstrap}
 mode        : standalone # {standalone, draft}
 knit        : slidify::knit2slides
+main_nav: false
 ---
 
 <style type='text/css'>
@@ -37,15 +38,14 @@ $(function() {
 
 <img src="assets/fig/unnamed-chunk-1-1.png" title="plot of chunk unnamed-chunk-1" alt="plot of chunk unnamed-chunk-1" style="display: block; margin: auto;" />
 
---- 
+---
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/UC5pDPY5Nz4?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
 
 ---
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/7KmbQ02JE3g?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe> 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7KmbQ02JE3g?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
 
 ---
 
 ![JWST](assets/img/jwst.jpg)
-
