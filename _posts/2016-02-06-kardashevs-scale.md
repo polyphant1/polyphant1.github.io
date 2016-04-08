@@ -9,6 +9,8 @@ excerpt: Over 50 years ago, a Russian astrophysicist proposed an eponymous scale
 og_image: /images/Kardashev.jpg
 ---
 
+> *A heavily edited (superior) version of this post was published on Astrobites in March 2016. You can read it <a href="https://astrobites.org/2016/03/15/classifying-civilisations-an-introduction-to-the-kardashev-scale/" target="_blank">here</a>.*
+
 Theorising about extraterrestrials is hard. Since we only have one data point, our own little civilisation on our own little Earth, trying to pin down what extraterrestrial civilisations will look or behave like stretches the imagination, to put it mildly. But there is one commodity that most theorists agree any advanced civilisation will need in large quantities, and that's energy. Just over 50 years ago, a Russian astrophysicist named Nikolai Semenovich Kardashev proposed a scale for ranking these hypothetical civilisations based on their energy consumption. The **Kardashev scale** was intended to help direct searches for signals from intelligent beings, but since its inception has led to hypothetical new energy consumption mechanisms, inspired generations of science fiction writers, and influenced thinking about our own future energy consumption.
 
 <a href="/images/Kardashev.jpg" data-lightbox="bilevel-partition" data-title="Nikolai Kardashev">
@@ -40,4 +42,4 @@ Alternatives and extensions to the scale have been proposed, such as Type IV civ
 
 {% include page_divider.html %}
 
-> *This post was inspired by a recent paper from Milan M. Cirkovic '[Kardashev's Classification at 50+: A Fine Vehicle with Room for Improvement](http://arxiv.org/abs/1601.05112)', which explores the scale, its context and continuing relevance in great detail, as well as this [post](http://www.centauri-dreams.org/?p=30255) on Centauri Dreams, which has had me thinking about these topics ever since.*
+> *This post was inspired by a recent paper from Milan M. Cirkovic '[Kardashev's Classification at 50+: A Fine Vehicle with Room for Improvement](http://arxiv.org/abs/1601.05112)', which explores the scale, its context and continuing relevance in great detail, as well as this [post](http://www.centauri-dreams.org/?p=30255) on Centauri Dreams, which has had me thinking about these topics ever since first reading it.*
