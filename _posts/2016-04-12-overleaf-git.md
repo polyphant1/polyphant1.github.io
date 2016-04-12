@@ -8,7 +8,7 @@ tags:
 excerpt: Overleaf + git = online Latex induced happiness
 ---
 
-I've had my eye out for an online Latex editor since first starting to learn the markup language back in my undergraduate. Latex is tricky to serve through the browser since compiling it can actually be quite computationally expensive, and supporting the array of packages must be a bit of a challenge. Recently though there have been a few brave start ups who've created slick interfaces for editing Latex files on the go. I settled on Overleaf for it's killer USP - Git integration.
+I've had my eye out for an online Latex editor since first starting to learn the markup language back in my undergraduate. Latex is tricky to serve through the browser since compiling it can actually be quite computationally expensive, and supporting the array of packages must be a bit of a challenge. Recently though there have been a few brave start ups who've created slick interfaces for editing Latex files on the go. I settled on [Overleaf](https://www.overleaf.com/) for it's killer USP - Git integration.
 
 Overleaf isn't the only online latex editor that provides a git interface (see [sharelatex](sharelatex.com)), but it's the only one so far that doesn't tie you to a particular git host, or charge you for the privilege. You can clone a private Overleaf repo to your local computer, and then push to a host such as Github if you wish.
 
