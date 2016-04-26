@@ -3,6 +3,7 @@ layout: post
 title: "'The Brighton of South Africa': a trip to Muizenberg, Cape Town"
 comments: true
 date: "Saturday, April 2, 2016"
+cover: /images/SA_Mar2016/P3041024.png
 tags:
 - Travel
 excerpt: Reflections on a conference in Muizenberg, hosted by the University of Western Cape

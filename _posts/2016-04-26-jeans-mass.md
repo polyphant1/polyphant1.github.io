@@ -5,6 +5,7 @@ comments: true
 date: "Tuesday, April 26, 2016"
 tags:
 - Physics
+cover: /images/small_magellanic_cloud.jpg
 excerpt: Two approaches to deriving the mass scale for gravitational collapse
 ---
 
