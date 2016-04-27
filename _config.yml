@@ -23,6 +23,8 @@ markdown: kramdown
 paginate: 8
 paginate_path: "/page:num/"
 inter_post_navigation: true
+highlightjs_theme: "googlecode"
+
 
 # Disqus comments
 disqus_shortname: polyphant
@@ -158,6 +160,7 @@ social:
     url:
     desc: Share to Reddit
     share: true
+
 
 # Social sharing protocols
 # These are for automatically generating sharing metadata for FB and Twitter
