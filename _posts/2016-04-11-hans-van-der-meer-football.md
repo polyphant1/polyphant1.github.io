@@ -20,4 +20,4 @@ My personal highlight was from a Dutch photographer on the theme of European foo
 
 You can see more of the images on his [site](http://www.hansvandermeer.nl/projects/europeanfields), or if you're in London go and check out the whole exhibition in person.
 
-![europeanfields](http://blogs.telegraph.co.uk/culture/files/2009/11/HvdM-EUFields-08.jpg)
+![europeanfields](http://www.designboom.com/cms/images/-Z56/ff2.jpg)
