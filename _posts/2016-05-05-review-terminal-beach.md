@@ -8,6 +8,8 @@ tags:
 excerpt: Thoughts on a collection of Ballards short stories
 ---
 
+> This review is also available on [Goodreads](https://www.goodreads.com/review/show/1592474099?book_show_action=false).
+
 Before 'The Terminal Beach' I hadn't read any Ballard before, but I'm aware of his other work (Empire of the Sun, the Crystal World, the recently cinematised High-Rise) and the reputation he's built on them. I've spoken before on this blog about the trepidation one can feel approaching a renowned authors work, and with Ballard it was no different. But short stories are an ideal way of sampling an authors work before undertaking their novels, and *The Terminal Beach* has certainly inspired me to explore his other output.
 
 This collection was published in 1964, and so contains some of his earliest short form fiction. Most of it was written at the height of the cold war, and the themes and locations reflect the times; abandoned nuclear testing grounds, spacecraft crash sites, the effects of contamination by alien substances, all set a vivid scene for the, at times psychological, drama to come.
