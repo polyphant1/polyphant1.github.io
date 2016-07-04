@@ -1,5 +1,5 @@
 ---
-title: "Image Classification with Principal Components Analysis"
+title: "Image Classification with Principal Component Analysis"
 layout: post
 comments: true
 tags:
@@ -8,7 +8,7 @@ date: "Monday, July 04, 2016"
 cover: /images/pca_deckchair/pcs_small.png
 ---
 
-I recently got involved with a hack day at the University of Sussex, working on a challenge proposed by [Deckchair](https://www.deckchair.com/), a company that provides high quality webcams for businesses around the world. They routinely capture some amazing images, such as lightning strikes and fireworks displays, but these are currently identified manually by eye. The challenge was to identify 'interesting' images [automagically](http://www.reactiongifs.com/wp-content/uploads/2013/03/magic.gif). Here's a write up of my approach using [Principal Components Analysis (PCA)](https://en.wikipedia.org/wiki/Principal_component_analysis).
+I recently got involved with a hack day at the University of Sussex, working on a challenge proposed by [Deckchair](https://www.deckchair.com/), a company that provides high quality webcams for businesses around the world. They routinely capture some amazing images, such as lightning strikes and fireworks displays, but these are currently identified manually by eye. The challenge was to identify 'interesting' images [automagically](http://www.reactiongifs.com/wp-content/uploads/2013/03/magic.gif). Here's a write up of my approach using [Principal Component Analysis (PCA)](https://en.wikipedia.org/wiki/Principal_component_analysis).
 
 ## PCA
 
