@@ -46,7 +46,7 @@ This will launch geth and start the blockchain download, but much faster than th
 > eth.syncing
 {% endhighlight %}
 
-If this returns false, you're in sync, i.e. the blockchain is downloaded, and you can kill geth with `exit` and laucnh the wallet. If not, it should display something similar to below:
+If this returns false, you're in sync, i.e. the blockchain is downloaded, and you can kill geth with `exit` and launch the wallet. If not, it should display something similar to below:
 
 {% highlight text %}
 {
