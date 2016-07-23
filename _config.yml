@@ -9,8 +9,7 @@ title: Polyphant
 subtitle: "Technology, Astronomy and other random noise, from an Astrophysicist in London"
 email: chrisl1991@hotmail.co.uk
 name: Christopher Lovell
-description: >
-  Technology, Astronomy and other random noise, from an Astrophysicist in London
+description: "Technology, Astronomy and other random noise, from an Astrophysicist in London"
 
 baseurl: "" # the subpath of your site, e.g. /blog/
 cover: "/images/hudf.jpg"
