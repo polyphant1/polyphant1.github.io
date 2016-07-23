@@ -12,7 +12,7 @@ name: Christopher Lovell
 description: "Technology, Astronomy and other random noise, from an Astrophysicist in London"
 
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: polyphant.com
+url: http://www.polyphant.com
 cover: "/images/hudf.jpg"
 logo: "/assets/logo.png"
 
