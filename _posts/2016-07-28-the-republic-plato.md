@@ -4,7 +4,7 @@ layout: post
 comments: true
 tags:
 - Books
-date: "Tuesday, July 26, 2016"
+date: "Thursday, July 28, 2016"
 excerpt: Thoughts on Plato's Socractic dialogue, exploring justice, the perfect community and the ideal individual
 og_image: /images/ancient_athens.jpg
 cover: /images/ancient_athens.jpg
@@ -12,7 +12,7 @@ cover: /images/ancient_athens.jpg
 
 > *These thoughts are also published on [Goodreads](https://www.goodreads.com/review/show/1687969729?book_show_action=false).*
 
-If it wasn't for its place in history, and the controversial, forward thinking nature of the ideas Plato raises, this would have got three stars. It's a frustrating book to read; many of the arguments don't stack up, or conflict with earlier assertions. The Socratic dialogue style can get very tiresome to read after a while (why is it necessary to have the interlocutor interject with agreement after every single phrase?!) And Socrates comes across as a bit of a jerk, so it's hard to get behind the main 'character'. I had to keep reminding myself that this was written around two and a half thousand years ago, and basically to cut Plato some slack.
+If it wasn't for its place in history, and the controversial, forward thinking nature of the ideas Plato raises, this would have got two stars. It's a frustrating book to read; many of the arguments don't stack up, or conflict with earlier assertions. The Socratic dialogue style can get very tiresome to read after a while (why is it necessary to have the interlocutor interject with agreement after every single phrase?!) And Socrates comes across as a bit of a jerk, so it's hard to get behind the main 'character'. I had to keep reminding myself that this was written around two and a half thousand years ago, and basically to cut Plato some slack.
 
 I can't comment on the translation from Desmond Lee without an understanding of the source, but there are enlightening comments throughout, revealing any ambiguities he had to deal with. It also helped one to take the perspective of interpretation, both in terms of language and philosophy.
 
