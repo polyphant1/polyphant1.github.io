@@ -1,5 +1,5 @@
 ---
-title: "Research Papers"
+title: "Research Papers: Missing massive subhalos in simulations?"
 layout: post
 comments: true
 tags:
@@ -11,6 +11,8 @@ cover: /images/research_papers/munari2016.png
 ---
 
 > I have a bad habit of keeping lots of interesting research papers open in a long line of tabs in my browser. I am loath to close any of them, but the sight of it is not good for my well being every time I want to browse the internet. To alleviate my suffering, from now on I endeavour to read at least one each weekday, and blog a brief summary. These summaries do not represent an endorsement of the research contained in the chosen paper, and the choice is arbitrary based on what I find interesting on a given day. Any of the content is liable to misinterpretation or misrepresentation: if you want to know exactly what the authors said, go check out the paper and make your own mind up.
+
+### NUMERICAL SIMULATIONS CHALLENGED ON THE PREDICTION OF MASSIVE SUBHALO ABUNDANCE IN GALAXY CLUSTERS: THE CASE OF ABELL 2142
 
 To kick things off, here's a paper on dark matter subhalos. [Munari et al. (2016)](http://arxiv.org/abs/1607.01023v1) look at Abell 2142, a local cluster (z~0.09), $M_{200} \approx 1.25 \times 10^{15} M_{\odot}$. They use the internal kinematics of the galaxies as a proxy for the masses of the host dark matter subhalos (as opposed to strong lensing used in a similar study by Grillo et al. 2015). By comparing the subhalos masses with simulations (they focus on semi-analytic models, with prescriptions for treating orphan galaxies$^1$) they find that the simulated halos have less massive subhalos (at $\gte 7$ sigma significance level). This can't be reconciled by introducing baryonic physics in to the N-body sims either. Their succinct, yet damning, conclusion:
 
