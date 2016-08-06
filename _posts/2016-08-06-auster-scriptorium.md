@@ -8,7 +8,7 @@ date: "Saturday, August 6, 2016"
 excerpt: Thoughts on Auster's 2006 novella
 ---
 
-> *These thoughts are also published on Goodreads*
+> *These thoughts are also published on [Goodreads](https://www.goodreads.com/review/show/1715955456?book_show_action=false)*
 
 I haven't read any Paul Auster before 'Travels in the Scriptorium'. This is important, as I believe it's the source of pretty much all my criticisms of this book. I really enjoyed the graphic novel adaptation of City of Glass, but apart from that I've only anecdotal evidence of Auster's brilliance as a writer.
 
