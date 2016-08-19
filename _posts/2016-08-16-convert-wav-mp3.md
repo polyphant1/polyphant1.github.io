@@ -6,8 +6,6 @@ tags:
 - Technology
 date: "Tuesday, August 16, 2016"
 excerpt: Convert WAV to MP3 through the terminal
-og_image: /images/research_papers/
-cover: /images/research_papers/
 ---
 
 Need to convert multiple WAV files to MP3 through the terminal? You need `ffmpeg`. Most commonly used for video conversions, `ffmpeg` can also be used to convert between audio formats.
