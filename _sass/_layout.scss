@@ -204,6 +204,9 @@ pre code.hljs {
 	.post-list {
 		padding-top: 1em !important;
 		@extend %default-ul;
+
+		a.post-link{font-weight: bold;}
+
 	}
 	.post-meta {
 		@include outer-container;
