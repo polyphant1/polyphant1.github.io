@@ -1,7 +1,6 @@
 ---
 layout: page
-permalink: /about/
-title: About
+title: Christopher Lovell
 ---
 
 <a href="/assets/profile.jpg" data-lightbox="profile.jpg" data-title="Moi">
@@ -34,13 +33,11 @@ Additional to this blog I also write for <a href="http://astrobites.org/" target
 </center>
 <br>
 
-The source code for this site, as well as all of my other public projects, can be found on <a href="github.com/polyphant1" target="blank">GitHub</a>. When I remember to update it you can read my posts on <a href="https://medium.com/@polyphant" target="blank">Medium</a>.
+The source code for this site, as well as all of my other public projects, can be found on <a href="https://github.com/christopherlovell" target="blank">GitHub</a>. When I remember to update it you can read my posts on <a href="https://medium.com/@chrislovell" target="blank">Medium</a>.
 
-I'm active on Stack Exchange, mostly in the Astronomy and Stack Overflow sites; the flair below links to my profile. I record my reading habits on <a href="https://www.goodreads.com/polyphant" target="blank">Goodreads</a>.
+I'm active on Stack Exchange, mostly in the Astronomy and Stack Overflow sites; the flair below links to my profile. I record my reading habits on <a href="https://www.goodreads.com/christopherlovell" target="blank">Goodreads</a>.
 
-<br><a href="http://stackexchange.com/users/1902550/polyphant" target="_blank">
-<img class="small" src="http://stackexchange.com/users/flair/1902550.png" width="208" height="58" alt="profile for polyphant on Stack Exchange, a network of free, community-driven Q&amp;A sites" title="profile for polyphant on Stack Exchange, a network of free, community-driven Q&amp;A sites" />
-</a>
+<br><a href="http://stackexchange.com/users/1902550/christopherlovell"><img src="http://stackexchange.com/users/flair/1902550.png" width="208" height="58" alt="profile for christopherlovell on Stack Exchange, a network of free, community-driven Q&amp;A sites" title="profile for christopherlovell on Stack Exchange, a network of free, community-driven Q&amp;A sites" /></a>
 
 <br>{% include page_divider.html %}
 <h2 style="text-align:center">Measured Beauty</h2>
@@ -50,6 +47,4 @@ I'm active on Stack Exchange, mostly in the Astronomy and Stack Overflow sites; 
 
 <br>{% include page_divider.html %}
 
-This site is built on <a href="https://pages.github.com/" target="source">GitHub pages</a> using <a href="http://jekyllrb.com/" target="source">Jekyll</a>; for details on how to recreate it using Cloud9, read <a href="{% post_url 2015-01-31-meta-post %}" target="source">this post</a>. The design is based on a template by Ben Centra, <a href="https://github.com/bencentra/centrarium" target="blank">Centrarium</a>.
-
-<a href="http://en.wikipedia.org/wiki/Polyphant" target="source">Polyphant</a> is a village in east Cornwall. It is north of the civil parish of Lewannick, five miles west of the town of Launceston near the convergence of the River Inny and Penpont Water.
+This site is built on <a href="https://pages.github.com/" target="source">GitHub pages</a> using <a href="http://jekyllrb.com/" target="source">Jekyll</a>; you can find details on how to recreate it using Cloud9 <a href="{% post_url 2015-01-31-meta-post %}" target="source">here</a>. The design is based on <a href="https://github.com/bencentra/centrarium" target="blank">Centrarium</a>, a template by Ben Centra.

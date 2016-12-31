@@ -5,29 +5,29 @@ gems:
   - jekyll-gist
 
 # Site settings
-title: Polyphant
+title: Christopher Lovell
 subtitle: "Technology, Astronomy and other random noise, from an Astrophysicist in London"
 email: chrisl1991@hotmail.co.uk
 name: Christopher Lovell
 description: "Technology, Astronomy and other random noise, from an Astrophysicist in London"
 
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: http://www.polyphant.com
+url: http://www.christopherlovell.co.uk
 cover: "/images/hudf.jpg"
 logo: "/assets/logo.png"
 
-permalink: /:categories/:year/:month/:day/:title.html
+permalink: /blog/:categories/:year/:month/:day/:title.html
 
 # Build settings
 markdown: kramdown
 paginate: 8
-paginate_path: "/page:num/"
+paginate_path: "/blog/page:num/"
 inter_post_navigation: true
 highlightjs_theme: "googlecode"
 
 
 # Disqus comments
-disqus_shortname: polyphant
+disqus_shortname: christopherclovell
 
 # Google analytics
 ga_tracking_id: "UA-61827184-1"
@@ -58,8 +58,8 @@ ga_tracking_id: "UA-61827184-1"
 social:
   - name: Twitter
     icon: twitter
-    username: polyphantastic
-    url: https://twitter.com/polyphantastic
+    username: chrisclovell
+    url: https://twitter.com/chrisclovell
     desc: Follow me on Twitter
     share: false
 
@@ -72,8 +72,8 @@ social:
 
   - name: GitHub
     icon: github
-    username: polyphant1
-    url: https://github.com/polyphant1
+    username: christopherlovell
+    url: https://github.com/christopherlovell
     desc: Fork me on GitHub
     share: true
 
@@ -173,6 +173,6 @@ protocols:
 
     #twitter_image: "/assets/logo.png"
 
-    os_repo: "https://github.com/polyphant1/polyphant1.github.io"
+    os_repo: "https://github.com/christopherlovell/polyphant1.github.io"
     os_rcs_type: "git"
-    os_src: "git@github.com:polyphant1/polyphant1.github.io"
+    os_src: "git@github.com:christopherlovell/polyphant1.github.io"
