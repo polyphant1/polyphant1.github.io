@@ -12,6 +12,7 @@ name: Christopher Lovell
 description: "Technology, Astronomy and other random noise, from an Astrophysicist in London"
 
 baseurl: "" # the subpath of your site, e.g. /blog/
+blogurl: "/blog/"
 url: http://www.christopherlovell.co.uk
 cover: "/images/hudf.jpg"
 logo: "/assets/logo.png"
@@ -21,7 +22,7 @@ permalink: /blog/:categories/:year/:month/:day/:title.html
 # Build settings
 markdown: kramdown
 paginate: 8
-paginate_path: "/blog/page:num/"
+paginate_path: /blog/page-:num/
 inter_post_navigation: true
 highlightjs_theme: "googlecode"
 
