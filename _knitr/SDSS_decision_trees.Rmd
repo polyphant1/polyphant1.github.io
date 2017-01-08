@@ -7,7 +7,7 @@ The following is a guide to using tree based methods in R, based on the correspo
 
 ## Data
 
-Rather than getting the data directly from SDSS and doing the cleaning myself, I'm going to cheat and use a pre-filtered data set used in the book 'Modern Statistical Methods for Astronomy', available [here](http://astrostatistics.psu.edu/MSMA/datasets/index.html). As part of their extract they perform a few cleaning operations, such as ignoring spatially resolved galaxies, those with large measurement errors, and those that are very bright (and could cause saturation) or very faint (with uncertain measurements). They also provide 3 labelled data sets for training, one each for Quasars, Stars & White Dwarfs. 
+Rather than getting the data directly from SDSS and doing the cleaning myself, I'm going to cheat and use a pre-filtered data set used in the book 'Modern Statistical Methods for Astronomy', available [here](http://astrostatistics.psu.edu/MSMA/datasets/index.html). As part of their extract they perform a few cleaning operations, such as ignoring spatially resolved galaxies, those with large measurement errors, and those that are very bright (and could cause saturation) or very faint (with uncertain measurements). They also provide 3 labelled data sets for training, one each for Quasars, Stars & White Dwarfs.
 
 The colour bands as they stand aren't particularly useful, since objects of the same class can be at different distances, and therefore have relatively lower flux across all bands. This can be avoided by looking at the ratios of brightness across bands, and since magnitudes are logarithmic units of brightness we simply find the difference between the provided values to get four colour indices, *(u-g)*, *(g-r)*, *(r-i)* & *(i-z)*.
 
@@ -26,7 +26,7 @@ names(qso_train) <- c('u_g', 'g_r', 'r_i', 'i_z', 'Class')
 Star training set (Class 2):
 ```{r}
 dat2 <- read.csv('http://astrostatistics.psu.edu/MSMA/datasets/SDSS_stars.csv', h=T)
-dat2 <- cbind((dat2[,1]-dat2[,2]), (dat2[,2]-dat2[,3]), (dat2[,3]-dat2[,4]), 
+dat2 <- cbind((dat2[,1]-dat2[,2]), (dat2[,2]-dat2[,3]), (dat2[,3]-dat2[,4]),
 	(dat2[,4]-dat2[,5]))
 star_train <- data.frame(cbind(dat2, rep(2, length(dat2[,1]))))
 names(star_train) <- c('u_g','g_r','r_i','i_z','Class')
@@ -53,15 +53,15 @@ The plot below shows each training class on a bivariate colour-colour scatter pl
 
 ```{r echo=FALSE,fig.width = 9,fig.height = 6,fig.align='center'}
 par(mfrow=c(1,3))
-plot(SDSS_train[,1], SDSS_train[,2], xlim=c(-0.7,3), ylim=c(-0.7,1.8), pch=20, 
+plot(SDSS_train[,1], SDSS_train[,2], xlim=c(-0.7,3), ylim=c(-0.7,1.8), pch=20,
    	col=SDSS_train[,5], cex=0.6, cex.lab=1.6, cex.axis=1.6, main='', xlab='u-g (mag)',
    	ylab='g-r (mag)')
-legend(-0.5, 1.7, c('QSO','MS + RG','WD'), pch=20, col=c('black','red','green'), 
+legend(-0.5, 1.7, c('QSO','MS + RG','WD'), pch=20, col=c('black','red','green'),
 	cex=)
-plot(SDSS_train[,2], SDSS_train[,3], xlim=c(-0.7,1.8), ylim=c(-0.7,1.8), pch=20, 
+plot(SDSS_train[,2], SDSS_train[,3], xlim=c(-0.7,1.8), ylim=c(-0.7,1.8), pch=20,
 	col=SDSS_train[,5], cex=0.6, cex.lab=1.6, cex.axis=1.6, main='', xlab='g-r (mag)',
-	ylab='r-i (mag)') 
-plot(SDSS_train[,3], SDSS_train[,4], xlim=c(-0.7,1.8), ylim=c(-1.1,1.3), pch=20, 
+	ylab='r-i (mag)')
+plot(SDSS_train[,3], SDSS_train[,4], xlim=c(-0.7,1.8), ylim=c(-1.1,1.3), pch=20,
 	col=SDSS_train[,5], cex=0.6, cex.lab=1.6, cex.axis=1.6, main='', xlab='r-i (mag)',
 	ylab='i-z (mag)')
 par(mfrow=c(1,1))
@@ -70,7 +70,7 @@ par(mfrow=c(1,1))
 
 ## Decision Trees
 
-Decision trees are the most basic tree based method, and one on which the majority of other methods are built on They work by splitting the predictor space in to regions; each split can be thought of as a *branch*, and each of the remaining regions are *leaves*. 
+Decision trees are the most basic tree based method, and one on which the majority of other methods are built on They work by splitting the predictor space in to regions; each split can be thought of as a *branch*, and each of the remaining regions are *leaves*.
 
 The default `tree` library has a simple binary recursive partitioning method for growing regression or classification trees.
 
@@ -78,7 +78,7 @@ The default `tree` library has a simple binary recursive partitioning method for
 library(tree)
 ```
 
-Below we split the data in to a training and test set, and train the classifier on the training test. 
+Below we split the data in to a training and test set, and train the classifier on the training test.
 
 ```{r}
 SDSS_train$Class <- as.factor(SDSS_train$Class)
@@ -96,12 +96,12 @@ plot(tree.sdss)
 text(tree.sdss,col=rainbow(10)[1:25],srt=35,cex=0.8)
 ```
 
-To evaluate our tree, we use it to predict the class of our test data. 
+To evaluate our tree, we use it to predict the class of our test data.
 ```{r}
 tree.pred <- predict(tree.sdss, SDSS_train[-train,], type="class")
 ```
 
-Below is a [confusion matrix](https://en.wikipedia.org/wiki/Confusion_matrix) of the predicted classes against the actual. 
+Below is a [confusion matrix](https://en.wikipedia.org/wiki/Confusion_matrix) of the predicted classes against the actual.
 ```{r echo=FALSE}
 test.results <- table(tree.pred,SDSS_train[-train,"Class"])
 test.results
@@ -151,7 +151,7 @@ The error rate, `r round(100*(1-sum(diag(test.results))/sum(test.results)),2)`%,
 
 ## Bagging and Random Forests
 
-Bagging and random forests are both examples of ensemble methods, where many decison trees are combined together to improve the prediction accuracy. Both can be implemented using the `randomForest` package. 
+Bagging and random forests are both examples of ensemble methods, where many decison trees are combined together to improve the prediction accuracy. Both can be implemented using the `randomForest` package.
 
 Bagging (derived from the full name *Bootstrap Aggregation*) takes multiple bootstrapped samples from the same training set and builds an ensemble of trees that are then averaged. Bagging uses all predictors; `mtry` states that all 4 predictors should be considered for each split of the tree.
 
@@ -206,7 +206,7 @@ varImpPlot(rf.sdss)
 
 Boosting algortihms for regression and classification problems are different, and I will not provide a full description here (for details, see [here](https://www.statsoft.com/Textbook/Boosting-Trees-Regression-Classification/button/1)). In basic terms, boosting algorithms apply many weak learners sequentially to the residuals (i.e. the remaining unexplained data) of previous trees. The algorithm learns slowly and incrementally, which can lead to a better resulting model, at the cost of extra computation compared to more direct learners.
 
-The `gbm` function, from the identically named package, is used here to perform Boosting. 
+The `gbm` function, from the identically named package, is used here to perform Boosting.
 
 ```{r echo=FALSE, message=FALSE}
 library(gbm)
@@ -276,7 +276,7 @@ The source of the data used in this post, the textbook '[Modern Statistical Meth
 *SDSS point sources test dataset, N=17,000 (mag<21, point sources, hi-qual)*
 ```{r}
 SDSS <- read.csv('http://astrostatistics.psu.edu/MSMA/datasets/SDSS_test.csv', h=T)
-SDSS_test <- data.frame(cbind((SDSS[,1]-SDSS[,2]), (SDSS[,2]-SDSS[,3]), 
+SDSS_test <- data.frame(cbind((SDSS[,1]-SDSS[,2]), (SDSS[,2]-SDSS[,3]),
 	(SDSS[,3]-SDSS[,4]), (SDSS[,4]-SDSS[,5])))
 names(SDSS_test) <- c('u_g', 'g_r', 'r_i', 'i_z')
 ```
@@ -289,36 +289,36 @@ SDSS_test$Class.Predict <- predict(rf.sdss, SDSS_test)
 
 ```{r echo=FALSE,fig.width = 9, fig.height = 6,fig.align='center'}
 par(mfrow=c(1,3),oma=c(0,0,2,0))
-plot(SDSS_test[,1], SDSS_test[,2], xlim=c(-0.7,3), ylim=c(-0.7,1.8),pch=20, 
+plot(SDSS_test[,1], SDSS_test[,2], xlim=c(-0.7,3), ylim=c(-0.7,1.8),pch=20,
 	col=SDSS_test[,5], cex=0.6, cex.lab=1.5, cex.axis=1.5, main='', xlab='u-g (mag)', ylab='g-r (mag)')
-legend(-0.5, 1.7, c('QSO','MS + RG','WD'), pch=20, col=c('black','red','green'), 
+legend(-0.5, 1.7, c('QSO','MS + RG','WD'), pch=20, col=c('black','red','green'),
 	cex=)
-plot(SDSS_test[,2], SDSS_test[,3], xlim=c(-0.7,1.8), ylim=c(-0.7,1.8), pch=20, 
-	col=SDSS_test[,5], cex=0.6, cex.lab=1.5, cex.axis=1.5, main='', xlab='g-r (mag)', ylab='r-i (mag)') 
-plot(SDSS_test[,3], SDSS_test[,4], xlim=c(-0.7,1.8), ylim=c(-1.1,1.3), pch=20, 
-	col=SDSS_test[,5], cex=0.6, cex.lab=1.5, cex.axis=1.5, main='', xlab='r-i (mag)', ylab='i-z (mag)') 
+plot(SDSS_test[,2], SDSS_test[,3], xlim=c(-0.7,1.8), ylim=c(-0.7,1.8), pch=20,
+	col=SDSS_test[,5], cex=0.6, cex.lab=1.5, cex.axis=1.5, main='', xlab='g-r (mag)', ylab='r-i (mag)')
+plot(SDSS_test[,3], SDSS_test[,4], xlim=c(-0.7,1.8), ylim=c(-1.1,1.3), pch=20,
+	col=SDSS_test[,5], cex=0.6, cex.lab=1.5, cex.axis=1.5, main='', xlab='r-i (mag)', ylab='i-z (mag)')
 title("test data", outer=TRUE)
 ```
 
 ```{r echo=FALSE,fig.width = 9, fig.height = 6,fig.align='center'}
 par(mfrow=c(1,3),oma=c(0,0,2,0))
-plot(SDSS_train[,1], SDSS_train[,2], xlim=c(-0.7,3), ylim=c(-0.7,1.8), pch=20, 
+plot(SDSS_train[,1], SDSS_train[,2], xlim=c(-0.7,3), ylim=c(-0.7,1.8), pch=20,
    	col=SDSS_train[,5], cex=0.6, cex.lab=1.6, cex.axis=1.6, main='', xlab='u-g (mag)',
    	ylab='g-r (mag)')
-legend(-0.5, 1.7, c('QSO','MS + RG','WD'), pch=20, col=c('black','red','green'), 
+legend(-0.5, 1.7, c('QSO','MS + RG','WD'), pch=20, col=c('black','red','green'),
 	cex=)
-plot(SDSS_train[,2], SDSS_train[,3], xlim=c(-0.7,1.8), ylim=c(-0.7,1.8), pch=20, 
+plot(SDSS_train[,2], SDSS_train[,3], xlim=c(-0.7,1.8), ylim=c(-0.7,1.8), pch=20,
 	col=SDSS_train[,5], cex=0.6, cex.lab=1.6, cex.axis=1.6, main='', xlab='g-r (mag)',
-	ylab='r-i (mag)') 
-plot(SDSS_train[,3], SDSS_train[,4], xlim=c(-0.7,1.8), ylim=c(-1.1,1.3), pch=20, 
+	ylab='r-i (mag)')
+plot(SDSS_train[,3], SDSS_train[,4], xlim=c(-0.7,1.8), ylim=c(-1.1,1.3), pch=20,
 	col=SDSS_train[,5], cex=0.6, cex.lab=1.6, cex.axis=1.6, main='', xlab='r-i (mag)',
 	ylab='i-z (mag)')
 par(mfrow=c(1,1))
-title("training data", outer=TRUE) 
+title("training data", outer=TRUE)
 ```
 
 There are a few interesting features here. Firstly, there are hardly any white dwarfs identified. This could be because there aren't very many in this data set, or the algorithm is failing to pick up on them. In the *u-g*/*g-r* plot on the left hand side their is also a clear vertical boundary on the red stellar classification. This lines up exactly with where the stars with lowest *u-g* line ratio lie in the training set, suggesting that our model isn't able to classify stars beyind this range.
 
 Given that we don't know what is actually in the 'test' data set, it's hard to draw any firm conclusions from it, but it does highlight some of the limitations of such learning algorithms, namely that they are very bad at predicting events beyond what they've been trained to; this is more generally known as 'overfitting', in relation to the training set.
 
-All of the code used to produce this post is available [here](https://github.com/polyphant1/statistical_learning/blob/master/SDSS_decision_trees.Rmd). Thanks for reading.
+All of the code used to produce this post is available [here](https://github.com/christopherlovell/statistical_learning/blob/master/SDSS_decision_trees.Rmd). Thanks for reading.

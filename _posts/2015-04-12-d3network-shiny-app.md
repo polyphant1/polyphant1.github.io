@@ -22,4 +22,4 @@ The second tab shows some simple graph metrics plotted over time. A significant 
 
 The final tab provides a look at the raw data used to generate the networks and the plots. Shiny reads and renders all this data live, which makes the speed and flexibility pretty impressive. It makes exploration of the data simple, so go ahead and explore, and comment if you find anything interesting.
 
-All the code used to clean the data and generate the app is on [GitHub](https://github.com/polyphant1/UKAirportNetwork).
+All the code used to clean the data and generate the app is on [GitHub](https://github.com/christopherlovell/UKAirportNetwork).

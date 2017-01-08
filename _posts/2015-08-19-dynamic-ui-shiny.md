@@ -53,4 +53,4 @@ output$table <- renderTable({
 tableOutput("table")
 {% endhighlight %}
 
-You can see this in action as a Shiny app <a href="https://polyphant.shinyapps.io/dynamic_ui" target="blank">here</a> A gist of the complete app code is available <a href="https://gist.github.com/polyphant1/b7ecdf8b0aa82c20fa46" target="blank">here</a>.
+You can see this in action as a Shiny app <a href="https://polyphant.shinyapps.io/dynamic_ui" target="blank">here</a> A gist of the complete app code is available <a href="https://gist.github.com/christopherlovell/b7ecdf8b0aa82c20fa46" target="blank">here</a>.

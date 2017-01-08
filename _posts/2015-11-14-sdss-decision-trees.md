@@ -396,4 +396,4 @@ There are a few interesting features here. Firstly, there are hardly any white d
 
 Given that we don't know what is actually in the 'test' data set, it's hard to draw any firm conclusions from it, but it does highlight some of the limitations of such learning algorithms, namely that they are very bad at predicting events beyond what they've been trained to; this is more generally known as 'overfitting', in relation to the training set.
 
-All of the code used to produce this post is available [here](https://github.com/polyphant1/statistical_learning/blob/master/SDSS_decision_trees.Rmd). Thanks for reading.
+All of the code used to produce this post is available [here](https://github.com/christopherlovell/statistical_learning/blob/master/SDSS_decision_trees.Rmd). Thanks for reading.

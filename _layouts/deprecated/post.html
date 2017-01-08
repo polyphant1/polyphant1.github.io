@@ -8,13 +8,13 @@ layout: default
   <div class="container">
     {{ content }}
   </div>
-  
+
   {% if page.comments %}
     <div id="disqus_thread">
       <script type="text/javascript">
         /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-        var disqus_shortname = 'polyphant'; // required: replace example with your forum shortname
-      
+        var disqus_shortname = 'christopherclovell'; // required: replace example with your forum shortname
+
         /* * * DON'T EDIT BELOW THIS LINE * * */
         (function() {
           var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -25,13 +25,13 @@ layout: default
       <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
   {% endif %}
-  
+
   <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-  
+
   <script src="https://carnivalapp.io/sites/378/init.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", Carnival.init);
   </script>
-  
+
   <center><i>Copyright &#169; {{ site.time | date: '%Y' }} Christopher Lovell</i></center>
 </article>

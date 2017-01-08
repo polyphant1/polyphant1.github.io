@@ -44,4 +44,4 @@ This is all well and good, but it's only useful if we can apply our pipeline to 
 I've demonstrated how to extract the principal components from an array of images and classify in the reduced dimensional space.
 As an extension you could include the entire RGB array. This would take longer to extract the PCs, but the added information could aid outlier detection. I also started work on a naive outlier detector, based on distance from cluster centres.
 
-To DIY, you can view the code [here](https://github.com/polyphant1/deckchair-pca/blob/master/Image_PCA.ipynb).
+To DIY, you can view the code [here](https://github.com/christopherlovell/deckchair-pca/blob/master/Image_PCA.ipynb).
