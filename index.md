@@ -39,11 +39,6 @@ I'm active on Stack Exchange, mostly in the Astronomy and Stack Overflow sites; 
 
 <br><a href="http://stackexchange.com/users/1902550/christopherlovell"><img src="http://stackexchange.com/users/flair/1902550.png" width="208" height="58" alt="profile for christopherlovell on Stack Exchange, a network of free, community-driven Q&amp;A sites" title="profile for christopherlovell on Stack Exchange, a network of free, community-driven Q&amp;A sites" /></a>
 
-<br>{% include page_divider.html %}
-<h2 style="text-align:center">Measured Beauty</h2>
-
-<a href="http://measuredbeauty.com/" target="blank">Measured Beauty</a> is an art project started in early 2016 that aims to reveal the abstract beauty hidden in scientific research. Read more <a href="http://measuredbeauty.com/about/" target="blank">here</a>.
-
 
 <br>{% include page_divider.html %}
 
