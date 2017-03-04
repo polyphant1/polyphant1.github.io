@@ -12,6 +12,6 @@ A couple of days ago I got to do some outreach in a pub, and earnt a free pint f
 
 When prepping for the presentation I had a bit of dilemma though; I'm a Linux user, and Libre office presentations don't tend to play nice with Mac or Windows, which I expected the organisers to have. To avoid this compatibility nightmare I decided to try something I discovered a few months back. [Slidify](http://slidify.org/) lets you create slick presentations using just R markdown. They can be exported to PDF or HTML, the latter allowing you to include interactive elements such as embedded videos or quizzes.
 
-You can check out my presentation [here](/assets/pubhd/index.html). The source code is shown below.
+The source code for my presentation is shown below.
 
 {% gist ad535e31239c7159bec4 %}
