@@ -6,6 +6,7 @@ tags:
 - Technology
 date: "Sunday, September 3, 2017"
 excerpt: Generating Mondrian-esque art with D3
+og_image: /images/Mondrian.png
 ---
 
 Weekend project: use D3 to generate artwork inspired by [Piet Mondrian](https://en.wikipedia.org/wiki/Piet_Mondrian) (see some examples [here](https://www.google.com/search?q=mondrian&source=lnms&tbm=isch&sa=X&ved=0ahUKEwi_tYHAl4rWAhWs5YMKHbjGAEoQ_AUICigB&biw=1454&bih=733)). A gist of the code is available at the bottom of the page; to run locally, start up a python http server in the script directory:
