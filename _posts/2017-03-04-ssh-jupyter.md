@@ -1,5 +1,5 @@
 ---
-title:  "Acessing Jupyter over SSH"
+title:  "Accessing Jupyter over SSH"
 layout: post
 comments: true
 tags:
