@@ -7,14 +7,12 @@ title: Christopher Lovell
   <img class="small img-circle" src="/assets/profile.jpg" title="Moi">
 </a>
 
-I'm Christopher Lovell, a doctoral student in Astronomy & Astrophysics at the University of Sussex. I currently live in London.
+I'm Christopher Lovell, a doctoral student in Astronomy & Astrophysics at the University of Sussex.
 
 <br>{% include page_divider.html %}
 <h2 style="text-align:center">Research</h2>
 
-My research is about understanding how galaxies form and evolve. I do this using simulations, typically of a patch of the universe containing many thousands of galaxies. Combining the data from these simulations with observations of distant galaxies in the early universe helps us understand how these beautiful, evocative objects are born.
-
-I'm also interested in how techniques from the growing field of Data Science, such as Machine Learning, can be used in Astronomy to expose relationships and patterns otherwise obscured using traditional techniques.
+My research focus is on the formation and evolution of galaxies, particularly in the first billion years after the big bang. I employ cosmological numerical simulations, as well as machine learning techniques, and am particularly interested in the interface between the two. 
 
 <br>{% include page_divider.html %}
 <h2 style="text-align:center">Writing</h2>
