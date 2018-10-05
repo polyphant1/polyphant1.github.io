@@ -4,9 +4,9 @@ title: Christopher Lovell
 ---
 
 <div class="w3-content w3-section" style="margin:auto">
-  <img class="mySlides carousel_small img-circle" src="/assets/me/viaduct.jpg">
-  <img class="mySlides carousel_small img-circle" src="/assets/me/UN.jpg">
-  <img class="mySlides carousel_small img-circle" src="/assets/me/profile.jpg">
+  <img class="mySlides w3-animate-fading carousel_small img-circle" src="/assets/me/viaduct.jpg">
+  <img class="mySlides w3-animate-fading carousel_small img-circle" src="/assets/me/UN.jpg">
+  <img class="mySlides w3-animate-fading carousel_small img-circle" src="/assets/me/profile.jpg">
 </div>
 
 <script>
@@ -22,7 +22,7 @@ function carousel() {
     myIndex++;
     if (myIndex > x.length) {myIndex = 1}    
     x[myIndex-1].style.display = "block";  
-    setTimeout(carousel, 3000); // Change image every 2 seconds
+    setTimeout(carousel, 5000); // Change image every 2 seconds
 }
 </script>  
 
