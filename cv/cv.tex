@@ -1,0 +1,108 @@
+%% start of file `template.tex'.
+
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[10pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+\usepackage{amsmath}    % Advanced maths commands
+\usepackage{amssymb}    % Extra maths symbols
+
+% character encoding
+\usepackage[utf8x]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+
+% adjust the page margins
+\usepackage[scale=0.8]{geometry}
+
+% \usepackage[authoryear]{natbib}
+
+% moderncv themes
+\moderncvstyle{classic}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}                                % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+
+\usepackage{xcolor}
+\usepackage[unicode,
+            colorlinks = true,
+            linkcolor = blue,
+            urlcolor  = purple,
+            citecolor = blue,
+            anchorcolor = blue]{hyperref}
+
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+% personal data
+\name{Christopher C.}{Lovell}
+\title{Curriculum Vitae}                               % optional, remove / comment the line if not wanted
+\address{University of Sussex}{Brighton, UK}% {BN1 3PD}{United Kingdom}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+% \extrainfo{University of Sussex}           % optional, remove / comment the line if not wanted
+%\phone[mobile]{+1~(234)~567~890}                   % optional, remove / comment the line if not wanted
+%\phone[fixed]{+2~(345)~678~901}                    % optional, remove / comment the line if not wanted
+\email{c.lovell at sussex.ac.uk}                               % optional, remove / comment the line if not wanted
+\homepage{www.christopherlovell.co.uk}                         % optional, remove / comment the line if not wanted
+
+%\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+
+%----------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------
+\begin{document}
+
+\makecvtitle
+
+\section{Education}
+
+\cventry{2015--2019}{Ph.D. Astronomy, Modelling Galaxy Formation and Evolution during the Epoch of Reionisation and Beyond}{}{}{}{Astronomy Centre, School of Mathematical and Physical Sciences, University of Sussex \\\textit{Advisors:} Prof. Peter Thomas \& Dr. Stephen Wilkins \\ The focus of my research is on using both semi-analytic and hydrodynamic simulations of galaxy evolution to model galaxies during the first few billion years of cosmic history.\\}
+
+\cventry{2013}{Cardiff Undergraduate Research Opportunities Programme (CUROP)}{School of Physics and Astronomy}{Cardiff University}{}{\textit{Advisor:} Dr. Ian Harrison \\ Summer research placement within the Cosmology group on quantifying extreme cosmological voids and their potential to provide cosmological constraints.\\}
+
+\cventry{2009--2013}{MPhys Astrophysics}{School of Physics and Astronomy}{Cardiff University}{}{\textit{Advisor:} Prof. Peter Coles \\ First-class honours. Masters project on using extreme value statistics to investigate massive clusters in cosmological simulations}{}
+
+\section{First-Author Publications}
+    \cventry{2017}{Characterising and Identifying Galaxy Protoclusters}{}{}{}{\textit{Christopher C. Lovell, Peter A. Thomas, Stephen M. Wilkins} \\ \href{https://arxiv.org/abs/1710.02148}{arxiv:1710.02148} \\ Accepted, Monthly Notices of the Royal Astronomical Society}
+
+\section{Co-Authored Publications}
+    \cventry{2017}{Dust Obscured Star Forming Galaxies in the Early Universe}{}{}{}{\textit{Stephen M. Wilkins, Yu Feng, Tiziana Di Matteo, Rupert Croft, Christopher C. Lovell, Peter Thomas} \\ \href{https://arxiv.org/abs/1710.01976}{arxiv:1710.01976} \\ Accepted, Monthly Notices of the Royal Astronomical Society \\}
+    \cventry{2017}{The properties of the first galaxies in the BLUETIDES simulation}{}{}{}{\textit{Stephen M. Wilkins, Yu Feng, Tiziana Di-Matteo, Rupert Croft, Christopher C. Lovell, Dacen Waters} \\ \href{https://arxiv.org/abs/1704.00954}{arxiv:1704.00954} \\ Accepted, Monthly Notices of the Royal Astronomical Society \\}
+    \cventry{2016}{The Photometric Properties of Galaxies in the Early Universe}{}{}{}{\textit{Stephen M. Wilkins, Yu Feng, Tiziana Di-Matteo, Rupert Croft, Elizabeth R. Stanway, Andrew Bunker, Dacen Waters, Christopher C. Lovell} \\ \href{https://arxiv.org/abs/1605.05044}{arxiv:1605.05044} \\ Accepted, Monthly Notices of the Royal Astronomical Society}
+
+\section{Non-refereed Publications}
+    \cventry{2018}{Learning the Relationship between Galaxy Spectra and their Star Formation Histories}{}{}{}{\textit{Christopher C. Lovell, Viviana Acquaviva, Stephen M. Wilkins, Peter A. Thomas}, In prep.}
+
+\section{Invited Talks}
+    \cventry{March 2018}{University of California, Santa Cruz}{}{}{}{\textit{Characterising and Identifying Galaxy Protoclusters}}
+
+
+    \section{Work Experience}
+
+    \cventry{2013--2015}{Data Scientist}{Bank of England}{London}{}{Graduate analyst in the IT department, before moving to the Data Lab as a Data Scientist. I worked on text analytics projects using techniques such a latent dirichlet allocation to perform topic modelling on large text corpora.\\}{}
+
+    \cventry{2015--Present}{Popular Science Writer}{Astrobites}{}{}{\href{https://astrobites.org}{Astrobites} provides accessible summaries of the latest research papers in Astronomy and Astrophysics. Since September 2015 I have produced \href{https://astrobites.org/author/clovell/}{14 articles} that have been viewed over twelve thousand times, and edited and mentored other authors.\\}{}
+
+    % \cventry{2016}{Online Learning Module Developer}{University of Sussex}{}{}{Recipient of a £1000 award to develop an open access \href{http://www.christopherlovell.co.uk/astro-python/}{online training module} for fellow postgraduates on the use of popular Python packages in Astronomy.\\}{}
+
+    % \cventry{2015-2016}{Hack Day Co-Organiser}{University of Sussex}{}{}{I co-organised and participated in two hack days. The first explored the potential for visualising astrophysical data sets with web based 3D modelling tools. The second was run in conjunction with Deckchair, a company that runs premium webcam services for clients around the world. We developed a novel, automatic image classification pipeline utilising principal component analysis. \\}{}
+
+    \cventry{2016}{Associate Tutor}{University of Sussex}{}{}{Performed marking and workshop supervision for a first year introductory Python course. Duties included marking and feedback on submitted scripts, and supervision in exercise classes.\\}{}
+
+    \cventry{2017--Present}{Brilliant Club Tutor}{\href{http://www.thebrilliantclub.org/}{Scholars Programme}}{}{}{I taught an intensive 6 week course on processes in galaxy evolution. The scheme required the design from scratch of a course intended for secondary school age students, the delivery of that course, communication with students and teachers, and marking and assessment of submissions.\\}{}
+
+    % \cventry{2010--2013}{Support Worker}{Cardiff University}{}{}{Cardiff university support workers aid students with physical or mental disabilities by taking and writing up notes from lectures, helping them to and from classes, and generally supporting their well being throughout the academic year. I worked with tens of students and learnt valuable note taking and communication skills.\\}{}
+
+
+\end{document}

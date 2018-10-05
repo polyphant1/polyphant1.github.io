@@ -1,5 +1,5 @@
 # External gems
-gems:
+plugins:
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-gist
@@ -15,7 +15,7 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 blogurl: "/blog/"
 url: http://www.christopherlovell.co.uk
 cover: "/images/hudf.jpg"
-logo: "/assets/logo.png"
+# logo: "/assets/logo.png"
 
 permalink: /blog/:categories/:year/:month/:day/:title.html
 

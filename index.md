@@ -3,21 +3,47 @@ layout: page
 title: Christopher Lovell
 ---
 
-<a href="/assets/profile.jpg" data-lightbox="profile.jpg" data-title="Moi">
-  <img class="small img-circle" src="/assets/profile.jpg" title="Moi">
-</a>
+<div class="w3-content w3-section" style="margin:auto">
+  <img class="mySlides carousel_small img-circle" src="/assets/me/viaduct.jpg">
+  <img class="mySlides carousel_small img-circle" src="/assets/me/UN.jpg">
+  <img class="mySlides carousel_small img-circle" src="/assets/me/profile.jpg">
+</div>
 
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 3000); // Change image every 2 seconds
+}
+</script>  
+
+<br>
 I'm Christopher Lovell, a doctoral student in Astronomy & Astrophysics at the University of Sussex.
 
 <br>{% include page_divider.html %}
-<h2 style="text-align:center">Research</h2>
+<h2 style="text-align:center"><a href="/research/">Research</a></h2>
 
-My research focus is on the formation and evolution of galaxies, particularly in the first billion years after the big bang. I employ cosmological numerical simulations, as well as machine learning techniques, and am particularly interested in the interface between the two. 
+My research focus is on the formation and evolution of galaxies, particularly in the first billion years after the big bang. I employ cosmological numerical simulations, as well as machine learning techniques, and am particularly interested in the interface between the two. Please see <a href="/research/">here</a> for more information on my research.
 
 <br>{% include page_divider.html %}
-<h2 style="text-align:center">Writing</h2>
+<h2 style="text-align:center">Outreach</h2>
 
-Additional to this blog I also write for <a href="http://astrobites.org/" target="blank">Astrobites</a>, where postgraduates in Astronomy and Astrophysics write about the latest research papers in a more accessible format for undergraduates or the public in general. You can read my posts <a href="http://astrobites.com/author/clovell/" target="blank">here</a>.
+Additional to this <a href="/blog/">blog</a> I also write for <a href="http://astrobites.org/" target="blank">Astrobites</a>, where postgraduates in Astronomy and Astrophysics write about the latest research in an accessible format for undergraduates or the public in general. You can read my posts <a href="http://astrobites.com/author/clovell/" target="blank">here</a>.
+
+The James Webb Space Telescope will revolutionise our understanding of the early universe. As part of Webb UK I have attended festivals and events around the UK talking to the general public about the incredible extragalactic astronomy that this space based observatory will perform.
+<br>
+
+<img class="vsmall" src="/assets/webb_UK_team.jpg" title="WebbUK">
+<p style="text-align:center; font-style:italic">The Webb UK team at Jodrell Bank for the <a href="https://www.discoverthebluedot.com/">Bluedot Festival</a></p>
 
 <br>{% include page_divider.html %}
 <h2 style="text-align:center" id="about-social">Social</h2>
