@@ -63,6 +63,8 @@ I'm active on Stack Exchange, mostly in the Astronomy and Stack Overflow sites; 
 
 <br><a href="http://stackexchange.com/users/1902550/christopherlovell"><img src="http://stackexchange.com/users/flair/1902550.png" width="208" height="58" alt="profile for christopherlovell on Stack Exchange, a network of free, community-driven Q&amp;A sites" title="profile for christopherlovell on Stack Exchange, a network of free, community-driven Q&amp;A sites" /></a>
 
+<!-- <br> -->
+<!-- {--% include goodreads_widget.html %--} -->
 
 <br>{% include page_divider.html %}
 
