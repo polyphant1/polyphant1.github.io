@@ -16,7 +16,7 @@ title: Tags
 
 {% for tag in sortedtags %}
 <!--div id="{{ tag }}"-->
-<h3><a href="{{ tag }}">{{ tag }}</a></h3>
+<h3><a href="{{ tag }}" name="{{ tag }}">{{ tag }}</a></h3>
 <!--/div-->
 <ul class="list-unstyled">
 {% for post in site.tags[tag] %}
