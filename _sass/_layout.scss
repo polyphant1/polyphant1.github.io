@@ -75,7 +75,7 @@ pre code.hljs {
 	&.has-cover {
 		color: $white;
 		text-shadow: 0 2px 1px rgba(0,0,0,0.67) !important;
-		background-position: 50% 50%;
+		// background-position: 50% 50%;
 		background-size: cover;
 		.title {
 			font-size: modular-scale(6);
@@ -85,12 +85,12 @@ pre code.hljs {
 		}
 	}
 	.scrim {
-		padding: 3em 1em;
+		padding: 0em 0em;
 		&.has-cover {
 			background-color: rgba(0,0,0,0.2);
-			padding: 6em 1em !important;
+			padding: 0em 1em !important;
 			@include media($tablet) {
-				padding: 9em 1em !important;
+				padding: 9em 0em !important;
 			}
 		}
 	}
@@ -99,96 +99,96 @@ pre code.hljs {
 /*
 *	Header
 */
-.navigation {
-	box-shadow: 0 2px $highlight-color;
-	padding: 0 1em;
-	margin: 0;
-	/*
-	*	Navigation Menu - http://refills.bourbon.io/unstyled/ (see "Navigation")
-	*/
-  // Mobile view
-  .navigation-menu-button {
-    display: block;
-    float: right;
-    margin: 0;
-    font-size: 1.5em;
-    padding-top: 0.5em;
-    @include media ($tablet) {
-      display: none;
-    }
-  }
-  // Nav menu
-  .navigation-wrapper {
-  	@include outer-container;
-    @include clearfix;
-    position: relative;
-  }
-  .logo {
-    float: left;
-    height: 4em;
-    @include media ($tablet) {
-    	padding-left: $em-base;
-    }
-    img {
-      max-height: 2.5em;
-      margin-top: 0.75em;
-      padding-right: 1em;
-    }
-    span {
-    	font-size: 1.25em;
-    }
-  }
-  nav {
-    float: none;
-    padding: 1.25em 0;
-    @include media ($tablet) {
-      float: right;
-      line-height: 1.5em;
-    }
-  }
-  ul.navigation-menu {
-    clear: both;
-    display: none;
-    margin: 0 auto;
-    overflow: visible;
-    padding: 0;
-    width: 100%;
-    @include media ($tablet) {
-      display: block;
-      margin: 0;
-      padding: 0;
-    }
-    &.show {
-      display: block;
-    }
-  }
-  // Nav items
-  ul li.nav-link {
-    display: block;
-    text-align: right;
-    width: 100%;
-    padding: 0.25em 0;
-    @include media ($tablet) {
-      background: transparent;
-      display: inline;
-      text-decoration: none;
-      width: auto;
-    }
-  }
-  li.nav-link {
-  	a {
-	    display: inline-block;
-	    @include media ($tablet) {
-	      padding-right: 1.5em;
-	    }
-	  }
-	  &:last-child a {
-	  	@include media ($tablet) {
-    		padding-right: 1em;
-    	}
-    }
-  }
-}
+// .navigation {
+// 	box-shadow: 0 2px $highlight-color;
+// 	padding: 0 1em;
+// 	margin: 0;
+// 	/*
+// 	*	Navigation Menu - http://refills.bourbon.io/unstyled/ (see "Navigation")
+// 	*/
+//   // Mobile view
+//   .navigation-menu-button {
+//     display: block;
+//     float: right;
+//     margin: 0;
+//     font-size: 1.5em;
+//     padding-top: 0.5em;
+//     @include media ($tablet) {
+//       display: none;
+//     }
+//   }
+//   // Nav menu
+//   .navigation-wrapper {
+//   	@include outer-container;
+//     @include clearfix;
+//     position: relative;
+//   }
+//   .logo {
+//     float: left;
+//     height: 4em;
+//     @include media ($tablet) {
+//     	padding-left: $em-base;
+//     }
+//     img {
+//       max-height: 2.5em;
+//       margin-top: 0.75em;
+//       padding-right: 1em;
+//     }
+//     span {
+//     	font-size: 1.25em;
+//     }
+//   }
+//   nav {
+//     float: none;
+//     padding: 1.25em 0;
+//     @include media ($tablet) {
+//       float: right;
+//       line-height: 1.5em;
+//     }
+//   }
+//   ul.navigation-menu {
+//     clear: both;
+//     display: none;
+//     margin: 0 auto;
+//     overflow: visible;
+//     padding: 0;
+//     width: 100%;
+//     @include media ($tablet) {
+//       display: block;
+//       margin: 0;
+//       padding: 0;
+//     }
+//     &.show {
+//       display: block;
+//     }
+//   }
+//   // Nav items
+//   ul li.nav-link {
+//     display: block;
+//     text-align: right;
+//     width: 100%;
+//     padding: 0.0em 0;
+//     @include media ($tablet) {
+//       background: transparent;
+//       display: inline;
+//       text-decoration: none;
+//       width: auto;
+//     }
+//   }
+//   li.nav-link {
+//   	a {
+// 	    display: inline-block;
+// 	    @include media ($tablet) {
+// 	      padding-right: 1.5em;
+// 	    }
+// 	  }
+// 	  &:last-child a {
+// 	  	@include media ($tablet) {
+//     		padding-right: 1em;
+//     	}
+//     }
+//   }
+// }
 
 /*
 *	Body
@@ -196,7 +196,7 @@ pre code.hljs {
 .page-content {
 	.wrapper {
 		@include outer-container;
-		padding: 1em;
+		padding: 0em;
 	}
 	/*
 	*	index.html
@@ -225,7 +225,7 @@ pre code.hljs {
 		}
 	}
 	.pagination {
-		padding-top: 2em;
+		padding-top: 0em;
 		text-align: center;
 		color: $medium-gray;
 		display: block;
@@ -266,7 +266,7 @@ pre code.hljs {
 			}
 		}
 		.post-meta {
-			padding-bottom: 1em;
+			padding-bottom: 0em;
 		}
 		.post-content {
 			padding: 1em 0;
@@ -343,7 +343,7 @@ pre code.hljs {
 		.profile {
 			max-width: 320px;
 			margin: auto;
-			padding-bottom: 0.5em;
+			padding-bottom: 0.0em;
  		}
 	}
 }
@@ -352,10 +352,10 @@ pre code.hljs {
 *	Footer
 */
 .site-footer {
-	$link-color: $white;
+	$link-color: $medium-gray;
 	padding: 1em 1em 2em 1em;
-	background-color: $highlight-color;
-	color: $white;
+	background-color: $dark-gray;
+	color: $medium-gray;
 	a {
 	  color: $link-color;
 	  &:active,

@@ -14,6 +14,7 @@ description: "Technology, Astronomy and other random noise, from an Astrophysici
 baseurl: "" # the subpath of your site, e.g. /blog/
 blogurl: "/blog/"
 url: http://www.christopherlovell.co.uk
+blogcover: "/images/hudf.jpg"
 cover: "/images/hudf.jpg"
 # logo: "/assets/logo.png"
 

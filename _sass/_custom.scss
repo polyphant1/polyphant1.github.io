@@ -14,13 +14,19 @@ img.carousel_small {
   width: 30%;
 }
 
+.home {
+  padding-bottom: 2em;
+}
+
 .img-circle {
+    padding-top: 1em;
     border-radius: 50%;
 }
 
 .post-social-meta {
   float:left;
-  padding-top: 8px;
+  // padding-top: 8px;
+  padding-top: 0px;
 }
 
 .fb-like {
@@ -29,6 +35,8 @@ img.carousel_small {
 }
 
 article :not(h1):not(h2):not(h3) a {
+  color: $link-color;
+
   &:active,
   &:focus,
   &:hover {
@@ -40,6 +48,4 @@ article :not(h1):not(h2):not(h3) a {
   &:focus {
     outline: none;
   }
-
-  color: $link-color;
 }

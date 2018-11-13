@@ -3,8 +3,8 @@ layout: default
 ---
 <div class="home">
 
-<div class="site-header-container {% if site.cover %}has-cover{% endif %}" {% if site.cover %}style="background-image: url({{ site.cover | prepend: site.baseurl }});"{% endif %}>
-  <div class="scrim {% if site.cover %}has-cover{% endif %}">
+<div class="site-header-container {% if site.cover %}has-cover{% endif %}" {% if site.blogcover %}style="background-image: url({{ site.blogcover | prepend: site.baseurl }});"{% endif %}>
+  <div class="scrim {% if site.blogcover %}has-cover{% endif %}">
     <header class="site-header">
       <h1 class="title">Bloggings</h1>
       <p class="subtitle">{{ site.description }}</p>
@@ -91,4 +91,4 @@ layout: default
 <!--</div>-->
 
 </div>
-</div>
+</div> <!-- div home-->
