@@ -50,7 +50,7 @@ I have led a new simulation project during this period, First Light And Reionisa
 Since hydrodynamic simulations do not resolve individual stars or HII regions a number of subgrid models and assumptions must be employed to accurately determine the galaxy SED, which can have a significant impact on the predicted emission.
 One example is the choice of stellar population synthesis (SPS) model, which links the initial mass, age and metallicity of a star particle in the simulation ($M_{*} \sim 10^{6} \, M_{\odot}$) to its intrinsic SED.
 In recent years a number of advanced SPS models have been developed, including the effects of binary interactions, post-AGB stars and nebular emission.
-We demonstrated in <a href="https://arxiv.org/abs/1512.032142" target="blank">Wilkins et al. 2016</a> that the production efficiency of ionising radiation can vary by up to a factor of 4 due to the choice of SPS model, and it can also have a significant effect on predicted magnitudes in the rest-frame UV for high-$z$ objects.
+We demonstrated in <a href="https://arxiv.org/abs/1512.03214" target="blank">Wilkins et al. 2016</a> that the production efficiency of ionising radiation can vary by up to a factor of 4 due to the choice of SPS model, and it can also have a significant effect on predicted magnitudes in the rest-frame UV for high-$z$ objects.
 
 <img class="vsmall" src="/images/spectra_example_z8.png" title="Spectra Example">
 <p style="text-align:center; font-style:italic">Median SED of galaxies in the EAGLE simulation at $z = 8$, both intrinsic and dust attenuated, with JWST NIRCAM filters overlayed</p>
