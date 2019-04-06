@@ -28,8 +28,8 @@ Protoclusters are of significant interest for understanding the environmental de
 <!-- <img class="small" src="/images/gas_test_zoom_1_r_1.gif" title="Simulated Protocluster">
 <p style="text-align:center; font-style:italic">Gas distribution in a Protocluster at $z \sim 5$ simulated with the EAGLE code</p> -->
 
-Protoclusters do not yet host a hot, rarefied, X-ray emitting intercluster medium, and so are primarily identified through 3D galaxy overdensities. In a recently accepted paper (<a href="http://adsabs.harvard.edu/cgi-bin/bib_query?arXiv:1710.02148" target="blank">Lovell et al. 2018</a>) I studied in detail the relationship between galaxy overdensity and the presence and descendant mass of protoclusters in the <a href="http://galformod.mpa-garching.mpg.de/public/LGalaxies/" target="blank">L-galaxies</a> semi-analytic model.
-The motivation for this work was to explore the systematic issues that have the greatest impact on protocluster identification; protoclusters are typically identified through surface overdensities of galaxies seen in narrow band photometric surveys, which are then compared to simulations in order to evaluate their protocluster probability and estimate their descendant mass.
+Protoclusters do not yet host an X-ray emitting ICM, and so are primarily identified through 3D galaxy overdensities. In a recently accepted paper (<a href="http://adsabs.harvard.edu/cgi-bin/bib_query?arXiv:1710.02148" target="blank">Lovell et al. 2018</a>) I studied in detail the relationship between galaxy overdensity and the presence and descendant mass of protoclusters in the <a href="http://galformod.mpa-garching.mpg.de/public/LGalaxies/" target="blank">L-galaxies</a> semi-analytic model.
+The motivation for this work was to explore the systematic issues that have the greatest impact on protocluster identification. Surface overdensities of galaxies seen in narrow band photometric surveys are typically compared to simulations in order to evaluate their protocluster probability and estimate their descendant mass.
 I developed a more rigorous method for generating these statistics that takes in to account the completeness and purity of the protocluster galaxy population, the galaxy distribution shape, redshift space distortions and redshift uncertainties, as well as the coincidence of AGN with protoclusters.
 
 <h2><a name="Numerical Simulations">Numerical Simulations</a></h2>
@@ -42,7 +42,7 @@ Such models are also necessary to make detailed predictions, and plan observatio
 <p style="text-align:center; font-style:italic">The distribution of gas in a Protocluster at $z \sim 5$, simulated with the EAGLE code</p>
 
 I have worked extensively on <a href="http://icc.dur.ac.uk/Eagle/" target="blank">EAGLE</a>, a state-of-the-art cosmological hydrodynamic simulation that has been tuned to a small number of distribution functions in the local universe; results at high redshifts represent predictions of the model.
-I have led a new simulation project during this period, First Light And Reionisation Epoch Simulations (FLARES), a new suite of 'zoom' simulations, using a modified version of the EAGLE physics code, of regions selected at high redshift.
+I have led a new simulation project during this period, First Light And Reionisation Epoch Simulations (FLARES), a suite of 'zoom' simulations using a modified version of the EAGLE physics code, of regions selected at high redshift.
 
 <h2><a name="Spectral Energy Distribution Modelling">Spectral Energy Distribution Modelling</a></h2>
 
@@ -50,7 +50,7 @@ I have led a new simulation project during this period, First Light And Reionisa
 Since hydrodynamic simulations do not resolve individual stars or HII regions a number of subgrid models and assumptions must be employed to accurately determine the galaxy SED, which can have a significant impact on the predicted emission.
 One example is the choice of stellar population synthesis (SPS) model, which links the initial mass, age and metallicity of a star particle in the simulation ($M_{*} \sim 10^{6} \, M_{\odot}$) to its intrinsic SED.
 In recent years a number of advanced SPS models have been developed, including the effects of binary interactions, post-AGB stars and nebular emission.
-We demonstrated in <a href="https://arxiv.org/abs/1512.032142" target="blank">Wilkins et al. 2016</a> that the production efficiency of ionising radiation can vary by up to a factor of 4 due to the choice of SPS model, and it can also have a significant effect on predicted magnitudes in the rest-frame UV for high-$z$ objects.
+We demonstrated in <a href="https://arxiv.org/abs/1512.03214" target="blank">Wilkins et al. 2016</a> that the production efficiency of ionising radiation can vary by up to a factor of 4 due to the choice of SPS model, and it can also have a significant effect on predicted magnitudes in the rest-frame UV for high-$z$ objects.
 
 <img class="vsmall" src="/images/spectra_example_z8.png" title="Spectra Example">
 <p style="text-align:center; font-style:italic">Median SED of galaxies in the EAGLE simulation at $z = 8$, both intrinsic and dust attenuated, with JWST NIRCAM filters overlayed</p>
@@ -58,13 +58,13 @@ We demonstrated in <a href="https://arxiv.org/abs/1512.032142" target="blank">Wi
 The dust contribution at high redshift is also highly uncertain, but is key for predicting realistic observed spectra. Dust modelling can vary significantly in sophistication, from simple screen models linked to the mass and metallicity of star forming gas, to full radiative transfer solutions taking account of the spatial distribution of dust and the orientation of the observer.
 Nebular emission is another important component in the SED of high-$z$ galaxies. It is obviously necessary for predicting the presence and strength of individual emission lines, but such lines can also have a significant impact on broad band magnitudes.
 
-I have recently been performing detailed modelling of the spectral energy distributions (SEDs) of galaxies in hydrodynamic simulations in order to carry out close comparisons with HST observations of the rest-frame UV luminosity, and make predictions for JWST.
+I have recently been performing detailed modelling of galaxy SEDs in hydrodynamic simulations in order to carry out close comparisons with HST observations of the rest-frame UV luminosity, and make predictions for JWST.
 
 <h2><a name="Machine Learning & Astronomy">Machine Learning & Astronomy</a></h2>
 
 I am keenly interested in the interface between simulations and machine learning methods. Whilst numerical models obviously do not represent the true universe, they do model the complex non-linear spatial and time dependent interactions of populations of objects. This can be important for accurately predicting intrinsic properties, something that traditional spectral energy distribution (SED) fitting techniques do not take into account. Training machines to learn these relationships, then applying these to observations, can provide unique predictions that complement existing techniques.
 
-I recently worked with Prof. Viviana Acquaviva at City University New York applying this method to the prediction of Star Formation Histories (SFH) in the SDSS catalogue. We trained a Convolutional Neural Network to learn the relationship between spectra and SFH in the EAGLE and Illustris simulations.
+I recently worked with <a href="https://www.drvivianaacquaviva.com/" target="blank">Prof. Viviana Acquaviva</a> at City University New York applying this method to the prediction of Star Formation Histories (SFH) in the SDSS catalogue. We trained a Convolutional Neural Network to learn the relationship between spectra and SFH in the EAGLE and Illustris simulations.
 
 <!-- <h2><a name="Extreme Value Statistics">Extreme Value Statistics</a></h2>
 

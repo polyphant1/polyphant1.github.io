@@ -3,4 +3,7 @@ source 'https://rubygems.org'
 # gem "jekyll-sitemap"#, "~>0.8"
 # gem 'highlight_js-rails'
 gem 'github-pages', group: :jekyll_plugins
-gem "loofah", ">= 2.2.3"  # fix security vulnerability
+
+# fix security vulnerabilities
+gem "loofah", ">= 2.2.3"  
+gem "rack", ">= 2.0.6"
