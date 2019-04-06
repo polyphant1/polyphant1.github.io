@@ -205,7 +205,14 @@ pre code.hljs {
 		padding-top: 1em !important;
 		@extend %default-ul;
 
-		a.post-link{font-weight: bold;}
+		a.post-link{font-weight: bold;
+							  // color: black;
+								&:active,
+							  &:focus,
+							  &:hover {
+							    color: $link-color;
+							    //text-decoration: underline;
+							  }}
 
 	}
 	.post-meta {
@@ -352,16 +359,15 @@ pre code.hljs {
 *	Footer
 */
 .site-footer {
-	$link-color: $medium-gray;
 	padding: 1em 1em 2em 1em;
 	background-color: $dark-gray;
 	color: $medium-gray;
 	a {
-	  color: $link-color;
+	  color: $medium-gray;
 	  &:active,
 	  &:focus,
 	  &:hover {
-	    color: darken($link-color, 10%);
+	    color: darken($white, 10%);
 	  }
 	  &:active,
 	  &:focus {

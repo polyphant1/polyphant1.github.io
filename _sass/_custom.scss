@@ -34,7 +34,8 @@ img.carousel_small {
   padding-right: 5px;
 }
 
-article :not(h1):not(h2):not(h3) a {
+// div.page-content
+article.post-content :not(h1):not(h2):not(h3) a {
   color: $link-color;
 
   &:active,
