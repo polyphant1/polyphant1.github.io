@@ -4,7 +4,7 @@ permalink: /publications/
 title: Publications
 ---
 
-An up to date list of my published research can be found on <a href="http://adsabs.harvard.edu/cgi-bin/nph-abs_connect?return_req=no_params&author=Lovell,%20Christopher%20C.&db_key=AST" target="blank">ADS</a> or <a href="https://scholar.google.co.uk/citations?user=2wlPQ1QAAAAJ&hl=en" target="blank">Google Scholar</a>. <a href="http://orcid.org/0000-0001-7964-5933" target="blank">ORCID</a>.
+An up-to-date list of my published research can be found on <a href="http://adsabs.harvard.edu/cgi-bin/basic_connect?qsearch=christopher+c.+lovell&version=1" target="blank">ADS</a>, <a href="https://scholar.google.co.uk/citations?user=2wlPQ1QAAAAJ&hl=en" target="blank">Google Scholar</a> or <a href="http://orcid.org/0000-0001-7964-5933" target="blank">ORCID</a>.
 
 ## First-Author Publications
 
@@ -12,10 +12,9 @@ An up to date list of my published research can be found on <a href="http://adsa
 **Christopher C. Lovell**, Peter A. Thomas, Stephen M. Wilkins, **2018**    
 <span style="color:green">Accepted</span>, <a style="color:darkblue" href="https://academic.oup.com/mnras/article/474/4/4612/4693860">Monthly Notices of the Royal Astronomical Society</a>
 
-## Non-Refereed Publications
-
-- *Learning the Relationship between Galaxy Spectra and their Star Formation Histories*  
-**Christopher C. Lovell**, Viviana Acquaviva, Stephen M. Wilkins, Peter A. Thomas et al. *In prep*
+- *Learning the Relationship between Galaxies Spectra and their Star Formation Histories using Convolutional Neural Networks and Cosmological Simulations* <a href="https://arxiv.org/abs/1903.10457">arxiv:1903.10457</a>
+<br> **Christopher C. Lovell**, Viviana Acquaviva, Peter A. Thomas, Kartheik G. Iyer, Eric Gawiser, Stephen M. Wilkins, **2019**
+<br><span style="color:orange">Submitted</span> to MNRAS
 
 
 ## Co-Authored Publications
@@ -31,6 +30,9 @@ Stephen M. Wilkins & others including **Christopher C. Lovell**, **2017**
 - *The Photometric Properties of Galaxies in the Early Universe*,  <a href="https://arxiv.org/abs/1605.05044">arxiv:1605.05044</a>  
 Stephen M. Wilkins & others including **Christopher C. Lovell**, **2016**    
 <span style="color:green">Accepted</span>, <a style="color:darkblue" href="https://academic.oup.com/mnras/article/460/3/3170/2609428">Monthly Notices of the Royal Astronomical Society</a>
+
+
+<br>
 
 <!-- ## Invited Talks
 
