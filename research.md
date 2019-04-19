@@ -7,14 +7,23 @@ title: Research
 Below are some brief summaries of research areas I am currently working in, or have recently worked on.
 
 <ul>
+<li><a href="#Machine Learning & Astronomy">Machine Learning & Astronomy</a></li>
 <li><a href="#Galaxy Protoclusters">Galaxy Protoclusters</a></li>
 <li><a href="#Numerical Simulations">Numerical Simulations</a></li>
 <li><a href="#Spectral Energy Distribution Modelling">Spectral Energy Distribution Modelling</a></li>
-<li><a href="#Machine Learning & Astronomy">Machine Learning & Astronomy</a></li>
 <!-- <li><a href="#Extreme Value Statistics">Extreme Value Statistics</a></li> -->
 </ul>
 
 {% include page_divider.html %}
+
+
+<h2><a name="Machine Learning & Astronomy">Machine Learning & Astronomy</a></h2>
+
+I am keenly interested in the interface between simulations and machine learning methods. Whilst numerical models obviously do not represent the true universe, they do model the complex non-linear spatial and time dependent interactions of populations of objects. This can be important for accurately predicting intrinsic properties, something that traditional spectral energy distribution (SED) fitting techniques do not take into account. Training machines to learn these relationships, then applying these to observations, can provide unique predictions that complement existing techniques.
+
+I recently worked with <a href="https://www.drvivianaacquaviva.com/" target="blank">Prof. Viviana Acquaviva</a> at City University New York applying this method to the prediction of Star Formation Histories (SFH) in the SDSS catalogue. We trained a Convolutional Neural Network to learn the relationship between spectra and SFH in the EAGLE and Illustris simulations. The paper is available <a href="https://arxiv.org/abs/1903.10457" target="blank">here</a>, and below is a talk I gave on this research at the Royal Astronomical Society meeting, <a href="https://ras.ac.uk/events-and-meetings/ras-meetings/machine-learning-and-artificial-intelligence-applied-astronomy" target="blank">"Machine Learning and Artificial Intelligence applied to astronomy"</a> in March 2019 (slides available <a href="https://ras.ac.uk/events-and-meetings/ras-meetings/machine-learning-and-artificial-intelligence-applied-astronomy" target="blank">here</a>)
+
+<a href="https://www.youtube.com/watch?v=R2MZ5HXZH_A" target="blank"><img class="small" src="/images/RAS2019_talk.jpg" title="RAS 2019 talk"></a>
 
 <!-- <h2><a href="High Redshift Galaxy Evolution" name="High Redshift Galaxy Evolution">High Redshift Galaxy Evolution</a></h2> -->
 
@@ -59,12 +68,6 @@ The dust contribution at high redshift is also highly uncertain, but is key for 
 Nebular emission is another important component in the SED of high-$z$ galaxies. It is obviously necessary for predicting the presence and strength of individual emission lines, but such lines can also have a significant impact on broad band magnitudes.
 
 I have recently been performing detailed modelling of galaxy SEDs in hydrodynamic simulations in order to carry out close comparisons with HST observations of the rest-frame UV luminosity, and make predictions for JWST.
-
-<h2><a name="Machine Learning & Astronomy">Machine Learning & Astronomy</a></h2>
-
-I am keenly interested in the interface between simulations and machine learning methods. Whilst numerical models obviously do not represent the true universe, they do model the complex non-linear spatial and time dependent interactions of populations of objects. This can be important for accurately predicting intrinsic properties, something that traditional spectral energy distribution (SED) fitting techniques do not take into account. Training machines to learn these relationships, then applying these to observations, can provide unique predictions that complement existing techniques.
-
-I recently worked with <a href="https://www.drvivianaacquaviva.com/" target="blank">Prof. Viviana Acquaviva</a> at City University New York applying this method to the prediction of Star Formation Histories (SFH) in the SDSS catalogue. We trained a Convolutional Neural Network to learn the relationship between spectra and SFH in the EAGLE and Illustris simulations.
 
 <!-- <h2><a name="Extreme Value Statistics">Extreme Value Statistics</a></h2>
 
