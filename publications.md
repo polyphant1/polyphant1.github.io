@@ -19,7 +19,12 @@ An up-to-date list of my published research can be found on <a href="http://adsa
 
 ## Co-Authored Publications
 
-- *Dust Obscured Star Forming Galaxies in the Early Universe*, <a href="https://arxiv.org/abs/1710.01976">arxiv:1710.01976</a>  
+
+- *Nebular Line Emission During the Epoch of Reionization*, <a href="https://arxiv.org/abs/1904.07504" target="blank">arxiv:1904.07504</a>  
+Stephen M. Wilkins, **Christopher C. Lovell**, Ciaran Fairhurst & others **2019**    
+<span style="color:orange">Submitted</span> to MNRAS
+
+- *Dust Obscured Star Forming Galaxies in the Early Universe*, <a href="https://arxiv.org/abs/1710.01976" target="blank">arxiv:1710.01976</a>  
 Stephen M. Wilkins & others including **Christopher C. Lovell**, **2017**    
 <span style="color:green">Accepted</span>, <a style="color:darkblue" href="https://academic.oup.com/mnras/article/473/4/5363/4430636">Monthly Notices of the Royal Astronomical Society</a>
 
