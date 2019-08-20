@@ -7,3 +7,4 @@ gem 'github-pages', group: :jekyll_plugins
 # fix security vulnerabilities
 gem "loofah", ">= 2.2.3"  
 gem "rack", ">= 2.0.6"
+gem "nokogiri", ">= 1.10.4"
