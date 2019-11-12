@@ -14,11 +14,14 @@ An up-to-date list of my published research can be found on <a href="http://adsa
 
 - *Learning the Relationship between Galaxies Spectra and their Star Formation Histories using Convolutional Neural Networks and Cosmological Simulations* <a href="https://arxiv.org/abs/1903.10457">arxiv:1903.10457</a>
 <br> **Christopher C. Lovell**, Viviana Acquaviva, Peter A. Thomas, Kartheik G. Iyer, Eric Gawiser, Stephen M. Wilkins, **2019**
-<br><span style="color:orange">Submitted</span> to MNRAS
+<br><span style="color:green">Accepted</span>, <a style="color:darkblue" href="https://academic.oup.com/mnras/advance-article/doi/10.1093/mnras/stz2851/5586582">Monthly Notices of the Royal Astronomical Society</a>
 
 
 ## Co-Authored Publications
 
+- *Recalibrating the Cosmic Star Formation History*, <a href="https://arxiv.org/abs/1910.05220" target="blank">arxiv:1910.05220</a>  
+Stephen M. Wilkins, **Christopher C. Lovell**, Elizabeth Stanway **2019**    
+<span style="color:green">Accepted</span>, <a style="color:darkblue" href="https://academic.oup.com/mnras/advance-article/doi/10.1093/mnras/stz2894/5588611">Monthly Notices of the Royal Astronomical Society</a>
 
 - *Nebular Line Emission During the Epoch of Reionization*, <a href="https://arxiv.org/abs/1904.07504" target="blank">arxiv:1904.07504</a>  
 Stephen M. Wilkins, **Christopher C. Lovell**, Ciaran Fairhurst & others **2019**    
