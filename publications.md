@@ -8,14 +8,17 @@ An up-to-date list of my published research can be found on <a href="http://adsa
 
 ## First-Author Publications
 
-- *Characterising and Identifying Galaxy Protoclusters*, <a href="https://arxiv.org/abs/1710.02148">arxiv:1710.02148</a>  
-**Christopher C. Lovell**, Peter A. Thomas, Stephen M. Wilkins, **2018**    
-<span style="color:green">Accepted</span>, <a style="color:darkblue" href="https://academic.oup.com/mnras/article/474/4/4612/4693860">Monthly Notices of the Royal Astronomical Society</a>
-
 - *Learning the Relationship between Galaxies Spectra and their Star Formation Histories using Convolutional Neural Networks and Cosmological Simulations* <a href="https://arxiv.org/abs/1903.10457">arxiv:1903.10457</a>
 <br> **Christopher C. Lovell**, Viviana Acquaviva, Peter A. Thomas, Kartheik G. Iyer, Eric Gawiser, Stephen M. Wilkins, **2019**
 <br><span style="color:green">Accepted</span>, <a style="color:darkblue" href="https://academic.oup.com/mnras/advance-article/doi/10.1093/mnras/stz2851/5586582">Monthly Notices of the Royal Astronomical Society</a>
 
+- *Sengi: a small, fast, interactive viewer for spectral outputs from stellar population synthesis models* <a href="https://arxiv.org/abs/1911.12713">arxiv:1911.12713</a>
+<br> **Christopher C. Lovell** **2019**
+<br><span style="color:orange">Submitted</span> to Astronomy and Computing
+
+- *Characterising and Identifying Galaxy Protoclusters*, <a href="https://arxiv.org/abs/1710.02148">arxiv:1710.02148</a>  
+**Christopher C. Lovell**, Peter A. Thomas, Stephen M. Wilkins, **2018**    
+<span style="color:green">Accepted</span>, <a style="color:darkblue" href="https://academic.oup.com/mnras/article/474/4/4612/4693860">Monthly Notices of the Royal Astronomical Society</a>
 
 ## Co-Authored Publications
 
