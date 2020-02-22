@@ -4,7 +4,7 @@ permalink: /publications/
 title: Publications
 ---
 
-An up-to-date list of my published research can be found on <a href="http://adsabs.harvard.edu/cgi-bin/basic_connect?qsearch=christopher+c.+lovell&version=1" target="blank">ADS</a>, <a href="https://scholar.google.co.uk/citations?user=2wlPQ1QAAAAJ&hl=en" target="blank">Google Scholar</a> or <a href="http://orcid.org/0000-0001-7964-5933" target="blank">ORCID</a>.
+An up-to-date list of my published research can be found on <a href="https://ui.adsabs.harvard.edu/public-libraries/x3_uMCyHTJ2-YisJxQxo_g" target="blank">ADS</a>, <a href="https://scholar.google.co.uk/citations?user=2wlPQ1QAAAAJ&hl=en" target="blank">Google Scholar</a> or <a href="http://orcid.org/0000-0001-7964-5933" target="blank">ORCID</a>.
 
 ## First-Author Publications
 
