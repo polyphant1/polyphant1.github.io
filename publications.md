@@ -22,13 +22,13 @@ An up-to-date list of my published research can be found on <a href="https://ui.
 
 ## Co-Authored Publications
 
+- *Nebular Line Emission During the Epoch of Reionization*, <a href="https://arxiv.org/abs/1904.07504" target="blank">arxiv:1904.07504</a>  
+Stephen M. Wilkins, **Christopher C. Lovell**, Ciaran Fairhurst & others **2020**    
+<span style="color:green">Accepted</span>, MNRAS
+
 - *Recalibrating the Cosmic Star Formation History*, <a href="https://arxiv.org/abs/1910.05220" target="blank">arxiv:1910.05220</a>  
 Stephen M. Wilkins, **Christopher C. Lovell**, Elizabeth Stanway **2019**    
 <span style="color:green">Accepted</span>, <a style="color:darkblue" href="https://academic.oup.com/mnras/advance-article/doi/10.1093/mnras/stz2894/5588611">Monthly Notices of the Royal Astronomical Society</a>
-
-- *Nebular Line Emission During the Epoch of Reionization*, <a href="https://arxiv.org/abs/1904.07504" target="blank">arxiv:1904.07504</a>  
-Stephen M. Wilkins, **Christopher C. Lovell**, Ciaran Fairhurst & others **2019**    
-<span style="color:orange">Submitted</span> to MNRAS
 
 - *Dust Obscured Star Forming Galaxies in the Early Universe*, <a href="https://arxiv.org/abs/1710.01976" target="blank">arxiv:1710.01976</a>  
 Stephen M. Wilkins & others including **Christopher C. Lovell**, **2017**    
