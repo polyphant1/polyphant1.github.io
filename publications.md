@@ -45,7 +45,8 @@ Stephen M. Wilkins & others including **Christopher C. Lovell**, **2016**
 
 <br>
 
-<!-- ## Invited Talks
-
-- March 2018, University of California, Santa Cruz  
+<!-- ## Invited Talks - March 2018, University of California, Santa Cruz  
 *Characterising and Identifying Galaxy Protoclusters* -->
+
+## Thesis
+*Exploring the history of star formation in galaxies and its environmental dependence at high redshift*, **2019**. Available <a href="http://sro.sussex.ac.uk/id/eprint/87720/">here</a>
