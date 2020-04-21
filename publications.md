@@ -8,6 +8,11 @@ An up-to-date list of my published research can be found on <a href="https://ui.
 
 ## First-Author Publications
 
+
+- *First Light And Reionisation Epoch Simulations (FLARES) I: Environmental Dependence of High-Redshift Galaxy Evolution* <a href="https://arxiv.org/abs/2004.07283">arxiv:2004.07283</a>
+<br> **Christopher C. Lovell**, Aswin P. Vijayan, Peter A. Thomas, Stephen M. Wilkins, David J. Barnes, Dimitrios Irodotou, Will Roper, **2020**
+<br><span style="color:orange">Submitted</span> to Monthly Notices of the Royal Astronomical Society
+
 - *Learning the Relationship between Galaxies Spectra and their Star Formation Histories using Convolutional Neural Networks and Cosmological Simulations* <a href="https://arxiv.org/abs/1903.10457">arxiv:1903.10457</a>
 <br> **Christopher C. Lovell**, Viviana Acquaviva, Peter A. Thomas, Kartheik G. Iyer, Eric Gawiser, Stephen M. Wilkins, **2019**
 <br><span style="color:green">Accepted</span>, <a style="color:darkblue" href="https://academic.oup.com/mnras/advance-article/doi/10.1093/mnras/stz2851/5586582">Monthly Notices of the Royal Astronomical Society</a>
