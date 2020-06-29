@@ -27,6 +27,10 @@ An up-to-date list of my published research can be found on <a href="https://ui.
 
 ## Co-Authored Publications
 
+- *Powderday: Dust Radiative Transfer for Galaxy Simulations*, <a href="https://arxiv.org/abs/2006.10757" target="blank">arxiv:2006.10757</a>  
+Desika Narayanan & others including **Christopher C. Lovell**, **2020**    
+<span style="color:orange">Submitted</span>, ApJ
+
 - *Nebular Line Emission During the Epoch of Reionization*, <a href="https://arxiv.org/abs/1904.07504" target="blank">arxiv:1904.07504</a>  
 Stephen M. Wilkins, **Christopher C. Lovell**, Ciaran Fairhurst & others **2020**    
 <span style="color:green">Accepted</span>, MNRAS
