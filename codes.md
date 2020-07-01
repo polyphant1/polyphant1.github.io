@@ -32,10 +32,14 @@ eagle_io is a python module for reading outputs from the Eagle simulation in nat
 
 Documentation is being updated [here](https://eagle-io.readthedocs.io/en/latest/), and the source code is [here](https://github.com/christopherlovell/eagle_IO)
 
+---
+
 # FitDF
 FitDF is a python code for fitting distribution functions through MCMC. It uses the [emcee](https://emcee.readthedocs.io) package.
 
 Read the docs [here](https://fitdf.readthedocs.io), and find the source code [here](https://github.com/christopherlovell/fitDF).
+
+---
 
 # goa
 
@@ -43,6 +47,8 @@ Read the docs [here](https://fitdf.readthedocs.io), and find the source code [he
 <img src="https://img.shields.io/badge/arXiv-1710.02148-red.svg" class="doi" style="display: inline-block">
 
 Galaxy Overdensity Analysis ([goa](https://github.com/christopherlovell/goa)) is a python package for running the protocluster statistics pipeline in [Lovell+18](https://ui.adsabs.harvard.edu/abs/2018MNRAS.474.4612L/abstract).
+
+---
 
 # VAMP
 Voigt Automatic MCMC Profiles ([VAMP](https://github.com/christopherlovell/VAMP)) is a python code for fitting Voigt absorption profiles using MCMC in python. It's currently being updated to python 3 using PyMC3 - watch this space!
