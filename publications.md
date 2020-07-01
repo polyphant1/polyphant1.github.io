@@ -8,6 +8,9 @@ An up-to-date list of my published research can be found on <a href="https://ui.
 
 ## First-Author Publications
 
+- *Reproducing sub-millimetre galaxy number counts with cosmological hydrodynamic simulations* <a href="https://arxiv.org/abs/2006.15156">arxiv:2006.15156</a>
+<br> **Christopher C. Lovell**, James E. Geach, Romeel Davé, Desika Narayanan, Qi Li, **2020**
+<br><span style="color:orange">Submitted</span> to Monthly Notices of the Royal Astronomical Society
 
 - *First Light And Reionisation Epoch Simulations (FLARES) I: Environmental Dependence of High-Redshift Galaxy Evolution* <a href="https://arxiv.org/abs/2004.07283">arxiv:2004.07283</a>
 <br> **Christopher C. Lovell**, Aswin P. Vijayan, Peter A. Thomas, Stephen M. Wilkins, David J. Barnes, Dimitrios Irodotou, Will Roper, **2020**
