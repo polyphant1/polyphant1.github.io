@@ -30,6 +30,10 @@ An up-to-date list of my published research can be found on <a href="https://ui.
 
 ## Co-Authored Publications
 
+- *First Light And Reionisation Epoch Simulations (FLARES) II: The Photometric Properties of High-Redshift Galaxies* <a href="https://arxiv.org/abs/2008.06057">arxiv:2008.06057</a>
+<br> Aswin P. Vijayan, **Christopher C. Lovell**, Stephen M. Wilkins, Peter A. Thomas, David J. Barnes, Dimitrios Irodotou, Jussi Kuusisto, Will Roper, **2020**
+<br><span style="color:orange">Submitted</span> to Monthly Notices of the Royal Astronomical Society
+
 - *Powderday: Dust Radiative Transfer for Galaxy Simulations*, <a href="https://arxiv.org/abs/2006.10757" target="blank">arxiv:2006.10757</a>  
 Desika Narayanan & others including **Christopher C. Lovell**, **2020**    
 <span style="color:orange">Submitted</span>, Astrophysical Journal
