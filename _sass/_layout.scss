@@ -201,6 +201,12 @@ pre code.hljs {
 	/*
 	*	index.html
 	*/
+    .post-meta {
+		padding: 0em 0.7em 0em 0.7em;
+	}
+	.post-content {
+		padding: 1em 0.7em 0em 0.7em;
+	}
 	.post-list {
 		padding-top: 1em !important;
 		@extend %default-ul;
@@ -273,10 +279,10 @@ pre code.hljs {
 			}
 		}
 		.post-meta {
-			padding-bottom: 0em;
+			padding: 0em 0.7em 0em 0.7em;
 		}
 		.post-content {
-			padding: 1em 0;
+			padding: 1em 0.7em 0em 0.7em;
 		}
 		.tags {
 			font-size: 0.9em;
