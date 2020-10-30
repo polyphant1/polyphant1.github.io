@@ -24,7 +24,8 @@ For a concise summary of the issues faced modelling these objects, see <a href="
 <p style="text-align:center; font-style:italic">An example SMG showing the gas, stellar and dust distribution, as well as the resolved and integrated $S_{850}$ emission.</p>
 
 Recently (<a href="https://arxiv.org/abs/2006.15156">Lovell et al. 2020; arXiv:2006.15156</a>), we used the <a href="https://arxiv.org/abs/1901.10203">SIMBA</a> simulation combined with the radiative transfer package <a href="https://arxiv.org/abs/2006.10757">Powderday</a> to model the sub-mm emission, and found unprecedented agreement with observationally inferred integrated number counts from single-dish instruments.
-We created a lightcone, allowing us to explore the effects of far-field blending, and found minimal impact on the shape or normalisation of the number counts.
+We assessed the impact of unassociated blending by building a lightcone, and found a slight boost in the normalisation of at the bright end.
+The good agreement is driven primarily by the good match to IR-constraints on the high-redshift star formation rate function in SIMBA, as well as the self-consistent dust model which leads to higher dust masses compared to using a fixed dust-to-metals ratio, by up to a factor of 2.5.
 
 <!--img class="small" src="/images/square_counts.png" title="SIMBA 850 micron counts">
 <p style="text-align:center; font-style:italic">$S_{850}$ counts from the SIMBA simulation, compared with observational constraints, as well as predictions from the EAGLE model.</p-->
