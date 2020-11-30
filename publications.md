@@ -14,7 +14,7 @@ An up-to-date list of my published research can be found on <a href="https://ui.
 
 - *First Light And Reionisation Epoch Simulations (FLARES) I: Environmental Dependence of High-Redshift Galaxy Evolution* <a href="https://arxiv.org/abs/2004.07283">arxiv:2004.07283</a>
 <br> **Christopher C. Lovell**, Aswin P. Vijayan, Peter A. Thomas, Stephen M. Wilkins, David J. Barnes, Dimitrios Irodotou, Will Roper, **2020**
-<br><span style="color:orange">Submitted</span> to Monthly Notices of the Royal Astronomical Society
+<br><span style="color:green">Accepted</span>, <a style="color:darkblue" href="https://academic.oup.com/mnras/article/500/2/2127/5942886">Monthly Notices of the Royal Astronomical Society</a>
 
 - *Learning the Relationship between Galaxies Spectra and their Star Formation Histories using Convolutional Neural Networks and Cosmological Simulations* <a href="https://arxiv.org/abs/1903.10457">arxiv:1903.10457</a>
 <br> **Christopher C. Lovell**, Viviana Acquaviva, Peter A. Thomas, Kartheik G. Iyer, Eric Gawiser, Stephen M. Wilkins, **2019**
@@ -29,6 +29,10 @@ An up-to-date list of my published research can be found on <a href="https://ui.
 <span style="color:green">Accepted</span>, <a style="color:darkblue" href="https://academic.oup.com/mnras/article/474/4/4612/4693860">Monthly Notices of the Royal Astronomical Society</a>
 
 ## Co-Authored Publications
+
+- *The emergence of passive galaxies in the early Universe* <a href="https://arxiv.org/abs/2011.10584">arxiv:2011.10584</a>
+<br> P. Santini & others, including **Christopher C. Lovell**, **2020**
+<br><span style="color:orange">Submitted</span> to Astronomy & Astrophysics
 
 - *First Light And Reionisation Epoch Simulations (FLARES) II: The Photometric Properties of High-Redshift Galaxies* <a href="https://arxiv.org/abs/2008.06057">arxiv:2008.06057</a>
 <br> Aswin P. Vijayan, **Christopher C. Lovell**, Stephen M. Wilkins, Peter A. Thomas, David J. Barnes, Dimitrios Irodotou, Jussi Kuusisto, Will Roper, **2020**
