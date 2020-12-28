@@ -22,7 +22,7 @@ An up-to-date list of my published research can be found on <a href="https://ui.
 
 - *Sengi: a small, fast, interactive viewer for spectral outputs from stellar population synthesis models* <a href="https://arxiv.org/abs/1911.12713">arxiv:1911.12713</a>
 <br> **Christopher C. Lovell** **2019**
-<br><span style="color:orange">Submitted</span> to Astronomy and Computing
+<br><span style="color:green">Accepted</span>, Astronomy and Computing
 
 - *Characterising and Identifying Galaxy Protoclusters*, <a href="https://arxiv.org/abs/1710.02148">arxiv:1710.02148</a>  
 **Christopher C. Lovell**, Peter A. Thomas, Stephen M. Wilkins, **2018**    
@@ -30,13 +30,17 @@ An up-to-date list of my published research can be found on <a href="https://ui.
 
 ## Co-Authored Publications
 
+- *Debunking Generalization Error or: How I Learned to Stop Worrying and Love My Training Set* <a href="https://arxiv.org/abs/2012.00066">arxiv:2012.00066</a>
+<br> Viviana Acquaviva, **Christopher C. Lovell** & Emille Ishida, **2020**
+<br><span style="color:green">Accepted</span> for <a style="color:darkblue" href="https://ml4physicalsciences.github.io/2020/files/NeurIPS_ML4PS_2020_80.pdf">2020 NeurIPS workshop "Machine Learning and the Physical Sciences"</a>
+
 - *The emergence of passive galaxies in the early Universe* <a href="https://arxiv.org/abs/2011.10584">arxiv:2011.10584</a>
 <br> P. Santini & others, including **Christopher C. Lovell**, **2020**
 <br><span style="color:orange">Submitted</span> to Astronomy & Astrophysics
 
 - *First Light And Reionisation Epoch Simulations (FLARES) II: The Photometric Properties of High-Redshift Galaxies* <a href="https://arxiv.org/abs/2008.06057">arxiv:2008.06057</a>
 <br> Aswin P. Vijayan, **Christopher C. Lovell**, Stephen M. Wilkins, Peter A. Thomas, David J. Barnes, Dimitrios Irodotou, Jussi Kuusisto, Will Roper, **2020**
-<br><span style="color:orange">Submitted</span> to Monthly Notices of the Royal Astronomical Society
+<br><span style="color:green">Accepted</span>, <a style="color:darkblue" href="https://academic.oup.com/mnras/advance-article/doi/10.1093/mnras/staa3715/6012841">Monthly Notices of the Royal Astronomical Society</a>
 
 - *Powderday: Dust Radiative Transfer for Galaxy Simulations*, <a href="https://arxiv.org/abs/2006.10757" target="blank">arxiv:2006.10757</a>  
 Desika Narayanan & others including **Christopher C. Lovell**, **2020**    
