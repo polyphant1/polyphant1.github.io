@@ -22,7 +22,7 @@ An up-to-date list of my published research can be found on <a href="https://ui.
 
 - *Sengi: a small, fast, interactive viewer for spectral outputs from stellar population synthesis models* <a href="https://arxiv.org/abs/1911.12713">arxiv:1911.12713</a>
 <br> **Christopher C. Lovell** **2019**
-<br><span style="color:green">Accepted</span>, Astronomy and Computing
+<br><span style="color:green">Accepted</span>, <a style="color:darkblue" href="https://www.sciencedirect.com/science/article/abs/pii/S2213133720300986">Astronomy and Computing</a>
 
 - *Characterising and Identifying Galaxy Protoclusters*, <a href="https://arxiv.org/abs/1710.02148">arxiv:1710.02148</a>  
 **Christopher C. Lovell**, Peter A. Thomas, Stephen M. Wilkins, **2018**    
