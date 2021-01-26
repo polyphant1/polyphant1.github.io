@@ -10,7 +10,7 @@ An up-to-date list of my published research can be found on <a href="https://ui.
 
 - *Reproducing sub-millimetre galaxy number counts with cosmological hydrodynamic simulations* <a href="https://arxiv.org/abs/2006.15156">arxiv:2006.15156</a>
 <br> **Christopher C. Lovell**, James E. Geach, Romeel Davé, Desika Narayanan, Qi Li, **2020**
-<br><span style="color:orange">Submitted</span> to Monthly Notices of the Royal Astronomical Society
+<br><span style="color:green">Accepted</span>, <a style="color:darkblue" href="https://academic.oup.com/mnras/advance-article/doi/10.1093/mnras/staa4043/6061388">Monthly Notices of the Royal Astronomical Society</a>
 
 - *First Light And Reionisation Epoch Simulations (FLARES) I: Environmental Dependence of High-Redshift Galaxy Evolution* <a href="https://arxiv.org/abs/2004.07283">arxiv:2004.07283</a>
 <br> **Christopher C. Lovell**, Aswin P. Vijayan, Peter A. Thomas, Stephen M. Wilkins, David J. Barnes, Dimitrios Irodotou, Will Roper, **2020**
@@ -44,7 +44,7 @@ An up-to-date list of my published research can be found on <a href="https://ui.
 
 - *Powderday: Dust Radiative Transfer for Galaxy Simulations*, <a href="https://arxiv.org/abs/2006.10757" target="blank">arxiv:2006.10757</a>  
 Desika Narayanan & others including **Christopher C. Lovell**, **2020**    
-<span style="color:orange">Submitted</span>, Astrophysical Journal
+<br><span style="color:green">Accepted</span>, <a style="color:darkblue" href="https://iopscience.iop.org/article/10.3847/1538-4365/abc487">Astrophysical Journal Supplement Series</a>
 
 - *Nebular Line Emission During the Epoch of Reionization*, <a href="https://arxiv.org/abs/1904.07504" target="blank">arxiv:1904.07504</a>  
 Stephen M. Wilkins, **Christopher C. Lovell**, Ciaran Fairhurst & others **2020**    
