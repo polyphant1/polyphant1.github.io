@@ -25,8 +25,8 @@ An up-to-date list of my published research can be found on <a href="https://ui.
 <br><font size="-1"><span style="color:green">Accepted</span>, <a style="color:darkblue" href="https://www.sciencedirect.com/science/article/abs/pii/S2213133720300986">Astronomy and Computing</a></font>
 
 - *Characterising and Identifying Galaxy Protoclusters*, <a href="https://arxiv.org/abs/1710.02148">arxiv:1710.02148</a>  
-**Christopher C. Lovell**, Peter A. Thomas, Stephen M. Wilkins, **2018**    
-<font size="-1"><span style="color:green">Accepted</span>, <a style="color:darkblue" href="https://academic.oup.com/mnras/article/474/4/4612/4693860">Monthly Notices of the Royal Astronomical Society</a></font>
+<br> **Christopher C. Lovell**, Peter A. Thomas, Stephen M. Wilkins, **2018**    
+<br><font size="-1"><span style="color:green">Accepted</span>, <a style="color:darkblue" href="https://academic.oup.com/mnras/article/474/4/4612/4693860">Monthly Notices of the Royal Astronomical Society</a></font>
 
 ## Co-Authored Publications
 
@@ -52,23 +52,23 @@ Desika Narayanan & others including **Christopher C. Lovell**, **2020**
 
 - *Nebular Line Emission During the Epoch of Reionization*, <a href="https://arxiv.org/abs/1904.07504" target="blank">arxiv:1904.07504</a>  
 Stephen M. Wilkins, **Christopher C. Lovell**, Ciaran Fairhurst & others **2020**    
-<font size="-1"><span style="color:green">Accepted</span>, <a style="color:darkblue" href="https://academic.oup.com/mnras/article-abstract/493/4/6079/5809971?redirectedFrom=fulltext">Monthly Notices of the Royal Astronomical Society</a></font>
+<br><font size="-1"><span style="color:green">Accepted</span>, <a style="color:darkblue" href="https://academic.oup.com/mnras/article-abstract/493/4/6079/5809971?redirectedFrom=fulltext">Monthly Notices of the Royal Astronomical Society</a></font>
 
 - *Recalibrating the Cosmic Star Formation History*, <a href="https://arxiv.org/abs/1910.05220" target="blank">arxiv:1910.05220</a>  
 Stephen M. Wilkins, **Christopher C. Lovell**, Elizabeth Stanway **2019**    
-<font size="-1"><span style="color:green">Accepted</span>, <a style="color:darkblue" href="https://academic.oup.com/mnras/advance-article/doi/10.1093/mnras/stz2894/5588611">Monthly Notices of the Royal Astronomical Society</a></font>
+<br><font size="-1"><span style="color:green">Accepted</span>, <a style="color:darkblue" href="https://academic.oup.com/mnras/advance-article/doi/10.1093/mnras/stz2894/5588611">Monthly Notices of the Royal Astronomical Society</a></font>
 
 - *Dust Obscured Star Forming Galaxies in the Early Universe*, <a href="https://arxiv.org/abs/1710.01976" target="blank">arxiv:1710.01976</a>  
 Stephen M. Wilkins & others including **Christopher C. Lovell**, **2017**    
-<font size="-1"><span style="color:green">Accepted</span>, <a style="color:darkblue" href="https://academic.oup.com/mnras/article/473/4/5363/4430636">Monthly Notices of the Royal Astronomical Society</a></font>
+<br><font size="-1"><span style="color:green">Accepted</span>, <a style="color:darkblue" href="https://academic.oup.com/mnras/article/473/4/5363/4430636">Monthly Notices of the Royal Astronomical Society</a></font>
 
 - *The properties of the first galaxies in the BLUETIDES simulation*, <a href="https://arxiv.org/abs/1704.00954">arxiv:1704.00954</a>  
 Stephen M. Wilkins & others including **Christopher C. Lovell**, **2017**    
-<font size="-1"><span style="color:green">Accepted</span>, <a style="color:darkblue" href="https://academic.oup.com/mnras/article/469/3/2517/3786441">Monthly Notices of the Royal Astronomical Society</a></font>
+<br><font size="-1"><span style="color:green">Accepted</span>, <a style="color:darkblue" href="https://academic.oup.com/mnras/article/469/3/2517/3786441">Monthly Notices of the Royal Astronomical Society</a></font>
 
 - *The Photometric Properties of Galaxies in the Early Universe*,  <a href="https://arxiv.org/abs/1605.05044">arxiv:1605.05044</a>  
 Stephen M. Wilkins & others including **Christopher C. Lovell**, **2016**    
-<font size="-1"><span style="color:green">Accepted</span>, <a style="color:darkblue" href="https://academic.oup.com/mnras/article/460/3/3170/2609428">Monthly Notices of the Royal Astronomical Society</a></font>
+<br><font size="-1"><span style="color:green">Accepted</span>, <a style="color:darkblue" href="https://academic.oup.com/mnras/article/460/3/3170/2609428">Monthly Notices of the Royal Astronomical Society</a></font>
 
 <br>
 
