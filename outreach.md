@@ -4,9 +4,19 @@ permalink: /outreach/
 title: Teaching & Outreach
 ---
 
-I am currently teaching introductory Python to undergraduate and graduate students from a range of backgrounds. I have previously taught similar introductory courses in Astronomy, as well as foundation Mathematics. I have also written a course, aimed at first year graduate students, on Astronomy in Python. It was supported by the <a href="http://www.sepnet.ac.uk/research/astrophysics/">South East Physics network</a>, and all of the course material is available online <a href="http://www.christopherlovell.co.uk/astro-python/">here</a>.
+I have taught introductory Python, Astronomy and foundation Mathematics courses to undergraduate and graduate students from a range of backgrounds. 
+I have also written a course, aimed at first year graduate students, on Astronomy in Python. 
+It was supported by the <a href="http://www.sepnet.ac.uk/research/astrophysics/">South East Physics network</a>, and all of the course material is available online <a href="http://www.christopherlovell.co.uk/astro-python/">here</a>.
 
-As a graduate student I wrote for <a href="http://astrobites.org/" target="blank">Astrobites</a>, where postgraduates in Astronomy and Astrophysics write about the latest research in an accessible format for undergraduates or the public in general. You can read my posts <a href="http://astrobites.com/author/clovell/" target="blank">here</a>. I still try to get involved with Astrobites when I can; if you're a graduate student in Astronomy looking to get involved feel free to ask me any questions!
+I am also currently completing my training to be a Software Carpentries instructor. 
+Software, Data, and Library Carpentry (The Carpentries) are programs of <a href="https://carpentries.org/">The Carpentries</a> (a fiscally sponsored project of Community Initiatives). 
+The Carpentries Instructors are volunteers who teach foundational computational and data skills to researchers, e.g., programming basics in R and Python, use of the command line, and version control. 
+Housed on GitHub, all Carpentries’ lessons are open source, with an open contribution model, and lessons are collaboratively created and maintained by volunteers. 
+Lessons are taught by Instructors in two-day workshops.
+
+My writing has been featured in Significance magazine (link <a href="https://rss.onlinelibrary.wiley.com/doi/full/10.1111/j.1740-9713.2017.01089.x">here</a>), the official magazine and website of the Royal Statistical Society (RSS) and the American Statistical Association (ASA).
+As a graduate student I wrote for <a href="http://astrobites.org/" target="blank">Astrobites</a>, where postgraduates in Astronomy and Astrophysics write about the latest research in an accessible format for undergraduates or the public in general. You can read my posts <a href="http://astrobites.com/author/clovell/" target="blank">here</a>. 
+I still try to get involved with Astrobites when I can; if you're a graduate student in Astronomy looking to get involved feel free to ask me any questions!
 
 <img class="vsmall" src="/images/astrobites_AAS.jpeg" title="Astrobites AAS">
 <p style="text-align:center; font-style:italic">Representing Astrobites at <a href="https://aas.org/meetings/aas231">AAS 231</a></p>
