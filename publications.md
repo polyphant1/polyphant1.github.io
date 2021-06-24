@@ -8,8 +8,12 @@ An up-to-date list of my published research can be found on <a href="https://ui.
 
 ## First-Author Publications
 
+- *An orientation bias in observations of submillimetre galaxies* <a href="https://arxiv.org/abs/2106.11588">arxiv:2106.11588</a>
+<br> **C. C. Lovell**, J. E. Geach, R. Davé, D. Narayanan, K. E. K. Coppin, Q. Li, M. Franco, G. C. Privon **2020**
+<br><font size="-1"><span style="color:orange">Submitted</span>, Monthly Notices of the Royal Astronomical Society</font>
+
 - *A machine learning approach to mapping baryons onto dark matter halos using the EAGLE and C-EAGLE simulations* <a href="https://arxiv.org/abs/2106.04980">arxiv:2106.04980</a>
-<br> **Christopher C. Lovell**, Stephen M. Wilkins, Peter A. Thomas, Matthieu Schaller, Carlton M. Baugh, Giulio Fabbian, Yannick Bahé **2020**
+<br> **Christopher C. Lovell**, Stephen M. Wilkins, Peter A. Thomas, Matthieu Schaller, Carlton M. Baugh, Giulio Fabbian, Yannick Bahé **2021**
 <br><font size="-1"><span style="color:orange">Submitted</span>, Monthly Notices of the Royal Astronomical Society</font>
 
 - *Reproducing sub-millimetre galaxy number counts with cosmological hydrodynamic simulations* <a href="https://arxiv.org/abs/2006.15156">arxiv:2006.15156</a>
