@@ -4,7 +4,18 @@ permalink: /codes/
 title: Codes
 ---
 
-Below I describe a few codes I've written. All of these codes, as well as additional source code for individual papers, is available on [Github](https://github.com/christopherlovell/). Please feel free to use and edit these; most should be under a permissive licence.
+Below I link to and describe a few codes I've written, mostly in Python. All of these, as well as the source code for individual papers, are available on [Github](https://github.com/christopherlovell/). 
+Please feel free to use and edit them; all should be under a permissive licence.
+
+---
+
+# Orientation Bias
+
+[![SMG orientation](/images/smg_orientation_counts.png)](https://github.com/christopherlovell/orientation_bias)
+
+<em>Orientation bias</em> is a python module for predicting the orientation bias and incompleteness of arbitrary submillimetre surveys. The code and further details are <a href="https://github.com/christopherlovell/orientation_bias">on Github</a>.
+
+---
 
 # Sengi
 
