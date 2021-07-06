@@ -9,7 +9,7 @@ An up-to-date list of my published research can be found on <a href="https://ui.
 ## First-Author Publications
 
 - *An orientation bias in observations of submillimetre galaxies* <a href="https://arxiv.org/abs/2106.11588">arxiv:2106.11588</a>
-<br> **C. C. Lovell**, J. E. Geach, R. Davé, D. Narayanan, K. E. K. Coppin, Q. Li, M. Franco, G. C. Privon **2020**
+<br> **C. C. Lovell**, J. E. Geach, R. Davé, D. Narayanan, K. E. K. Coppin, Q. Li, M. Franco, G. C. Privon **2021**
 <br><font size="-1"><span style="color:orange">Submitted</span>, Monthly Notices of the Royal Astronomical Society</font>
 
 - *A machine learning approach to mapping baryons onto dark matter halos using the EAGLE and C-EAGLE simulations* <a href="https://arxiv.org/abs/2106.04980">arxiv:2106.04980</a>
@@ -46,7 +46,7 @@ Tracy Garratt & others including **Christopher C. Lovell**, **2021**
 
 - *The emergence of passive galaxies in the early Universe* <a href="https://arxiv.org/abs/2011.10584">arxiv:2011.10584</a>
 <br> P. Santini & others, including **Christopher C. Lovell**, **2020**
-<br><font size="-1"><span style="color:orange">Submitted</span> to Astronomy & Astrophysics </font>
+<br><font size="-1"><span style="color:green">Accepted</span>, Astronomy & Astrophysics </font>
 
 - *First Light And Reionisation Epoch Simulations (FLARES) II: The Photometric Properties of High-Redshift Galaxies* <a href="https://arxiv.org/abs/2008.06057">arxiv:2008.06057</a>
 <br> Aswin P. Vijayan, **Christopher C. Lovell**, Stephen M. Wilkins, Peter A. Thomas, David J. Barnes, Dimitrios Irodotou, Jussi Kuusisto, Will Roper, **2020**
